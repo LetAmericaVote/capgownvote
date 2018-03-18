@@ -21,8 +21,9 @@
     "seed-schools": "node util/seed.js"
   },
   "engines": {
-    "node": "9.5.x"
+    "node": "9.5.x",
+    "npm": "5.x"
   },
-  "author": "",
+  "author": "Joe Kent <hey@joekent.nyc>",
   "license": "MIT"
 }

@@ -1,0 +1,47 @@
+{
+  "name": "Cap, Gown, Vote!",
+  "description": "Cap, Gown, Vote! is an initiative aimed at increasing voter registration among high school students.",
+  "keywords": [
+    "civic tech"
+  ],
+  "website": "https://capgownvote.org",
+  "repository": "https://github.com/LetAmericaVote/capgownvote",
+  "logo": "https://capgownvote.org/capgownvote.svg",
+  "env": {
+    "RTV_URL": {
+      "required": true,
+      "description": "Rock The Vote API url"
+    },
+    "RTV_PARTNER_ID": {
+      "required": true,
+      "description": "Unique partner ID used to communicate with Rock The Vote"
+    },
+    "ALGOLIA_APP_ID": {
+      "required": true,
+      "description": "Application ID used to communicate with Algolia"
+    },
+    "ALGOLIA_WRITE_API_KEY": {
+      "required": true,
+      "description": "Secret write key used to make requests against Algolia"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "mongolab:shared-cluster-1"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/lstoll/heroku-buildpack-monorepo"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

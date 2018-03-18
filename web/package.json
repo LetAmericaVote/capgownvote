@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "postal-abbreviations": "^2.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.1.6",
+    "url-pattern": "^1.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "REACT_APP_API_URI=https://capgownvote-staging.herokuapp.com react-scripts build && cp ./build/index.html ./build/200.html",
+    "deploy": "surge ./build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "surge": "^0.19.0"
+  }
+}

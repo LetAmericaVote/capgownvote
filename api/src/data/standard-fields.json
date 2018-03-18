@@ -1,0 +1,229 @@
+{
+  "fields": [
+    {
+      "rtvKey": "first_registration",
+      "title": "First registration",
+      "helpMessage": "Is this your first time registering to vote?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "us_citizen",
+      "title": "US Citizen",
+      "helpMessage": "Are you a US Citizen?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "has_state_license",
+      "title": "Do you have a state license?",
+      "helpMessage": "eg: drivers license",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "date_of_birth",
+      "title": "What's your birthday?",
+      "type": "birthday"
+    },
+    {
+      "rtvKey": "email_address",
+      "title": "Email address",
+      "type": "email",
+      "autocomplete": "email"
+    },
+    {
+      "rtvKey": "name_title",
+      "title": "Title",
+      "type": "select",
+      "options": ["Mr.", "Mrs.", "Miss.", "Ms.", "Sr.", "Sra.", "Srta."],
+      "autocomplete": "honorific-prefix"
+    },
+    {
+      "rtvKey": "first_name",
+      "title": "First name",
+      "type": "text",
+      "autocomplete": "given-name"
+    },
+    {
+      "rtvKey": "middle_name",
+      "title": "Middle name",
+      "type": "text",
+      "isOptional": true,
+      "autocomplete": "additional-name"
+    },
+    {
+      "rtvKey": "last_name",
+      "title": "Last name",
+      "type": "text",
+      "autocomplete": "family-name"
+    },
+    {
+      "rtvKey": "name_suffix",
+      "title": "Suffix",
+      "type": "select",
+      "options": ["Jr.", "Sr.", "II", "III", "IV"],
+      "isOptional": true,
+      "autocomplete": "honorific-suffix"
+    },
+    {
+      "rtvKey": "home_address",
+      "title": "Home address",
+      "type": "text",
+      "autocomplete": "street-address",
+      "validation": {
+        "format": "address"
+      }
+    },
+    {
+      "rtvKey": "home_unit",
+      "title": "Apt. or Lot #",
+      "type": "text",
+      "isOptional": true
+    },
+    {
+      "rtvKey": "home_city",
+      "title": "City",
+      "type": "text"
+    },
+    {
+      "rtvKey": "home_state_id",
+      "title": "State",
+      "type": "state"
+    },
+    {
+      "rtvKey": "home_zip_code",
+      "title": "Zipcode",
+      "type": "number",
+      "validation": {
+        "format": "zipcode"
+      }
+    },
+    {
+      "rtvKey": "has_mailing_address",
+      "title": "Do you have a different mailing address?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "mailing_address",
+      "title": "Mailing address",
+      "type": "text",
+      "askIf": "has_mailing_address",
+      "validation": {
+        "format": "address"
+      }
+    },
+    {
+      "rtvKey": "mailing_unit",
+      "title": "Mailing Unit #",
+      "type": "text",
+      "isOptional": true,
+      "askIf": "has_mailing_address"
+    },
+    {
+      "rtvKey": "mailing_city",
+      "title": "Mailing City",
+      "type": "text",
+      "askIf": "has_mailing_address"
+    },
+    {
+      "rtvKey": "mailing_state_id",
+      "title": "Mailing State",
+      "type": "state",
+      "askIf": "has_mailing_address"
+    },
+    {
+      "rtvKey": "mailing_zip_code",
+      "title": "Mailing Zipcode",
+      "type": "number",
+      "askIf": "has_mailing_address",
+      "validation": {
+        "format": "zipcode"
+      }
+    },
+    {
+      "rtvKey": "change_of_name",
+      "title": "Have you previously changed your name?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "prev_name_title",
+      "title": "Previous title",
+      "type": "select",
+      "options": ["Mr.", "Mrs.", "Miss.", "Ms.", "Sr.", "Sra.", "Srta."],
+      "askIf": "change_of_name"
+    },
+    {
+      "rtvKey": "prev_first_name",
+      "title": "Previous first name",
+      "type": "text",
+      "askIf": "change_of_name"
+    },
+    {
+      "rtvKey": "prev_middle_name",
+      "title": "Previous middle name",
+      "type": "text",
+      "askIf": "change_of_name",
+      "isOptional": true
+    },
+    {
+      "rtvKey": "prev_last_name",
+      "title": "Previous last name",
+      "type": "text",
+      "askIf": "change_of_name"
+    },
+    {
+      "rtvKey": "prev_name_suffix",
+      "title": "Previous suffix",
+      "type": "select",
+      "options": ["Jr.", "Sr.", "II", "III", "IV"],
+      "isOptional": true,
+      "askIf": "change_of_name"
+    },
+    {
+      "rtvKey": "change_of_address",
+      "title": "Have you previously changed addresses?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "rtvKey": "prev_address",
+      "title": "Previous address",
+      "type": "text",
+      "askIf": "change_of_address",
+      "validation": {
+        "format": "address"
+      }
+    },
+    {
+      "rtvKey": "prev_unit",
+      "title": "Previous Unit #",
+      "type": "text",
+      "isOptional": true,
+      "askIf": "change_of_address"
+    },
+    {
+      "rtvKey": "prev_city",
+      "title": "Previous City",
+      "type": "text",
+      "askIf": "change_of_address"
+    },
+    {
+      "rtvKey": "prev_state_id",
+      "title": "Previous State",
+      "type": "state",
+      "askIf": "change_of_address"
+    },
+    {
+      "rtvKey": "prev_zip_code",
+      "title": "Previous Zipcode",
+      "type": "number",
+      "askIf": "change_of_address",
+      "validation": {
+        "format": "zipcode"
+      }
+    }
+  ]
+}

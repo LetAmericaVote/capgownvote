@@ -1,0 +1,259 @@
+{
+	"states": [
+		{
+			"code": "AL",
+			"name": "Alabama",
+			"hasOvr": true
+		},
+		{
+			"code": "AK",
+			"name": "Alaska",
+			"hasOvr": true
+		},
+		{
+			"code": "AZ",
+			"name": "Arizona",
+			"hasOvr": true
+		},
+		{
+			"code": "AR",
+			"name": "Arkansas",
+			"hasOvr": false
+		},
+		{
+			"code": "CA",
+			"name": "California",
+			"hasOvr": true
+		},
+		{
+			"code": "CO",
+			"name": "Colorado",
+			"hasOvr": true
+		},
+		{
+			"code": "CT",
+			"name": "Conneticut",
+			"hasOvr": true
+		},
+		{
+			"code": "DE",
+			"name": "Deleware",
+			"hasOvr": true
+		},
+		{
+			"code": "DC",
+			"name": "District of Columbia",
+			"hasOvr": true
+		},
+		{
+			"code": "FL",
+			"name": "Florida",
+			"hasOvr": true
+		},
+		{
+			"code": "GA",
+			"name": "Georgia",
+			"hasOvr": true
+		},
+		{
+			"code": "HI",
+			"name": "Hawaii",
+			"hasOvr": true
+		},
+		{
+			"code": "ID",
+			"name": "Idaho",
+			"hasOvr": true
+		},
+		{
+			"code": "IL",
+			"name": "Illinois",
+			"hasOvr": true
+		},
+		{
+			"code": "IN",
+			"name": "Indiana",
+			"hasOvr": true
+		},
+		{
+			"code": "IA",
+			"name": "Iowa",
+			"hasOvr": true
+		},
+		{
+			"code": "KS",
+			"name": "Kansas",
+			"hasOvr": true
+		},
+		{
+			"code": "KY",
+			"name": "Kentucky",
+			"hasOvr": true
+		},
+		{
+			"code": "LA",
+			"name": "Louisiana",
+			"hasOvr": true
+		},
+		{
+			"code": "ME",
+			"name": "Maine",
+			"hasOvr": false
+		},
+		{
+			"code": "MD",
+			"name": "Maryland",
+			"hasOvr": true
+		},
+		{
+			"code": "MA",
+			"name": "Massachusetts",
+			"hasOvr": true
+		},
+		{
+			"code": "MI",
+			"name": "Michigan",
+			"hasOvr": false
+		},
+		{
+			"code": "MN",
+			"name": "Minnesota",
+			"hasOvr": true
+		},
+		{
+			"code": "MS",
+			"name": "Mississippi",
+			"hasOvr": false
+		},
+		{
+			"code": "MO",
+			"name": "Missouri",
+			"hasOvr": true
+		},
+		{
+			"code": "MT",
+			"name": "Montana",
+			"hasOvr": false
+		},
+		{
+			"code": "NE",
+			"name": "Nebraska",
+			"hasOvr": true
+		},
+		{
+			"code": "NV",
+			"name": "Nevada",
+			"hasOvr": true
+		},
+		{
+			"code": "NH",
+			"name": "New Hampshire",
+			"hasOvr": false
+		},
+		{
+			"code": "NJ",
+			"name": "New Jersey",
+			"hasOvr": false
+		},
+		{
+			"code": "NM",
+			"name": "New Mexico",
+			"hasOvr": true
+		},
+		{
+			"code": "NY",
+			"name": "New York",
+			"hasOvr": true
+		},
+		{
+			"code": "NC",
+			"name": "North Carolina",
+			"hasOvr": false
+		},
+		{
+			"code": "ND",
+			"name": "North Dakota",
+			"hasOvr": false
+		},
+		{
+			"code": "OH",
+			"name": "Ohio",
+			"hasOvr": true
+		},
+		{
+			"code": "OK",
+			"name": "Oklahoma",
+			"hasOvr": false
+		},
+		{
+			"code": "OR",
+			"name": "Oregon",
+			"hasOvr": true
+		},
+		{
+			"code": "PA",
+			"name": "Pennsylvania",
+			"hasOvr": true
+		},
+		{
+			"code": "RI",
+			"name": "Rhode Island",
+			"hasOvr": true
+		},
+		{
+			"code": "SC",
+			"name": "South Carolina",
+			"hasOvr": true
+		},
+		{
+			"code": "SD",
+			"name": "South Dakota",
+			"hasOvr": false
+		},
+		{
+			"code": "TN",
+			"name": "Tennessee",
+			"hasOvr": true
+		},
+		{
+			"code": "TX",
+			"name": "Texas",
+			"hasOvr": false
+		},
+		{
+			"code": "UT",
+			"name": "Utah",
+			"hasOvr": true
+		},
+		{
+			"code": "VT",
+			"name": "Vermont",
+			"hasOvr": true
+		},
+		{
+			"code": "VA",
+			"name": "Virginia",
+			"hasOvr": true
+		},
+		{
+			"code": "WA",
+			"name": "Washington",
+			"hasOvr": true
+		},
+		{
+			"code": "WV",
+			"name": "West Virginia",
+			"hasOvr": true
+		},
+		{
+			"code": "WI",
+			"name": "Wisconsin",
+			"hasOvr": true
+		},
+		{
+			"code": "WY",
+			"name": "Wyoming",
+			"hasOvr": false
+		}
+	]
+}

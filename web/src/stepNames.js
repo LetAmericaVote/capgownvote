@@ -1,0 +1,15 @@
+export const CREATE_USER_STEP = 'CREATE_USER_STEP';
+
+export const FIND_SCHOOL_STEP = 'FIND_SCHOOL_STEP';
+
+export const INVITE_SCHOOL_STEP = 'INVITE_SCHOOL_STEP';
+
+export const REGISTRATION_STATUS_STEP = 'REGISTRATION_STATUS_STEP';
+
+export const RULES_STEP = 'RULES_STEP';
+
+export const FORM_STEP = 'FORM_STEP';
+
+export const MAIL_FORM_STEP = 'MAIL_STEP';
+
+export const POST_SIGNUP_STEP = 'POST_SIGNUP_STEP';

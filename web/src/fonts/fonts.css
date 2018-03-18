@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'MrEavesModOT';
+	src: url('./d54475dfefff6ce4a39905754342f94e60bb1fe3ac1adf2ecf48ea70f29afe6.eot');
+	src: url('./d54475dfefff6ce4a39905754342f94e60bb1fe3ac1adf2ecf48ea70f29afe6.eot?#iefix') format('embedded-opentype'),
+		url('./d54475dfefff6ce4a39905754342f94e60bb1fe3ac1adf2ecf48ea70f29afe6.woff2') format('woff2'),
+		url('./d54475dfefff6ce4a39905754342f94e60bb1fe3ac1adf2ecf48ea70f29afe6.woff') format('woff'),
+		url('./d54475dfefff6ce4a39905754342f94e60bb1fe3ac1adf2ecf48ea70f29afe6.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MrEavesModOTBook';
+	src: url('./fdc076eff24b826c39fb62821e0adcdd0266f1ab27613ac126e05b89638e3ad.eot');
+	src: url('./fdc076eff24b826c39fb62821e0adcdd0266f1ab27613ac126e05b89638e3ad.eot?#iefix') format('embedded-opentype'),
+		url('./fdc076eff24b826c39fb62821e0adcdd0266f1ab27613ac126e05b89638e3ad.woff2') format('woff2'),
+		url('./fdc076eff24b826c39fb62821e0adcdd0266f1ab27613ac126e05b89638e3ad.woff') format('woff'),
+		url('./fdc076eff24b826c39fb62821e0adcdd0266f1ab27613ac126e05b89638e3ad.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

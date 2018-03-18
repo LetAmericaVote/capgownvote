@@ -25,6 +25,8 @@ const About = (props) => {
         <ContentParagraph>Let America Vote will contact high schools in your city to identify and recruit student ambassadors. If you know of any particular schools that would be interested in participating, please let us know. After we sign up schools and identify student ambassadors, we will work with them to organize voter registration drives using our online tool to register eligible students.</ContentParagraph>
         <ContentHeader>Who do I contact if I have additional questions and if I would like my city to participate?</ContentHeader>
         <ContentParagraph>Please contact info@letamericavote.org.</ContentParagraph>
+        <ContentHeader>Photo Credits</ContentHeader>
+        <ContentParagraph>Photos by Stephanie McCabe & Caleb Woods on Unsplash</ContentParagraph>
       </ContentLayout>
       <PageFooter />
     </Main>

@@ -6,7 +6,6 @@ import { applyMiddleware, createStore, compose } from 'redux';
 import logger from 'redux-logger';
 import { css, injectGlobal } from 'styled-components';
 
-import Notification from './components/Notification'
 import Home from './routes/Home';
 import Register from './routes/Register';
 import Router from './routing/Router';
@@ -50,7 +49,6 @@ const Root = () => (
   <Provider store={store}>
     <Router>
       <div>
-        <Notification />
         <Route path="/"><Home /></Route>
         <Route path="/register"><Register/></Route>
       </div>

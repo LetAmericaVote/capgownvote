@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "algoliasearch": "^3.25.1",
     "history": "^4.7.2",
     "postal-abbreviations": "^2.0.0",
     "react": "^16.2.0",

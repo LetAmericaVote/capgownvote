@@ -927,3 +927,32 @@ export const SignupLayout = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const ContentLayout = styled.section`
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  max-width: ${maxWidth}px;
+  padding: ${baseValue}px;
+  margin: ${baseValue * 3}px auto;
+`;
+
+export const ContentHeader = styled.h1`
+  display: block;
+  color: ${colors.cyan};
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
+  margin-bottom: ${baseValue}px;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const ContentParagraph = styled.p`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * 1}px;
+  line-height: ${baseValue * 1}px;
+  margin-bottom: ${baseValue * 2}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;

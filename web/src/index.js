@@ -8,6 +8,7 @@ import { css, injectGlobal } from 'styled-components';
 
 import Home from './routes/Home';
 import Register from './routes/Register';
+import About from './routes/About';
 import Router from './routing/Router';
 import Route from './routing/Route';
 
@@ -51,6 +52,7 @@ const Root = () => (
       <div>
         <Route path="/"><Home /></Route>
         <Route path="/register"><Register/></Route>
+        <Route path="/about"><About /></Route>
       </div>
     </Router>
   </Provider>

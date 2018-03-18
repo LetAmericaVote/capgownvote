@@ -29,6 +29,10 @@ const PageNav = (props) => {
       to: '/about',
     },
     {
+      title: 'Register',
+      to: '/register',
+    },
+    {
       title: 'Leaderboard',
       to: '/leaderboard',
     },

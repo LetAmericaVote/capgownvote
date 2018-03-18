@@ -8,7 +8,8 @@ This is the core frontend application of Cap Gown Vote. It's built with React, R
 $ npm install
 
 # Copy & fill out the env variables
-$ cp .env.example .env
+$ cp .env.example .env.development.local
+$ cp .env.example .env.production.local
 ```
 
 ## usage

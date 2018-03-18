@@ -8,6 +8,7 @@
   "repository": "https://github.com/LetAmericaVote/capgownvote",
   "logo": "https://capgownvote.org/capgownvote.svg",
   "env": {
+    "APP_BASE": "api",
     "RTV_URL": {
       "required": true,
       "description": "Rock The Vote API url"

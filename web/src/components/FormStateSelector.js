@@ -8,13 +8,13 @@ import { states } from '../helpers';
 const StateSelector = (props) => {
   const {
     setStateValue, formValue, showConfirmationButton,
-    assumedStateCode,
+    assumedStateCode, isRequired,
   } = props;
 
   const value = formValue || assumedStateCode || '';
 
   return (
-    <SelectInputCarrot>
+    <SelectInputCarrot required={isRequired}>
       <SelectInput value={value} onChange={setStateValue}>
         { value ? null : <option>Select state</option>}
         { states.map(state => (

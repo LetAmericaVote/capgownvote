@@ -82,7 +82,7 @@ const Signup = (props) => {
         />
       </SpacedInputGroupLayout>
       <SpacedInputGroupLayout>
-        <FormStateSelector formKey={STATE_CODE} />
+        <FormStateSelector formKey={STATE_CODE} isRequired />
       </SpacedInputGroupLayout>
       <SpacedInputGroupLayout>
         <CheckboxLayout>

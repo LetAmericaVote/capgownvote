@@ -605,6 +605,22 @@ export const SelectInputCarrot = styled.div`
   width: 100%;
   position: relative;
 
+  ${props => props.required ? `
+    &:before {
+      position: absolute;
+      content: 'Required';
+      display: block;
+      color: ${props => props.error ? colors.red : colors.black};
+      font-size: ${baseValue / 2}px;
+      line-height: ${baseValue / 2}px;
+      text-transform: uppercase;
+      color: ${colors.red};
+      bottom: ${baseValue}px;
+      ${primaryFontFamily}
+      ${fontKerning}
+    }
+  ` : ''}
+
   &:after {
     position: absolute;
     content: '';

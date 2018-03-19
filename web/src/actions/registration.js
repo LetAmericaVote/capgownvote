@@ -1,8 +1,6 @@
 import { getFromApi, postToApi } from './api';
 import { makeStateRequestId } from '../helpers';
-import {
-  selectForm, selectSelectedSchoolId, selectIsSubscribed,
-} from '../selectors';
+import { selectForm } from '../selectors';
 
 export const SET_IS_REGISTERED = 'SET_IS_REGISTERED';
 export function setIsRegistered(isRegistered) {
@@ -56,16 +54,10 @@ export const POST_USER_REGISTRATION_FORM = 'POST_USER_REGISTRATION_FORM';
 export function postUserRegistrationForm() {
   return (dispatch, getState) => {
     const form = selectForm(getState());
-    const schoolId = selectSelectedSchoolId(getState());
-    const isSubscribed = selectIsSubscribed(getState());
 
     const payload = {
       rtv: {
         ...form,
-      },
-      lav: {
-        schoolId,
-        isSubscribed,
       },
     };
 

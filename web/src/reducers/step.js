@@ -17,7 +17,10 @@ const step = createReducer('step', {
     ...state,
     active: state.stepHistory[0],
     backLock: true,
-    stepHistory: state.stepHistory.slice(1),
+    stepHistory: [
+      state.active,
+      state.stepHistory.slice(1)
+    ],
   }),
   [SET_IS_FADING]: (state, action) => ({
     ...state,

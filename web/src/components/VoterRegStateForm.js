@@ -4,7 +4,7 @@ import VoterRegFormBuilder from './VoterRegFormBuilder';
 import EmailSubscriptionInput from './EmailSubscriptionInput';
 import {
   selectStateRegistrationFields,
-  selectAssumedStateCode,
+  selectAuthenticatedUserStateCode,
 } from '../selectors';
 
 const VoterRegStateForm = (props) => (
@@ -15,7 +15,9 @@ const VoterRegStateForm = (props) => (
 );
 
 VoterRegStateForm.mapStateToProps = (state) => ({
-  stateFields: selectStateRegistrationFields(selectAssumedStateCode(state), state),
+  stateFields: selectStateRegistrationFields(
+    selectAuthenticatedUserStateCode(state), state
+  ),
 });
 
 export default BaseWrapper(VoterRegStateForm);

@@ -8,6 +8,11 @@ export function setAuthToken(token) {
   return { type: SET_AUTH_TOKEN, token };
 }
 
+export const SET_AUTH_TOKEN_EXPIRATION = 'SET_AUTH_TOKEN_EXPIRATION';
+export function setAuthTokenExpiration(expiration) {
+  return { type: SET_AUTH_TOKEN_EXPIRATION, expiration };
+}
+
 export const SET_IS_PUBLIC_COMPUTER = 'SET_IS_PUBLIC_COMPUTER';
 export function setIsPublicComputer(isPublicComputer) {
   return { type: SET_IS_PUBLIC_COMPUTER, isPublicComputer };

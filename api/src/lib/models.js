@@ -159,6 +159,10 @@ const UserSchema = mongoose.Schema({
     ref: 'School',
     default: null,
   },
+  isEligible: {
+    type: Boolean,
+    default: null,
+  },
   email: {
     type: String,
   },
@@ -189,6 +193,21 @@ UserSchema.index('email', {
     email: { '$exists': true },
   },
 });
+
+UserSchema.statics.userEditableFields = function(container) {
+  const fields = [
+    'firstName', 'lastName', 'mobile', 'stateCode', 'zipcode',
+    'birthday', 'school', 'email', 'isEligible',
+  ];
+
+  return fields.reduce((acc, key) => {
+    if (container[key] !== undefined) {
+      acc[key] = container[key];
+    }
+
+    return acc;
+  }, {});
+};
 
 UserSchema.statics.findByEmail = function(email) {
   return this.findOne({ email });
@@ -260,6 +279,7 @@ UserSchema.methods.api = function() {
     stateCode: this.stateCode,
     birthday: this.birthday,
     school: this.school,
+    isEligible: this.isEligible,
     email: this.email,
     tokenExpiration: this.tokenExpiration,
     role: this.role,

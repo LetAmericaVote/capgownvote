@@ -1,8 +1,9 @@
 import algoliasearch from 'algoliasearch';
 import { selectSchoolData } from '../selectors';
 import {
-  SET_SELECTED_SCHOOL_ID, SET_SCHOOL_INPUT_VALUE,
+  STORE_USER_DATA, SET_SCHOOL_INPUT_VALUE,
   SET_SCHOOL_SUGGESTIONS, getSchoolData, setSchoolSuggestions,
+  updateAuthenticatedUserProfile,
 } from '../actions';
 
 const schools = store => next => action => {
@@ -15,11 +16,9 @@ const schools = store => next => action => {
   }
 
   switch (action.type) {
-    case SET_SELECTED_SCHOOL_ID: {
-      if (action.schoolId) {
-        fillSchoolIfNull(action.schoolId);
-      } else {
-        store.dispatch(setSchoolSuggestions(null));
+    case STORE_USER_DATA: {
+      if (action.user && action.user.school) {
+        fillSchoolIfNull(action.user.school);
       }
 
       break;
@@ -27,6 +26,9 @@ const schools = store => next => action => {
 
     case SET_SCHOOL_INPUT_VALUE: {
       if (! action.value) {
+        store.dispatch(setSchoolSuggestions(null));
+        store.dispatch(updateAuthenticatedUserProfile({ school: null }));
+
         break;
       }
 

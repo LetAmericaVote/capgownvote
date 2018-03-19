@@ -1,44 +1,40 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import { setSchoolInputValue } from '../actions';
 import {
   InputGroupLayout, InputGroupLabel,
   TextInput,
 } from '../blocks';
 import {
-  setSchoolInputValue, setSelectedSchoolId,
-  setSchoolSuggestions,
-} from '../actions';
-import {
-  selectSchoolInputValue, selectSelectedSchoolName,
+  selectSchoolInputValue,
+  selectAuthenticatedUserSchoolData,
 } from '../selectors';
 
-const SchoolSelectorInput = (props) => (
-  <InputGroupLayout>
-    <InputGroupLabel>
-      School Name
-    </InputGroupLabel>
-    <TextInput
-      onChange={props.onChange}
-      value={props.value || props.selectedSchoolName || ''}
-    />
-  </InputGroupLayout>
-);
+const SchoolSelectorInput = (props) => {
+  const { setSchoolInputValue, value, userSchool } = props;
+
+  const schoolName = userSchool ? userSchool.name : '';
+
+  return (
+    <InputGroupLayout>
+      <InputGroupLabel>
+        School Name
+      </InputGroupLabel>
+      <TextInput
+        onChange={event => setSchoolInputValue(event.target.value)}
+        value={value || schoolName}
+      />
+    </InputGroupLayout>
+  );
+};
 
 SchoolSelectorInput.mapStateToProps = (state) => ({
   value: selectSchoolInputValue(state),
-  selectedSchoolName: selectSelectedSchoolName(state),
+  userSchool: selectAuthenticatedUserSchoolData(state),
 });
 
-SchoolSelectorInput.mapDispatchToProps = (dispatch) => ({
-  onChange: (event) => {
-    const { value } = event.target;
-    dispatch(setSchoolInputValue(value));
-
-    if (value === '') {
-      dispatch(setSelectedSchoolId(null));
-      dispatch(setSchoolSuggestions(null));
-    }
-  },
-});
+SchoolSelectorInput.actionCreators = {
+  setSchoolInputValue,
+};
 
 export default BaseWrapper(SchoolSelectorInput);

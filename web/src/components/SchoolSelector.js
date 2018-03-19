@@ -3,7 +3,7 @@ import SchoolSelectorInput from './SchoolSelectorInput';
 import SchoolResetButton from './SchoolResetButton';
 import SchoolSelectorSuggestions from './SchoolSelectorSuggestions';
 import BaseWrapper from './BaseWrapper';
-import { selectSelectedSchoolId } from '../selectors';
+import { selectAuthenticatedUserHasSchool } from '../selectors';
 
 const SchoolSelector = (props) => {
   const { hasSchoolSet } = props;
@@ -20,7 +20,7 @@ const SchoolSelector = (props) => {
 };
 
 SchoolSelector.mapStateToProps = (state) => ({
-  hasSchoolSet: !! selectSelectedSchoolId(state),
+  hasSchoolSet: selectAuthenticatedUserHasSchool(state),
 });
 
 export default BaseWrapper(SchoolSelector);

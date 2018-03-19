@@ -24,11 +24,6 @@ export function getSchoolData(schoolId) {
   };
 }
 
-export const SET_SELECTED_SCHOOL_ID = 'SET_SELECTED_SCHOOL_ID';
-export function setSelectedSchoolId(schoolId) {
-  return { type: SET_SELECTED_SCHOOL_ID, schoolId };
-}
-
 export const SET_SCHOOL_SUGGESTIONS = 'SET_SCHOOL_SUGGESTIONS';
 export function setSchoolSuggestions(suggestions) {
   return { type: SET_SCHOOL_SUGGESTIONS, suggestions };

@@ -1,5 +1,6 @@
 const AUTH_ID_KEY = 'AUTH_ID_KEY';
 const AUTH_TOKEN_KEY = 'AUTH_TOKEN_KEY';
+const AUTH_TOKEN_EXPIRATION_KEY = 'AUTH_TOKEN_EXPIRATION_KEY';
 
 export function writeAuthId(id) {
   if (! id) {
@@ -17,9 +18,18 @@ export function writeAuthToken(token) {
   localStorage.setItem(AUTH_TOKEN_KEY, token);
 }
 
+export function writeAuthTokenExpiration(expiration) {
+  if (! expiration) {
+    return;
+  }
+
+  localStorage.setItem(AUTH_TOKEN_EXPIRATION_KEY, expiration);
+}
+
 export function wipeAuthCredentials() {
   localStorage.removeItem(AUTH_ID_KEY);
   localStorage.removeItem(AUTH_TOKEN_KEY);
+  localStorage.removeItem(AUTH_TOKEN_EXPIRATION_KEY);
 }
 
 export function readAuthId() {
@@ -30,9 +40,21 @@ export function readAuthId() {
 
 export function readAuthToken() {
   const value = localStorage.getItem(AUTH_TOKEN_KEY);
-  if (value === 'null') {
-    return null;
-  }
 
   return value;
+}
+
+export function readAuthTokenExpiration() {
+  const value = parseInt(localStorage.getItem(AUTH_TOKEN_EXPIRATION_KEY));
+
+  return value;
+}
+
+export function readAuth() {
+  return {
+    id: readAuthId(),
+    token: readAuthToken(),
+    expiration: readAuthTokenExpiration(),
+    isExpired: new Date(readAuthTokenExpiration()).getTime() < Date.now(),
+  };
 }

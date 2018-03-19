@@ -33,15 +33,8 @@ module.exports = (app) => {
   });
 
   app.post('/v1/user', (req, res) => {
-    const {
-      firstName, lastName, mobile, stateCode, zipcode,
-      birthday, school, email,
-    } = req.body;
-
-    const user = new User({
-      firstName, lastName, mobile, stateCode, zipcode,
-      birthday, school, email,
-    });
+    const data = User.userEditableFields(req.body);
+    const user = new User(data);
 
     user.save().then((user, err) => {
       if (err) {
@@ -89,7 +82,9 @@ module.exports = (app) => {
       res.status(401).json({ error: 'You cannot access other user profiles. '});
     }
 
-    return User.findOneAndUpdate({ _id: id }, { '$set': { ...req.body } }, { new: true })
+    const data = isAdmin ? req.body : User.userEditableFields(req.body);
+
+    return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
       .then(user => res.json({ data: user.api() }))
       .catch((error) => {
         console.error(error);

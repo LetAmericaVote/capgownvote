@@ -4,6 +4,7 @@ const initialState = {
     id: null,
     token: null,
     isPublicComputer: false,
+    expiration: null,
   },
   birthday: {
     month: null,
@@ -11,7 +12,6 @@ const initialState = {
     date: null,
     formatted: null,
   },
-  eligibility: {},
   form: {},
   invite: {
     stateCode: null,
@@ -40,7 +40,6 @@ const initialState = {
   },
   school: {
     inputValue: null,
-    selectedSchoolId: null,
     items: {},
     suggestions: [],
   },

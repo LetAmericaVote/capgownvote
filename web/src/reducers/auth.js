@@ -1,8 +1,11 @@
 import createReducer from './createReducer';
-import { writeAuthId, writeAuthToken, wipeAuthCredentials } from '../authStorage';
+import {
+  writeAuthId, writeAuthToken,
+  wipeAuthCredentials, writeAuthTokenExpiration,
+} from '../authStorage';
 import {
   SET_AUTH_ID, SET_AUTH_TOKEN, SET_IS_PUBLIC_COMPUTER,
-  LOGIN, LOGOUT,
+  LOGIN, LOGOUT, SET_AUTH_TOKEN_EXPIRATION,
 } from '../actions';
 
 const subscribe = createReducer('auth', {
@@ -26,12 +29,23 @@ const subscribe = createReducer('auth', {
       token: action.token,
     };
   },
+  [SET_AUTH_TOKEN_EXPIRATION]: (state, action) => {
+    if (! state.isPublicComputer) {
+      writeAuthTokenExpiration(action.expiration);
+    }
+
+    return {
+      ...state,
+      expiration: action.expiration,
+    };
+  },
   [SET_IS_PUBLIC_COMPUTER]: (state, action) => {
     if (action.isPublicComputer) {
       wipeAuthCredentials();
     } else {
       writeAuthId(state.id);
       writeAuthToken(state.token);
+      writeAuthTokenExpiration(state.expiration);
     }
 
     return {

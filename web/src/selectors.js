@@ -12,42 +12,19 @@ export const selectInviteEmail = (state) => selectInviteFields(state).email;
 
 export const selectInviteIsCompleted = (state) => selectInviteFields(state).isComplete;
 
-export const selectSelectedSchoolId = (state) => state.school.selectedSchoolId;
-
 export const selectSchoolInputValue = (state) => state.school.inputValue || '';
 
 export const selectSchoolItems = (state) => state.school.items || {};
 
-export const selectSchoolData = (schoolId, state) => selectSchoolItems(state)[schoolId] || null;
+export const selectSchoolData = (schoolId, state) => selectSchoolItems(state)[schoolId] || {};
 
-export const selectSelectedSchoolName = (state) => (
-  selectSchoolData(selectSelectedSchoolId(state), state) || {}
-).name || '';
+export const selectSchoolRules = (schoolId, state) => selectSchoolData(schoolId, state).rules;
 
 export const selectSchoolSuggestions = (state) => state.school.suggestions || [];
 
 export const selectApiRequest = (id, state) => state.api[id] || null;
 
 export const selectApiRequestIsPending = (id, state) => (selectApiRequest(id, state) || {}).isPending;
-
-export const selectAssumedValues = (state) => selectSchoolData(selectSelectedSchoolId(state), state) || {};
-
-export const selectAssumedStateCode = (state) =>
-  selectAssumedValues(state).stateCode ||
-  selectInviteSchoolState(state) || '';
-
-export const selectHasStateEligibilityRequirements = (state, reduxState) =>
-  !! reduxState.eligibility[state];
-
-export const selectStateEligibilityRules = (state, reduxState) =>
-  (reduxState.eligibility[state] || {}).rules || [];
-
-export const selectStateEligibilityRulesFromAnySource = (state) =>
-  selectSchoolData(selectSelectedSchoolId(state), state).rules ||
-  selectStateEligibilityRules(selectFormHomeState(state), state);
-
-export const selectStateIsEligible = (state, reduxState) =>
-  (reduxState.eligibility[state] || {}).isEligible || false;
 
 export const selectHasStandardRegistrationFields = (state) =>
   state.registration.standardFields &&
@@ -65,13 +42,15 @@ export const selectStateRegistrationFields = (state, reduxState) =>
 
 export const selectAllRegistrationFields = (state) =>
   selectStandardRegistrationFields(state).concat(
-    selectStateRegistrationFields(selectAssumedStateCode(state), state)
+    selectStateRegistrationFields(
+      selectAuthenticatedUserStateCode(state), state
+    )
   );
 
 export const selectRegistrationField = (rtvKey, state) =>
   selectStandardRegistrationFields(state)
     .find(field => field.rtvKey === rtvKey) ||
-  selectStateRegistrationFields(selectAssumedStateCode(state), state)
+  selectStateRegistrationFields(selectUserStateCode(state), state)
     .find(field => field.rtvKey === rtvKey) || {};
 
 export const selectRegistrationFieldTitle = (rtvKey, state) =>
@@ -125,11 +104,27 @@ export const selectUser = (id, state) => state.user[id] || {};
 
 export const selectHasUser = (id, state) => !!state.user[id];
 
-export const selectUserSchool = (id, state) => selectUser(id, state).school;
+export const selectUserSchoolId = (id, state) => selectUser(id, state).school;
 
-export const selectUserHasSchool = (id, state) => !!selectUserSchool(id, state);
+export const selectUserHasSchool = (id, state) => !!selectUserSchoolId(id, state);
+
+export const selectAuthenticatedUserHasSchool = (state) =>
+  selectUserHasSchool(selectAuthId(state), state);
+
+export const selectUserSchoolData = (id, state) =>
+  selectSchoolData(selectUserSchoolId(id, state), state);
+
+export const selectAuthenticatedUserSchoolData = (state) =>
+  selectUserSchoolData(selectAuthId(state), state);
 
 export const selectUserRole = (id, state) => selectUser(id, state).role;
+
+export const selectUserStateCode = (id, state) => selectUser(id, state).stateCode;
+
+export const selectAuthenticatedUserStateCode = (state) =>
+  selectUserStateCode(selectAuthId(state), state);
+
+export const selectUserIsEligible = (id, state) => selectUser(id, state).isEligible;
 
 export const selectAuthId = (state) => state.auth.id;
 

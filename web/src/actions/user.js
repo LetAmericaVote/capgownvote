@@ -1,8 +1,11 @@
 import { getFromApi, postToApi, putToApi } from './api';
-import { setAuthId, setAuthToken } from './auth';
 import { setFormValue } from './form';
 import { selectAuthId, selectFormValue } from '../selectors';
 import { userMap } from '../formKeys';
+import {
+  setAuthId, setAuthToken,
+  setAuthTokenExpiration,
+} from './auth';
 
 export const STORE_USER_DATA = 'STORE_USER_DATA';
 export function storeUserData(user) {
@@ -49,6 +52,7 @@ export function createUser(user, setAuthUser = false) {
           if (setAuthUser) {
             dispatch(setAuthId(res.data.user.id));
             dispatch(setAuthToken(res.data.token));
+            dispatch(setAuthTokenExpiration(res.data.user.tokenExpiration));
           }
 
           dispatch(storeUserData(res.data.user));
@@ -69,6 +73,13 @@ export function updateUserProfile(id, profile) {
         }
       });
   };
+}
+
+export function updateAuthenticatedUserProfile(profile) {
+  return (dispatch, getState) => {
+    const id = selectAuthId(getState());
+    return dispatch(updateUserProfile(id, profile));
+  }
 }
 
 export const UPDATE_USER_EMAIL = 'UPDATE_USER_EMAIL';

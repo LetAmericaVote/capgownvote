@@ -1,7 +1,6 @@
 export * from './api';
 export * from './auth';
 export * from './birthday';
-export * from './eligibility';
 export * from './form';
 export * from './invite';
 export * from './nav';

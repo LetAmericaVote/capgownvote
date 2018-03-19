@@ -2,25 +2,25 @@ import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import Invite from './Invite';
 import {
-  selectSelectedSchoolId, selectSchoolSuggestions,
-  selectSchoolItems, selectSchoolInputValue,
+  selectSchoolSuggestions, selectSchoolItems,
+  selectSchoolInputValue, selectAuthenticatedUserHasSchool,
 } from '../selectors';
 import {
   SuggestionColumn, Suggestion, SuggestionPrimaryTitle,
   SuggestionSecondaryTitle,
 } from '../blocks';
 import {
-  setSelectedSchoolId, setSchoolInputValue,
-  getSchoolData,
+  setSchoolInputValue, getSchoolData,
+  updateAuthenticatedUserProfile,
 } from '../actions';
 
 const SchoolSelectorSuggestions = (props) => {
   const {
-    schoolSuggestions, setSelectedSchoolId, selectedSchoolId,
+    updateUser, schoolSuggestions, hasSchoolSet,
     getSchoolData, schoolItems, schoolInputValue,
   } = props;
 
-  if (selectedSchoolId) {
+  if (hasSchoolSet) {
     return null;
   }
 
@@ -47,7 +47,7 @@ const SchoolSelectorSuggestions = (props) => {
         }
 
         const onClick = () => {
-          setSelectedSchoolId(school);
+          updateUser(school);
         };
 
         return (
@@ -62,17 +62,17 @@ const SchoolSelectorSuggestions = (props) => {
 };
 
 SchoolSelectorSuggestions.mapStateToProps = (state) => ({
-  selectedSchoolId: selectSelectedSchoolId(state),
+  hasSchoolSet: selectAuthenticatedUserHasSchool(state),
   schoolItems: selectSchoolItems(state),
   schoolSuggestions: selectSchoolSuggestions(state),
   schoolInputValue: selectSchoolInputValue(state),
 });
 
 SchoolSelectorSuggestions.mapDispatchToProps = (dispatch) => ({
-  setSelectedSchoolId: (school) => {
+  updateUser: (school) => {
     const { id, name } = school;
 
-    dispatch(setSelectedSchoolId(id));
+    dispatch(updateAuthenticatedUserProfile({ school: id }));
     dispatch(setSchoolInputValue(name));
   },
   getSchoolData: schoolId => dispatch(getSchoolData(schoolId)),

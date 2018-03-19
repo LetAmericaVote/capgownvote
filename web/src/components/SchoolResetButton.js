@@ -1,14 +1,19 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import { setSchoolInputValue, setSelectedSchoolId } from '../actions';
 import { TertiaryButtonWrapper, TertiaryButton } from '../blocks';
+import {
+  setSchoolInputValue,
+  updateAuthenticatedUserProfile,
+} from '../actions';
 
 const SchoolResetButton = (props) => {
-  const { setSchoolInputValue, setSelectedSchoolId } = props;
+  const {
+    setSchoolInputValue, updateAuthenticatedUserProfile
+  } = props;
 
   const onReset = () => {
     setSchoolInputValue(null);
-    setSelectedSchoolId(null);
+    updateAuthenticatedUserProfile({ school: null });
   };
 
   return (
@@ -19,7 +24,7 @@ const SchoolResetButton = (props) => {
 };
 
 SchoolResetButton.actionCreators = {
-  setSchoolInputValue, setSelectedSchoolId,
+  setSchoolInputValue, updateAuthenticatedUserProfile,
 };
 
 export default BaseWrapper(SchoolResetButton);

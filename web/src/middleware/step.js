@@ -22,6 +22,7 @@ const step = store => next => action => {
   const hasActiveStep = selectHasActiveStep(getState());
 
   const setStepWrapper = (stepName) => {
+    console.log(stepName);
     const isNotSameStep = () => selectActiveStep(getState()) !== stepName;
     const hasBackLock = selectHasStepBackLock(getState());
 

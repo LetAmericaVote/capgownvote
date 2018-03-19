@@ -1,17 +1,20 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import { WhiteButton, SelectInput, SelectInputCarrot } from '../blocks';
-import { selectFormValue, selectAssumedStateCode } from '../selectors';
 import { setFormValue } from '../actions';
 import { states } from '../helpers';
+import {
+  selectFormValue,
+  selectAuthenticatedUserStateCode,
+} from '../selectors';
 
 const StateSelector = (props) => {
   const {
     setStateValue, formValue, showConfirmationButton,
-    assumedStateCode, isRequired,
+    userStateCode, isRequired,
   } = props;
 
-  const value = formValue || assumedStateCode || '';
+  const value = formValue || userStateCode || '';
 
   return (
     <SelectInputCarrot required={isRequired}>
@@ -29,7 +32,7 @@ const StateSelector = (props) => {
 };
 
 StateSelector.mapStateToProps = (state, ownProps) => ({
-  assumedStateCode: selectAssumedStateCode(state),
+  userStateCode: selectAuthenticatedUserStateCode(state),
   formValue: selectFormValue(ownProps.formKey, null, state),
 });
 

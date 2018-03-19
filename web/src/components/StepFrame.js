@@ -15,6 +15,11 @@ const StepFrame = (props) => {
     previousStep, disableBackLock, hasBackLock,
   } = props;
 
+  const onNext = () => {
+    disableBackLock();
+    previousStep(); // this is enabling the back lock.
+  };
+
   return (
     <StepFrameLayout isFading={isFading}>
       <StepFrameLayoutPart>
@@ -23,7 +28,7 @@ const StepFrame = (props) => {
           <StepBackButton onClick={previousStep}>&larr; Go Back</StepBackButton>
         ) : null}
         {hasBackLock ? (
-          <StepBackButton onClick={disableBackLock}>Next &rarr;</StepBackButton>
+          <StepBackButton onClick={onNext}>Next &rarr;</StepBackButton>
         ) : null}
       </StepFrameLayoutPart>
       <StepFrameLayoutPart>

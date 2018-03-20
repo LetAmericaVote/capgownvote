@@ -53,7 +53,6 @@ export function changeCurrentStep(stepId) {
       dispatch(clearFade());
     };
 
-    console.log({ delay });
     const timeoutId = setTimeout(postFade, delay);
     dispatch(setFadeTimeoutId(timeoutId));
   };

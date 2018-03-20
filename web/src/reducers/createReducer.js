@@ -23,10 +23,6 @@ const initialState = {
     error: null,
   },
   registration: {
-    isRegistered: {
-      value: false,
-      isConfirmed: false,
-    },
     standardFields: [],
     stateFields: {},
   },

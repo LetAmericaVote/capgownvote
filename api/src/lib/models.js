@@ -163,6 +163,10 @@ const UserSchema = mongoose.Schema({
     type: Boolean,
     default: null,
   },
+  isRegistered: {
+    type: Boolean,
+    default: null,
+  },
   email: {
     type: String,
   },
@@ -197,7 +201,7 @@ UserSchema.index('email', {
 UserSchema.statics.userEditableFields = function(container) {
   const fields = [
     'firstName', 'lastName', 'mobile', 'stateCode', 'zipcode',
-    'birthday', 'school', 'email', 'isEligible',
+    'birthday', 'school', 'email', 'isEligible', 'isRegistered',
   ];
 
   return fields.reduce((acc, key) => {
@@ -280,6 +284,7 @@ UserSchema.methods.api = function() {
     birthday: this.birthday,
     school: this.school,
     isEligible: this.isEligible,
+    isRegistered: this.isRegistered,
     email: this.email,
     tokenExpiration: this.tokenExpiration,
     role: this.role,

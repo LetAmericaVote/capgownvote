@@ -10,7 +10,8 @@ const schools = store => next => action => {
   const result = next(action);
 
   const fillSchoolIfNull = (id) => {
-    if (! selectSchoolData(id, store.getState())) {
+    const schoolData = selectSchoolData(id, store.getState());
+    if (! schoolData || ! schoolData.id) {
       store.dispatch(getSchoolData(id));
     }
   }

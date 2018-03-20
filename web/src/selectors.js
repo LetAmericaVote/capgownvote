@@ -49,12 +49,6 @@ export const selectRegistrationFieldTitle = (rtvKey, state) =>
 export const selectRegistrationFieldOptions = (rtvKey, state) =>
   selectRegistrationField(rtvKey, state).options || [];
 
-export const selectRegistrationIsRegistered = (state) =>
-  state.registration.isRegistered.value;
-
-export const selectRegistrationIsRegisteredConfirmation = (state) =>
-  state.registration.isRegistered.isConfirmed;
-
 export const selectForm = (state) => state.form;
 
 export const selectFormValue = (key, defaultValue, state) =>
@@ -141,6 +135,11 @@ export const selectAuthenticatedUserStateCode = (state) =>
   selectUserStateCode(selectAuthId(state), state);
 
 export const selectUserIsEligible = (id, state) => selectUser(id, state).isEligible;
+
+export const selectUserIsRegistered = (id, state) => selectUser(id, state).isRegistered;
+
+export const selectAuthenticatedUserIsRegistered = (state) =>
+  selectUserIsRegistered(selectAuthId(state), state);
 
 export const selectAuthId = (state) => state.auth.id;
 

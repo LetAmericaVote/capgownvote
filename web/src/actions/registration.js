@@ -2,16 +2,6 @@ import { getFromApi, postToApi } from './api';
 import { makeStateRequestId } from '../helpers';
 import { selectForm } from '../selectors';
 
-export const SET_IS_REGISTERED = 'SET_IS_REGISTERED';
-export function setIsRegistered(isRegistered) {
-  return { type: SET_IS_REGISTERED, isRegistered };
-}
-
-export const SET_IS_REGISTERED_CONFIRMED = 'SET_IS_REGISTERED_CONFIRMED';
-export function setIsRegisteredConfirmation(isConfirmed) {
-  return { type: SET_IS_REGISTERED_CONFIRMED, isConfirmed };
-}
-
 export const SET_STANDARD_REGISTRATION_FIELDS = 'SET_STANDARD_REGISTRATION_FIELDS';
 export function setStandardRegistrationFields(fields) {
   return { type: SET_STANDARD_REGISTRATION_FIELDS, fields };

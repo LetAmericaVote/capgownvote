@@ -3,7 +3,9 @@ import {
   selectStepIsViewed, selectIsAuthenticated,
   selectStepOrder, selectCurrentStepId,
   selectStepIndex, selectRequiresInvite,
+  selectAuthenticatedUser,
   selectAuthenticatedUserHasSchool,
+  selectAuthenticatedUserIsRegistered,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -30,14 +32,16 @@ const stepNames = [
 const step = store => next => action => {
   next(action);
 
+  const user = selectAuthenticatedUser(store.getState());
   const isAuthenticated = selectIsAuthenticated(store.getState());
   const hasSchool = selectAuthenticatedUserHasSchool(store.getState());
   const requiresInvite = selectRequiresInvite(store.getState());
+  const isRegistered = selectAuthenticatedUserIsRegistered(store.getState());
 
   const orderData = [
     {
       id: CREATE_USER_STEP,
-      isComplete: isAuthenticated,
+      isComplete: user.id && isAuthenticated,
     },
     {
       id: FIND_SCHOOL_STEP,
@@ -49,6 +53,13 @@ const step = store => next => action => {
     orderData.push({
       id: INVITE_SCHOOL_STEP,
       isComplete: hasSchool,
+    });
+  }
+
+  if (hasSchool) {
+    orderData.push({
+      id: REGISTRATION_STATUS_STEP,
+      isComplete: typeof isRegistered === 'boolean',
     });
   }
 
@@ -85,29 +96,6 @@ const step = store => next => action => {
       store.dispatch(changeCurrentStep(nextStep.id));
     }
   }
-
-  /*
-
-  * In Middleware, on every action,
-  *  - recalculate step order based on state
-  *  - recalculate the step COMPLETE values.
-  *  - automatically advance the user if the current step is complete and the next step has not been viewed. (use action)
-
-  * In StepFrame Component, display the NEXT button if the current step is complete.
-  *  - In Step Reducer, advance index by 1 (find the numerical index of the current, add one, get that ID)
-  * In StepFrame Component, display the PREVIOUS button if there is a previous step.
-  *  - In Step Reducer, subtract index by 1 (find the numerical index of the current, sub one, get that ID)
-
-  * In Step Reducer, set the VIEWED value to true on the step everytime the index advances.
-
-  * In Change Step Index Action,
-  *  - if fadee.to != newIndex, cancel old timeout.
-  *  - set fade.to = newIndex
-  *  - setTimeout() for 500ms (or 500 - start). set fade.timeout = this. set fade.start = Date.now().
-  *    - set step index = fade.to
-  *    - clear fade settings.
-
-  */
 };
 
 export default step;

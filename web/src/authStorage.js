@@ -45,7 +45,7 @@ export function readAuthToken() {
 }
 
 export function readAuthTokenExpiration() {
-  const value = parseInt(localStorage.getItem(AUTH_TOKEN_EXPIRATION_KEY));
+  const value = parseInt(localStorage.getItem(AUTH_TOKEN_EXPIRATION_KEY), 10);
 
   return value;
 }

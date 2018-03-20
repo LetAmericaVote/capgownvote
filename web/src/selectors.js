@@ -89,16 +89,40 @@ export const selectIsSubscribed = (state) => state.subscribe.isSubscribed;
 
 export const selectIsGuideEnabled = (state) => state.guide.isEnabled;
 
-export const selectStepisFading = (state) => state.step.isFading;
+export const selectCurrentStepId = (state) => state.step.current;
 
-export const selectActiveStep = (state) => state.step.active;
+export const selectStepOrder = (state) => state.step.order;
 
-export const selectHasActiveStep = (state) => !!selectActiveStep(state);
+export const selectStepIndex = (stepId, state) =>
+  selectStepOrder(state).findIndex(step => step.id === stepId);
 
-export const selectHasPreviousSteps = (state) =>
-  !!state.step.stepHistory.filter(step => !!step).length;
+export const selectCurrentStep = (state) =>
+  selectStepOrder(state)[
+    selectStepIndex(selectCurrentStepId(state), state)
+  ];
 
-export const selectHasStepBackLock = (state) => state.step.backLock;
+export const selectNextStep = (state) =>
+  selectStepOrder(state)[
+    selectStepIndex(selectCurrentStepId(state), state) + 1
+  ] || {};
+
+export const selectPreviousStep = (state) =>
+  selectStepOrder(state)[
+    selectStepIndex(selectCurrentStepId(state), state) - 1
+  ] || {};
+
+export const selectStepIsViewed = (id, state) =>
+  (selectStepOrder(state)[selectStepIndex(id, state)] || {}).isViewed;
+
+export const selectHasNextStep = (state) =>
+  !!selectNextStep(state).id &&
+  selectCurrentStep(state).isComplete;
+
+export const selectHasPreviousStep = (state) => !!selectPreviousStep(state).id;
+
+export const selectStepFade = (state) => state.step.fade;
+
+export const selectIsStepFadeSet = (state) => !!selectStepFade(state).to;
 
 export const selectUser = (id, state) => state.user[id] || {};
 
@@ -107,6 +131,8 @@ export const selectHasUser = (id, state) => !!state.user[id];
 export const selectUserSchoolId = (id, state) => selectUser(id, state).school;
 
 export const selectUserHasSchool = (id, state) => !!selectUserSchoolId(id, state);
+
+export const selectAuthenticatedUser = (state) => selectUser(selectAuthId(state), state);
 
 export const selectAuthenticatedUserHasSchool = (state) =>
   selectUserHasSchool(selectAuthId(state), state);

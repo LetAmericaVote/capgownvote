@@ -280,7 +280,6 @@ export const Subtitle = styled.h3`
   color: ${colors.black};
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
-  text-align: center;
   ${secondaryFontFamily}
   ${fontKerning}
 `;
@@ -483,6 +482,16 @@ export const StepFrameLayoutPart = styled.div`
   `}
 `;
 
+export const StepSticky = styled.div`
+  display: block;
+  width: 100%;
+
+  ${media.tablet`
+    position: sticky;
+    top: ${baseValue}px;
+  `}
+`;
+
 export const StepTitle = styled.h2`
   display: block;
   color: ${colors.black};
@@ -490,11 +499,6 @@ export const StepTitle = styled.h2`
   line-height: ${baseValue * 2}px;
   ${primaryFontFamily}
   ${fontKerning}
-
-  ${media.tablet`
-    position: sticky;
-    top: ${baseValue}px;
-  `}
 `;
 
 export const StepBackButton = styled.a`
@@ -505,8 +509,6 @@ export const StepBackButton = styled.a`
   margin-top: ${baseValue / 2}px;
   cursor: pointer;
   text-transform: uppercase;
-  position: sticky;
-  top: ${baseValue * 5.5}px;
   ${secondaryFontFamily}
   ${fontKerning}
 `;

@@ -44,10 +44,13 @@ const initialState = {
     suggestions: [],
   },
   step: {
-    active: null,
-    backLock: false,
-    stepHistory: [],
-    isFading: false,
+    order: [],
+    current: null,
+    fade: {
+      to: null,
+      timeoutId: null,
+      startTime: null,
+    },
   },
   subscribe: {
     isSubscribed: false,

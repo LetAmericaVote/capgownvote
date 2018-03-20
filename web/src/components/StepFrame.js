@@ -1,35 +1,35 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import { previousStep, disableBackLock } from '../actions';
 import {
-  selectHasPreviousSteps, selectHasStepBackLock,
+  moveCurrentStepForward, moveCurrentStepBackward,
+} from '../actions';
+import {
+  selectHasPreviousStep, selectHasNextStep,
 } from '../selectors';
 import {
   StepFrameLayout, StepFrameLayoutPart,
-  StepTitle, StepBackButton,
+  StepTitle, StepBackButton, StepSticky,
 } from '../blocks';
 
 const StepFrame = (props) => {
   const {
     title, children, isFading, hasPreviousStep,
-    previousStep, disableBackLock, hasBackLock,
+    hasNextStep, moveCurrentStepForward,
+    moveCurrentStepBackward,
   } = props;
-
-  const onNext = () => {
-    disableBackLock();
-    previousStep(); // this is enabling the back lock.
-  };
 
   return (
     <StepFrameLayout isFading={isFading}>
       <StepFrameLayoutPart>
-        <StepTitle>{title}</StepTitle>
-        {hasPreviousStep ? (
-          <StepBackButton onClick={previousStep}>&larr; Go Back</StepBackButton>
-        ) : null}
-        {hasBackLock ? (
-          <StepBackButton onClick={onNext}>Next &rarr;</StepBackButton>
-        ) : null}
+        <StepSticky>
+          <StepTitle>{title}</StepTitle>
+          {hasPreviousStep ? (
+            <StepBackButton onClick={moveCurrentStepBackward}>&larr; Go Back</StepBackButton>
+          ) : null}
+          {hasNextStep ? (
+            <StepBackButton onClick={moveCurrentStepForward}>Next &rarr;</StepBackButton>
+          ) : null}
+        </StepSticky>
       </StepFrameLayoutPart>
       <StepFrameLayoutPart>
         {children}
@@ -39,12 +39,12 @@ const StepFrame = (props) => {
 };
 
 StepFrame.mapStateToProps = (state) => ({
-  hasPreviousStep: selectHasPreviousSteps(state),
-  hasBackLock: selectHasStepBackLock(state),
+  hasPreviousStep: selectHasPreviousStep(state),
+  hasNextStep: selectHasNextStep(state),
 });
 
 StepFrame.actionCreators = {
-  previousStep, disableBackLock,
+  moveCurrentStepForward, moveCurrentStepBackward,
 };
 
 export default BaseWrapper(StepFrame);

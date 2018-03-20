@@ -1,34 +1,56 @@
 import createReducer from './createReducer';
 import {
-  SET_ACTIVE_STEP, SET_IS_FADING,
-  GO_BACK_TO_PREVIOUS_STEP, DISABLE_STEP_BACK_LOCK,
+  SET_FADE_TO, SET_FADE_TIMEOUT_ID, SET_FADE_START_TIME,
+  CLEAR_FADE, CHANGE_CURRENT_STEP, SET_STEP_ORDER,
 } from '../actions';
 
 const step = createReducer('step', {
-  [SET_ACTIVE_STEP]: (state, action) => ({
+  [SET_FADE_TO]: (state, action) => ({
     ...state,
-    active: action.stepName,
-    stepHistory: [
-      state.active,
-      ...state.stepHistory,
-    ],
+    fade: {
+      ...state.fade,
+      to: action.to,
+    },
   }),
-  [GO_BACK_TO_PREVIOUS_STEP]: (state, action) => ({
+  [SET_FADE_TIMEOUT_ID]: (state, action) => ({
     ...state,
-    active: state.stepHistory[0],
-    backLock: true,
-    stepHistory: [
-      state.active,
-      state.stepHistory.slice(1)
-    ],
+    fade: {
+      ...state.fade,
+      timeoutId: action.timeoutId,
+    },
   }),
-  [SET_IS_FADING]: (state, action) => ({
+  [SET_FADE_START_TIME]: (state, action) => ({
     ...state,
-    isFading: action.isFading,
+    fade: {
+      ...state.fade,
+      startTime: action.startTime,
+    },
   }),
-  [DISABLE_STEP_BACK_LOCK]: (state, action) => ({
+  [CLEAR_FADE]: (state, action) => ({
     ...state,
-    backLock: false,
+    fade: {
+      to: null,
+      timeoutId: null,
+      startTime: null,
+    },
+  }),
+  [CHANGE_CURRENT_STEP]: (state, action) => ({
+    ...state,
+    current: action.stepId,
+    order: state.order.map(step => {
+      if (step.id === action.stepId) {
+        return {
+          ...step,
+          isViewed: true,
+        };
+      }
+
+      return step;
+    }),
+  }),
+  [SET_STEP_ORDER]: (state, action) => ({
+    ...state,
+    order: action.order,
   }),
 });
 

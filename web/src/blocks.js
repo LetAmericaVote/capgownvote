@@ -813,7 +813,6 @@ export const SuggestionSecondaryTitle = styled.h3`
 export const InviteLayout = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: ${baseValue}px;
 `;
 
 export const InviteHeader = styled.h1`

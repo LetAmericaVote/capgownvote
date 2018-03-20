@@ -1,79 +1,113 @@
 import React from 'react';
 import InviteSubmit from './InviteSubmit';
 import BaseWrapper from './BaseWrapper';
-import StateSelector from './StateSelector';
+import FormStateSelector from './FormStateSelector';
+import { setFormValue } from '../actions';
 import {
-  InviteLayout, InviteHeader, SpacedInputGroupLayout,
-  InputGroupLabel, TextInput,
-} from '../blocks';
-import {
-  selectInviteSchoolState, selectInviteFirstName,
-  selectInviteEmail, selectInviteIsCompleted,
+  selectFormValue, selectSchoolInputValue,
+  selectAuthenticatedUserHasSchool,
 } from '../selectors';
 import {
-  setInviteSchoolState, setInviteFirstName,
-  setInviteEmail,
-} from '../actions';
+  InviteLayout, InviteHeader, SpacedInputGroupLayout,
+  InputGroupLabel, TextInput, InputGroupLabelLayout,
+} from '../blocks';
+import {
+  SCHOOL_INVITE_NAME, SCHOOL_INVITE_STATE_CODE,
+  SCHOOL_INVITE_CITY, SCHOOL_INVITE_ZIPCODE,
+} from '../formKeys';
 
-const headerCopy = `Can't find your school? Leave your contact info below to request an invite to the competition. You can still register to vote afterwards.`;
+const headerCopy = `Can't find your school? No worries, just enter a few details to have it added to the competition. You can still register to vote afterwards.`;
 
 const Invite = (props) => {
   const {
-    schoolStateEventHandler, firstNameEventHandler,
-    emailEventHandler, inviteSchoolState,
-    inviteFirstName, inviteEmail, isCompleted,
+    name, city, zipcode,
+    schoolSearchInput, setFormValue,
+    authenticatedUserHasSchool,
   } = props;
 
-  const form = isCompleted ? null : [
-    <SpacedInputGroupLayout key="state">
-      <InputGroupLabel>
-        The state your school is in
-      </InputGroupLabel>
-      <StateSelector
-        setStateValue={schoolStateEventHandler}
-        value={inviteSchoolState}
-      />
-    </SpacedInputGroupLayout>,
-    <SpacedInputGroupLayout key="first">
-      <InputGroupLabel>
-        Your first name
-      </InputGroupLabel>
-      <TextInput
-        onChange={firstNameEventHandler}
-        value={inviteFirstName}
-      />
-    </SpacedInputGroupLayout>,
-    <SpacedInputGroupLayout key="email">
-      <InputGroupLabel>
-        Your email address
-      </InputGroupLabel>
-      <TextInput
-        onChange={emailEventHandler}
-        value={inviteEmail}
-      />
-    </SpacedInputGroupLayout>,
-  ];
+  if (authenticatedUserHasSchool) {
+    return (
+      <InviteLayout>
+        <InviteHeader>We got the submission for your school - Thanks!</InviteHeader>
+      </InviteLayout>
+    );
+  }
+
+  if (! name && schoolSearchInput) {
+    setFormValue(SCHOOL_INVITE_NAME, schoolSearchInput);
+  }
 
   return (
     <InviteLayout>
       <InviteHeader>{headerCopy}</InviteHeader>
-      {form}
+      <SpacedInputGroupLayout>
+        <InputGroupLabelLayout>
+          <InputGroupLabel>
+            Full School Name
+          </InputGroupLabel>
+          <InputGroupLabel error>
+            Required
+          </InputGroupLabel>
+        </InputGroupLabelLayout>
+        <TextInput
+          onChange={event => setFormValue(SCHOOL_INVITE_NAME, event.target.value)}
+          value={name}
+        />
+      </SpacedInputGroupLayout>
+      <SpacedInputGroupLayout>
+        <InputGroupLabelLayout>
+          <InputGroupLabel>
+            School City
+          </InputGroupLabel>
+          <InputGroupLabel error>
+            Required
+          </InputGroupLabel>
+        </InputGroupLabelLayout>
+        <TextInput
+          onChange={event => setFormValue(SCHOOL_INVITE_CITY, event.target.value)}
+          value={city}
+        />
+      </SpacedInputGroupLayout>
+      <SpacedInputGroupLayout>
+        <InputGroupLabelLayout>
+          <InputGroupLabel>
+            School State
+          </InputGroupLabel>
+          <InputGroupLabel error>
+            Required
+          </InputGroupLabel>
+        </InputGroupLabelLayout>
+        <FormStateSelector formKey={SCHOOL_INVITE_STATE_CODE} />
+      </SpacedInputGroupLayout>
+      <SpacedInputGroupLayout>
+        <InputGroupLabelLayout>
+          <InputGroupLabel>
+            School Zipcode
+          </InputGroupLabel>
+          <InputGroupLabel error>
+            Required
+          </InputGroupLabel>
+        </InputGroupLabelLayout>
+        <TextInput
+          onChange={event => setFormValue(SCHOOL_INVITE_ZIPCODE, event.target.value)}
+          value={zipcode}
+        />
+      </SpacedInputGroupLayout>
       <InviteSubmit />
     </InviteLayout>
   );
 };
 
 Invite.mapStateToProps = (state) => ({
-  inviteSchoolState: selectInviteSchoolState(state),
-  inviteFirstName: selectInviteFirstName(state),
-  inviteEmail: selectInviteEmail(state),
-  isCompleted: selectInviteIsCompleted(state),
+  name: selectFormValue(SCHOOL_INVITE_NAME, null, state),
+  city: selectFormValue(SCHOOL_INVITE_CITY, null, state),
+  zipcode: selectFormValue(SCHOOL_INVITE_ZIPCODE, null, state),
+  schoolSearchInput: selectSchoolInputValue(state),
+  authenticatedUserHasSchool: selectAuthenticatedUserHasSchool(state),
 });
 
-Invite.mapDispatchToProps = (dispatch) => ({
-  schoolStateEventHandler: event => dispatch(setInviteSchoolState(event.target.value)),
-  firstNameEventHandler: event => dispatch(setInviteFirstName(event.target.value)),
-  emailEventHandler: event => dispatch(setInviteEmail(event.target.value)),
-});
+Invite.actionCreators = {
+  setFormValue,
+};
 
 export default BaseWrapper(Invite);

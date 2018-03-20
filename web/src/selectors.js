@@ -1,16 +1,6 @@
 import { HOME_STATE_RTV_KEY } from './helpers';
 
-export const selectInviteFields = (state) => state.invite;
-
-export const selectInviteSchoolName = (state) => selectInviteFields(state).schoolName;
-
-export const selectInviteSchoolState = (state) => selectInviteFields(state).stateCode;
-
-export const selectInviteFirstName = (state) => selectInviteFields(state).firstName;
-
-export const selectInviteEmail = (state) => selectInviteFields(state).email;
-
-export const selectInviteIsCompleted = (state) => selectInviteFields(state).isComplete;
+export const selectRequiresInvite = (state) => state.invite.requiresInvite;
 
 export const selectSchoolInputValue = (state) => state.school.inputValue || '';
 

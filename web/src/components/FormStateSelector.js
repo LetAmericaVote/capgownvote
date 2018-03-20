@@ -8,7 +8,7 @@ import {
   selectAuthenticatedUserStateCode,
 } from '../selectors';
 
-const StateSelector = (props) => {
+const FormStateSelector = (props) => {
   const {
     setStateValue, formValue, showConfirmationButton,
     userStateCode, isRequired,
@@ -31,12 +31,12 @@ const StateSelector = (props) => {
   );
 };
 
-StateSelector.mapStateToProps = (state, ownProps) => ({
+FormStateSelector.mapStateToProps = (state, ownProps) => ({
   userStateCode: selectAuthenticatedUserStateCode(state),
   formValue: selectFormValue(ownProps.formKey, null, state),
 });
 
-StateSelector.mapDispatchToProps = (dispatch, ownProps) => ({
+FormStateSelector.mapDispatchToProps = (dispatch, ownProps) => ({
   setStateValue: event => {
     const { value } = event.target;
     const { formKey } = ownProps;
@@ -44,4 +44,4 @@ StateSelector.mapDispatchToProps = (dispatch, ownProps) => ({
   },
 });
 
-export default BaseWrapper(StateSelector);
+export default BaseWrapper(FormStateSelector);

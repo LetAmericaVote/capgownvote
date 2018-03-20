@@ -1,34 +1,40 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import Invite from './Invite';
 import {
   selectSchoolSuggestions, selectSchoolItems,
-  selectSchoolInputValue, selectAuthenticatedUserHasSchool,
+  selectAuthenticatedUserHasSchool,
+  selectSchoolInputValue,
 } from '../selectors';
 import {
   SuggestionColumn, Suggestion, SuggestionPrimaryTitle,
-  SuggestionSecondaryTitle,
+  SuggestionSecondaryTitle, TertiaryButton,
+  TertiaryButtonWrapper,
 } from '../blocks';
 import {
   setSchoolInputValue, getSchoolData,
-  updateAuthenticatedUserProfile,
+  updateAuthenticatedUserProfile, setRequiresInvite,
 } from '../actions';
 
 const SchoolSelectorSuggestions = (props) => {
   const {
     updateUser, schoolSuggestions, hasSchoolSet,
-    getSchoolData, schoolItems, schoolInputValue,
+    getSchoolData, schoolItems, setRequiresInvite,
+    hasSchoolInput,
   } = props;
 
   if (hasSchoolSet) {
     return null;
   }
 
-  if (schoolInputValue && (! schoolSuggestions || ! schoolSuggestions.length)) {
+  const RequireInviteCheckbox = () => {
     return (
-      <Invite />
+      <TertiaryButtonWrapper>
+        <TertiaryButton
+          onClick={() => setRequiresInvite(true)}
+        >Can't find your school?</TertiaryButton>
+      </TertiaryButtonWrapper>
     );
-  }
+  };
 
   return (
     <SuggestionColumn>
@@ -57,6 +63,7 @@ const SchoolSelectorSuggestions = (props) => {
           </Suggestion>
         );
       })}
+      {hasSchoolInput ? <RequireInviteCheckbox /> : null}
     </SuggestionColumn>
   );
 };
@@ -65,7 +72,7 @@ SchoolSelectorSuggestions.mapStateToProps = (state) => ({
   hasSchoolSet: selectAuthenticatedUserHasSchool(state),
   schoolItems: selectSchoolItems(state),
   schoolSuggestions: selectSchoolSuggestions(state),
-  schoolInputValue: selectSchoolInputValue(state),
+  hasSchoolInput: !!selectSchoolInputValue(state),
 });
 
 SchoolSelectorSuggestions.mapDispatchToProps = (dispatch) => ({
@@ -74,8 +81,10 @@ SchoolSelectorSuggestions.mapDispatchToProps = (dispatch) => ({
 
     dispatch(updateAuthenticatedUserProfile({ school: id }));
     dispatch(setSchoolInputValue(name));
+    dispatch(setRequiresInvite(false));
   },
   getSchoolData: schoolId => dispatch(getSchoolData(schoolId)),
+  setRequiresInvite: requiresInvite => dispatch(setRequiresInvite(requiresInvite)),
 });
 
 export default BaseWrapper(SchoolSelectorSuggestions);

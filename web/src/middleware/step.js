@@ -1,8 +1,9 @@
 import { setStepOrder, changeCurrentStep } from '../actions';
 import {
-  selectStepIsViewed, selectAuthenticatedUser,
+  selectStepIsViewed, selectIsAuthenticated,
   selectStepOrder, selectCurrentStepId,
-  selectStepIndex,
+  selectStepIndex, selectRequiresInvite,
+  selectAuthenticatedUserHasSchool,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -29,19 +30,27 @@ const stepNames = [
 const step = store => next => action => {
   next(action);
 
-  const authenticatedUser = selectAuthenticatedUser(store.getState());
-  console.log(authenticatedUser);
+  const isAuthenticated = selectIsAuthenticated(store.getState());
+  const hasSchool = selectAuthenticatedUserHasSchool(store.getState());
+  const requiresInvite = selectRequiresInvite(store.getState());
 
   const orderData = [
     {
       id: CREATE_USER_STEP,
-      isComplete: !!authenticatedUser && !!authenticatedUser.id,
+      isComplete: isAuthenticated,
     },
     {
       id: FIND_SCHOOL_STEP,
-      isComplete: !!authenticatedUser && !!authenticatedUser.school,
+      isComplete: hasSchool || requiresInvite,
     },
   ];
+
+  if (selectRequiresInvite(store.getState())) {
+    orderData.push({
+      id: INVITE_SCHOOL_STEP,
+      isComplete: hasSchool,
+    });
+  }
 
   const order = orderData.map((step) => ({
     ...step,
@@ -59,7 +68,7 @@ const step = store => next => action => {
     });
 
   if (isChanged) {
-    store.dispatch(setStepOrder(order));
+    next(setStepOrder(order));
   }
 
   const currentStepId = selectCurrentStepId(store.getState());

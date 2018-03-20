@@ -6,6 +6,7 @@ import Notification from '../components/Notification'
 import StepFrame from '../components/StepFrame';
 import Signup from '../components/Signup';
 import SchoolSelector from '../components/SchoolSelector';
+import Invite from '../components/Invite';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
@@ -14,6 +15,7 @@ import {
 import {
   CREATE_USER_STEP,
   FIND_SCHOOL_STEP,
+  INVITE_SCHOOL_STEP,
   REGISTRATION_STATUS_STEP,
   RULES_STEP,
   FORM_STEP,
@@ -47,6 +49,14 @@ const Register = (props) => {
       );
 
       break;
+    }
+
+    case INVITE_SCHOOL_STEP: {
+      ActiveStepComponent = (props) => (
+        <StepFrame {...props} title="Add your school to the competition.">
+          <Invite />
+        </StepFrame>
+      );
     }
 
     default: break;

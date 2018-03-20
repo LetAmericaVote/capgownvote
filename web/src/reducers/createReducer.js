@@ -14,12 +14,7 @@ const initialState = {
   },
   form: {},
   invite: {
-    stateCode: null,
-    invitedBy: {
-      firstName: null,
-      email: null,
-    },
-    isComplete: false,
+    requiresInvite: false,
   },
   nav: {
     isOpen: false,

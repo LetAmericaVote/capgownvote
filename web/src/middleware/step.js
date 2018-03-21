@@ -16,19 +16,9 @@ import {
   RULES_STEP,
   FORM_STEP,
   MAIL_FORM_STEP,
-  POST_SIGNUP_STEP,
+  CONTINUE_IMPACT_STEP,
+  STILL_IMPACT_STEP,
 } from '../stepNames'
-
-const stepNames = [
-  CREATE_USER_STEP,
-  FIND_SCHOOL_STEP,
-  INVITE_SCHOOL_STEP,
-  REGISTRATION_STATUS_STEP,
-  RULES_STEP,
-  FORM_STEP,
-  MAIL_FORM_STEP,
-  POST_SIGNUP_STEP,
-];
 
 const step = store => next => action => {
   next(action);
@@ -67,6 +57,13 @@ const step = store => next => action => {
 
   if (isRegistered) {
     orderData.push({
+      id: STILL_IMPACT_STEP,
+      isComplete: false,
+    });
+  }
+
+  if (typeof isRegistered === 'boolean' && ! isRegistered) {
+    orderData.push({
       id: RULES_STEP,
       isComplete: typeof isEligible === 'boolean',
     });
@@ -76,6 +73,13 @@ const step = store => next => action => {
     orderData.push({
       id: FORM_STEP,
       isComplete: isRegistered,
+    });
+  }
+
+  if (typeof isEligible === 'boolean' && ! isEligible) {
+    orderData.push({
+      id: STILL_IMPACT_STEP,
+      isComplete: false,
     });
   }
 

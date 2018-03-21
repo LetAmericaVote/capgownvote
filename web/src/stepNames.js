@@ -12,4 +12,6 @@ export const FORM_STEP = 'FORM_STEP';
 
 export const MAIL_FORM_STEP = 'MAIL_STEP';
 
-export const POST_SIGNUP_STEP = 'POST_SIGNUP_STEP';
+export const STILL_IMPACT_STEP = 'STILL_IMPACT_STEP';
+
+export const CONTINUE_IMPACT_STEP = 'CONTINUE_IMPACT_STEP';

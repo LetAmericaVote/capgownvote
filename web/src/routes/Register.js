@@ -23,7 +23,8 @@ import {
   RULES_STEP,
   FORM_STEP,
   MAIL_FORM_STEP,
-  POST_SIGNUP_STEP,
+  CONTINUE_IMPACT_STEP,
+  STILL_IMPACT_STEP,
 } from '../stepNames'
 
 const subCopy = `Every student that signs up for Cap, Gown, Vote! gets points for their school, and if you register to vote, you'll earn double the points. We can't legally offer you a prize, but you get to brag about being the most civically engaged high school in America.`;
@@ -88,6 +89,16 @@ const Register = (props) => {
       ActiveStepComponent = (props) => (
         <StepFrame {...props} title="Fill out the remainder of the voter registration form.">
           <VoterReg />
+        </StepFrame>
+      );
+
+      break;
+    }
+
+    case STILL_IMPACT_STEP: {
+      ActiveStepComponent = (props) => (
+        <StepFrame {...props} title="You can still make a difference.">
+          <p>...</p>
         </StepFrame>
       );
 

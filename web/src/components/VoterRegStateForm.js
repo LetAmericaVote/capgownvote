@@ -1,7 +1,6 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import VoterRegFormBuilder from './VoterRegFormBuilder';
-import EmailSubscriptionInput from './EmailSubscriptionInput';
 import {
   selectStateRegistrationFields,
   selectAuthenticatedUserStateCode,
@@ -10,7 +9,6 @@ import {
 const VoterRegStateForm = (props) => (
   <div>
     <VoterRegFormBuilder fields={props.stateFields} />
-    <EmailSubscriptionInput />
   </div>
 );
 

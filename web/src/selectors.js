@@ -15,15 +15,15 @@ export const selectApiRequest = (id, state) => state.api[id] || null;
 export const selectApiRequestIsPending = (id, state) => (selectApiRequest(id, state) || {}).isPending;
 
 export const selectHasStandardRegistrationFields = (state) =>
-  state.registration.standardFields &&
-  Object.keys(state.registration.standardFields).length;
+  !!state.registration.standardFields &&
+  !!Object.keys(state.registration.standardFields).length;
 
 export const selectStandardRegistrationFields = (state) =>
   state.registration.standardFields || [];
 
 export const selectHasStateRegistrationFields = (state, reduxState) =>
-  reduxState.registration.stateFields[state] &&
-  Object.keys(reduxState.registration.stateFields[state]).length;
+  !!reduxState.registration.stateFields[state] &&
+  !!Object.keys(reduxState.registration.stateFields[state]).length;
 
 export const selectStateRegistrationFields = (state, reduxState) =>
   reduxState.registration.stateFields[state] || [];

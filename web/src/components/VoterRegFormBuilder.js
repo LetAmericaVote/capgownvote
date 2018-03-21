@@ -4,7 +4,7 @@ import BirthdayInput from './BirthdayInput';
 import FormStateSelector from './FormStateSelector';
 import { setFormValue } from '../actions';
 import { isDefined } from '../helpers';
-import { selectForm, selectValidationErrors } from '../selectors';
+import { selectForm } from '../selectors';
 import {
   SpacedInputGroupLayout, InputGroupLabelLayout,
   InputGroupLabel, TextInput, CheckboxInput,
@@ -14,8 +14,7 @@ import {
 
 const VoterRegFormBuilder = (props) => {
   const {
-    fields, form, setFormValue, errors,
-  } = props;
+    fields, form, setFormValue } = props;
 
   if (! fields) {
     return null;
@@ -32,7 +31,6 @@ const VoterRegFormBuilder = (props) => {
     }
 
     const value = form[rtvKey];
-    const error = errors[rtvKey];
 
     if (isDefined(field.default) && ! isDefined(value)) {
       setFormValue(rtvKey, field.default);
@@ -56,7 +54,6 @@ const VoterRegFormBuilder = (props) => {
           <TextInput
             onChange={event => setFormValue(rtvKey, event.target.value)}
             value={value}
-            hasError={error}
           />
           {helpMessage ? (
             <InputGroupHelperLabel>
@@ -99,7 +96,6 @@ const VoterRegFormBuilder = (props) => {
           </InputGroupLabelLayout>
           <SelectInputCarrot>
             <SelectInput
-              hasError={error}
               value={value || ''}
               onChange={event => setFormValue(rtvKey, event.target.value)}
             >
@@ -168,7 +164,6 @@ const VoterRegFormBuilder = (props) => {
 
 VoterRegFormBuilder.mapStateToProps = (state) => ({
   form: selectForm(state),
-  errors: selectValidationErrors(state),
 });
 
 VoterRegFormBuilder.mapDispatchToProps = (dispatch) => ({

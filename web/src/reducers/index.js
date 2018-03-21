@@ -10,14 +10,13 @@ import registration from './registration';
 import routing from './routing';
 import school from './school';
 import step from './step';
-import subscribe from './subscribe';
 import user from './user';
 import validation from './validation';
 
 const reducers = combineReducers({
   api, auth, birthday, form, invite, nav,
   notification, registration, routing,
-  school, step, subscribe, user, validation,
+  school, step, user, validation,
 });
 
 export default reducers;

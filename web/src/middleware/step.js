@@ -72,6 +72,13 @@ const step = store => next => action => {
     });
   }
 
+  if (isEligible) {
+    orderData.push({
+      id: FORM_STEP,
+      isComplete: isRegistered,
+    });
+  }
+
   const order = orderData.map((step) => ({
     ...step,
     isViewed: selectStepIsViewed(step.id, store.getState()),

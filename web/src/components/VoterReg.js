@@ -9,8 +9,10 @@ import {
   GET_STANDARD_REGISTRATION_FIELDS, GET_STATE_REGISTRATION_FIELDS,
 } from '../actions';
 import {
-  selectApiRequest, selectFormHomeState,
-  selectHasStandardRegistrationFields, selectHasStateRegistrationFields,
+  selectApiRequest,
+  selectHasStandardRegistrationFields,
+  selectHasStateRegistrationFields,
+  selectAuthenticatedUserStateCode,
 } from '../selectors';
 
 const VoterReg = (props) => {
@@ -75,12 +77,16 @@ const VoterReg = (props) => {
 };
 
 VoterReg.mapStateToProps = (state) => ({
-  stateCode: selectFormHomeState(state),
+  stateCode: selectAuthenticatedUserStateCode(state),
   hasStandardRegistrationFields: selectHasStandardRegistrationFields(state),
-  hasStateRegistrationFields: selectHasStateRegistrationFields(selectFormHomeState(state), state),
+  hasStateRegistrationFields: selectHasStateRegistrationFields(
+    selectAuthenticatedUserStateCode(state), state
+  ),
   standardRegistrationFieldsRequest: selectApiRequest(GET_STANDARD_REGISTRATION_FIELDS, state),
   stateRegistrationFieldsRequest: selectApiRequest(
-    makeStateRequestId(GET_STATE_REGISTRATION_FIELDS, selectFormHomeState(state)), state
+    makeStateRequestId(
+      GET_STATE_REGISTRATION_FIELDS, selectAuthenticatedUserStateCode(state)
+    ), state
   ),
 });
 

@@ -9,6 +9,5 @@ export * from './registration'
 export * from './routing';
 export * from './school';
 export * from './step';
-export * from './subscribe';
 export * from './user';
 export * from './validation';

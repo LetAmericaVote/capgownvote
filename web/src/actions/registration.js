@@ -1,6 +1,9 @@
 import { getFromApi, postToApi } from './api';
 import { makeStateRequestId } from '../helpers';
-import { selectForm } from '../selectors';
+import {
+  selectForm,
+  selectAuthenticatedUserStateCode,
+} from '../selectors';
 
 export const SET_STANDARD_REGISTRATION_FIELDS = 'SET_STANDARD_REGISTRATION_FIELDS';
 export function setStandardRegistrationFields(fields) {
@@ -27,13 +30,13 @@ export function getStandardRegistrationFields() {
 export const GET_STATE_REGISTRATION_FIELDS = 'GET_STATE_REGISTRATION_FIELDS';
 export function getStateRegistrationFields(state) {
   return (dispatch, getState) => {
-    const requestedState = state || getState().assumed.state;
+    const requestedState = state || selectAuthenticatedUserStateCode(getState());
     const requestId = makeStateRequestId(GET_STATE_REGISTRATION_FIELDS, requestedState);
     const endpoint = `/v1/rtv/fields/${requestedState}`;
 
     dispatch(getFromApi(requestId, endpoint))
       .then(res => {
-        if (res.data) {
+        if (res && res.data) {
           dispatch(setStateRegistrationFields(requestedState, res.data));
         }
       });

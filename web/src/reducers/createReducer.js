@@ -43,9 +43,6 @@ const initialState = {
       startTime: null,
     },
   },
-  subscribe: {
-    isSubscribed: false,
-  },
   user: {},
   validation: {},
 };

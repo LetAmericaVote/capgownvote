@@ -17,7 +17,11 @@ const VoterRegSubmit = (props) => {
     .filter(key => typeof validationErrors[key] === 'string');
 
   const failedValidationTitles = failedValidationKeys
-    .map(rtvKey => registrationFields.find(field => field.rtvKey === rtvKey).title);
+    .map(rtvKey => {
+      const { title } = registrationFields.find(field => field.rtvKey === rtvKey);
+
+      return `"${title}"`;
+    });
 
   const hasErrors = !! failedValidationKeys.length;
   const singularError = failedValidationKeys.length === 1;

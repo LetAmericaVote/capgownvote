@@ -9,6 +9,7 @@ import SchoolSelector from '../components/SchoolSelector';
 import Invite from '../components/Invite';
 import RegistrationStatus from '../components/RegistrationStatus';
 import Rules from '../components/Rules';
+import VoterReg from '../components/VoterReg';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
@@ -77,6 +78,16 @@ const Register = (props) => {
       ActiveStepComponent = (props) => (
         <StepFrame {...props} title="Are you eligible to vote?">
           <Rules />
+        </StepFrame>
+      );
+
+      break;
+    }
+
+    case FORM_STEP: {
+      ActiveStepComponent = (props) => (
+        <StepFrame {...props} title="Fill out the remainder of the voter registration form.">
+          <VoterReg />
         </StepFrame>
       );
 

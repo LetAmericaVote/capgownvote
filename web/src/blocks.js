@@ -744,7 +744,7 @@ export const CheckboxLayout = styled.div`
   width: 100%;
   flex-direction: row;
 
-  ${props => props.spacing ? `margin-bottom: ${baseValue}px;` : ''}
+  ${props => props.spacing ? `margin: ${baseValue}px 0;` : ''}
 `;
 
 export const CheckboxTitleLayout = styled.div`

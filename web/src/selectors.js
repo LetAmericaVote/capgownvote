@@ -98,6 +98,7 @@ export const selectStepIsViewed = (id, state) =>
 
 export const selectHasNextStep = (state) =>
   !!selectNextStep(state).id &&
+  !!selectCurrentStep(state) &&
   selectCurrentStep(state).isComplete;
 
 export const selectHasPreviousStep = (state) => !!selectPreviousStep(state).id;
@@ -150,7 +151,7 @@ export const selectAuthId = (state) => state.auth.id;
 export const selectAuthToken = (state) => state.auth.token;
 
 export const selectIsAuthenticated = (state) =>
-  selectAuthId(state) && selectAuthToken(state);
+  !!selectAuthId(state) && !!selectAuthToken(state);
 
 export const selectIsPublicComputer = (state) => state.auth.isPublicComputer;
 

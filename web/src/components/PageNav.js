@@ -47,7 +47,12 @@ const PageNav = (props) => {
             const { title, to } = link;
 
             const MenuLink = Link(({ onClick }) => (
-              <NavLink onClick={onClick}>{title}</NavLink>
+              <NavLink
+                onClick={() => {
+                  onClick();
+                  toggleNavMenu();
+                }}
+              >{title}</NavLink>
             ), to);
 
             return (

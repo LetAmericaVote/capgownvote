@@ -43,7 +43,7 @@ const step = store => next => action => {
   const orderData = [
     {
       id: CREATE_USER_STEP,
-      isComplete: user.id && isAuthenticated,
+      isComplete: !!user.id && isAuthenticated,
     },
     {
       id: FIND_SCHOOL_STEP,

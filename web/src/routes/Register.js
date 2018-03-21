@@ -94,7 +94,13 @@ const Register = (props) => {
       break;
     }
 
-    default: break;
+    default: {
+      ActiveStepComponent = (props) => (
+        <StepFrame {...props} title="How did you end up here?" />
+      );
+
+      break;
+    }
   }
 
   return (

@@ -288,6 +288,7 @@ UserSchema.methods.api = function() {
     email: this.email,
     tokenExpiration: this.tokenExpiration,
     role: this.role,
+    rules: this.rules,
   };
 };
 

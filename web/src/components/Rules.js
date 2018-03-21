@@ -1,65 +1,58 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import { states } from '../helpers';
+import { updateUserProfile } from '../actions';
 import {
-  setStateEligibilityConfirmation,
-  getStateEligibilityRequirements,
-} from '../actions';
-import {
-  RulesLayout, RuleItem, WhiteButton,
+  RulesLayout, RuleItem, SpacedInputGroupLayout,
+  CheckboxLayout, CheckboxInput, CheckboxTitle,
+  CheckboxTitleLayout,
 } from '../blocks';
 import {
-  selectStateEligibilityRulesFromAnySource,
-  selectStateIsEligible, selectFormHomeState,
+  selectAuthenticatedUserIsEligible,
+  selectAuthenticatedUserRules,
+  selectAuthId,
 } from '../selectors';
 
+const eligibleCopy = `I'm eligible to register.`;
+const notEligibleCopy= `I'm not eligible to register.`;
+
 const Rules = (props) => {
-  const {
-    setStateEligibilityConfirmation, rules,
-    stateCode, isEligible, 
-  } = props;
-
-  const stateConfig = states.find(state => state.code === stateCode);
-  const hasOvr = stateConfig.hasOvr;
-  if (! hasOvr) {
-    // TODO: Tell the user we don't support that state :/
-    return (
-      <p>Ruh roh</p>
-    );
-  }
-
-  if (! rules) {
-    // TODO: Handle API request / error
-    getStateEligibilityRequirements(stateCode);
-  }
-
-  const onClick = () => {
-    setStateEligibilityConfirmation(stateCode, true);
-  };
-
-  // TODO: Should we have a not-eligible button? What's the CTA?
+  const { authId, rules, isEligible, updateUserProfile } = props;
 
   return (
     <RulesLayout>
       {rules.map(rule => <RuleItem key={rule}>- {rule}</RuleItem>)}
-      {isEligible ? null : (
-        <WhiteButton
-          topSpacing
-          onClick={onClick}
-        >I'm eligible to register</WhiteButton>
-      )}
+      <SpacedInputGroupLayout>
+        <CheckboxLayout spacing>
+          <CheckboxInput
+            checked={isEligible === true}
+            onClick={() => updateUserProfile(authId, { isEligible: true })}
+          />
+          <CheckboxTitleLayout>
+            <CheckboxTitle>{eligibleCopy}</CheckboxTitle>
+          </CheckboxTitleLayout>
+        </CheckboxLayout>
+        <CheckboxLayout>
+          <CheckboxInput
+            checked={isEligible === false}
+            onClick={() => updateUserProfile(authId, { isEligible: false })}
+          />
+          <CheckboxTitleLayout>
+            <CheckboxTitle>{notEligibleCopy}</CheckboxTitle>
+          </CheckboxTitleLayout>
+        </CheckboxLayout>
+      </SpacedInputGroupLayout>
     </RulesLayout>
   );
 };
 
 Rules.mapStateToProps = (state) => ({
-  rules: selectStateEligibilityRulesFromAnySource(state),
-  stateCode: selectFormHomeState(state),
-  isEligible: selectStateIsEligible(selectFormHomeState(state), state),
+  authId: selectAuthId(state),
+  rules: selectAuthenticatedUserRules(state),
+  isEligible: selectAuthenticatedUserIsEligible(state),
 });
 
 Rules.actionCreators = {
-  setStateEligibilityConfirmation
+  updateUserProfile,
 };
 
 export default BaseWrapper(Rules);

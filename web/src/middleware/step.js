@@ -6,6 +6,7 @@ import {
   selectAuthenticatedUser,
   selectAuthenticatedUserHasSchool,
   selectAuthenticatedUserIsRegistered,
+  selectAuthenticatedUserIsEligible,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -37,6 +38,7 @@ const step = store => next => action => {
   const hasSchool = selectAuthenticatedUserHasSchool(store.getState());
   const requiresInvite = selectRequiresInvite(store.getState());
   const isRegistered = selectAuthenticatedUserIsRegistered(store.getState());
+  const isEligible = selectAuthenticatedUserIsEligible(store.getState());
 
   const orderData = [
     {
@@ -60,6 +62,13 @@ const step = store => next => action => {
     orderData.push({
       id: REGISTRATION_STATUS_STEP,
       isComplete: typeof isRegistered === 'boolean',
+    });
+  }
+
+  if (isRegistered) {
+    orderData.push({
+      id: RULES_STEP,
+      isComplete: typeof isEligible === 'boolean',
     });
   }
 

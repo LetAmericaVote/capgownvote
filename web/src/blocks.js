@@ -743,6 +743,8 @@ export const CheckboxLayout = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
+
+  ${props => props.spacing ? `margin-bottom: ${baseValue}px;` : ''}
 `;
 
 export const CheckboxTitleLayout = styled.div`
@@ -845,6 +847,7 @@ export const RuleItem = styled.p`
   color: ${colors.black};
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
+  margin-bottom: ${baseValue}px;
   ${secondaryFontFamily}
   ${fontKerning}
 `;

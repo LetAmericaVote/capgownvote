@@ -8,8 +8,6 @@ export const selectSchoolItems = (state) => state.school.items || {};
 
 export const selectSchoolData = (schoolId, state) => selectSchoolItems(state)[schoolId] || {};
 
-export const selectSchoolRules = (schoolId, state) => selectSchoolData(schoolId, state).rules;
-
 export const selectSchoolSuggestions = (state) => state.school.suggestions || [];
 
 export const selectApiRequest = (id, state) => state.api[id] || null;
@@ -136,7 +134,13 @@ export const selectAuthenticatedUserStateCode = (state) =>
 
 export const selectUserIsEligible = (id, state) => selectUser(id, state).isEligible;
 
+export const selectAuthenticatedUserIsEligible = (state) =>
+  selectUserIsEligible(selectAuthId(state), state);
+
 export const selectUserIsRegistered = (id, state) => selectUser(id, state).isRegistered;
+
+export const selectAuthenticatedUserRules = (state) =>
+  selectAuthenticatedUser(state).rules;
 
 export const selectAuthenticatedUserIsRegistered = (state) =>
   selectUserIsRegistered(selectAuthId(state), state);

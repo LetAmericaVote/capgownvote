@@ -25,19 +25,21 @@ const options = [
 const RegistrationStatus = (props) => {
   const { authId, isRegistered, updateUserProfile } = props;
 
-  return options.map((option) => (
-    <SpacedInputGroupLayout key={option.title}>
-      <CheckboxLayout>
-        <CheckboxInput
-          checked={isRegistered === option.set}
-          onClick={() => updateUserProfile(authId, { isRegistered: ! isRegistered })}
-        />
-        <CheckboxTitleLayout>
-          <CheckboxTitle>{option.title}</CheckboxTitle>
-        </CheckboxTitleLayout>
-      </CheckboxLayout>
+  return (
+    <SpacedInputGroupLayout>
+      {options.map((option, index) => (
+        <CheckboxLayout spacing={index > 0} key={option.title}>
+          <CheckboxInput
+            checked={isRegistered === option.set}
+            onClick={() => updateUserProfile(authId, { isRegistered: ! isRegistered })}
+          />
+          <CheckboxTitleLayout>
+            <CheckboxTitle>{option.title}</CheckboxTitle>
+          </CheckboxTitleLayout>
+        </CheckboxLayout>
+      ))}
     </SpacedInputGroupLayout>
-  ));
+  );
 };
 
 RegistrationStatus.mapStateToProps = (state) => ({

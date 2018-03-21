@@ -1,3 +1,4 @@
+const profanity = require('profanity-util');
 const { authenticateUser } = require('../lib/auth');
 const { School } = require('../lib/models');
 
@@ -13,6 +14,10 @@ module.exports = (app) => {
       return res.status(400).json({ error: 'You already picked a school' });
     }
 
+    if (profanity.check(`${name} ${city}`).length) {
+      return res.status(400).json({ error: 'Invalid name or city' });
+    }
+
     const invitedBy = user.id;
     const school = new School({ name, city, stateCode, zipcode, invitedBy });
 
@@ -24,8 +29,14 @@ module.exports = (app) => {
         user
           .save()
           .then(() => res.json({ data: invite }))
-          .catch(error => res.status(500).json({ error }));
+          .catch((error) => {
+            console.error(error);
+            res.status(500).json({ error });
+          });
       })
-      .catch(error => res.status(500).json({ error }));
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ error });
+      });
   });
 };

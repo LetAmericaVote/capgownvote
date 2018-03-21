@@ -6,6 +6,7 @@ import { setFormValue } from '../actions';
 import {
   selectFormValue, selectSchoolInputValue,
   selectAuthenticatedUserHasSchool,
+  selectAuthenticatedUserStateCode,
 } from '../selectors';
 import {
   InviteLayout, InviteHeader, SpacedInputGroupLayout,
@@ -20,9 +21,10 @@ const headerCopy = `Can't find your school? No worries, just enter a few details
 
 const Invite = (props) => {
   const {
-    name, city, zipcode,
+    name, city, zipcode, stateCode,
     schoolSearchInput, setFormValue,
     authenticatedUserHasSchool,
+    authenticatedUserStateCode,
   } = props;
 
   if (authenticatedUserHasSchool) {
@@ -35,6 +37,11 @@ const Invite = (props) => {
 
   if (! name && schoolSearchInput) {
     setFormValue(SCHOOL_INVITE_NAME, schoolSearchInput);
+  }
+
+  console.log('abcd', stateCode, authenticatedUserStateCode);
+  if (! stateCode && authenticatedUserStateCode) {
+    setFormValue(SCHOOL_INVITE_STATE_CODE, authenticatedUserStateCode);
   }
 
   return (
@@ -101,9 +108,11 @@ const Invite = (props) => {
 Invite.mapStateToProps = (state) => ({
   name: selectFormValue(SCHOOL_INVITE_NAME, null, state),
   city: selectFormValue(SCHOOL_INVITE_CITY, null, state),
+  stateCode: selectFormValue(SCHOOL_INVITE_STATE_CODE, null, state),
   zipcode: selectFormValue(SCHOOL_INVITE_ZIPCODE, null, state),
   schoolSearchInput: selectSchoolInputValue(state),
   authenticatedUserHasSchool: selectAuthenticatedUserHasSchool(state),
+  authenticatedUserStateCode: selectAuthenticatedUserStateCode(state),
 });
 
 Invite.actionCreators = {

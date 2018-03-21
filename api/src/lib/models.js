@@ -61,10 +61,6 @@ SchoolSchema.virtual('stateName').get(function() {
   return postal(this.stateCode);
 });
 
-SchoolSchema.virtual('rules').get(function() {
-  return rules.find(item => item.code.toLowerCase() === this.stateCode).rules;
-});
-
 SchoolSchema.pre('validate', function(next) {
   if (this.shortCode) {
     return next();
@@ -196,6 +192,10 @@ UserSchema.index('email', {
   partialFilterExpression: {
     email: { '$exists': true },
   },
+});
+
+UserSchema.virtual('rules').get(function() {
+  return rules.find(item => item.code.toLowerCase() === this.stateCode).rules;
 });
 
 UserSchema.statics.userEditableFields = function(container) {

@@ -1,3 +1,4 @@
+const { authenticateUser } = require('../lib/auth');
 const request = require('superagent');
 const dateFormat = require('dateformat');
 
@@ -22,8 +23,6 @@ function computeFields(form) {
     'partner_id': process.env.RTV_PARTNER_ID,
     'created_at': require('dateformat')(new Date(), 'mmddyyyy hh:mm:ss'),
     'updated_at': require('dateformat')(new Date(), 'mmddyyyy hh:mm:ss'),
-    // 'created_at': new Date().toLocaleString().replace(/-/g, ''),
-    // 'updated_at': new Date().toLocaleString().replace(/-/g, ''),
   };
 }
 
@@ -83,12 +82,12 @@ module.exports = (app) => {
     return res.json({ data: fields });
   });
 
-  app.post('/v1/rtv/register', async (req, res) => {
+  app.post('/v1/rtv/register', authenticateUser, async (req, res) => {
     const { RTV_URL } = process.env;
-    const rtvForm = req.body.rtv;
-    const lavForm = req.body.lav;
+    const rtvForm = req.body;
+    const { user } = res.locals;
 
-    if (! rtvForm || ! lavForm) {
+    if (! rtvForm) {
       return res.status(400).json({
         error: 'Missing data',
       });
@@ -96,22 +95,32 @@ module.exports = (app) => {
 
     const payload = {
       registration: {
+        ...rtvForm,
         ...computeFields(rtvForm),
         ...prefilledFields,
+        email_address: user.email,
+        first_name: user.firstName,
+        last_name: user.lastName,
+        home_state_id: user.stateCode,
       },
     };
 
-    console.log(payload);
+    // to user
+    //  - date_of_birth
+
+    // console.log(payload);
+    // res.json({ ok: true });
 
     request
       .post(`${RTV_URL}/api/v3/registrations.json`)
       .send(payload)
       .then(rtvRes => {
-        console.log(rtvRes);
+        console.log({payload, rtvRes});
         res.json({ success: true });
       })
       .catch(error => {
-        // console.log(error);
+        console.error(error);
+        console.log(payload);
         res.status(500).json({ error: 'Rock the vote had an error', error });
       });
   });

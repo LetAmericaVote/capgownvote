@@ -10,6 +10,7 @@ import Invite from '../components/Invite';
 import RegistrationStatus from '../components/RegistrationStatus';
 import Rules from '../components/Rules';
 import VoterReg from '../components/VoterReg';
+import TextSubscribe from '../components/TextSubscribe';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
@@ -27,7 +28,7 @@ import {
   STILL_IMPACT_STEP,
 } from '../stepNames'
 
-const subCopy = `Every student that signs up for Cap, Gown, Vote! gets points for their school, and if you register to vote, you'll earn double the points. We can't legally offer you a prize, but you get to brag about being the most civically engaged high school in America.`;
+const subCopy = `Sign up for Cap, Gown, Vote! and make your high school the most civically engaged in America.`;
 
 const Register = (props) => {
   const { currentStep, isFading } = props;
@@ -98,7 +99,7 @@ const Register = (props) => {
     case STILL_IMPACT_STEP: {
       ActiveStepComponent = (props) => (
         <StepFrame {...props} title="You can still make a difference.">
-          <p>...</p>
+          <TextSubscribe />
         </StepFrame>
       );
 

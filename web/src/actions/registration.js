@@ -3,6 +3,7 @@ import { makeStateRequestId } from '../helpers';
 import {
   selectForm,
   selectAuthenticatedUserStateCode,
+  selectAllRegistrationFields,
 } from '../selectors';
 
 export const SET_STANDARD_REGISTRATION_FIELDS = 'SET_STANDARD_REGISTRATION_FIELDS';
@@ -47,12 +48,12 @@ export const POST_USER_REGISTRATION_FORM = 'POST_USER_REGISTRATION_FORM';
 export function postUserRegistrationForm() {
   return (dispatch, getState) => {
     const form = selectForm(getState());
+    const fields = selectAllRegistrationFields(getState());
 
-    const payload = {
-      rtv: {
-        ...form,
-      },
-    };
+    const payload = fields.reduce((acc, { rtvKey }) => {
+      acc[rtvKey] = form[rtvKey];
+      return acc;
+    }, {});
 
     dispatch(postToApi(POST_USER_REGISTRATION_FORM, '/v1/rtv/register', payload))
       .then(res => {

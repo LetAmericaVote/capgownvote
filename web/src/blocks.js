@@ -563,12 +563,25 @@ export const InputGroupLabel = styled.span`
   ` : ''}
 `;
 
-export const InputGroupHelperLabel = styled.span`
+export const InputGroupHelperLabel = styled.p`
   display: block;
   color: ${colors.darkSilver};
   font-size: ${baseValue - 4}px;
   line-height: ${baseValue - 4}px;
   margin-top: ${baseValue / 4}px;
+
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const InputGroupHelperLabelLink = styled.a`
+  display: inline;
+  color: ${colors.cyan};
+  font-size: ${baseValue - 4}px;
+  line-height: ${baseValue - 4}px;
+  margin-top: ${baseValue / 4}px;
+  cursor: pointer;
+  text-decoration: underline;
 
   ${primaryFontFamily}
   ${fontKerning}
@@ -975,4 +988,13 @@ export const ContentParagraph = styled.p`
   margin-bottom: ${baseValue * 2}px;
   ${secondaryFontFamily}
   ${fontKerning}
+`;
+
+export const TextSubscribeLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TextSubscribePart = styled.div`
+  margin-bottom: ${baseValue}px;
 `;

@@ -1,6 +1,8 @@
-const { authenticateUser } = require('../lib/auth');
 const request = require('superagent');
 const dateFormat = require('dateformat');
+const { authenticateUser } = require('../lib/auth');
+const { states } = require('../data/states');
+const { User } = require('../lib/models');
 
 // RTV Api response for this appears bugged.
 const REQUIRES_PARTY_AFFILIATION = [
@@ -103,22 +105,25 @@ module.exports = (app) => {
       },
     };
 
-    // TODO: If OVR state, use the other API endpoint.
-
     request
       .post(`${RTV_URL}/api/v3/registrations.json`)
       .send(payload)
       .then(rtvRes => {
         const { pdfurl } = rtvRes.body;
 
-        // TODO: Update user DOB, isRegistered
-        // TODO: Attach pdfUrl + updated user if applicable
+        // TODO: Update user DOB
+        const data = { isRegistered: true };
 
-        res.json({ pdfUrl });
+        User.findOneAndUpdate({ _id: user.id }, { '$set': data }, { new: true })
+          .then(user => res.json({ data: { user, pdfUrl: pdfurl } }))
+          .catch((error) => {
+            console.error(error);
+            res.json({ error: 'Internal server error.' });
+          });
       })
       .catch(error => {
         console.error(error);
-        res.status(500).json({ error: 'Rock the vote had an error', error });
+        res.status(500).json({ error: 'Rock the vote had an error' });
       });
   });
 };

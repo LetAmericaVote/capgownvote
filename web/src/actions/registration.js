@@ -1,4 +1,5 @@
 import { getFromApi, postToApi } from './api';
+import { storeUserData } from './user';
 import { makeStateRequestId } from '../helpers';
 import {
   selectForm,
@@ -44,6 +45,11 @@ export function getStateRegistrationFields(state) {
   };
 }
 
+export const SET_REGISTRATION_PDF = 'SET_REGISTRATION_PDF';
+export function setRegistrationPdf(pdf) {
+  return { type: SET_REGISTRATION_PDF, pdf };
+}
+
 export const POST_USER_REGISTRATION_FORM = 'POST_USER_REGISTRATION_FORM';
 export function postUserRegistrationForm() {
   return (dispatch, getState) => {
@@ -58,6 +64,11 @@ export function postUserRegistrationForm() {
     dispatch(postToApi(POST_USER_REGISTRATION_FORM, '/v1/rtv/register', payload))
       .then(res => {
         console.log(res);
+        if (res && res.data) {
+          console.log(res.data);
+          dispatch(setRegistrationPdf(res.data.pdfUrl));
+          dispatch(storeUserData(res.data.user));
+        }
       });
   };
 }

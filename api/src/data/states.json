@@ -3,17 +3,20 @@
 		{
 			"code": "AL",
 			"name": "Alabama",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action"
 		},
 		{
 			"code": "AK",
 			"name": "Alaska",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://voterregistration.alaska.gov/Registration/RegistrationDetails?haveValidAKDL=true"
 		},
 		{
 			"code": "AZ",
 			"name": "Arizona",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://servicearizona.com/webapp/evoter/selectLanguage"
 		},
 		{
 			"code": "AR",
@@ -23,77 +26,92 @@
 		{
 			"code": "CA",
 			"name": "California",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://registertovote.ca.gov/"
 		},
 		{
 			"code": "CO",
 			"name": "Colorado",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.sos.state.co.us/voter/pages/pub/olvr/verifyNewVoter.xhtml"
 		},
 		{
 			"code": "CT",
 			"name": "Conneticut",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://voterregistration.ct.gov/OLVR/welcome.do"
 		},
 		{
 			"code": "DE",
 			"name": "Deleware",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://ivote.de.gov/voterlogin.aspx"
 		},
 		{
 			"code": "DC",
 			"name": "District of Columbia",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.vote4dc.com/ApplyInstructions/Register"
 		},
 		{
 			"code": "FL",
 			"name": "Florida",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://registertovoteflorida.gov/en/Registration/Eligibility"
 		},
 		{
 			"code": "GA",
 			"name": "Georgia",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button"
 		},
 		{
 			"code": "HI",
 			"name": "Hawaii",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://olvr.hawaii.gov/register.aspx"
 		},
 		{
 			"code": "ID",
 			"name": "Idaho",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://apps.idahovotes.gov/OnlineVoterRegistration"
 		},
 		{
 			"code": "IL",
 			"name": "Illinois",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://ova.elections.il.gov/Step0.aspx"
 		},
 		{
 			"code": "IN",
 			"name": "Indiana",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://indianavoters.in.gov/"
 		},
 		{
 			"code": "IA",
 			"name": "Iowa",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration"
 		},
 		{
 			"code": "KS",
 			"name": "Kansas",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx"
 		},
 		{
 			"code": "KY",
 			"name": "Kentucky",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx"
 		},
 		{
 			"code": "LA",
 			"name": "Louisiana",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx"
 		},
 		{
 			"code": "ME",
@@ -103,12 +121,14 @@
 		{
 			"code": "MD",
 			"name": "Maryland",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1"
 		},
 		{
 			"code": "MA",
 			"name": "Massachusetts",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.sec.state.ma.us/ovr/"
 		},
 		{
 			"code": "MI",
@@ -118,7 +138,8 @@
 		{
 			"code": "MN",
 			"name": "Minnesota",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx"
 		},
 		{
 			"code": "MS",
@@ -128,7 +149,8 @@
 		{
 			"code": "MO",
 			"name": "Missouri",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://s1.sos.mo.gov/votemissouri/request"
 		},
 		{
 			"code": "MT",
@@ -138,12 +160,14 @@
 		{
 			"code": "NE",
 			"name": "Nebraska",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.nebraska.gov/apps-sos-voter-registration/"
 		},
 		{
 			"code": "NV",
 			"name": "Nevada",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://nvsos.gov/sosvoterservices/Registration/Step0.aspx"
 		},
 		{
 			"code": "NH",
@@ -158,12 +182,14 @@
 		{
 			"code": "NM",
 			"name": "New Mexico",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://portal.sos.state.nm.us/OVR/(S(od4445h5uj2f5tyucvvhszdf))/WebPages/InstructionsStep1.aspx"
 		},
 		{
 			"code": "NY",
 			"name": "New York",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://voterreg.dmv.ny.gov/MotorVoter/"
 		},
 		{
 			"code": "NC",
@@ -178,7 +204,8 @@
 		{
 			"code": "OH",
 			"name": "Ohio",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://olvr.sos.state.oh.us/"
 		},
 		{
 			"code": "OK",
@@ -188,22 +215,26 @@
 		{
 			"code": "OR",
 			"name": "Oregon",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "http://sos.oregon.gov/voting/Pages/registration.aspx?lang=en"
 		},
 		{
 			"code": "PA",
 			"name": "Pennsylvania",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://www.pavoterservices.pa.gov/pages/VoterRegistrationApplication.aspx"
 		},
 		{
 			"code": "RI",
 			"name": "Rhode Island",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://vote.sos.ri.gov/"
 		},
 		{
 			"code": "SC",
 			"name": "South Carolina",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://info.scvotes.sc.gov/eng/ovr/start.aspx"
 		},
 		{
 			"code": "SD",
@@ -213,7 +244,8 @@
 		{
 			"code": "TN",
 			"name": "Tennessee",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://ovr.govote.tn.gov/"
 		},
 		{
 			"code": "TX",
@@ -223,32 +255,38 @@
 		{
 			"code": "UT",
 			"name": "Utah",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://secure.utah.gov/voterreg/login.html?selection=REGISTER"
 		},
 		{
 			"code": "VT",
 			"name": "Vermont",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://olvr.sec.state.vt.us/"
 		},
 		{
 			"code": "VA",
 			"name": "Virginia",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://vote.elections.virginia.gov/VoterInformation"
 		},
 		{
 			"code": "WA",
 			"name": "Washington",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://weiapplets.sos.wa.gov/MyVoteOLVR/MyVoteOLVR"
 		},
 		{
 			"code": "WV",
 			"name": "West Virginia",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://ovr.sos.wv.gov/Register/Landing"
 		},
 		{
 			"code": "WI",
 			"name": "Wisconsin",
-			"hasOvr": true
+			"hasOvr": true,
+			"ovrLink": "https://myvote.wi.gov/en-US/RegisterToVote"
 		},
 		{
 			"code": "WY",

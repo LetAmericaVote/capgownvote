@@ -12,6 +12,7 @@ import Rules from '../components/Rules';
 import VoterReg from '../components/VoterReg';
 import TextSubscribe from '../components/TextSubscribe';
 import Mail from '../components/Mail';
+import OvrRedirect from '../components/OvrRedirect';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
@@ -90,8 +91,8 @@ const Register = (props) => {
 
     case OVR_STEP: {
       ActiveStepComponent = (props) => (
-        <StepFrame {...props} title="OVR redirect page">
-          <p>TODO...</p>
+        <StepFrame {...props} title="Complete your voter registration">
+          <OvrRedirect />
         </StepFrame>
       );
 

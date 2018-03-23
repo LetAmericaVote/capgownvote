@@ -3,6 +3,7 @@ const dateFormat = require('dateformat');
 const { authenticateUser } = require('../lib/auth');
 const { states } = require('../data/states');
 const { User } = require('../lib/models');
+const { generatePdfPassword, encrypt } = require('../lib/common');
 
 // RTV Api response for this appears bugged.
 const REQUIRES_PARTY_AFFILIATION = [
@@ -110,12 +111,16 @@ module.exports = (app) => {
       .send(payload)
       .then(rtvRes => {
         const { pdfurl } = rtvRes.body;
+        const password = generatePdfPassword(user.id);
 
-        // TODO: Update user DOB
-        const data = { isRegistered: true };
+        // TODO: Update user DOB & other misc. fields
+        const data = {
+          isRegistered: true,
+          pdf: encrypt(pdfurl, password),
+        };
 
         User.findOneAndUpdate({ _id: user.id }, { '$set': data }, { new: true })
-          .then(user => res.json({ data: { user, pdfUrl: pdfurl } }))
+          .then(user => res.json({ data: user.api() }))
           .catch((error) => {
             console.error(error);
             res.json({ error: 'Internal server error.' });

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 
+const encryptionAlgorithm = 'aes-256-ctr';
 const saltRounds = 10;
 
 const USER_ROLE = 'USER_ROLE';
@@ -24,7 +25,7 @@ const cors = (app) => {
 
 const dbConnect = () => mongoose.connect(process.env.MONGODB_URI);
 
-const encrypt = (text) => {
+const hashText = (text) => {
   return new Promise((resolve, reject) => {
     bcrypt.hash(text, saltRounds, function(err, hash) {
       if (err) {
@@ -36,7 +37,7 @@ const encrypt = (text) => {
   });
 };
 
-const compare = (text, hash) => {
+const compareText = (text, hash) => {
   return new Promise((resolve, reject) => {
     bcrypt.compare(text, hash, function(err, res) {
       if (err) {
@@ -47,6 +48,24 @@ const compare = (text, hash) => {
     });
   });
 };
+
+const encrypt = (text, password) => {
+  const cipher = crypto.createCipher(encryptionAlgorithm, password);
+  let encrypted = cipher.update(text, 'utf8', 'hex');
+  encrypted += cipher.final('hex');
+
+  return encrypted;
+};
+
+const decrypt = (text, password) => {
+  const decipher = crypto.createDecipher(encryptionAlgorithm, password);
+  let decrypted = decipher.update(text, 'hex', 'utf8');
+  decrypted += decipher.final('utf8');
+
+  return decrypted;
+};
+
+const generatePdfPassword = (userId) => `${process.env.PDF_ENCRYPTION_TOKEN}${userId}`;
 
 const randomBytes = () => {
   return new Promise((resolve, reject) => {
@@ -62,8 +81,8 @@ const randomBytes = () => {
 
 const generateToken = () => {
   return randomBytes().then((token) => {
-    return encrypt(token).then((encryptedToken) => ({
-      token, encryptedToken
+    return hashText(token).then((hashedToken) => ({
+      token, hashedToken
     }));
   });
 };
@@ -74,11 +93,14 @@ module.exports = {
   cors,
   jsonMiddleware,
   dbConnect,
+  hashText,
+  compareText,
   encrypt,
-  compare,
+  decrypt,
   randomBytes,
   generateToken,
   generateTokenExpiration,
+  generatePdfPassword,
   USER_ROLE,
   ADMIN_ROLE,
   AMBASSADOR_ROLE,

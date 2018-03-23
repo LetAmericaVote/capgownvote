@@ -11,7 +11,7 @@ import {
   TextSubscribePart,
 } from '../blocks';
 
-const cta = `Signup for alerts from Let America Vote to help protect voting rights.`;
+const cta = `Signup to get alerts from Let America Vote and help protect voting rights.`;
 
 const privacyLink = 'https://www.letamericavote.org/privacy-policy/';
 const PrivacyPolicyLink = () => (

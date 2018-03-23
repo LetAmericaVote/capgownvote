@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 const postal = require('postal-abbreviations');
 const algolia = require('./algolia');
 const {
-  encrypt, compare, generateToken, randomBytes,
+  hashText, compareText, generateToken, randomBytes,
   generateCodeExpiration, generateTokenExpiration,
+  encrypt, decrypt, generatePdfPassword,
   USER_ROLE, ADMIN_ROLE, AMBASSADOR_ROLE,
 } = require('./common');
 
-const rules = require('../data/rules').rules;
-const states = require('../data/states').states;
+const { rules } = require('../data/rules');
+const { states } = require('../data/states');
 const zipTest = (/^\d{5}(-\d{4})?$/);
 
 const stateCodeSchema = {
@@ -166,6 +167,10 @@ const UserSchema = mongoose.Schema({
   email: {
     type: String,
   },
+  pdf: {
+    type: String,
+    default: null,
+  },
   password: {
     type: String,
     default: null,
@@ -198,6 +203,10 @@ UserSchema.virtual('rules').get(function() {
   return rules.find(item => item.code.toLowerCase() === this.stateCode).rules;
 });
 
+UserSchema.virtual('stateHasOvr').get(function() {
+  return states.find(state => state.code.toLowerCase() === this.stateCode).hasOvr;
+});
+
 // TODO: Post user save, if mobile was added, send to mobile commons.
 // TODO: Should we have a mobile commons ID on the user?
 
@@ -205,6 +214,7 @@ UserSchema.statics.userEditableFields = function(container) {
   const fields = [
     'firstName', 'lastName', 'mobile', 'stateCode', 'zipcode',
     'birthday', 'school', 'email', 'isEligible', 'isRegistered',
+    'pdf',
   ];
 
   return fields.reduce((acc, key) => {
@@ -239,7 +249,7 @@ UserSchema.statics.findAndAuthenticateByToken = function(id, token, roles) {
         return authData(user, false);
       }
 
-      return compare(token, user.token)
+      return compareText(token, user.token)
         .then(result => authData(user, result))
         .catch((error) => {
           console.error(error);
@@ -252,8 +262,8 @@ UserSchema.statics.findAndAuthenticateByToken = function(id, token, roles) {
 };
 
 UserSchema.methods.generateToken = function() {
-  return generateToken().then(({ token, encryptedToken }) => {
-    this.token = encryptedToken;
+  return generateToken().then(({ token, hashedToken }) => {
+    this.token = hashedToken;
     this.tokenExpiration = generateTokenExpiration();
 
     return this.save()
@@ -263,9 +273,9 @@ UserSchema.methods.generateToken = function() {
 };
 
 UserSchema.methods.setPassword = function(password) {
-  return encrypt(password)
-    .then((encrypted) => {
-      this.password = encrypted;
+  return hashText(password)
+    .then((hashedText) => {
+      this.password = hashedText;
 
       return this.save();
     })
@@ -273,7 +283,7 @@ UserSchema.methods.setPassword = function(password) {
 };
 
 UserSchema.methods.comparePassword = function(password) {
-  return compare(password, this.password);
+  return compareText(password, this.password);
 };
 
 UserSchema.methods.api = function() {
@@ -289,9 +299,11 @@ UserSchema.methods.api = function() {
     isEligible: this.isEligible,
     isRegistered: this.isRegistered,
     email: this.email,
+    pdf: this.pdf ? decrypt(this.pdf, generatePdfPassword(this.id)) : null,
     tokenExpiration: this.tokenExpiration,
     role: this.role,
     rules: this.rules,
+    stateHasOvr: this.stateHasOvr,
   };
 };
 

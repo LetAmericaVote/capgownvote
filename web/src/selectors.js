@@ -117,6 +117,19 @@ export const selectUserHasSchool = (id, state) => !!selectUserSchoolId(id, state
 
 export const selectAuthenticatedUser = (state) => selectUser(selectAuthId(state), state);
 
+export const selectUserRegistrationPdf = (id, state) => selectUser(id, state).pdf;
+
+export const selectAuthenticatedUserPdf = (state) =>
+  selectUserRegistrationPdf(selectAuthId(state), state);
+
+export const selectAuthenticatedUserHasPdf = (state) =>
+  !!selectAuthenticatedUserPdf(state);
+
+export const selectUserHasStateOvr = (id, state) => selectUser(id, state).stateHasOvr;
+
+export const selectAuthenticatedUserHasStateOvr = (state) =>
+  selectUserHasStateOvr(selectAuthId(state), state);
+
 export const selectAuthenticatedUserHasSchool = (state) =>
   selectUserHasSchool(selectAuthId(state), state);
 

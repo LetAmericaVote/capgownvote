@@ -8,6 +8,8 @@ export const REGISTRATION_STATUS_STEP = 'REGISTRATION_STATUS_STEP';
 
 export const RULES_STEP = 'RULES_STEP';
 
+export const OVR_STEP = 'OVR_STEP';
+
 export const FORM_STEP = 'FORM_STEP';
 
 export const MAIL_FORM_STEP = 'MAIL_STEP';

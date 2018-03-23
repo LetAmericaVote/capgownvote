@@ -25,7 +25,6 @@ const initialState = {
   registration: {
     standardFields: [],
     stateFields: {},
-    pdf: null,
   },
   routing: {
     pathName: window.location.pathname || '/',

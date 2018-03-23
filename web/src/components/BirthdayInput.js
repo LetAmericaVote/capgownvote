@@ -14,7 +14,7 @@ import {
   selectValidationError,
 } from '../selectors';
 
-const days = [...Array(30).keys()].map((num, index) => index + 1);
+const days = [...Array(31).keys()].map((num, index) => index + 1);
 const years = [...Array(117).keys()].map((num, index) => index + 1901).reverse();
 
 const BirthdayInput = (props) => {

@@ -7,6 +7,8 @@ import {
   selectAuthenticatedUserHasSchool,
   selectAuthenticatedUserIsRegistered,
   selectAuthenticatedUserIsEligible,
+  selectAuthenticatedUserHasPdf,
+  selectAuthenticatedUserHasStateOvr,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -18,6 +20,7 @@ import {
   MAIL_FORM_STEP,
   CONTINUE_IMPACT_STEP,
   STILL_IMPACT_STEP,
+  OVR_STEP,
 } from '../stepNames'
 
 const step = store => next => action => {
@@ -29,7 +32,9 @@ const step = store => next => action => {
   const requiresInvite = selectRequiresInvite(store.getState());
   const isRegistered = selectAuthenticatedUserIsRegistered(store.getState());
   const isEligible = selectAuthenticatedUserIsEligible(store.getState());
-
+  const hasPdf = selectAuthenticatedUserHasPdf(store.getState());
+  const hasOvr = selectAuthenticatedUserHasStateOvr(store.getState());
+console.log(hasOvr);
   const orderData = [
     {
       id: CREATE_USER_STEP,
@@ -41,7 +46,7 @@ const step = store => next => action => {
     },
   ];
 
-  if (selectRequiresInvite(store.getState())) {
+  if (requiresInvite) {
     orderData.push({
       id: INVITE_SCHOOL_STEP,
       isComplete: hasSchool,
@@ -55,7 +60,7 @@ const step = store => next => action => {
     });
   }
 
-  if (isRegistered) {
+  if (isRegistered && ! hasPdf) {
     orderData.push({
       id: STILL_IMPACT_STEP,
       isComplete: false,
@@ -69,7 +74,14 @@ const step = store => next => action => {
     });
   }
 
-  if (isEligible) {
+  if (isEligible && hasOvr) {
+    orderData.push({
+      id: OVR_STEP,
+      isComplete: false,
+    });
+  }
+
+  if (isEligible && ! hasOvr) {
     orderData.push({
       id: FORM_STEP,
       isComplete: isRegistered,
@@ -79,6 +91,13 @@ const step = store => next => action => {
   if (typeof isEligible === 'boolean' && ! isEligible) {
     orderData.push({
       id: STILL_IMPACT_STEP,
+      isComplete: false,
+    });
+  }
+
+  if (isRegistered && hasPdf) {
+    orderData.push({
+      id: MAIL_FORM_STEP,
       isComplete: false,
     });
   }

@@ -34,7 +34,7 @@ const step = store => next => action => {
   const isEligible = selectAuthenticatedUserIsEligible(store.getState());
   const hasPdf = selectAuthenticatedUserHasPdf(store.getState());
   const hasOvr = selectAuthenticatedUserHasStateOvr(store.getState());
-console.log(hasOvr);
+
   const orderData = [
     {
       id: CREATE_USER_STEP,

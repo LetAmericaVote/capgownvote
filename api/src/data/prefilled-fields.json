@@ -9,7 +9,6 @@
     "partner_opt_in_email": false,
     "partner_opt_in_sms": false,
     "partner_opt_in_volunteer": false,
-    "us_citizen": true,
-    "async": false
+    "us_citizen": true
   }
 }

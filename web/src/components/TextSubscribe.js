@@ -1,6 +1,5 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import Link from '../routing/Link';
 import { MOBILE } from '../formKeys';
 import { selectAuthId, selectFormValue } from '../selectors';
 import { setFormValue, updateUserProfile } from '../actions';
@@ -31,6 +30,8 @@ const TextSubscribe = (props) => {
     updateUserProfile,
   } = props;
 
+  const onSubmit = () => updateUserProfile(authId, { mobile });
+
   return (
     <TextSubscribeLayout>
       <TextSubscribePart>
@@ -49,7 +50,7 @@ const TextSubscribe = (props) => {
         />
         <PrivacyPolicy />
       </SpacedInputGroupLayout>
-      <WhiteButton>Signup</WhiteButton>
+      <WhiteButton onClick={onSubmit}>Signup</WhiteButton>
     </TextSubscribeLayout>
   );
 };
@@ -58,5 +59,9 @@ TextSubscribe.mapStateToProps = (state) => ({
   authId: selectAuthId(state),
   mobile: selectFormValue(MOBILE, '', state),
 });
+
+TextSubscribe.actionCreators = {
+  setFormValue, updateUserProfile,
+};
 
 export default BaseWrapper(TextSubscribe);

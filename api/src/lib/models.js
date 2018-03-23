@@ -198,6 +198,9 @@ UserSchema.virtual('rules').get(function() {
   return rules.find(item => item.code.toLowerCase() === this.stateCode).rules;
 });
 
+// TODO: Post user save, if mobile was added, send to mobile commons.
+// TODO: Should we have a mobile commons ID on the user?
+
 UserSchema.statics.userEditableFields = function(container) {
   const fields = [
     'firstName', 'lastName', 'mobile', 'stateCode', 'zipcode',

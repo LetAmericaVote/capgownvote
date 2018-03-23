@@ -21,8 +21,6 @@ function computeFields(form) {
     ...form,
     'is_eighteen_or_older': ageDiff >= 18,
     'partner_id': process.env.RTV_PARTNER_ID,
-    'created_at': require('dateformat')(new Date(), 'mmddyyyy hh:mm:ss'),
-    'updated_at': require('dateformat')(new Date(), 'mmddyyyy hh:mm:ss'),
   };
 }
 
@@ -105,22 +103,21 @@ module.exports = (app) => {
       },
     };
 
-    // to user
-    //  - date_of_birth
-
-    // console.log(payload);
-    // res.json({ ok: true });
+    // TODO: If OVR state, use the other API endpoint.
 
     request
       .post(`${RTV_URL}/api/v3/registrations.json`)
       .send(payload)
       .then(rtvRes => {
-        console.log({payload, rtvRes});
-        res.json({ success: true });
+        const { pdfurl } = rtvRes.body;
+
+        // TODO: Update user DOB, isRegistered
+        // TODO: Attach pdfUrl + updated user if applicable
+
+        res.json({ pdfUrl });
       })
       .catch(error => {
         console.error(error);
-        console.log(payload);
         res.status(500).json({ error: 'Rock the vote had an error', error });
       });
   });

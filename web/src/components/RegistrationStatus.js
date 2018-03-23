@@ -31,7 +31,7 @@ const RegistrationStatus = (props) => {
         <CheckboxLayout spacing={index > 0} key={option.title}>
           <CheckboxInput
             checked={isRegistered === option.set}
-            onClick={() => updateUserProfile(authId, { isRegistered: ! isRegistered })}
+            onClick={() => updateUserProfile(authId, { isRegistered: option.set })}
           />
           <CheckboxTitleLayout>
             <CheckboxTitle>{option.title}</CheckboxTitle>

@@ -1,3 +1,5 @@
+import { postToApi } from './api';
+
 export const SET_AUTH_ID = 'SET_AUTH_ID';
 export function setAuthId(id) {
   return { type: SET_AUTH_ID, id };
@@ -24,6 +26,9 @@ export function login(email, password) {
 }
 
 export const LOGOUT = 'LOGOUT';
-export function logout(email, password) {
-  // TODO..
+export function logout() {
+  return (dispatch) => {
+    dispatch(postToApi(LOGOUT, '/v1/auth/logout'))
+      .then(() => dispatch({ type: LOGOUT }));
+  }
 }

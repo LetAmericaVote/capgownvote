@@ -54,7 +54,16 @@ const subscribe = createReducer('auth', {
     };
   },
   [LOGIN]: (state, action) => state,
-  [LOGOUT]: (state, action) => state,
+  [LOGOUT]: (state, action) => {
+    wipeAuthCredentials();
+
+    return {
+      ...state,
+      id: null,
+      token: null,
+      expiration: null,
+    };
+  },
 });
 
 export default subscribe;

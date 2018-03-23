@@ -1,7 +1,8 @@
 const { User } = require('../lib/models');
+const { authenticateUser } = require('../lib/auth');
 
 module.exports = (app) => {
-  app.post('/v1/auth', (req, res) => {
+  app.post('/v1/auth/login', (req, res) => {
     const { email, password } = req.body;
 
     if (! email || ! password) {
@@ -18,5 +19,11 @@ module.exports = (app) => {
       console.error(error);
       res.status(500).json({ error: 'Internal server error' });
     });
+  });
+
+  app.post('/v1/auth/logout', authenticateUser, (req, res) => {
+    const { user } = res.locals;
+
+    user.generateToken().then(() => res.json({ ok: true }));
   });
 };

@@ -961,6 +961,33 @@ export const SignupLayout = styled.div`
   flex-direction: column;
 `;
 
+export const SignupAuthLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: ${baseValue * 2}px;
+`;
+
+export const SignupAuthCopy = styled.p`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * .75}px;
+  line-height: ${baseValue * .75}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
+export const SignupAuthLink = styled.a`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * .75}px;
+  line-height: ${baseValue * .75}px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: ${baseValue / 6}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
 export const ContentLayout = styled.section`
   display: block;
   flex-grow: 1;

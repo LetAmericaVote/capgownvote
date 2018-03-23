@@ -1,9 +1,10 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import FormStateSelector from './FormStateSelector';
+import Link from '../routing/Link';
 import {
   setFormValue, createUser, setIsPublicComputer,
-  updateUserProfile,
+  updateUserProfile, logout,
 } from '../actions';
 import {
   selectFormValue, selectIsPublicComputer, selectAuthId,
@@ -17,13 +18,14 @@ import {
   InputGroupLabel, TextInput, WhiteButton, SignupLayout,
   CheckboxLayout, CheckboxInput, CheckboxTitle,
   CheckboxTitleLayout, InputGroupHelperLabel,
+  SignupAuthLayout, SignupAuthCopy, SignupAuthLink,
 } from '../blocks';
 
 const Signup = (props) => {
   const {
     createUser, setFormValue, user, isPublicComputer,
     setIsPublicComputer, updateUserProfile, isAuthenticated,
-    authId,
+    authId, logout,
   } = props;
 
   // TODO: Validations...
@@ -37,8 +39,37 @@ const Signup = (props) => {
 
   const submitCopy = isAuthenticated ? 'Update your profile' : 'Join Cap, Gown, Vote!';
 
+  const LoginLink = Link((props) => (
+    <SignupAuthLink {...props}>
+      Login
+    </SignupAuthLink>
+  ), '/login');
+
+  const onLogout = () => {
+    logout();
+    setFormValue(FIRST_NAME, '');
+    setFormValue(LAST_NAME, '');
+    setFormValue(EMAIL, '');
+    setFormValue(STATE_CODE, '');
+  };
+
+  const Auth = () => isAuthenticated ? (
+    <SignupAuthLayout>
+      <SignupAuthCopy>Not {user.firstName}?</SignupAuthCopy>
+      <SignupAuthLink onClick={onLogout}>
+        Logout
+      </SignupAuthLink>
+    </SignupAuthLayout>
+  ) : (
+    <SignupAuthLayout>
+      <SignupAuthCopy>Already make an account?</SignupAuthCopy>
+      <LoginLink />
+    </SignupAuthLayout>
+  );
+
   return (
     <SignupLayout>
+      <Auth />
       <SpacedInputGroupLayout>
         <InputGroupLabelLayout>
           <InputGroupLabel>
@@ -117,7 +148,7 @@ Signup.mapStateToProps = (state) => ({
 
 Signup.actionCreators = {
   setFormValue, createUser, setIsPublicComputer,
-  updateUserProfile,
+  updateUserProfile, logout,
 };
 
 export default BaseWrapper(Signup);

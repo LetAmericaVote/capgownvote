@@ -124,16 +124,34 @@ const step = store => next => action => {
   const currentStepId = selectCurrentStepId(store.getState());
   const hasCurrentStep = !!currentStepId;
 
-  if (! hasCurrentStep) {
-    store.dispatch(changeCurrentStep(order[0].id));
-  } else {
-    const currentStepIndex = selectStepIndex(currentStepId, store.getState());
-    const currentStepIsComplete = order[currentStepIndex].isComplete;
-    const nextStep = order[currentStepIndex + 1];
+  function getActiveStep(startId, respectIsViewed) {
+    const currentStepIndex = selectStepIndex(startId, store.getState());
+    const currentStepIsComplete = selectStepOrder(store.getState())[currentStepIndex].isComplete;
+    const nextStep = selectStepOrder(store.getState())[currentStepIndex + 1];
 
-    if (currentStepIsComplete && nextStep && ! nextStep.isViewed) {
-      store.dispatch(changeCurrentStep(nextStep.id));
+    if (! currentStepIsComplete) {
+      return startId;
     }
+
+    if (nextStep && respectIsViewed && nextStep.isViewed) {
+      return startId;
+    }
+
+    if (nextStep && respectIsViewed && ! nextStep.isViewed) {
+      return getActiveStep(nextStep.id, respectIsViewed);
+    }
+
+    if (nextStep) {
+      return getActiveStep(nextStep.id, respectIsViewed);
+    }
+
+    return startId;
+  }
+
+  const startId = hasCurrentStep ? currentStepId : order[0].id;
+  const activeStep = getActiveStep(startId, hasCurrentStep);
+  if (activeStep !== currentStepId) {
+    store.dispatch(changeCurrentStep(activeStep));
   }
 };
 

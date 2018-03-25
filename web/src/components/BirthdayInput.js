@@ -30,7 +30,7 @@ const BirthdayInput = (props) => {
 
   return (
     <BirthdayLayout>
-      <BirthdayColumn>
+      <BirthdayColumn month>
         <SelectInputCarrot>
           <SelectInput
             onChange={setBirthdayMonth}

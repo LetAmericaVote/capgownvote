@@ -475,6 +475,7 @@ export const StepFrameLayoutPart = styled.div`
   display: block;
   flex: 0 0 100%;
   padding: ${baseValue}px;
+  overflow-x: hidden;
 
   ${media.tablet`
     flex: 0 0 50%;
@@ -868,23 +869,23 @@ export const RuleItem = styled.p`
 export const BirthdayLayout = styled.div`
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: ${baseValue / 2}px;
-
-  ${media.tablet`
-    flex-direction: row;
-    justify-content: space-between;
-  `}
 `;
 
 export const BirthdayColumn = styled.div`
   display: block;
   flex: 0 0 100%;
   margin-top: ${baseValue / 2}px;
+  ${props => props.month ? `
+    flex: 0 0 calc(50% - ${baseValue / 2}px);
+  ` : `
+    flex: 0 0 calc(25% - ${baseValue / 2}px);
+  `}
 
   ${media.tablet`
     margin-top: 0;
-    flex: 0 0 calc(33.3% - ${baseValue / 2}px);
   `}
 `;
 

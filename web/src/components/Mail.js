@@ -1,18 +1,23 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import TextSubscribeForm from './TextSubscribeForm';
 import { selectAuthenticatedUserPdf } from '../selectors';
-import { Subtitle } from '../blocks';
+import {
+  FlexColumnLayout, ContentHeader, ContentParagraph,
+} from '../blocks';
 
 const Mail = (props) => {
   const { pdf } = props;
 
   return (
-    <div>
-      <Subtitle>TODO...</Subtitle>
-      <Subtitle>Steps on how to mail the form for your state</Subtitle>
-      <Subtitle>SMS subscribe option</Subtitle>
-      <Subtitle>Voter Reg Form: {pdf}</Subtitle>
-    </div>
+    <FlexColumnLayout>
+      <ContentHeader>Mailing your form requires 3 easy steps</ContentHeader>
+      <ContentParagraph>{pdf}</ContentParagraph>
+      <ContentHeader>Take the next step, help protect voting rights.</ContentHeader>
+      <ContentParagraph>Join Let America Vote and help protect your community from politicians that want to make it harder to vote.</ContentParagraph>
+      <ContentParagraph>Subscribe to text messages from Let America Vote to start getting actions you can take to protect voting rights.</ContentParagraph>
+      <TextSubscribeForm ctaCopy="Subscribe" />
+    </FlexColumnLayout>
   );
 };
 

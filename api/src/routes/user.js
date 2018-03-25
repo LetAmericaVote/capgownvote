@@ -106,7 +106,7 @@ module.exports = (app) => {
     const isAdmin = user.role === ADMIN_ROLE;
 
     if (! isAdmin && id !== user.id) {
-      res.status(401).json({ error: 'You cannot access other user profiles.'});
+      return res.status(401).json({ error: 'You cannot access other user profiles.'});
     }
 
     const mobile = new PhoneNumber(req.body.mobile, 'US');

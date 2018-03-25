@@ -12,6 +12,7 @@ import {
 } from '../selectors';
 import {
   FIRST_NAME, LAST_NAME, EMAIL, STATE_CODE,
+  HAS_STATE_LICENSE,
 } from '../formKeys';
 import {
   SpacedInputGroupLayout, InputGroupLabelLayout,
@@ -51,6 +52,7 @@ const Signup = (props) => {
     setFormValue(LAST_NAME, '');
     setFormValue(EMAIL, '');
     setFormValue(STATE_CODE, '');
+    setFormValue(HAS_STATE_LICENSE, false);
   };
 
   const Auth = () => isAuthenticated ? (
@@ -118,6 +120,20 @@ const Signup = (props) => {
       <SpacedInputGroupLayout>
         <CheckboxLayout>
           <CheckboxInput
+            checked={user.hasStateLicense}
+            onClick={() => setFormValue(HAS_STATE_LICENSE, ! user.hasStateLicense)}
+          />
+          <CheckboxTitleLayout>
+            <CheckboxTitle>Do you have a valid state license?</CheckboxTitle>
+            <InputGroupHelperLabel>
+              eg: Drivers license. Note: This is not a requirement to reigster.
+            </InputGroupHelperLabel>
+          </CheckboxTitleLayout>
+        </CheckboxLayout>
+      </SpacedInputGroupLayout>
+      <SpacedInputGroupLayout>
+        <CheckboxLayout>
+          <CheckboxInput
             checked={isPublicComputer}
             onClick={() => setIsPublicComputer(! isPublicComputer)}
           />
@@ -140,6 +156,7 @@ Signup.mapStateToProps = (state) => ({
     lastName: selectFormValue(LAST_NAME, '', state),
     email: selectFormValue(EMAIL, '', state),
     stateCode: selectFormValue(STATE_CODE, '', state),
+    hasStateLicense: selectFormValue(HAS_STATE_LICENSE, false, state),
   },
   isPublicComputer: selectIsPublicComputer(state),
   authId: selectAuthId(state),

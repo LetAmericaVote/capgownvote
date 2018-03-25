@@ -8,13 +8,6 @@
       "default": false
     },
     {
-      "rtvKey": "has_state_license",
-      "title": "Do you have a state license?",
-      "helpMessage": "eg: drivers license",
-      "type": "boolean",
-      "default": false
-    },
-    {
       "rtvKey": "name_title",
       "title": "Title",
       "type": "select",

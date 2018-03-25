@@ -3,6 +3,7 @@ export const LAST_NAME = 'USER_LAST_NAME';
 export const EMAIL = 'USER_EMAIL';
 export const STATE_CODE = 'USER_STATE_CODE';
 export const MOBILE = 'USER_MOBILE';
+export const HAS_STATE_LICENSE = 'HAS_STATE_LICENSE';
 
 export const SCHOOL_INVITE_NAME = 'SCHOOL_INVITE_NAME';
 export const SCHOOL_INVITE_STATE_CODE = 'SCHOOL_INVITE_STATE_CODE';
@@ -15,4 +16,5 @@ export const userMap = {
   email: EMAIL,
   stateCode: STATE_CODE,
   mobile: MOBILE,
+  hasStateLicense: HAS_STATE_LICENSE,
 };

@@ -169,6 +169,10 @@ const UserSchema = mongoose.Schema({
     type: Boolean,
     default: null,
   },
+  hasStateLicense: {
+    type: Boolean,
+    default: null,
+  },
   email: {
     type: String,
   },
@@ -223,7 +227,7 @@ UserSchema.statics.userEditableFields = function(container) {
   const fields = [
     'firstName', 'lastName', 'stateCode', 'zipcode',
     'birthday', 'school', 'email', 'isEligible', 'isRegistered',
-    'pdf',
+    'hasStateLicense',
   ];
 
   return fields.reduce((acc, key) => {
@@ -322,6 +326,7 @@ UserSchema.methods.api = function() {
     school: this.school,
     isEligible: this.isEligible,
     isRegistered: this.isRegistered,
+    hasStateLicense: this.hasStateLicense,
     email: this.email,
     pdf: this.pdf ? decrypt(this.pdf, generatePdfPassword(this.id)) : null,
     tokenExpiration: this.tokenExpiration,

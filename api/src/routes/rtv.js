@@ -103,6 +103,7 @@ module.exports = (app) => {
         first_name: user.firstName,
         last_name: user.lastName,
         home_state_id: user.stateCode,
+        has_state_license: user.hasStateLicense,
       },
     };
 

@@ -96,6 +96,20 @@ export function updateUserEmail(id, email) {
   };
 }
 
+export const UPDATE_USER_MOBILE = 'UPDATE_USER_MOBILE';
+export function updateUserMobile(id, mobile) {
+  return (dispatch, getState) => {
+    const requestId = `${UPDATE_USER_MOBILE}_${id}`;
+
+    dispatch(putToApi(requestId, `/v1/user/${id}/mobile`, { mobile }))
+      .then(res => {
+        if (res && res.data) {
+          dispatch(storeUserData(res.data));
+        }
+      });
+  };
+}
+
 export const UPDATE_USER_ROLE = 'UPDATE_USER_ROLE';
 export function updateUserRole(id, role) {
   // TODO...

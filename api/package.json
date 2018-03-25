@@ -5,13 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "algoliasearch": "^3.25.1",
+    "awesome-phonenumber": "^2.2.5",
     "bcrypt": "^1.0.3",
     "dateformat": "^3.0.3",
     "express": "^4.16.2",
     "mongoose": "^5.0.9",
     "postal-abbreviations": "^2.0.0",
     "profanity-util": "^0.2.0",
-    "superagent": "^3.8.2"
+    "superagent": "^3.8.2",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "dotenv": "^5.0.1",

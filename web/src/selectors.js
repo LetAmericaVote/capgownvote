@@ -130,6 +130,11 @@ export const selectUserHasStateOvr = (id, state) => selectUser(id, state).stateH
 export const selectAuthenticatedUserHasStateOvr = (state) =>
   selectUserHasStateOvr(selectAuthId(state), state);
 
+export const selectUserOvrLink = (id, state) => selectUser(id, state).ovrLink;
+
+export const selectAuthenticatedUserOvrLink = (state) =>
+  selectUserOvrLink(selectAuthId(state), state);
+
 export const selectAuthenticatedUserHasSchool = (state) =>
   selectUserHasSchool(selectAuthId(state), state);
 

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const postal = require('postal-abbreviations');
 const algolia = require('./algolia');
+const { updateProfile } = require('./mobileCommons');
 const {
   hashText, compareText, generateToken, randomBytes,
   generateCodeExpiration, generateTokenExpiration,
@@ -142,6 +143,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     default: null,
   },
+  mobileCommonsId: {
+    type: String,
+    default: null,
+  },
   stateCode: stateCodeSchema,
   zipcode: {
     type: String,
@@ -207,12 +212,16 @@ UserSchema.virtual('stateHasOvr').get(function() {
   return states.find(state => state.code.toLowerCase() === this.stateCode).hasOvr;
 });
 
+UserSchema.virtual('ovrLink').get(function() {
+  return states.find(state => state.code.toLowerCase() === this.stateCode).ovrLink;
+});
+
 // TODO: Post user save, if mobile was added, send to mobile commons.
 // TODO: Should we have a mobile commons ID on the user?
 
 UserSchema.statics.userEditableFields = function(container) {
   const fields = [
-    'firstName', 'lastName', 'mobile', 'stateCode', 'zipcode',
+    'firstName', 'lastName', 'stateCode', 'zipcode',
     'birthday', 'school', 'email', 'isEligible', 'isRegistered',
     'pdf',
   ];
@@ -286,6 +295,21 @@ UserSchema.methods.comparePassword = function(password) {
   return compareText(password, this.password);
 };
 
+UserSchema.methods.updateMobileCommonsProfile = function() {
+  if (! this.mobile) {
+    return;
+  }
+
+  updateProfile(this)
+    .then(id => {
+      this.mobileCommonsId = id;
+      this.save();
+    })
+    .catch(error => {
+      console.error(error);
+    });
+};
+
 UserSchema.methods.api = function() {
   return {
     id: this.id,
@@ -304,6 +328,7 @@ UserSchema.methods.api = function() {
     role: this.role,
     rules: this.rules,
     stateHasOvr: this.stateHasOvr,
+    ovrLink: this.ovrLink,
   };
 };
 

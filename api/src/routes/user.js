@@ -1,3 +1,4 @@
+const PhoneNumber = require('awesome-phonenumber');
 const auth = require('../lib/auth');
 const { User } = require('../lib/models');
 const { randomBytes, ADMIN_ROLE } = require('../lib/common');
@@ -10,7 +11,7 @@ module.exports = (app) => {
     const isAdmin = user.role === ADMIN_ROLE;
 
     if (! isAdmin && id !== user.id) {
-      res.status(401).json({ error: 'You cannot access other user profiles. '});
+      return res.status(401).json({ error: 'You cannot access other user profiles.'});
     }
 
     return User.findOne({ _id: id })
@@ -79,13 +80,52 @@ module.exports = (app) => {
     const isAdmin = user.role === ADMIN_ROLE;
 
     if (! isAdmin && id !== user.id) {
-      res.status(401).json({ error: 'You cannot access other user profiles. '});
+      return res.status(401).json({ error: 'You cannot access other user profiles.'});
     }
 
     const data = isAdmin ? req.body : User.userEditableFields(req.body);
 
     return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
-      .then(user => res.json({ data: user.api() }))
+      .then(user => {
+        user.updateMobileCommonsProfile();
+
+        res.json({
+          data: user.api(),
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.json({ error: 'Internal server error.' });
+      });
+  });
+
+  app.put('/v1/user/:id/mobile', auth.authenticateUser, (req, res) => {
+    const { id } = req.params;
+    const { user } = res.locals;
+
+    const isAdmin = user.role === ADMIN_ROLE;
+
+    if (! isAdmin && id !== user.id) {
+      res.status(401).json({ error: 'You cannot access other user profiles.'});
+    }
+
+    const mobile = new PhoneNumber(req.body.mobile, 'US');
+
+    if (! mobile.isValid()) {
+      return res.status(400).json({ error: 'Invalid phone number'});
+    }
+
+    const formattedMobile = mobile.toJSON().number.e164;
+    const data = { mobile: formattedMobile };
+
+    return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
+      .then(user => {
+        user.updateMobileCommonsProfile();
+
+        res.json({
+          data: user.api(),
+        });
+      })
       .catch((error) => {
         console.error(error);
         res.json({ error: 'Internal server error.' });
@@ -98,7 +138,13 @@ module.exports = (app) => {
     const { email } = req.body;
 
     return User.findOneAndUpdate({ _id: id }, { '$set': { email } }, { new: true })
-      .then(user => res.json({ data: user.api() }))
+      .then(user => {
+        user.updateMobileCommonsProfile();
+
+        res.json({
+          data: user.api(),
+        });
+      })
       .catch((error) => {
         console.error(error);
         res.json({ error: 'Internal server error.' });

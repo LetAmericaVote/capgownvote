@@ -1017,7 +1017,7 @@ export const ContentParagraph = styled.p`
   ${fontKerning}
 `;
 
-export const TextSubscribeLayout = styled.div`
+export const FlexColumnLayout = styled.div`
   display: flex;
   flex-direction: column;
 `;

@@ -475,7 +475,6 @@ export const StepFrameLayoutPart = styled.div`
   display: block;
   flex: 0 0 100%;
   padding: ${baseValue}px;
-  overflow-x: hidden;
 
   ${media.tablet`
     flex: 0 0 50%;
@@ -1011,8 +1010,8 @@ export const ContentHeader = styled.h1`
 export const ContentParagraph = styled.p`
   display: block;
   color: ${colors.black};
-  font-size: ${baseValue * 1}px;
-  line-height: ${baseValue * 1}px;
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
   margin-bottom: ${baseValue * 2}px;
   ${secondaryFontFamily}
   ${fontKerning}
@@ -1023,6 +1022,52 @@ export const FlexColumnLayout = styled.div`
   flex-direction: column;
 `;
 
+export const FlexRowLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const TextSubscribePart = styled.div`
   margin-bottom: ${baseValue}px;
+`;
+
+export const NumberedItemLayout = styled(FlexRowLayout)`
+  margin-bottom: ${baseValue}px;
+  align-items: center;
+`;
+
+export const NumberedItemContainer = styled.div`
+  display: flex;
+  width: ${baseValue * 2}px;
+  height: ${baseValue * 2}px;
+  flex: 0 0 ${baseValue * 2}px;
+  border-radius: ${baseValue}px;
+  background-color: ${colors.cyan};
+  align-items: center;
+  justify-content: center;
+`;
+
+export const NumberedItemLabel = styled.h3`
+  display: block;
+  color: ${colors.white};
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const NumberedItemContent = styled(ContentParagraph)`
+  margin-left: ${baseValue / 2}px;
+  margin-bottom: 0;
+`;
+
+export const NumberedItemLink = styled.a`
+  display: block;
+  color: ${colors.black};
+  text-decoration: underline;
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  cursor: pointer;
+  ${secondaryFontFamily}
+  ${fontKerning}
 `;

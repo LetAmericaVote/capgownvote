@@ -164,6 +164,12 @@ export const selectAuthenticatedUserRules = (state) =>
 export const selectAuthenticatedUserIsRegistered = (state) =>
   selectUserIsRegistered(selectAuthId(state), state);
 
+export const selectUserHasStateLicense = (id, state) =>
+  selectUser(id, state).hasStateLicense;
+
+export const selectAuthenticatedUserHasStateLicense = (state) =>
+  selectUserHasStateLicense(selectAuthId(state), state);
+
 export const selectAuthId = (state) => state.auth.id;
 
 export const selectAuthToken = (state) => state.auth.token;

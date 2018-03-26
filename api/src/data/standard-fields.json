@@ -1,13 +1,6 @@
 {
   "fields": [
     {
-      "rtvKey": "first_registration",
-      "title": "First registration",
-      "helpMessage": "Is this your first time registering to vote?",
-      "type": "boolean",
-      "default": false
-    },
-    {
       "rtvKey": "name_title",
       "title": "Title",
       "type": "select",
@@ -180,6 +173,13 @@
       "validation": {
         "format": "zipcode"
       }
+    },
+    {
+      "rtvKey": "first_registration",
+      "title": "First registration",
+      "helpMessage": "Is this your first time registering to vote?",
+      "type": "boolean",
+      "default": false
     }
   ]
 }

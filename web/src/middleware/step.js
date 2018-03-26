@@ -9,6 +9,7 @@ import {
   selectAuthenticatedUserIsEligible,
   selectAuthenticatedUserHasPdf,
   selectAuthenticatedUserHasStateOvr,
+  selectAuthenticatedUserHasStateLicense,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -34,6 +35,7 @@ const step = store => next => action => {
   const isEligible = selectAuthenticatedUserIsEligible(store.getState());
   const hasPdf = selectAuthenticatedUserHasPdf(store.getState());
   const hasOvr = selectAuthenticatedUserHasStateOvr(store.getState());
+  const hasStateLicense = selectAuthenticatedUserHasStateLicense(store.getState());
 
   const orderData = [
     {
@@ -74,14 +76,14 @@ const step = store => next => action => {
     });
   }
 
-  if (isEligible && hasOvr) {
+  if (isEligible && hasOvr && hasStateLicense) {
     orderData.push({
       id: OVR_STEP,
       isComplete: false,
     });
   }
 
-  if (isEligible && ! hasOvr) {
+  if (isEligible && (! hasOvr || ! hasStateLicense)) {
     orderData.push({
       id: FORM_STEP,
       isComplete: isRegistered,

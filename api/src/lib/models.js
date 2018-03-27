@@ -142,6 +142,7 @@ const UserSchema = mongoose.Schema({
   mobile: {
     type: String,
     default: null,
+    index: true,
   },
   mobileCommonsId: {
     type: String,

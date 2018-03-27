@@ -18,7 +18,7 @@ module.exports = (app) => {
       .then(user => res.json({ data: user.api() }))
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
@@ -29,7 +29,7 @@ module.exports = (app) => {
       .then(user => res.json({ data: user.api() }))
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
@@ -112,11 +112,11 @@ module.exports = (app) => {
       })
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
-  app.put('/v1/user/:id/mobile', auth.authenticateUser, (req, res) => {
+  app.put('/v1/user/:id/mobile', auth.authenticateUser, async (req, res) => {
     const { id } = req.params;
     const { user } = res.locals;
 
@@ -129,11 +129,26 @@ module.exports = (app) => {
     const mobile = new PhoneNumber(req.body.mobile, 'US');
 
     if (! mobile.isValid()) {
-      return res.status(400).json({ error: 'Invalid phone number'});
+      return res.status(400).json({ error: 'Invalid phone number or number already in use.'});
     }
 
     const formattedMobile = mobile.toJSON().number.e164;
     const data = { mobile: formattedMobile };
+
+    let existingMobileUser = null;
+
+    try {
+      existingMobileUser = await User.findOne(data);
+    } catch (error) {
+      res.status(500).json({ error: 'Internal server error.' });
+      console.error(error);
+
+      return;
+    }
+
+    if (existingMobileUser) {
+      return res.status(400).json({ error: 'Invalid phone number or number already in use.'});
+    }
 
     return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
       .then(user => {
@@ -145,7 +160,7 @@ module.exports = (app) => {
       })
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
@@ -164,7 +179,7 @@ module.exports = (app) => {
       })
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
@@ -177,7 +192,7 @@ module.exports = (app) => {
       .then(user => res.json({ data: user.api() }))
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 
@@ -189,7 +204,7 @@ module.exports = (app) => {
       .then(user => res.json({ success: true }))
       .catch((error) => {
         console.error(error);
-        res.json({ error: 'Internal server error.' });
+        res.status(500).json({ error: 'Internal server error.' });
       });
   });
 };

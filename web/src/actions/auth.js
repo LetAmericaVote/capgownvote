@@ -29,10 +29,10 @@ export function login(email, password) {
     dispatch(postToApi(LOGIN, '/v1/auth/login', { email, password }))
       .then((res) => {
         if (res && res.data) {
-          dispatch(storeUserData(res.data.user));
           dispatch(setAuthId(res.data.user.id));
           dispatch(setAuthToken(res.data.token));
           dispatch(setAuthTokenExpiration(res.data.user.tokenExpiration));
+          dispatch(storeUserData(res.data.user));
 
           const previousRoute = selectPreviousRoute(getState());
           if (previousRoute && previousRoute.length) {

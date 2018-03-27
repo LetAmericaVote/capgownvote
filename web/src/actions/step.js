@@ -26,7 +26,7 @@ export function clearFade() {
 }
 
 export const CHANGE_CURRENT_STEP = 'CHANGE_CURRENT_STEP';
-export function changeCurrentStep(stepId) {
+export function changeCurrentStep(stepId, shouldScroll) {
   return (dispatch, getState) => {
     const fade = selectStepFade(getState());
     const isFadeInProgress = !! fade.to;
@@ -51,9 +51,15 @@ export function changeCurrentStep(stepId) {
     const postFade = () => {
       dispatch({ type: CHANGE_CURRENT_STEP, stepId });
       dispatch(clearFade());
+
+      if (shouldScroll) {
+        setTimeout(() => {
+          document.getElementById('step-frame').scrollIntoView();
+        }, 0);
+      }
     };
 
-    const timeoutId = setTimeout(postFade, delay);
+    const timeoutId = setTimeout(postFade.bind(this), delay);
     dispatch(setFadeTimeoutId(timeoutId));
   };
 }

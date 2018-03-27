@@ -530,7 +530,7 @@ export const InputGroupLayout = styled.div`
 `;
 
 export const SpacedInputGroupLayout = styled(InputGroupLayout)`
-  margin-bottom: ${baseValue * 3}px;
+  margin-bottom: ${props => baseValue * (props.multiplier || 3)}px;
 `;
 
 export const InputGroupLabelLayout = styled.div`
@@ -1120,4 +1120,63 @@ export const AuthSubheader = styled.h3`
   text-align: center;
   ${secondaryFontFamily}
   ${fontKerning}
+`;
+
+export const ReminderLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: ${maxWidth - (baseValue * 2)}px;
+  margin-top: ${baseValue}px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: ${baseValue}px;
+  background-color: ${colors.silver};
+`;
+
+export const ReminderHeader = styled.h1`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
+  margin-bottom: ${baseValue}px;
+  text-align: center;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const ReminderButton = styled.button`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
+export const ReminderConfigLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media.tablet`
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+`;
+
+export const ReminderConfigPart = styled.div`
+  display: block;
+  flex: 0 0 100%;
+  padding: ${baseValue}px;
+  margin-bottom: ${baseValue}px;
+  background-color: ${colors.white};
+
+  ${media.tablet`
+    flex: 0 0 calc(50% - ${baseValue / 2}px);
+    margin-bottom: 0;
+  `}
 `;

@@ -91,7 +91,7 @@ const Register = (props) => {
 
     case OVR_STEP: {
       ActiveStepComponent = (props) => (
-        <StepFrame {...props} title="Complete your voter registration">
+        <StepFrame {...props} showReminder title="Complete your voter registration">
           <OvrRedirect />
         </StepFrame>
       );
@@ -101,7 +101,7 @@ const Register = (props) => {
 
     case FORM_STEP: {
       ActiveStepComponent = (props) => (
-        <StepFrame {...props} title="Fill out the remainder of the voter registration form.">
+        <StepFrame {...props} showReminder title="Fill out the remainder of the voter registration form.">
           <VoterReg />
         </StepFrame>
       );

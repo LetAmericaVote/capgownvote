@@ -153,7 +153,7 @@ const step = store => next => action => {
   const startId = hasCurrentStep ? currentStepId : order[0].id;
   const activeStep = getActiveStep(startId, hasCurrentStep);
   if (activeStep !== currentStepId) {
-    store.dispatch(changeCurrentStep(activeStep));
+    store.dispatch(changeCurrentStep(activeStep, hasCurrentStep));
   }
 };
 

@@ -15,6 +15,9 @@ export const AUTH_PASSWORD = 'AUTH_PASSWORD';
 export const AUTH_RESET_PASSWORD = 'AUTH_RESET_PASSWORD';
 export const AUTH_RESET_CONFIRM_PASSWORD = 'AUTH_RESET_CONFIRM_PASSWORD';
 
+export const REMINDER_SHOW_CONFIG = 'REMINDER_SHOW_CONFIG';
+export const REMINDER_USE_SMS = 'REMINDER_USE_SMS';
+
 export const userMap = {
   firstName: FIRST_NAME,
   lastName: LAST_NAME,

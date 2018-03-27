@@ -88,8 +88,6 @@ module.exports = (app) => {
       });
   });
 
-  // TODO: Admin API endpoint to set any user password.
-
   app.put('/v1/user/:id/profile', auth.authenticateUser, (req, res) => {
     const { id } = req.params;
     const { user } = res.locals;

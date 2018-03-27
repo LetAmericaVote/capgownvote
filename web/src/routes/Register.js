@@ -2,7 +2,7 @@ import React from 'react';
 import BaseWrapper from '../components/BaseWrapper';
 import PageFooter from '../components/PageFooter';
 import PageNav from '../components/PageNav';
-import Notification from '../components/Notification'
+import Notification from '../components/Notification';
 import StepFrame from '../components/StepFrame';
 import Signup from '../components/Signup';
 import SchoolSelector from '../components/SchoolSelector';

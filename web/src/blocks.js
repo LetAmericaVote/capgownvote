@@ -1071,3 +1071,51 @@ export const NumberedItemLink = styled.a`
   ${secondaryFontFamily}
   ${fontKerning}
 `;
+
+export const AuthLayout = styled.section`
+  display: flex;
+  width: 100%;
+  max-width: ${maxWidth}px;
+  padding: ${baseValue}px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+`;
+
+export const BorderedBlock = styled.div`
+  display: block;
+  width: 100%;
+  border: 1px solid ${colors.black};
+  padding: ${baseValue}px;
+`;
+
+export const DividingLine = styled.div`
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: ${colors.black};
+  margin-top: ${baseValue * 3}px;
+  margin-bottom: ${baseValue * 3}px;
+`;
+
+export const AuthHeader = styled.h1`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
+  margin-bottom: ${baseValue * 2}px;
+  text-align: center;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const AuthSubheader = styled.h3`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  margin-bottom: ${baseValue}px;
+  text-align: center;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;

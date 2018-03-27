@@ -9,6 +9,7 @@ import { css, injectGlobal } from 'styled-components';
 import Home from './routes/Home';
 import Register from './routes/Register';
 import About from './routes/About';
+import Auth from './routes/Auth';
 import Router from './routing/Router';
 import Route from './routing/Route';
 
@@ -54,6 +55,7 @@ const Root = () => (
         <Route path="/"><Home /></Route>
         <Route path="/register"><Register/></Route>
         <Route path="/about"><About /></Route>
+        <Route path="/auth"><Auth /></Route>
       </div>
     </Router>
   </Provider>

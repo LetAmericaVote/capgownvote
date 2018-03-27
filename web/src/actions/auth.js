@@ -1,4 +1,5 @@
 import { postToApi } from './api';
+import { storeUserData } from './user';
 
 export const SET_AUTH_ID = 'SET_AUTH_ID';
 export function setAuthId(id) {
@@ -22,7 +23,17 @@ export function setIsPublicComputer(isPublicComputer) {
 
 export const LOGIN = 'LOGIN';
 export function login(email, password) {
-  // TODO..
+  return (dispatch) => {
+    dispatch(postToApi(LOGIN, '/v1/auth/login', { email, password }))
+      .then((res) => {
+        if (res && res.data) {
+          dispatch(storeUserData(res.data.user));
+          dispatch(setAuthId(res.data.user.id));
+          dispatch(setAuthToken(res.data.token));
+          dispatch(setAuthTokenExpiration(res.data.user.tokenExpiration));
+        }
+      });
+  };
 }
 
 export const LOGOUT = 'LOGOUT';

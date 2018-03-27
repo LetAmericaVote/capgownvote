@@ -61,17 +61,34 @@ module.exports = (app) => {
     });
   });
 
-  app.put('/v1/user/password', auth.authenticateUser, (req, res) => {
+  app.put('/v1/user/:id/password', auth.authenticateUser, (req, res) => {
+    const { id } = req.params;
     const { user } = res.locals;
     const { password } = req.body;
 
-    user.setPassword(password)
+    const isAdmin = user.role === ADMIN_ROLE;
+
+    if (! isAdmin && id !== user.id) {
+      return res.status(401).json({ error: 'You cannot access other user profiles.'});
+    }
+
+    User.findOne({ _id: id })
+      .then(user => {
+        if (! user) {
+          res.status(400).json({ error: 'Invalid user ID' });
+          return null;
+        }
+
+        return user.setPassword(password);
+      })
       .then(() => res.json({ success: true }))
       .catch((error) => {
         console.error(error);
         res.status(500).json({ error: 'Internal server error.' });
       });
   });
+
+  // TODO: Admin API endpoint to set any user password.
 
   app.put('/v1/user/:id/profile', auth.authenticateUser, (req, res) => {
     const { id } = req.params;

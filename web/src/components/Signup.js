@@ -44,7 +44,7 @@ const Signup = (props) => {
     <SignupAuthLink {...props}>
       Login
     </SignupAuthLink>
-  ), '/login');
+  ), '/auth');
 
   const onLogout = () => {
     logout();
@@ -112,6 +112,7 @@ const Signup = (props) => {
         <TextInput
           onChange={event => setFormValue(EMAIL, event.target.value)}
           value={user.email}
+          type="email"
         />
       </SpacedInputGroupLayout>
       <SpacedInputGroupLayout>

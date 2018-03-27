@@ -110,6 +110,15 @@ export function updateUserMobile(id, mobile) {
   };
 }
 
+export const UPDATE_USER_PASSWORD = 'UPDATE_USER_PASSWORD';
+export function updateUserPassword(id, password) {
+  return (dispatch) => {
+    const requestId = `${UPDATE_USER_PASSWORD}_${id}`;
+
+    dispatch(putToApi(requestId, `/v1/user/${id}/password`, { password }));
+  };
+}
+
 export const UPDATE_USER_ROLE = 'UPDATE_USER_ROLE';
 export function updateUserRole(id, role) {
   // TODO...

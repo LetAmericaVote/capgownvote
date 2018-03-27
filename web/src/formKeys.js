@@ -10,6 +10,10 @@ export const SCHOOL_INVITE_STATE_CODE = 'SCHOOL_INVITE_STATE_CODE';
 export const SCHOOL_INVITE_CITY = 'SCHOOL_INVITE_CITY';
 export const SCHOOL_INVITE_ZIPCODE = 'SCHOOL_INVITE_ZIPCODE';
 
+export const AUTH_EMAIL = 'AUTH_EMAIL';
+export const AUTH_PASSWORD = 'AUTH_PASSWORD';
+export const AUTH_CONFIRM_PASSWORD = 'AUTH_CONFIRM_PASSWORD';
+
 export const userMap = {
   firstName: FIRST_NAME,
   lastName: LAST_NAME,

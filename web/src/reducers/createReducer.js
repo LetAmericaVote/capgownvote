@@ -28,6 +28,7 @@ const initialState = {
   },
   routing: {
     pathName: window.location.pathname || '/',
+    history: [],
   },
   school: {
     inputValue: null,

@@ -1,5 +1,7 @@
 import { postToApi } from './api';
 import { storeUserData } from './user';
+import { setRoutingPathName } from './routing';
+import { selectPreviousRoute } from '../selectors';
 
 export const SET_AUTH_ID = 'SET_AUTH_ID';
 export function setAuthId(id) {
@@ -23,7 +25,7 @@ export function setIsPublicComputer(isPublicComputer) {
 
 export const LOGIN = 'LOGIN';
 export function login(email, password) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     dispatch(postToApi(LOGIN, '/v1/auth/login', { email, password }))
       .then((res) => {
         if (res && res.data) {
@@ -31,6 +33,11 @@ export function login(email, password) {
           dispatch(setAuthId(res.data.user.id));
           dispatch(setAuthToken(res.data.token));
           dispatch(setAuthTokenExpiration(res.data.user.tokenExpiration));
+
+          const previousRoute = selectPreviousRoute(getState());
+          if (previousRoute && previousRoute.length) {
+            dispatch(setRoutingPathName(previousRoute));
+          }
         }
       });
   };

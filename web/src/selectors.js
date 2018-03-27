@@ -189,3 +189,6 @@ export const selectErrorNotification = (state) => state.notification.error;
 export const selectHasErrorNotification = (state) => !!selectErrorNotification(state);
 
 export const selectIsNavOpen = (state) => state.nav.isOpen;
+
+export const selectPreviousRoute = (state) => 
+  state.routing.history[state.routing.history.length - 1];

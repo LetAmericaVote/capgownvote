@@ -5,6 +5,10 @@ const routing = createReducer('routing', {
   [SET_ROUTING_PATH_NAME]: (state, action) => ({
     ...state,
     pathName: action.pathName,
+    history: [
+      ...state.history,
+      state.pathName,
+    ],
   }),
 });
 

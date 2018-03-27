@@ -4,7 +4,8 @@ import PageFooter from '../components/PageFooter';
 import PageNav from '../components/PageNav';
 import Notification from '../components/Notification';
 import {
-  AUTH_EMAIL, AUTH_PASSWORD, AUTH_CONFIRM_PASSWORD,
+  AUTH_EMAIL, AUTH_PASSWORD, AUTH_RESET_PASSWORD,
+  AUTH_RESET_CONFIRM_PASSWORD,
 } from '../formKeys';
 import {
   login, logout, setFormValue,
@@ -24,8 +25,8 @@ import {
 const Auth = (props) => {
   const {
     isAuthenticated, authenticatedEmail, logout, login, setFormValue,
-    formEmail, formPassword, formConfirmPassword, authenticatedId,
-    updateUserPassword,
+    formEmail, formPassword, formResetConfirmPassword, authenticatedId,
+    updateUserPassword, formResetPassword,
   } = props;
 
   const onLogin = () => login(formEmail, formPassword);
@@ -67,7 +68,7 @@ const Auth = (props) => {
     </BorderedBlock>
   );
 
-  const passwordsMatch = formPassword === formConfirmPassword;
+  const passwordsMatch = formResetPassword === formResetConfirmPassword;
 
   const onResetPassword = () => {
     if (! passwordsMatch) {
@@ -75,8 +76,8 @@ const Auth = (props) => {
     }
 
     updateUserPassword(authenticatedId, formPassword);
-    setFormValue(AUTH_CONFIRM_PASSWORD, '');
-    setFormValue(AUTH_PASSWORD, '');
+    setFormValue(AUTH_RESET_CONFIRM_PASSWORD, '');
+    setFormValue(AUTH_RESET_PASSWORD, '');
   };
 
   const logoutForm = (
@@ -96,8 +97,8 @@ const Auth = (props) => {
           </InputGroupLabel>
         </InputGroupLabelLayout>
         <TextInput
-          onChange={event => setFormValue(AUTH_PASSWORD, event.target.value)}
-          value={formPassword}
+          onChange={event => setFormValue(AUTH_RESET_PASSWORD, event.target.value)}
+          value={formResetPassword}
           type="password"
         />
       </SpacedInputGroupLayout>
@@ -111,8 +112,8 @@ const Auth = (props) => {
           </InputGroupLabel>
         </InputGroupLabelLayout>
         <TextInput
-          onChange={event => setFormValue(AUTH_CONFIRM_PASSWORD, event.target.value)}
-          value={formConfirmPassword}
+          onChange={event => setFormValue(AUTH_RESET_CONFIRM_PASSWORD, event.target.value)}
+          value={formResetConfirmPassword}
           type="password"
         />
       </SpacedInputGroupLayout>
@@ -142,7 +143,8 @@ Auth.mapStateToProps = (state) => ({
   authenticatedEmail: selectAuthenticatedUserEmail(state),
   formEmail: selectFormValue(AUTH_EMAIL, '', state),
   formPassword: selectFormValue(AUTH_PASSWORD, '', state),
-  formConfirmPassword: selectFormValue(AUTH_CONFIRM_PASSWORD, '', state),
+  formResetPassword: selectFormValue(AUTH_RESET_PASSWORD, '', state),
+  formResetConfirmPassword: selectFormValue(AUTH_RESET_CONFIRM_PASSWORD, '', state),
 });
 
 Auth.actionCreators = {

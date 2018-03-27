@@ -1075,8 +1075,10 @@ export const NumberedItemLink = styled.a`
 export const AuthLayout = styled.section`
   display: flex;
   width: 100%;
-  max-width: ${maxWidth}px;
-  padding: ${baseValue}px;
+  max-width: ${maxWidth / 2}px;
+  padding: ${baseValue * 3}px ${baseValue}px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   align-items: center;
   flex-grow: 1;

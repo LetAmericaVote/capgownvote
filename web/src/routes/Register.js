@@ -13,6 +13,7 @@ import VoterReg from '../components/VoterReg';
 import TextSubscribe from '../components/TextSubscribe';
 import Mail from '../components/Mail';
 import OvrRedirect from '../components/OvrRedirect';
+import CustomStepMessage from '../components/CustomStepMessage';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
@@ -29,6 +30,7 @@ import {
   CONTINUE_IMPACT_STEP,
   STILL_IMPACT_STEP,
   OVR_STEP,
+  CUSTOM_MESSAGE_STEP,
 } from '../stepNames'
 
 const subCopy = `Sign up for Cap, Gown, Vote! and make your high school the most civically engaged in America.`;
@@ -123,6 +125,17 @@ const Register = (props) => {
       ActiveStepComponent = (props) => (
         <StepFrame {...props} title="Mail your voter registration form">
           <Mail />
+        </StepFrame>
+      );
+
+      break;
+    }
+
+    case CUSTOM_MESSAGE_STEP: {
+      ActiveStepComponent = (props) => (
+        <StepFrame {...props} title="You can still make a difference.">
+          <CustomStepMessage />
+          <TextSubscribe />
         </StepFrame>
       );
 

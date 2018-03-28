@@ -10,7 +10,7 @@ import {
 import {
   StepFrameLayout, StepFrameLayoutPart,
   StepTitle, StepBackButton, StepSticky,
-  FlexColumnLayout,
+  FlexColumnLayout, StepButtonLayout,
 } from '../blocks';
 
 const StepFrame = (props) => {
@@ -27,12 +27,14 @@ const StepFrame = (props) => {
         <StepFrameLayoutPart>
           <StepSticky>
             <StepTitle>{title}</StepTitle>
-            {hasPreviousStep ? (
-              <StepBackButton onClick={moveCurrentStepBackward}>&larr; Go Back</StepBackButton>
-            ) : null}
-            {hasNextStep ? (
-              <StepBackButton onClick={moveCurrentStepForward}>Next &rarr;</StepBackButton>
-            ) : null}
+            <StepButtonLayout>
+              {hasPreviousStep ? (
+                <StepBackButton onClick={moveCurrentStepBackward}>&larr; Go Back</StepBackButton>
+              ) : null}
+              {hasNextStep ? (
+                <StepBackButton onClick={moveCurrentStepForward}>Next &rarr;</StepBackButton>
+              ) : null}
+            </StepButtonLayout>
           </StepSticky>
         </StepFrameLayoutPart>
         <StepFrameLayoutPart>

@@ -4,7 +4,8 @@
 			"code": "AL",
 			"name": "Alabama",
 			"hasOvr": true,
-			"ovrLink": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action"
+			"ovrLink": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "AK",
@@ -57,7 +58,8 @@
 			"code": "FL",
 			"name": "Florida",
 			"hasOvr": true,
-			"ovrLink": "https://registertovoteflorida.gov/en/Registration/Eligibility"
+			"ovrLink": "https://registertovoteflorida.gov/en/Registration/Eligibility",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "GA",
@@ -128,7 +130,8 @@
 			"code": "MA",
 			"name": "Massachusetts",
 			"hasOvr": true,
-			"ovrLink": "https://www.sec.state.ma.us/ovr/"
+			"ovrLink": "https://www.sec.state.ma.us/ovr/",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "MI",
@@ -150,7 +153,8 @@
 			"code": "MO",
 			"name": "Missouri",
 			"hasOvr": true,
-			"ovrLink": "https://s1.sos.mo.gov/votemissouri/request"
+			"ovrLink": "https://s1.sos.mo.gov/votemissouri/request",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "MT",
@@ -172,7 +176,8 @@
 		{
 			"code": "NH",
 			"name": "New Hampshire",
-			"hasOvr": false
+			"hasOvr": false,
+			"customRegistrationMessage": "Stay tuned for updates from the Let America Vote field team about upcoming voter registration drives."
 		},
 		{
 			"code": "NJ",
@@ -199,13 +204,15 @@
 		{
 			"code": "ND",
 			"name": "North Dakota",
-			"hasOvr": false
+			"hasOvr": false,
+			"customRegistrationMessage": "You're in luck, North Dakota doesn't require you to register to vote!"
 		},
 		{
 			"code": "OH",
 			"name": "Ohio",
 			"hasOvr": true,
-			"ovrLink": "https://olvr.sos.state.oh.us/"
+			"ovrLink": "https://olvr.sos.state.oh.us/",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "OK",
@@ -228,7 +235,8 @@
 			"code": "RI",
 			"name": "Rhode Island",
 			"hasOvr": true,
-			"ovrLink": "https://vote.sos.ri.gov/"
+			"ovrLink": "https://vote.sos.ri.gov/",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "SC",
@@ -286,12 +294,14 @@
 			"code": "WI",
 			"name": "Wisconsin",
 			"hasOvr": true,
-			"ovrLink": "https://myvote.wi.gov/en-US/RegisterToVote"
+			"ovrLink": "https://myvote.wi.gov/en-US/RegisterToVote",
+			"ovrRequiresLicense": true
 		},
 		{
 			"code": "WY",
 			"name": "Wyoming",
-			"hasOvr": false
+			"hasOvr": false,
+			"customRegistrationMessage": "Wyoming has a very restrictive voting process and we do not support it at this time."
 		}
 	]
 }

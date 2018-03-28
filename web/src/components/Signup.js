@@ -4,7 +4,7 @@ import FormStateSelector from './FormStateSelector';
 import Link from '../routing/Link';
 import {
   setFormValue, createUser, setIsPublicComputer,
-  updateUserProfile, logout,
+  updateUserProfile, logout, pushGeneralNotification,
 } from '../actions';
 import {
   selectFormValue, selectIsPublicComputer, selectAuthId,
@@ -26,13 +26,17 @@ const Signup = (props) => {
   const {
     createUser, setFormValue, user, isPublicComputer,
     setIsPublicComputer, updateUserProfile, isAuthenticated,
-    authId, logout,
+    authId, logout, pushGeneralNotification,
   } = props;
 
   // TODO: Validations...
   const onSubmit = () => {
     if (isAuthenticated) {
-      updateUserProfile(authId, user);
+      updateUserProfile(authId, user).then(isUpdated => {
+        if (isUpdated) {
+          pushGeneralNotification('Updated user profile');
+        }
+      })
     } else {
       createUser(user, true);
     }
@@ -166,7 +170,7 @@ Signup.mapStateToProps = (state) => ({
 
 Signup.actionCreators = {
   setFormValue, createUser, setIsPublicComputer,
-  updateUserProfile, logout,
+  updateUserProfile, logout, pushGeneralNotification,
 };
 
 export default BaseWrapper(Signup);

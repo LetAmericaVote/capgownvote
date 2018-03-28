@@ -10,6 +10,8 @@ import {
   selectAuthenticatedUserHasPdf,
   selectAuthenticatedUserHasStateOvr,
   selectAuthenticatedUserHasStateLicense,
+  selectAuthenticatedUserOvrRequiresLicense,
+  selectAuthenticatedUserCustomRegistrationMessage,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -22,6 +24,7 @@ import {
   CONTINUE_IMPACT_STEP,
   STILL_IMPACT_STEP,
   OVR_STEP,
+  CUSTOM_MESSAGE_STEP,
 } from '../stepNames'
 
 const step = store => next => action => {
@@ -36,6 +39,11 @@ const step = store => next => action => {
   const hasPdf = selectAuthenticatedUserHasPdf(store.getState());
   const hasOvr = selectAuthenticatedUserHasStateOvr(store.getState());
   const hasStateLicense = selectAuthenticatedUserHasStateLicense(store.getState());
+  const ovrRequiresLicense = selectAuthenticatedUserOvrRequiresLicense(store.getState());
+  const customRegistrationMessage = selectAuthenticatedUserCustomRegistrationMessage(store.getState());
+
+  const ovrIsAvailable = isEligible && hasOvr &&
+    (ovrRequiresLicense ? hasStateLicense : true);
 
   const orderData = [
     {
@@ -47,6 +55,13 @@ const step = store => next => action => {
       isComplete: hasSchool || requiresInvite,
     },
   ];
+
+  if (customRegistrationMessage) {
+    orderData.push({
+      id: CUSTOM_MESSAGE_STEP,
+      isComplete: false,
+    });
+  }
 
   if (requiresInvite) {
     orderData.push({
@@ -76,14 +91,14 @@ const step = store => next => action => {
     });
   }
 
-  if (isEligible && hasOvr && hasStateLicense) {
+  if (ovrIsAvailable) {
     orderData.push({
       id: OVR_STEP,
       isComplete: false,
     });
   }
 
-  if (isEligible && (! hasOvr || ! hasStateLicense)) {
+  if (isEligible && ! ovrIsAvailable) {
     orderData.push({
       id: FORM_STEP,
       isComplete: isRegistered,

@@ -135,6 +135,18 @@ export const selectUserOvrLink = (id, state) => selectUser(id, state).ovrLink;
 export const selectAuthenticatedUserOvrLink = (state) =>
   selectUserOvrLink(selectAuthId(state), state);
 
+export const selectUserOvrRequiresLicense = (id, state) =>
+  selectUser(id, state).ovrRequiresLicense;
+
+export const selectAuthenticatedUserOvrRequiresLicense = (state) =>
+  selectUserOvrRequiresLicense(selectAuthId(state), state);
+
+export const selectUserCustomRegistrationMessage = (id, state) =>
+  selectUser(id, state).customRegistrationMessage;
+
+export const selectAuthenticatedUserCustomRegistrationMessage = (state) =>
+  selectUserCustomRegistrationMessage(selectAuthId(state), state);
+
 export const selectAuthenticatedUserHasSchool = (state) =>
   selectUserHasSchool(selectAuthId(state), state);
 

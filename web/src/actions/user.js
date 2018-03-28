@@ -66,11 +66,15 @@ export function updateUserProfile(id, profile) {
   return (dispatch, getState) => {
     const requestId = `${UPDATE_USER_PROFILE}_${id}`;
 
-    dispatch(putToApi(requestId, `/v1/user/${id}/profile`, profile))
+    return dispatch(putToApi(requestId, `/v1/user/${id}/profile`, profile))
       .then(res => {
         if (res && res.data) {
           dispatch(storeUserData(res.data));
+          
+          return true;
         }
+
+        return false;
       });
   };
 }

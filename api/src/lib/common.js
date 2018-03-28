@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 
+const { states } = require('../data/states');
+
 const encryptionAlgorithm = 'aes-256-ctr';
 const saltRounds = 10;
 
@@ -89,6 +91,8 @@ const generateToken = () => {
 
 const generateTokenExpiration = () => Date.now() + TOKEN_EXPIRATION_LENGTH;
 
+const findStateByCode = code => states.find(state => state.code.toLowerCase() === code);
+
 module.exports = {
   cors,
   jsonMiddleware,
@@ -101,6 +105,7 @@ module.exports = {
   generateToken,
   generateTokenExpiration,
   generatePdfPassword,
+  findStateByCode,
   USER_ROLE,
   ADMIN_ROLE,
   AMBASSADOR_ROLE,

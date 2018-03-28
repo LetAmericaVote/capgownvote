@@ -6,6 +6,7 @@ const {
   hashText, compareText, generateToken, randomBytes,
   generateCodeExpiration, generateTokenExpiration,
   encrypt, decrypt, generatePdfPassword,
+  findStateByCode,
   USER_ROLE, ADMIN_ROLE, AMBASSADOR_ROLE,
 } = require('./common');
 
@@ -218,11 +219,19 @@ UserSchema.virtual('rules').get(function() {
 });
 
 UserSchema.virtual('stateHasOvr').get(function() {
-  return states.find(state => state.code.toLowerCase() === this.stateCode).hasOvr;
+  return findStateByCode(this.stateCode).hasOvr;
 });
 
 UserSchema.virtual('ovrLink').get(function() {
-  return states.find(state => state.code.toLowerCase() === this.stateCode).ovrLink;
+  return findStateByCode(this.stateCode).ovrLink;
+});
+
+UserSchema.virtual('ovrRequiresLicense').get(function() {
+  return !!findStateByCode(this.stateCode).ovrRequiresLicense;
+});
+
+UserSchema.virtual('customRegistrationMessage').get(function() {
+  return findStateByCode(this.stateCode).customRegistrationMessage || null;
 });
 
 // TODO: Post user save, if mobile was added, send to mobile commons.
@@ -340,6 +349,8 @@ UserSchema.methods.api = function() {
     rules: this.rules,
     stateHasOvr: this.stateHasOvr,
     ovrLink: this.ovrLink,
+    ovrRequiresLicense: this.ovrRequiresLicense,
+    customRegistrationMessage: this.customRegistrationMessage,
   };
 };
 

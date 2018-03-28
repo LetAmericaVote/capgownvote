@@ -501,12 +501,22 @@ export const StepTitle = styled.h2`
   ${fontKerning}
 `;
 
+export const StepButtonLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: ${baseValue}px;
+
+  ${media.tablet`
+    width: 50%;
+  `}
+`;
+
 export const StepBackButton = styled.a`
   display: block;
   color: ${colors.darkSilver};
   font-size: ${baseValue * 0.75}px;
   line-height: ${baseValue * 0.75}px;
-  margin-top: ${baseValue / 2}px;
   cursor: pointer;
   text-transform: uppercase;
   ${secondaryFontFamily}

@@ -20,7 +20,8 @@ const initialState = {
     isOpen: false,
   },
   notification: {
-    error: null,
+    type: null,
+    message: null,
   },
   registration: {
     standardFields: [],

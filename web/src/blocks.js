@@ -875,7 +875,6 @@ export const BirthdayLayout = styled.div`
 
 export const BirthdayColumn = styled.div`
   display: block;
-  flex: 0 0 100%;
   margin-top: ${baseValue / 2}px;
   ${props => props.month ? `
     flex: 0 0 calc(50% - ${baseValue / 2}px);
@@ -897,7 +896,7 @@ export const ErrorMessage = styled.h1`
   ${fontKerning}
 `;
 
-export const ErrorNotificationLayout = styled.div`
+export const NotificationLayout = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -914,14 +913,14 @@ export const ErrorNotificationLayout = styled.div`
   `}
 `;
 
-export const ErrorNotificationMessageArea = styled.div`
+export const NotificationMessageArea = styled.div`
   display: block;
   flex: 0 0 85%;
   padding: ${baseValue / 2}px;
-  background-color: ${colors.red};
+  background-color: ${props => props.error ? colors.red : colors.cyan};
 `;
 
-export const ErrorNotificationMessage = styled.h3`
+export const NotificationMessage = styled.h3`
   display: block;
   color: ${colors.white};
   font-size: ${baseValue}px;
@@ -930,9 +929,9 @@ export const ErrorNotificationMessage = styled.h3`
   ${fontKerning}
 `;
 
-export const ErrorNotificationClose = styled.div`
+export const NotificationClose = styled.div`
   flex-grow: 1;
-  background-color: ${colors.red};
+  background-color: ${props => props.error ? colors.red : colors.cyan};
   position: relative;
   cursor: pointer;
 
@@ -1179,4 +1178,16 @@ export const ReminderConfigPart = styled.div`
     flex: 0 0 calc(50% - ${baseValue / 2}px);
     margin-bottom: 0;
   `}
+`;
+
+export const ReminderTimeRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const ReminderTimeColumn = styled.div`
+  display: block;
+  flex: 0 0 calc(50% - ${baseValue / 2}px);
+  margin-bottom: ${baseValue * 2}px;
 `;

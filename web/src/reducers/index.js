@@ -15,8 +15,8 @@ import validation from './validation';
 
 const reducers = combineReducers({
   api, auth, birthday, form, invite, nav,
-  notification, registration, routing,
-  school, step, user, validation,
+  notification, registration,
+  routing, school, step, user, validation,
 });
 
 export default reducers;

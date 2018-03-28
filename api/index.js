@@ -13,6 +13,7 @@ require('./src/routes/chatbot')(app);
 require('./src/routes/invites')(app);
 require('./src/routes/user')(app);
 require('./src/routes/auth')(app);
+require('./src/routes/reminder')(app);
 
 const port = process.env.PORT;
 app.listen(port, () => console.log(`Listening on ${port}`));

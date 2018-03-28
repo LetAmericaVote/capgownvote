@@ -1,16 +1,24 @@
 import createReducer from './createReducer';
 import {
-  PUSH_ERROR_NOTIFICATION, CLOSE_ERROR_NOTIFICATION,
+  PUSH_ERROR_NOTIFICATION, PUSH_GENERAL_NOTIFICATION,
+  CLOSE_NOTIFICATION,
 } from '../actions';
 
 const notification = createReducer('notification', {
   [PUSH_ERROR_NOTIFICATION]: (state, action) => ({
     ...state,
-    error: action.message,
+    type: 'error',
+    message: action.message,
   }),
-  [CLOSE_ERROR_NOTIFICATION]: (state, action) => ({
+  [PUSH_GENERAL_NOTIFICATION]: (state, action) => ({
     ...state,
-    error: null,
+    type: 'general',
+    message: action.message,
+  }),
+  [CLOSE_NOTIFICATION]: (state, action) => ({
+    ...state,
+    type: null,
+    message: null,
   }),
 });
 

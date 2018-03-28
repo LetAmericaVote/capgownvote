@@ -6,6 +6,7 @@ export * from './invite';
 export * from './nav';
 export * from './notification';
 export * from './registration'
+export * from './reminder';
 export * from './routing';
 export * from './school';
 export * from './step';

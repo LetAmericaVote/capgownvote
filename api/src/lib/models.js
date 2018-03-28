@@ -177,6 +177,10 @@ const UserSchema = mongoose.Schema({
   email: {
     type: String,
   },
+  hasReminder: {
+    type: Boolean,
+    default: false,
+  },
   pdf: {
     type: String,
     default: null,
@@ -329,6 +333,7 @@ UserSchema.methods.api = function() {
     isRegistered: this.isRegistered,
     hasStateLicense: this.hasStateLicense,
     email: this.email,
+    hasReminder: this.hasReminder,
     pdf: this.pdf ? decrypt(this.pdf, generatePdfPassword(this.id)) : null,
     tokenExpiration: this.tokenExpiration,
     role: this.role,
@@ -340,6 +345,27 @@ UserSchema.methods.api = function() {
 
 const User = mongoose.model('user', UserSchema);
 
+const ReminderSchema = mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'School',
+    index: true,
+    required: true,
+  },
+  targetTime: {
+    type: Number,
+    required: true,
+  },
+}, {
+  timestamps: true,
+});
+
+ReminderSchema.index({
+  targetTime: 1, createdAt: 1,
+});
+
+const Reminder = mongoose.model('reminder', ReminderSchema);
+
 module.exports = {
-  School, User,
+  School, User, Reminder,
 };

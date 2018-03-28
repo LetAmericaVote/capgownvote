@@ -2,7 +2,10 @@ import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import { MOBILE } from '../formKeys';
 import { selectAuthId, selectFormValue } from '../selectors';
-import { setFormValue, updateUserMobile } from '../actions';
+import {
+  setFormValue, updateUserMobile,
+  pushGeneralNotification,
+} from '../actions';
 import {
   SpacedInputGroupLayout, InputGroupLabelLayout,
   InputGroupLabel, TextInput, WhiteButton,
@@ -25,15 +28,28 @@ const TextSubscribeForm = (props) => {
   const {
     authId, mobile, setFormValue,
     updateUserMobile, ctaCopy, ctaLink,
+    ctaOnClick, staticCtaCopy,
   } = props;
 
+  const defaultOnClick = () => {
+    if (mobile) {
+      updateUserMobile(authId, mobile).then(updated => {
+        if (updated) {
+          pushGeneralNotification('Mobile number set!');
+        }
+      });
+    }
+  };
+
   const SubscribeButton = () => {
-    const copy = mobile ? 'Update mobile number' : ctaCopy;
+    const copy = staticCtaCopy || (mobile ? 'Update mobile number' : ctaCopy);
 
     const CtaButton = () => (
       <WhiteButton onClick={() => {
-        if (mobile) {
-          updateUserMobile(authId, mobile);
+        if (ctaOnClick) {
+          ctaOnClick(mobile);
+        } else {
+          defaultOnClick();
         }
       }}>{copy}</WhiteButton>
     );
@@ -78,6 +94,7 @@ TextSubscribeForm.mapStateToProps = (state) => ({
 
 TextSubscribeForm.actionCreators = {
   setFormValue, updateUserMobile,
+  pushGeneralNotification,
 };
 
 export default BaseWrapper(TextSubscribeForm);

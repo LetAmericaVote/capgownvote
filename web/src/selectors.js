@@ -184,11 +184,15 @@ export const selectIsAuthenticated = (state) =>
 
 export const selectIsPublicComputer = (state) => state.auth.isPublicComputer;
 
-export const selectErrorNotification = (state) => state.notification.error;
+export const selectNotificationMessage = (state) => state.notification.message;
 
-export const selectHasErrorNotification = (state) => !!selectErrorNotification(state);
+export const selectNotificationType = (state) => state.notification.type;
+
+export const selectHasNotification = (state) =>
+  !!selectNotificationMessage(state) &&
+  !!selectNotificationType(state);
 
 export const selectIsNavOpen = (state) => state.nav.isOpen;
 
-export const selectPreviousRoute = (state) => 
+export const selectPreviousRoute = (state) =>
   state.routing.history[state.routing.history.length - 1];

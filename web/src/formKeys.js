@@ -17,6 +17,8 @@ export const AUTH_RESET_CONFIRM_PASSWORD = 'AUTH_RESET_CONFIRM_PASSWORD';
 
 export const REMINDER_SHOW_CONFIG = 'REMINDER_SHOW_CONFIG';
 export const REMINDER_USE_SMS = 'REMINDER_USE_SMS';
+export const REMINDER_TIME = 'REMINDER_TIME';
+export const REMINDER_DAY = 'REMINDER_DAY';
 
 export const userMap = {
   firstName: FIRST_NAME,

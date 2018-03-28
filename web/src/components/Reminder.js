@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import TextSubscribeForm from './TextSubscribeForm';
+import PasswordReset from './PasswordReset';
 import { selectFormValue } from '../selectors';
 import { setFormValue, postReminder } from '../actions';
 import {
@@ -127,7 +128,9 @@ const Reminder = (props) => {
                 />
               </div>
             ) : (
-              null
+              <PasswordReset
+                postUpdate={() => setFormValue(REMINDER_SHOW_CONFIG, false)}
+              />
             )}
           </ReminderConfigPart>
         </ReminderConfigLayout>

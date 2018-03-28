@@ -119,7 +119,8 @@ export function updateUserPassword(id, password) {
   return (dispatch) => {
     const requestId = `${UPDATE_USER_PASSWORD}_${id}`;
 
-    dispatch(putToApi(requestId, `/v1/user/${id}/password`, { password }));
+    return dispatch(putToApi(requestId, `/v1/user/${id}/password`, { password }))
+      .then(res => res && res.success);
   };
 }
 

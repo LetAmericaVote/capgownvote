@@ -4,6 +4,7 @@ const MOBILE_COMMONS_PASSWORD = process.env.MOBILE_COMMONS_PASSWORD;
 
 const request = require('superagent');
 const { parseString } = require('xml2js');
+const { ADMIN_ROLE } = require('./common');
 
 function parseXML(xml) {
   return new Promise((resolve, reject) => {
@@ -25,6 +26,7 @@ function updateProfile(user) {
     first_name: user.firstName,
     last_name: user.lastName,
     state: user.statCode,
+    is_cap_gown_vote_student: user.role !== ADMIN_ROLE,
     country: 'US',
   }; // TODO: opt_in_path_id, address...
 

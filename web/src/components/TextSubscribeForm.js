@@ -35,7 +35,7 @@ const TextSubscribeForm = (props) => {
     if (mobile) {
       updateUserMobile(authId, mobile).then(updated => {
         if (updated) {
-          pushGeneralNotification('Mobile number set!');
+          pushGeneralNotification('Thanks for signing up!');
         }
       });
     }

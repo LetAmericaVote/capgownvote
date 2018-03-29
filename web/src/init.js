@@ -1,0 +1,43 @@
+import { readAuth, wipeAuthCredentials } from './authStorage';
+import { setAuthId, setAuthToken, getUserData } from './actions';
+
+function getUrlParams(search) {
+  const hashes = search.slice(search.indexOf('?') + 1).split('&');
+
+  return hashes.reduce((acc, hash) => {
+    const [key, val] = hash.split('=');
+    acc[key] = decodeURIComponent(val);
+
+    return acc;
+  }, {});
+}
+
+function auth(store, id, token) {
+  if (id) {
+    store.dispatch(setAuthId(id));
+  }
+
+  if (token) {
+    store.dispatch(setAuthToken(token));
+  }
+
+  if (id && token) {
+    store.dispatch(getUserData(id));
+  }
+}
+
+function init(store) {
+  const { id: paramId, token: paramToken } = getUrlParams(window.location.search);
+  const { id, token, isExpired } = readAuth();
+
+  if (paramId && paramToken) {
+    auth(store, paramId, paramToken);
+    window.history.replaceState({}, document.title, window.location.pathname);
+  } else if (isExpired) {
+    wipeAuthCredentials();
+  } else {
+    auth(store, id, token);
+  }
+}
+
+export default init;

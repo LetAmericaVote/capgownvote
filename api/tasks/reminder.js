@@ -31,7 +31,7 @@ async function execute() {
         return;
       }
 
-      const url = `${APP_DOMAIN}/register?token=${token}`;
+      const url = `${APP_DOMAIN}/register?id=${user.id}&token=${token}`;
       const message = `This is your reminder to register to vote through Cap, Gown Vote! Click this link to continue where you left off (Expires in 24 hours). ${url}`;
 
       const isReminderSent = await sendMessage(user, message, MOBILE_COMMONS_REMINDER_CAMPAIGN);

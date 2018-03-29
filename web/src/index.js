@@ -18,8 +18,7 @@ import step from './middleware/step';
 import schools from './middleware/schools';
 import validation from './middleware/validation';
 
-import { readAuth, wipeAuthCredentials } from './authStorage';
-import { setAuthId, setAuthToken, getUserData } from './actions';
+import init from './init';
 
 import './fonts';
 
@@ -32,23 +31,7 @@ if (process.env.NODE_ENV === `development`) {
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware(...middlewares)));
 
-const { id, token, isExpired } = readAuth();
-
-if (isExpired) {
-  wipeAuthCredentials();
-} else {
-  if (id) {
-    store.dispatch(setAuthId(id));
-  }
-
-  if (token) {
-    store.dispatch(setAuthToken(token));
-  }
-
-  if (id && token) {
-    store.dispatch(getUserData(id));
-  }
-}
+init(store);
 
 const Root = () => (
   <Provider store={store}>

@@ -51,4 +51,6 @@ async function execute() {
   }
 }
 
-new Promise(() => execute()).catch(error => console.error(error));
+new Promise((resolve) => {
+  execute().then(() => process.exit())
+}).catch(error => console.error(error));

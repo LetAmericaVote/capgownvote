@@ -143,7 +143,13 @@ const step = store => next => action => {
 
   function getActiveStep(startId, respectIsViewed) {
     const currentStepIndex = selectStepIndex(startId, store.getState());
-    const currentStepIsComplete = selectStepOrder(store.getState())[currentStepIndex].isComplete;
+    const currentStep = selectStepOrder(store.getState())[currentStepIndex];
+
+    if (! currentStep) {
+      return startId;
+    }
+
+    const currentStepIsComplete = currentStep.isComplete;
     const nextStep = selectStepOrder(store.getState())[currentStepIndex + 1];
 
     if (! currentStepIsComplete) {

@@ -313,12 +313,12 @@ UserSchema.methods.comparePassword = function(password) {
   return compareText(password, this.password);
 };
 
-UserSchema.methods.updateMobileCommonsProfile = function(campaign) {
+UserSchema.methods.updateMobileCommonsProfile = function(optInPathId) {
   if (! this.mobile) {
     return;
   }
 
-  updateProfile(this, campaign)
+  updateProfile(this, optInPathId)
     .then(id => {
       this.mobileCommonsId = id;
       this.save();

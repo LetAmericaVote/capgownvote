@@ -1,4 +1,3 @@
-const { MOBILE_COMMONS_REMINDER_CAMPAIGN } = process.env;
 const PhoneNumber = require('awesome-phonenumber');
 const { authenticateUser } = require('../lib/auth');
 const { User, Reminder } = require('../lib/models');
@@ -65,7 +64,7 @@ module.exports = (app) => {
 
     try {
       await user.save();
-      user.updateMobileCommonsProfile(MOBILE_COMMONS_REMINDER_CAMPAIGN);
+      user.updateMobileCommonsProfile();
     } catch (error) {
       console.error(error);
       return res.status(500).json({ error: 'Internal server error.' });

@@ -1,5 +1,5 @@
 const PhoneNumber = require('awesome-phonenumber');
-const { MOBILE_COMMONS_GENERAL_CAMPAIGN } = process.env;
+const { MOBILE_COMMONS_GENERAL_CAMPAIGN_OPT_IN } = process.env;
 const auth = require('../lib/auth');
 const { User } = require('../lib/models');
 const { randomBytes, ADMIN_ROLE } = require('../lib/common');
@@ -103,7 +103,7 @@ module.exports = (app) => {
 
     return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
       .then(user => {
-        user.updateMobileCommonsProfile();
+        user.updateMobileCommonsProfile(MOBILE_COMMONS_GENERAL_CAMPAIGN_OPT_IN);
 
         res.json({
           data: user.api(),
@@ -151,7 +151,7 @@ module.exports = (app) => {
 
     return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
       .then(user => {
-        user.updateMobileCommonsProfile(MOBILE_COMMONS_GENERAL_CAMPAIGN);
+        user.updateMobileCommonsProfile(MOBILE_COMMONS_GENERAL_CAMPAIGN_OPT_IN);
 
         res.json({
           data: user.api(),
@@ -170,7 +170,7 @@ module.exports = (app) => {
 
     return User.findOneAndUpdate({ _id: id }, { '$set': { email } }, { new: true })
       .then(user => {
-        user.updateMobileCommonsProfile();
+        user.updateMobileCommonsProfile(MOBILE_COMMONS_GENERAL_CAMPAIGN_OPT_IN);
 
         res.json({
           data: user.api(),

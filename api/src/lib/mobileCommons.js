@@ -20,7 +20,14 @@ function parseXML(xml) {
   });
 }
 
-function updateProfile(user, campaign) {
+function selectIsSuccess(res) {
+  return res &&
+    res.response &&
+    res.response['$'] &&
+    res.response['$'].success === 'true';
+}
+
+function updateProfile(user, optInPathId) {
   const payload = {
     phone_number: user.mobile,
     email: user.email,
@@ -32,8 +39,8 @@ function updateProfile(user, campaign) {
     country: 'US',
   };
 
-  if (campaign) {
-    payload['opt_in_path_id'] = campaign;
+  if (optInPathId) {
+    payload['opt_in_path_id'] = optInPathId;
   }
 
   return request
@@ -43,7 +50,20 @@ function updateProfile(user, campaign) {
     .buffer()
     .accept('xml')
     .then(res => parseXML(res.text))
-    .then(res => res.response.profile[0]['$'].id)
+    .then(res => {
+      if (! selectIsSuccess(res)) {
+        console.error(res.response.error);
+        return null;
+      }
+
+      const profile = res.response.profile;
+
+      if (profile) {
+        return profile[0]['$'].id;
+      }
+
+      return null;
+    })
     .catch(error => {
       console.error(error);
     });
@@ -63,7 +83,7 @@ function sendMessage(user, message, campaignId) {
     .buffer()
     .accept('xml')
     .then(res => parseXML(res.text))
-    .then(res => res.response['$'].success)
+    .then(res => selectIsSuccess(res))
     .catch(error => {
       console.error(error);
     });

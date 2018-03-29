@@ -18,7 +18,7 @@ import step from './middleware/step';
 import schools from './middleware/schools';
 import validation from './middleware/validation';
 
-import { readAuth } from './authStorage';
+import { readAuth, wipeAuthCredentials } from './authStorage';
 import { setAuthId, setAuthToken, getUserData } from './actions';
 
 import './fonts';
@@ -34,7 +34,9 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(...middlewa
 
 const { id, token, isExpired } = readAuth();
 
-if (! isExpired) {
+if (isExpired) {
+  wipeAuthCredentials();
+} else {
   if (id) {
     store.dispatch(setAuthId(id));
   }

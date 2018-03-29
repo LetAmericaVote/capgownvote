@@ -1,4 +1,5 @@
 const PhoneNumber = require('awesome-phonenumber');
+const { MOBILE_COMMONS_GENERAL_CAMPAIGN } = process.env;
 const auth = require('../lib/auth');
 const { User } = require('../lib/models');
 const { randomBytes, ADMIN_ROLE } = require('../lib/common');
@@ -44,7 +45,7 @@ module.exports = (app) => {
       }
 
       user.generateToken().then((token) => {
-        randomBytes()
+        randomBytes(24)
           .then(password => user.setPassword(password))
           .then((user, err) => {
             if (err) {
@@ -150,7 +151,7 @@ module.exports = (app) => {
 
     return User.findOneAndUpdate({ _id: id }, { '$set': data }, { new: true })
       .then(user => {
-        user.updateMobileCommonsProfile();
+        user.updateMobileCommonsProfile(MOBILE_COMMONS_GENERAL_CAMPAIGN);
 
         res.json({
           data: user.api(),

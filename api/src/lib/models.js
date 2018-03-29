@@ -313,12 +313,12 @@ UserSchema.methods.comparePassword = function(password) {
   return compareText(password, this.password);
 };
 
-UserSchema.methods.updateMobileCommonsProfile = function() {
+UserSchema.methods.updateMobileCommonsProfile = function(campaign) {
   if (! this.mobile) {
     return;
   }
 
-  updateProfile(this)
+  updateProfile(this, campaign)
     .then(id => {
       this.mobileCommonsId = id;
       this.save();
@@ -366,6 +366,7 @@ const ReminderSchema = mongoose.Schema({
   targetTime: {
     type: Number,
     required: true,
+    index: true,
   },
 }, {
   timestamps: true,

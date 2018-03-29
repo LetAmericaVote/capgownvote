@@ -1,6 +1,8 @@
 const MOBILE_COMMONS_API_BASE = 'https://secure.mcommons.com';
-const MOBILE_COMMONS_USERNAME = process.env.MOBILE_COMMONS_USERNAME;
-const MOBILE_COMMONS_PASSWORD = process.env.MOBILE_COMMONS_PASSWORD;
+const {
+  MOBILE_COMMONS_USERNAME,
+  MOBILE_COMMONS_PASSWORD,
+} = process.env;
 
 const request = require('superagent');
 const { parseString } = require('xml2js');
@@ -18,7 +20,7 @@ function parseXML(xml) {
   });
 }
 
-function updateProfile(user) {
+function updateProfile(user, campaign) {
   const payload = {
     phone_number: user.mobile,
     email: user.email,
@@ -28,7 +30,11 @@ function updateProfile(user) {
     state: user.statCode,
     is_cap_gown_vote_student: user.role !== ADMIN_ROLE,
     country: 'US',
-  }; // TODO: opt_in_path_id, address...
+  };
+
+  if (campaign) {
+    payload['opt_in_path_id'] = campaign;
+  }
 
   return request
     .post(`${MOBILE_COMMONS_API_BASE}/api/profile_update`)
@@ -43,4 +49,24 @@ function updateProfile(user) {
     });
 }
 
-module.exports = { updateProfile };
+function sendMessage(user, message, campaignId) {
+  const payload = {
+    phone_number: user.mobile,
+    body: message,
+    campaign_id: campaignId,
+  };
+
+  return request
+    .post(`${MOBILE_COMMONS_API_BASE}/api/send_message`)
+    .auth(MOBILE_COMMONS_USERNAME, MOBILE_COMMONS_PASSWORD)
+    .query(payload)
+    .buffer()
+    .accept('xml')
+    .then(res => parseXML(res.text))
+    .then(res => res.response['$'].success)
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+module.exports = { sendMessage, updateProfile };

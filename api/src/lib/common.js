@@ -69,9 +69,9 @@ const decrypt = (text, password) => {
 
 const generatePdfPassword = (userId) => `${process.env.PDF_ENCRYPTION_TOKEN}${userId}`;
 
-const randomBytes = () => {
+const randomBytes = (length) => {
   return new Promise((resolve, reject) => {
-    crypto.randomBytes(48, (err, buffer) => {
+    crypto.randomBytes(length, (err, buffer) => {
       if (err) {
         reject(err);
       } else {
@@ -82,7 +82,7 @@ const randomBytes = () => {
 };
 
 const generateToken = () => {
-  return randomBytes().then((token) => {
+  return randomBytes(12).then((token) => {
     return hashText(token).then((hashedToken) => ({
       token, hashedToken
     }));

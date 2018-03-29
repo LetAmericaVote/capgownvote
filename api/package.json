@@ -21,8 +21,8 @@
   },
   "scripts": {
     "start": "heroku local --procfile=ProcfileDev",
-    "reminder-task": "node src/tasks/reminder.js",
-    "reminder-task-local": "node -r dotenv/config src/tasks/reminder.js",
+    "reminder-task": "node tasks/reminder.js",
+    "reminder-task-local": "node -r dotenv/config tasks/reminder.js",
     "seed-schools": "node util/seed.js"
   },
   "engines": {

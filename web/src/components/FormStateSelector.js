@@ -16,6 +16,14 @@ const FormStateSelector = (props) => {
 
   const value = formValue || userStateCode || '';
 
+  if (! formValue && userStateCode) {
+    setStateValue({
+      target: {
+        value: userStateCode,
+      },
+    });
+  }
+
   return (
     <SelectInputCarrot required={isRequired}>
       <SelectInput value={value} onChange={setStateValue}>

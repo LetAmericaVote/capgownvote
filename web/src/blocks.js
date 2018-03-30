@@ -1022,12 +1022,17 @@ export const ContentParagraph = styled.p`
   color: ${colors.black};
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
-  margin-bottom: ${baseValue * 2}px;
 
   ${props => props.underlined ? `
     text-decoration: underline;
     cursor: pointer;
   ` : ''}
+
+  ${props => props.reducedSpacing ? `
+    margin-bottom: ${baseValue}px;
+  ` : `
+    margin-bottom: ${baseValue * 2}px;
+  `}
 
   ${secondaryFontFamily}
   ${fontKerning}

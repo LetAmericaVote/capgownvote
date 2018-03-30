@@ -77,11 +77,117 @@ SchoolSchema.post('findOneAndRemove', function(doc) {
 const School = mongoose.model('school', SchoolSchema);
 
 const UserSchema = mongoose.Schema({
+  nameTitle: {
+    type: String,
+    default: null,
+  },
   firstName: {
     type: String,
     default: null,
   },
   lastName: {
+    type: String,
+    default: null,
+  },
+  nameSuffix: {
+    type: String,
+    default: null,
+  },
+  homeAddress: {
+    type: String,
+    default: null,
+  },
+  homeUnit: {
+    type: String,
+    default: null
+  },
+  homeCity: {
+    type: String,
+    default: null,
+  },
+  homeZipCode: {
+    type: String,
+    default: null,
+  },
+  hasMailingAddress: {
+    type: Boolean,
+    default: false,
+  },
+  mailingAddress: {
+    type: String,
+    default: null,
+  },
+  mailingUnit: {
+    type: String,
+    default: null,
+  },
+  mailingCity: {
+    type: String,
+    default: null,
+  },
+  mailingStateCode: stateCodeSchema,
+  mailingZipCode: {
+    type: String,
+    default: null,
+  },
+  hasChangedName: {
+    type: Boolean,
+    default: false,
+  },
+  previousNameTitle: {
+    type: String,
+    default: null,
+  },
+  previousFirstName: {
+    type: String,
+    default: null,
+  },
+  previousMiddleName: {
+    type: String,
+    default: null,
+  },
+  previousLastName: {
+    type: String,
+    default: null,
+  },
+  previousNameSuffix: {
+    type: String,
+    default: null,
+  },
+  hasChangeOfAddress: {
+    type: Boolean,
+    default: false,
+  },
+  previousAddress: {
+    type: String,
+    default: null,
+  },
+  previousUnit: {
+    type: String,
+    default: null,
+  },
+  previousCity: {
+    type: String,
+    default: null,
+  },
+  previousStateCode: stateCodeSchema,
+  previousZipCode: {
+    type: String,
+    default: null,
+  },
+  isFirstRegistration: {
+    type: Boolean,
+    default: false,
+  },
+  politicalParty: {
+    type: String,
+    default: null,
+  },
+  race: {
+    type: String,
+    default: null,
+  },
+  governmentId: {
     type: String,
     default: null,
   },
@@ -183,7 +289,14 @@ UserSchema.statics.userEditableFields = function(container) {
   const fields = [
     'firstName', 'lastName', 'stateCode', 'zipcode',
     'birthday', 'school', 'email', 'isEligible', 'isRegistered',
-    'hasStateLicense',
+    'hasStateLicense', 'nameTitle', 'nameSuffix', 'home_address',
+    'homeUnit', 'homeCity', 'homeZipCode', 'hasMailingAddress',
+    'mailingAddress', 'mailingUnit', 'mailingCity', 'mailingStateCode',
+    'mailingZipCode', 'hasChangedName', 'previousNameTitle',
+    'previousFirstName', 'previousLastName', 'previousNameSuffix',
+    'hasChangeOfAddress', 'previousAddress', 'previousUnit',
+    'previousCity', 'previousStateCode', 'previousZipCode', 'race',
+    'isFirstRegistration', 'previousMiddleName', 'politicalParty',
   ];
 
   return fields.reduce((acc, key) => {
@@ -273,9 +386,37 @@ UserSchema.methods.updateMobileCommonsProfile = function(optInPathId) {
 UserSchema.methods.api = function() {
   return {
     id: this.id,
+    nameTitle: this.nameTitle,
     firstName: this.firstName,
     lastName: this.lastName,
+    nameSuffix: this.nameSuffix,
+    homeAddress: this.homeAddress,
+    homeUnit: this.homeUnit,
+    homeCity: this.homeCity,
+    homeZipCode: this.homeZipCode,
+    hasMailingAddress: this.hasMailingAddress,
+    mailingAddress: this.mailingAddress,
+    mailingUnit: this.mailingUnit,
+    mailingCity: this.mailingCity,
+    mailingStateCode: this.mailingStateCode,
+    mailingZipCode: this.mailingZipCode,
+    hasChangedName: this.hasChangedName,
+    previousNameTitle: this.previousNameTitle,
+    previousFirstName: this.previousFirstName,
+    previousMiddleName: this.previousMiddleName,
+    previousLastName: this.previousLastName,
+    previousNameSuffix: this.previousNameSuffix,
+    hasChangeOfAddress: this.hasChangeOfAddress,
+    previousAddress: this.previousAddress,
+    previousUnit: this.previousUnit,
+    previousCity: this.previousCity,
+    previousStateCode: this.previousStateCode,
+    previousZipCode: this.previousZipCode,
+    isFirstRegistration: this.isFirstRegistration,
+    politicalParty: this.politicalParty,
+    race: this.race,
     mobile: this.mobile,
+    governmentId: this.governmentId ? decrypt(this.governmentId, generatePdfPassword(this.id)) : null,
     zipcode: this.zipcode,
     stateCode: this.stateCode,
     birthday: this.birthday,

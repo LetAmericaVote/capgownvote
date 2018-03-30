@@ -125,7 +125,7 @@ const VoterRegFormBuilder = (props) => {
               </InputGroupLabel>
             )}
           </InputGroupLabelLayout>
-          <FormStateSelector key={rtvKey} rtvKey={rtvKey} />
+          <FormStateSelector formKey={rtvKey} />
           {helpMessage ? (
             <InputGroupHelperLabel>
               {helpMessage}

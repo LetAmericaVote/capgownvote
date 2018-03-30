@@ -114,10 +114,37 @@ module.exports = (app) => {
         const { pdfurl } = rtvRes.body;
         const password = generatePdfPassword(user.id);
 
-        // TODO: Update user DOB & other misc. fields
         const data = {
           isRegistered: true,
           pdf: encrypt(pdfurl, password),
+          nameTitle: rtvForm['name_title'],
+          nameSuffix: rtvForm['name_suffix'],
+          homeAddress: rtvForm['home_address'],
+          homeUnit: rtvForm['home_unit'],
+          homeCity: rtvForm['home_city'],
+          homeZipCode: rtvForm['home_zip_code'],
+          hasMailingAddress: rtvForm['has_mailing_address'],
+          mailingAddress: rtvForm['mailing_address'],
+          mailingUnit: rtvForm['mailing_unit'],
+          mailingCity: rtvForm['mailing_city'],
+          mailingStateCode: rtvForm['mailing_state_id'],
+          mailingZipCode: rtvForm['mailing_zip_code'],
+          hasChangedName: rtvForm['change_of_name'],
+          previousNameTitle: rtvForm['prev_name_title'],
+          previousFirstName: rtvForm['prev_first_name'],
+          previousMiddleName: rtvForm['prev_middle_name'],
+          previousLastName: rtvForm['prev_last_name'],
+          previousNameSuffix: rtvForm['prev_name_suffix'],
+          hasChangeOfAddress: rtvForm['change_of_address'],
+          previousAddress: rtvForm['prev_address'],
+          previousUnit: rtvForm['prev_unit'],
+          previousCity: rtvForm['prev_city'],
+          previousStateCode: rtvForm['prev_state_id'],
+          previousZipCode: rtvForm['prev_zip_code'],
+          isFirstRegistration: rtvForm['first_registration'],
+          politicalParty: rtvForm['party'],
+          race: rtvForm['race'],
+          governmentId: encrypt(rtvForm['id_number'], password),
         };
 
         User.findOneAndUpdate({ _id: user.id }, { '$set': data }, { new: true })

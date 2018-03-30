@@ -46,6 +46,10 @@ async function execute() {
   }
 }
 
+// find last stat record,
+// if pending, dont run task?
+// otherwise, create the new stat and set to pending before any other execution...
+
 new Promise((resolve) => {
   execute().then(() => process.exit())
 }).catch(error => console.error(error));

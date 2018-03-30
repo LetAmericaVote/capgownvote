@@ -47,9 +47,10 @@ const Mail = (props) => {
       <ContentParagraph>
         If you need access to a printer, talk to someone at your school such as a teacher or a guidance counselor. In order to mail your form, you can buy a first class stamp at almost any store such as Walmart, or you can purchase them directly from the post office.
       </ContentParagraph>
-      <ContentParagraph>
-        Need to access your completed form later? <SetPasswordLink />
+      <ContentParagraph reducedSpacing>
+        Need to access your completed form later?
       </ContentParagraph>
+      <SetPasswordLink />
       <ContentHeader>Take the next step, help protect voting rights</ContentHeader>
       <ContentParagraph>Join Let America Vote and help protect your community from politicians that want to make it harder to vote.</ContentParagraph>
       <ContentParagraph>Subscribe to text messages from Let America Vote to start getting actions you can take to protect voting rights.</ContentParagraph>

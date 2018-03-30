@@ -39,12 +39,6 @@ const SchoolSchema = new mongoose.Schema({
     required: true,
     validate: value => zipTest.test(value),
   },
-  shortCode: {
-    type: String,
-    required: true,
-    unique: true,
-    index: true,
-  },
   invitedBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -62,55 +56,6 @@ const SchoolSchema = new mongoose.Schema({
 
 SchoolSchema.virtual('stateName').get(function() {
   return postal(this.stateCode);
-});
-
-SchoolSchema.pre('validate', function(next) {
-  if (this.shortCode) {
-    return next();
-  }
-
-  async function _generateShortCode(dupes, resolve) {
-    const name = this.name;
-
-    if (dupes > 50) {
-      console.error(`Interupting short code generator for ${name} due to large dupe count.`);
-      return resolve(null);
-    }
-
-    const schoolAbbr = name
-      .split(' ')
-      .filter(word => !(/\W/g).test(word))
-      .map(word => word[0])
-      .join('');
-
-    const tooShort = schoolAbbr.length <= 3;
-    const combinedAbbr = `${schoolAbbr}${tooShort ? this.stateCode : ''}`.toLowerCase();
-    const shortCode = `${combinedAbbr}${dupes}`;
-
-    School.findOne({ shortCode })
-      .then(school => {
-        if (school) {
-          return generateShortCode(dupes + 1, resolve);
-        }
-
-        resolve(shortCode);
-      })
-      .catch(err => {
-        console.error(err);
-        resolve(null);
-      });
-  }
-
-  const generateShortCode = _generateShortCode.bind(this);
-
-  new Promise((resolve, reject) => generateShortCode(1, resolve))
-    .then((shortCode) => {
-      if (shortCode) {
-        this.shortCode = shortCode;
-      }
-
-      next();
-    });
 });
 
 SchoolSchema.post('save', function(doc) {
@@ -233,9 +178,6 @@ UserSchema.virtual('ovrRequiresLicense').get(function() {
 UserSchema.virtual('customRegistrationMessage').get(function() {
   return findStateByCode(this.stateCode).customRegistrationMessage || null;
 });
-
-// TODO: Post user save, if mobile was added, send to mobile commons.
-// TODO: Should we have a mobile commons ID on the user?
 
 UserSchema.statics.userEditableFields = function(container) {
   const fields = [

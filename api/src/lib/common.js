@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const { states } = require('../data/states');
 
 const encryptionAlgorithm = 'aes-256-ctr';
+const encryptionPassword = new Buffer(process.env.APP_ENCRYPTION_TOKEN);
 const saltRounds = 10;
 
 const USER_ROLE = 'USER_ROLE';
@@ -51,23 +52,21 @@ const compareText = (text, hash) => {
   });
 };
 
-const encrypt = (text, password) => {
-  const cipher = crypto.createCipher(encryptionAlgorithm, password);
+const encrypt = (text, iv) => {
+  const cipher = crypto.createCipheriv(encryptionAlgorithm, encryptionPassword, iv);
   let encrypted = cipher.update(text, 'utf8', 'hex');
   encrypted += cipher.final('hex');
 
   return encrypted;
 };
 
-const decrypt = (text, password) => {
-  const decipher = crypto.createDecipher(encryptionAlgorithm, password);
+const decrypt = (text, iv) => {
+  const decipher = crypto.createDecipheriv(encryptionAlgorithm, encryptionPassword, iv);
   let decrypted = decipher.update(text, 'hex', 'utf8');
   decrypted += decipher.final('utf8');
 
   return decrypted;
 };
-
-const generatePdfPassword = (userId) => `${process.env.PDF_ENCRYPTION_TOKEN}${userId}`;
 
 const randomBytes = (length) => {
   return new Promise((resolve, reject) => {
@@ -104,7 +103,6 @@ module.exports = {
   randomBytes,
   generateToken,
   generateTokenExpiration,
-  generatePdfPassword,
   findStateByCode,
   USER_ROLE,
   ADMIN_ROLE,

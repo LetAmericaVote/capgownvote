@@ -1,6 +1,7 @@
 import { postToApi } from './api';
 import { storeUserData } from './user';
 import { setRoutingPathName } from './routing';
+import { changeCurrentStep } from './step';
 import { selectPreviousRoute } from '../selectors';
 
 export const SET_AUTH_ID = 'SET_AUTH_ID';
@@ -53,6 +54,9 @@ export const LOGOUT = 'LOGOUT';
 export function logout() {
   return (dispatch) => {
     dispatch(postToApi(LOGOUT, '/v1/auth/logout'))
-      .then(() => dispatch({ type: LOGOUT }));
+      .then(() => {
+        dispatch({ type: LOGOUT });
+        dispatch(changeCurrentStep(null, false));
+      });
   }
 }

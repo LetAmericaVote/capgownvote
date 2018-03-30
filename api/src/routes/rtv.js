@@ -3,7 +3,7 @@ const dateFormat = require('dateformat');
 const { authenticateUser } = require('../lib/auth');
 const { states } = require('../data/states');
 const { User } = require('../lib/models');
-const { generatePdfPassword, encrypt } = require('../lib/common');
+const { encrypt } = require('../lib/common');
 
 // RTV Api response for this appears bugged.
 const REQUIRES_PARTY_AFFILIATION = [
@@ -112,11 +112,10 @@ module.exports = (app) => {
       .send(payload)
       .then(rtvRes => {
         const { pdfurl } = rtvRes.body;
-        const password = generatePdfPassword(user.id);
 
         const data = {
           isRegistered: true,
-          pdf: encrypt(pdfurl, password),
+          pdf: encrypt(pdfurl, user.id.substring(0, 16)),
           nameTitle: rtvForm['name_title'],
           nameSuffix: rtvForm['name_suffix'],
           homeAddress: rtvForm['home_address'],
@@ -144,7 +143,7 @@ module.exports = (app) => {
           isFirstRegistration: rtvForm['first_registration'],
           politicalParty: rtvForm['party'],
           race: rtvForm['race'],
-          governmentId: encrypt(rtvForm['id_number'], password),
+          governmentId: encrypt(rtvForm['id_number'], user.id.substring(0, 16)),
         };
 
         User.findOneAndUpdate({ _id: user.id }, { '$set': data }, { new: true })

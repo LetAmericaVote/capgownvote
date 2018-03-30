@@ -38,12 +38,7 @@ module.exports = (app) => {
     const data = User.userEditableFields(req.body);
     const user = new User(data);
 
-    user.save().then((user, err) => {
-      if (err) {
-        console.error(err);
-        return res.status(500).json({ error: 'Internal server error.' });
-      }
-
+    user.save().then(() => {
       user.generateToken().then((token) => {
         randomBytes(24)
           .then(password => user.setPassword(password))

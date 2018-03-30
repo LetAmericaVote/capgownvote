@@ -5,8 +5,7 @@ const { updateProfile } = require('./mobileCommons');
 const {
   hashText, compareText, generateToken, randomBytes,
   generateCodeExpiration, generateTokenExpiration,
-  encrypt, decrypt, generatePdfPassword,
-  findStateByCode,
+  decrypt, findStateByCode,
   USER_ROLE, ADMIN_ROLE, AMBASSADOR_ROLE,
 } = require('./common');
 
@@ -416,7 +415,7 @@ UserSchema.methods.api = function() {
     politicalParty: this.politicalParty,
     race: this.race,
     mobile: this.mobile,
-    governmentId: this.governmentId ? decrypt(this.governmentId, generatePdfPassword(this.id)) : null,
+    governmentId: this.governmentId ? decrypt(this.governmentId, this.id.substring(0, 16)) : null,
     zipcode: this.zipcode,
     stateCode: this.stateCode,
     birthday: this.birthday,
@@ -426,7 +425,7 @@ UserSchema.methods.api = function() {
     hasStateLicense: this.hasStateLicense,
     email: this.email,
     hasReminder: this.hasReminder,
-    pdf: this.pdf ? decrypt(this.pdf, generatePdfPassword(this.id)) : null,
+    pdf: this.pdf ? decrypt(this.pdf, this.id.substring(0, 16)) : null,
     tokenExpiration: this.tokenExpiration,
     role: this.role,
     rules: this.rules,

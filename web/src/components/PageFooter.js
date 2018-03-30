@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from '../routing/Link';
 import {
   Footer, FooterLink, FooterItem, FooterSubtext,
   FooterLinkWrapper, FooterSubtextWrapper,
@@ -10,9 +9,6 @@ import {
 const disclaimer = `Paid for by Let America Vote (www.letamericavote.org). Not authorized by any candidate or candidate’s committee.`;
 
 const PageFooter = () => {
-  const RTVLink = Link(FooterLink, 'https://rockthevote.org');
-  const LAVLink = Link(FooterLink, 'https://letamericavote.org');
-
   return (
     <Footer>
       <FooterItemLayout>
@@ -21,7 +17,9 @@ const PageFooter = () => {
             <FooterSubtextWrapper>
               <FooterSubtext>Created By</FooterSubtext>
             </FooterSubtextWrapper>
-            <LAVLink>Let America Vote</LAVLink>
+            <a href="https://letamericavote.org" target="_blank" rel="noopener noreferrer">
+              <FooterLink>Let America Vote</FooterLink>
+            </a>
           </FooterLinkWrapper>
         </FooterItem>
         <FooterItem>
@@ -29,7 +27,9 @@ const PageFooter = () => {
             <FooterSubtextWrapper>
               <FooterSubtext>In Partnership With</FooterSubtext>
             </FooterSubtextWrapper>
-            <RTVLink>Rock The Vote</RTVLink>
+            <a href="https://rockthevote.org" target="_blank" rel="noopener noreferrer">
+              <FooterLink>Rock The Vote</FooterLink>
+            </a>
           </FooterLinkWrapper>
         </FooterItem>
       </FooterItemLayout>

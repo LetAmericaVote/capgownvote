@@ -404,7 +404,7 @@ export const FooterSubtext = styled.h4`
   }
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled.span`
   display: block;
   color: ${colors.red};
   font-size: ${baseValue}px;

@@ -129,6 +129,12 @@ module.exports = (app) => {
       })
       .catch(error => {
         console.error(error);
+
+        if (error && error.response && error.response.body && error.response.body.message) {
+          res.status(500).json({ error: error.response.body.message });
+          return;
+        }
+
         res.status(500).json({ error: 'Rock the vote had an error' });
       });
   });

@@ -1,4 +1,6 @@
 import { pushErrorNotification } from './notification';
+import { clearAuth } from './auth';
+import { GET_USER_DATA } from './user';
 import {
   selectApiRequestIsPending,
   selectAuthId, selectAuthToken,
@@ -10,7 +12,7 @@ export const API_CALL_FAILURE = 'API_CALL_FAILURE';
 
 const BASE_URL = process.env.REACT_APP_API_URI;
 
-export function apiCallFailed(requestId, error) {
+export function apiCallFailed(requestId, error, statusCode) {
   return (dispatch) => {
     dispatch({ type: API_CALL_FAILURE, requestId, error });
 
@@ -45,8 +47,10 @@ export function callApi(requestId, endpoint, options) {
     return fetch(url, requestOptions)
       .then((res) => {
         return res.json().then((json) => {
-          if (res.status !== 200) {
-            dispatch(apiCallFailed(requestId, json.error));
+          if (res.status === 401 && requestId === `${GET_USER_DATA}_${authId}`) {
+            dispatch(clearAuth());
+          } else if (res.status !== 200) {
+            dispatch(apiCallFailed(requestId, json.error, res.status));
           } else {
             dispatch({ type: API_CALL_SUCCESS, requestId });
           }

@@ -1,10 +1,12 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import SubmitButton from './SubmitButton';
 import FormStateSelector from './FormStateSelector';
 import Link from '../routing/Link';
 import {
   setFormValue, createUser, setIsPublicComputer,
   updateUserProfile, logout, pushGeneralNotification,
+  UPDATE_USER_PROFILE,
 } from '../actions';
 import {
   selectFormValue, selectIsPublicComputer, selectAuthId,
@@ -16,7 +18,7 @@ import {
 } from '../formKeys';
 import {
   SpacedInputGroupLayout, InputGroupLabelLayout,
-  InputGroupLabel, TextInput, WhiteButton, SignupLayout,
+  InputGroupLabel, TextInput, SignupLayout,
   CheckboxLayout, CheckboxInput, CheckboxTitle,
   CheckboxTitleLayout, InputGroupHelperLabel,
   SignupAuthLayout, SignupAuthCopy, SignupAuthLink,
@@ -129,9 +131,9 @@ const Signup = (props) => {
             onClick={() => setFormValue(HAS_STATE_LICENSE, ! user.hasStateLicense)}
           />
           <CheckboxTitleLayout>
-            <CheckboxTitle>Do you have a valid state license?</CheckboxTitle>
+            <CheckboxTitle>Do you have valid state identification? Note: This is not a requirement to register.</CheckboxTitle>
             <InputGroupHelperLabel>
-              eg: Drivers license. Note: This is not a requirement to reigster.
+              eg: Drivers license.
             </InputGroupHelperLabel>
           </CheckboxTitleLayout>
         </CheckboxLayout>
@@ -150,7 +152,11 @@ const Signup = (props) => {
           </CheckboxTitleLayout>
         </CheckboxLayout>
       </SpacedInputGroupLayout>
-      <WhiteButton onClick={onSubmit}>{submitCopy}</WhiteButton>
+      <SubmitButton
+        onClick={onSubmit}
+        ctaCopy={submitCopy}
+        requestId={`${UPDATE_USER_PROFILE}_${authId}`}
+      />
     </SignupLayout>
   );
 };

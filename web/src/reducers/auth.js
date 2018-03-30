@@ -5,7 +5,7 @@ import {
 } from '../authStorage';
 import {
   SET_AUTH_ID, SET_AUTH_TOKEN, SET_IS_PUBLIC_COMPUTER,
-  LOGIN, LOGOUT, SET_AUTH_TOKEN_EXPIRATION,
+  LOGOUT, SET_AUTH_TOKEN_EXPIRATION, CLEAR_AUTH,
 } from '../actions';
 
 const subscribe = createReducer('auth', {
@@ -53,8 +53,17 @@ const subscribe = createReducer('auth', {
       isPublicComputer: action.isPublicComputer,
     };
   },
-  [LOGIN]: (state, action) => state,
   [LOGOUT]: (state, action) => {
+    wipeAuthCredentials();
+
+    return {
+      ...state,
+      id: null,
+      token: null,
+      expiration: null,
+    };
+  },
+  [CLEAR_AUTH]: (state, action) => {
     wipeAuthCredentials();
 
     return {

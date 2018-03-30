@@ -12,6 +12,7 @@ import {
   selectAuthenticatedUserHasStateLicense,
   selectAuthenticatedUserOvrRequiresLicense,
   selectAuthenticatedUserCustomRegistrationMessage,
+  selectAuthenticatedUserMobile,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -21,10 +22,10 @@ import {
   RULES_STEP,
   FORM_STEP,
   MAIL_FORM_STEP,
-  CONTINUE_IMPACT_STEP,
   STILL_IMPACT_STEP,
   OVR_STEP,
   CUSTOM_MESSAGE_STEP,
+  THANKS_STEP,
 } from '../stepNames'
 
 const step = store => next => action => {
@@ -41,6 +42,7 @@ const step = store => next => action => {
   const hasStateLicense = selectAuthenticatedUserHasStateLicense(store.getState());
   const ovrRequiresLicense = selectAuthenticatedUserOvrRequiresLicense(store.getState());
   const customRegistrationMessage = selectAuthenticatedUserCustomRegistrationMessage(store.getState());
+  const hasMobile = !!selectAuthenticatedUserMobile(store.getState());
 
   const ovrIsAvailable = isEligible && hasOvr &&
     (ovrRequiresLicense ? hasStateLicense : true);
@@ -80,7 +82,7 @@ const step = store => next => action => {
   if (isRegistered && ! hasPdf) {
     orderData.push({
       id: STILL_IMPACT_STEP,
-      isComplete: false,
+      isComplete: hasMobile,
     });
   }
 
@@ -94,7 +96,7 @@ const step = store => next => action => {
   if (ovrIsAvailable) {
     orderData.push({
       id: OVR_STEP,
-      isComplete: false,
+      isComplete: hasMobile,
     });
   }
 
@@ -108,13 +110,20 @@ const step = store => next => action => {
   if (typeof isEligible === 'boolean' && ! isEligible) {
     orderData.push({
       id: STILL_IMPACT_STEP,
-      isComplete: false,
+      isComplete: hasMobile,
     });
   }
 
   if (isRegistered && hasPdf) {
     orderData.push({
       id: MAIL_FORM_STEP,
+      isComplete: hasMobile,
+    });
+  }
+
+  if (hasMobile) {
+    orderData.push({
+      id: THANKS_STEP,
       isComplete: false,
     });
   }

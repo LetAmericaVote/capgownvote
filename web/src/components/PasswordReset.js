@@ -1,15 +1,16 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import SubmitButton from './SubmitButton';
 import { selectFormValue, selectAuthId } from '../selectors';
 import {
   setFormValue, updateUserPassword,
-  pushGeneralNotification,
+  pushGeneralNotification, UPDATE_USER_PASSWORD,
 } from '../actions';
 import {
   AUTH_RESET_PASSWORD, AUTH_RESET_CONFIRM_PASSWORD,
 } from '../formKeys';
 import {
-  WhiteButton, SpacedInputGroupLayout,
+  SpacedInputGroupLayout,
   InputGroupLabelLayout, InputGroupLabel,
   TextInput, ErrorMessage,
 } from '../blocks';
@@ -76,7 +77,11 @@ const PasswordReset = (props) => {
         />
       </SpacedInputGroupLayout>
       {passwordsMatch ? (
-        <WhiteButton onClick={onResetPassword}>Reset password</WhiteButton>
+        <SubmitButton
+          onClick={onResetPassword}
+          ctaCopy="Reset password"
+          requestId={`${UPDATE_USER_PASSWORD}_${authenticatedId}`}
+        />
       ) : (
         <ErrorMessage>Passwords do not match</ErrorMessage>
       )}

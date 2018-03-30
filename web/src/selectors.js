@@ -187,6 +187,11 @@ export const selectUserEmail = (id, state) => selectUser(id, state).email;
 export const selectAuthenticatedUserEmail = (state) =>
   selectUserEmail(selectAuthId(state), state);
 
+export const selectUserMobile = (id, state) => selectUser(id, state).mobile;
+
+export const selectAuthenticatedUserMobile = (state) =>
+  selectUserMobile(selectAuthId(state), state);
+
 export const selectAuthId = (state) => state.auth.id;
 
 export const selectAuthToken = (state) => state.auth.token;

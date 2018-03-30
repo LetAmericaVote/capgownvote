@@ -19,7 +19,7 @@ export const colors = {
   black: '#111111',
   white: '#FFFFFF',
   silver: '#ebeded',
-  darkSilver: '#c3c9c9',
+  darkSilver: '#9aa4a4',
   red: '#ff4c4d',
   cyan: '#21c2de',
   darkCyan: '#072c34',
@@ -464,7 +464,7 @@ export const StepFrameLayout = styled.section`
   margin: ${baseValue * 4}px auto;
   flex-direction: column;
   flex-grow: 1;
-  ${props => props.isFading ? `animation: ${fadeAnimation} 0.5s linear;` : ''}
+  ${props => props.isFading ? `animation: ${fadeAnimation} 0.25s linear;` : ''}
 
   ${media.tablet`
     flex-direction: row;
@@ -546,6 +546,7 @@ export const SpacedInputGroupLayout = styled(InputGroupLayout)`
 export const InputGroupLabelLayout = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: ${baseValue / 4}px;
 `;
 
 export const InputGroupLabel = styled.span`
@@ -1022,6 +1023,12 @@ export const ContentParagraph = styled.p`
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
   margin-bottom: ${baseValue * 2}px;
+
+  ${props => props.underlined ? `
+    text-decoration: underline;
+    cursor: pointer;
+  ` : ''}
+
   ${secondaryFontFamily}
   ${fontKerning}
 `;

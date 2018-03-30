@@ -377,7 +377,39 @@ ReminderSchema.index({
 });
 
 const Reminder = mongoose.model('reminder', ReminderSchema);
+//
+// const StatsSchema = mongoose.Schema({
+//   totalStudents: {
+//     type: Number,
+//     default: null,
+//   },
+//   totalHighschools: {
+//     type: Number,
+//     default: null,
+//   },
+//   totalFormRegistrations: {
+//     type: Number,
+//     default: null,
+//   },
+//   totalOvrRegistrations: {
+//     type: Number,
+//     default: null,
+//   },
+//   leaderboard: [
+//     {
+//       ...SchoolSchema,
+//       score: {
+//         type: Number,
+//         default: null,
+//       },
+//     },
+//   ],
+// }, {
+//   timestamps: true,
+// });
+//
+// const Stat = mongoose.model('stat', StatsSchema);
 
 module.exports = {
-  School, User, Reminder,
+  School, User, Reminder, // Stat,
 };

@@ -1,7 +1,11 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import { WhiteButton, ErrorMessage } from '../blocks';
-import { postUserRegistrationForm } from '../actions';
+import SubmitButton from './SubmitButton';
+import { ErrorMessage } from '../blocks';
+import {
+  postUserRegistrationForm,
+  POST_USER_REGISTRATION_FORM,
+} from '../actions';
 import {
   selectValidationErrors, selectAllRegistrationFields,
 } from '../selectors';
@@ -25,7 +29,7 @@ const VoterRegSubmit = (props) => {
 
   const hasErrors = !! failedValidationKeys.length;
   const singularError = failedValidationKeys.length === 1;
-  const errorMessage = `This form ${singularError ? 'has an error' : 'has errors'}. Check ${failedValidationTitles.join(', ')}.`;
+  const errorMessage = `This form ${singularError ? 'has an error' : 'has errors'}, check the following fields, ${failedValidationTitles.join(', ')}.`;
 
   const onSubmit = () => {
     if (hasErrors) {
@@ -35,9 +39,6 @@ const VoterRegSubmit = (props) => {
     postUserRegistrationForm();
   };
 
-  // TODO:
-  //  - Show submission status
-
   if (hasErrors) {
     return (
       <ErrorMessage>{errorMessage}</ErrorMessage>
@@ -45,7 +46,11 @@ const VoterRegSubmit = (props) => {
   }
 
   return (
-    <WhiteButton onClick={onSubmit}>Register To Vote</WhiteButton>
+    <SubmitButton
+      onClick={onSubmit}
+      ctaCopy="Register To Vote"
+      requestId={POST_USER_REGISTRATION_FORM}
+    />
   );
 };
 

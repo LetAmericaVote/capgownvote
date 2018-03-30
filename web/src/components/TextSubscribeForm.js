@@ -1,16 +1,17 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import SubmitButton from './SubmitButton';
 import { MOBILE } from '../formKeys';
 import { selectAuthId, selectFormValue } from '../selectors';
 import {
   setFormValue, updateUserMobile,
   pushGeneralNotification,
+  UPDATE_USER_MOBILE,
 } from '../actions';
 import {
   SpacedInputGroupLayout, InputGroupLabelLayout,
-  InputGroupLabel, TextInput, WhiteButton,
+  InputGroupLabel, TextInput, FlexColumnLayout,
   InputGroupHelperLabel, InputGroupHelperLabelLink,
-  FlexColumnLayout,
 } from '../blocks';
 
 const privacyLink = 'https://www.letamericavote.org/privacy-policy/';
@@ -29,6 +30,7 @@ const TextSubscribeForm = (props) => {
     authId, mobile, setFormValue,
     updateUserMobile, ctaCopy, ctaLink,
     ctaOnClick, staticCtaCopy,
+    reducedSpacing, ctaRequestId,
   } = props;
 
   const defaultOnClick = () => {
@@ -45,13 +47,17 @@ const TextSubscribeForm = (props) => {
     const copy = staticCtaCopy || (mobile ? 'Update mobile number' : ctaCopy);
 
     const CtaButton = () => (
-      <WhiteButton onClick={() => {
-        if (ctaOnClick) {
-          ctaOnClick(mobile);
-        } else {
-          defaultOnClick();
-        }
-      }}>{copy}</WhiteButton>
+      <SubmitButton
+        ctaCopy={copy}
+        onClick={() => {
+          if (ctaOnClick) {
+            ctaOnClick(mobile);
+          } else {
+            defaultOnClick();
+          }
+        }}
+        requestId={ctaRequestId || `${UPDATE_USER_MOBILE}_${authId}`}
+      />
     );
 
     if (ctaLink) {
@@ -67,9 +73,14 @@ const TextSubscribeForm = (props) => {
     );
   };
 
+  const inputGroupProps = {};
+  if (reducedSpacing) {
+    inputGroupProps.multiplier = 2;
+  }
+
   return (
     <FlexColumnLayout>
-      <SpacedInputGroupLayout>
+      <SpacedInputGroupLayout {...inputGroupProps}>
         <InputGroupLabelLayout>
           <InputGroupLabel>
             Mobile Number

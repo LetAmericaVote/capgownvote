@@ -14,7 +14,7 @@ const TextSubscribe = (props) => {
       <TextSubscribePart>
         <ContentHeader>{cta}</ContentHeader>
       </TextSubscribePart>
-      <TextSubscribeForm ctaCopy="Signup" />
+      <TextSubscribeForm ctaCopy="Signup" reducedSpacing />
     </FlexColumnLayout>
   );
 };

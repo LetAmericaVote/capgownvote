@@ -37,10 +37,16 @@ export function login(email, password) {
           const previousRoute = selectPreviousRoute(getState());
           if (previousRoute && previousRoute.length) {
             dispatch(setRoutingPathName(previousRoute));
+            window.history.replaceState({}, document.title, previousRoute);
           }
         }
       });
   };
+}
+
+export const CLEAR_AUTH = 'CLEAR_AUTH';
+export function clearAuth() {
+  return { type: CLEAR_AUTH };
 }
 
 export const LOGOUT = 'LOGOUT';

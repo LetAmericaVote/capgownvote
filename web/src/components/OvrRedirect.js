@@ -7,6 +7,7 @@ import {
  } from '../selectors';
 import {
   FlexColumnLayout, ContentParagraph,
+  InputGroupHelperLabel,
 } from '../blocks';
 
 const OvrRedirect = (props) => {
@@ -19,9 +20,11 @@ const OvrRedirect = (props) => {
       <ContentParagraph>{copy}</ContentParagraph>
       <ContentParagraph>You can also opt-in to recieve messages from Let America Vote to help protect voting rights in your community.</ContentParagraph>
       <TextSubscribeForm
-        staticCtaCopy="Complete Voter Registration Form"
+        staticCtaCopy="Complete Form"
         ctaLink={ovrLink}
+        reducedSpacing
       />
+      <InputGroupHelperLabel>Clicking this button will open a new tab to the state voter registration website.</InputGroupHelperLabel>
     </FlexColumnLayout>
   );
 };

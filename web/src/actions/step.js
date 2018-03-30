@@ -3,7 +3,7 @@ import {
   selectPreviousStep,
 } from '../selectors';
 
-const FADE_LENGTH = 500;
+const FADE_LENGTH = 250;
 
 export const SET_FADE_TO = 'SET_FADE_TO';
 export function setFadeTo(to) {

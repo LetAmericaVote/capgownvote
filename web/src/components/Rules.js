@@ -4,7 +4,7 @@ import { updateUserProfile } from '../actions';
 import {
   RulesLayout, RuleItem, SpacedInputGroupLayout,
   CheckboxLayout, CheckboxInput, CheckboxTitle,
-  CheckboxTitleLayout,
+  CheckboxTitleLayout, ContentHeader,
 } from '../blocks';
 import {
   selectAuthenticatedUserIsEligible,
@@ -20,6 +20,7 @@ const Rules = (props) => {
 
   return (
     <RulesLayout>
+      <ContentHeader>Check the rules below to see if you're eligible to vote in your state.</ContentHeader>
       {rules.map(rule => <RuleItem key={rule}>- {rule}</RuleItem>)}
       <SpacedInputGroupLayout>
         <CheckboxLayout spacing>

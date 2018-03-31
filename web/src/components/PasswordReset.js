@@ -20,7 +20,7 @@ const PasswordReset = (props) => {
     formResetPassword, formResetConfirmPassword,
     authenticatedId, updateUserPassword,
     setFormValue, pushGeneralNotification,
-    postUpdate,
+    postUpdate, buttonCopy,
   } = props;
 
   const passwordsMatch = formResetPassword === formResetConfirmPassword;
@@ -79,7 +79,7 @@ const PasswordReset = (props) => {
       {passwordsMatch ? (
         <SubmitButton
           onClick={onResetPassword}
-          ctaCopy="Reset password"
+          ctaCopy={buttonCopy || "Reset password"}
           requestId={`${UPDATE_USER_PASSWORD}_${authenticatedId}`}
         />
       ) : (

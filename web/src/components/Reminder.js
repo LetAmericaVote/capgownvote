@@ -99,13 +99,21 @@ const Reminder = (props) => {
 
   const onSmsRemind = (mobile) => {
     if (mobile && reminderDay && reminderTime) {
-      const dateOffset = reminderDay === 'td' ? Date.now() : new Date().setHours(23, 0, 0);
-      const timeOffset =
-        ((reminderTime === 'm' ? 9 : false) ||
-        (reminderTime === 'a' ? 15 : false) ||
-        19) * (1000 * 60 * 60);
+      const hoursOffset = new Date().getTimezoneOffset() / 60;
 
-      const targetTime = dateOffset + timeOffset;
+      const dateOffset = reminderDay === 'td' ?
+        new Date().setHours(0, 0, 0) :
+        new Date().setHours(23, 0, 0) + (1000 * 60 * 60);
+
+      const timeOffset =
+        (((reminderTime === 'm' ? 9 : false) ||
+        (reminderTime === 'a' ? 15 : false) ||
+        19) + hoursOffset) * (1000 * 60 * 60);
+
+      const workingTime = dateOffset + timeOffset;
+      const targetTime = workingTime - (hoursOffset * (1000 * 60 * 60));
+
+      console.log(new Date(targetTime));
 
       postReminder(targetTime, mobile)
         .then(isSet => setFormValue(REMINDER_SHOW_CONFIG, ! isSet));
@@ -129,6 +137,7 @@ const Reminder = (props) => {
               </div>
             ) : (
               <PasswordReset
+                buttonCopy="Set password"
                 postUpdate={() => setFormValue(REMINDER_SHOW_CONFIG, false)}
               />
             )}

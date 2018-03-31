@@ -45,7 +45,7 @@ const Mail = (props) => {
         All of the information you need for each step can be found on the first page of the form you downloaded.
       </ContentParagraph>
       <ContentParagraph>
-        If you need access to a printer, talk to someone at your school such as a teacher or a guidance counselor. In order to mail your form, you can buy a first class stamp at almost any store such as Walmart, or you can purchase them directly from the post office.
+        If you need access to a printer, talk to someone at your school such as a teacher or a guidance counselor. To mail your form, you can buy a first-class stamp at almost any store such as Walmart, or you can purchase them directly from the post office.
       </ContentParagraph>
       <ContentParagraph reducedSpacing>
         Need to access your completed form later?

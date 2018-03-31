@@ -2,7 +2,10 @@ import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import SubmitButton from './SubmitButton';
 import { MOBILE } from '../formKeys';
-import { selectAuthId, selectFormValue } from '../selectors';
+import {
+  selectAuthId, selectFormValue,
+  selectAuthenticatedUserMobile,
+} from '../selectors';
 import {
   setFormValue, updateUserMobile,
   pushGeneralNotification,
@@ -29,12 +32,12 @@ const TextSubscribeForm = (props) => {
   const {
     authId, mobile, setFormValue,
     updateUserMobile, ctaCopy, ctaLink,
-    ctaOnClick, staticCtaCopy,
+    ctaOnClick, staticCtaCopy, userMobile,
     reducedSpacing, ctaRequestId,
   } = props;
 
   const defaultOnClick = () => {
-    if (mobile) {
+    if (mobile && mobile !== userMobile) {
       updateUserMobile(authId, mobile).then(updated => {
         if (updated) {
           pushGeneralNotification('Thanks for signing up!');
@@ -101,6 +104,7 @@ const TextSubscribeForm = (props) => {
 TextSubscribeForm.mapStateToProps = (state) => ({
   authId: selectAuthId(state),
   mobile: selectFormValue(MOBILE, '', state),
+  userMobile: selectAuthenticatedUserMobile(state),
 });
 
 TextSubscribeForm.actionCreators = {

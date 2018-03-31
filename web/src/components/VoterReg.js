@@ -4,9 +4,11 @@ import VoterRegStateForm from './VoterRegStateForm';
 import VoterRegSubmit from './VoterRegSubmit';
 import BaseWrapper from './BaseWrapper';
 import { makeStateRequestId } from '../helpers';
+import { ContentParagraph } from '../blocks';
 import {
   getStandardRegistrationFields, getStateRegistrationFields,
   GET_STANDARD_REGISTRATION_FIELDS, GET_STATE_REGISTRATION_FIELDS,
+  POST_USER_REGISTRATION_FORM,
 } from '../actions';
 import {
   selectApiRequest,
@@ -20,7 +22,7 @@ const VoterReg = (props) => {
     hasStandardRegistrationFields, hasStateRegistrationFields,
     getStandardRegistrationFields, getStateRegistrationFields,
     standardRegistrationFieldsRequest, stateRegistrationFieldsRequest,
-    stateCode,
+    postRegistrationRequest, stateCode,
   } = props;
 
   if (! hasStandardRegistrationFields && ! standardRegistrationFieldsRequest) {
@@ -72,6 +74,9 @@ const VoterReg = (props) => {
       <StandardFields />
       <StateFields />
       { showSubmissionBar ? <VoterRegSubmit /> : null }
+      { postRegistrationRequest && postRegistrationRequest.isPending ? (
+        <ContentParagraph>Processing your request will take a moment.</ContentParagraph>
+      ) : null}
     </div>
   );
 };
@@ -88,6 +93,7 @@ VoterReg.mapStateToProps = (state) => ({
       GET_STATE_REGISTRATION_FIELDS, selectAuthenticatedUserStateCode(state)
     ), state
   ),
+  postRegistrationRequest: selectApiRequest(POST_USER_REGISTRATION_FORM, state),
 });
 
 VoterReg.mapDispatchToProps = (dispatch) => ({

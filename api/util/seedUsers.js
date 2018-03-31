@@ -1,4 +1,3 @@
-require('dotenv').config();
 require('../src/lib/common').dbConnect();
 
 const { User, School } = require('../src/lib/models');

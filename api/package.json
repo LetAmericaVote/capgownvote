@@ -26,7 +26,9 @@
     "stats-task": "node tasks/stats.js",
     "stats-task-local": "node -r dotenv/config tasks/stats.js",
     "seed-schools": "node util/seedSchools.js",
-    "seed-users": "node util/seedUsers.js"
+    "seed-schools-local": "node -r dotenv/config util/seedSchools.js",
+    "seed-users": "node util/seedUsers.js",
+    "seed-users-local": "node -r dotenv/config util/seedUsers.js"
   },
   "engines": {
     "node": "9.5.x",

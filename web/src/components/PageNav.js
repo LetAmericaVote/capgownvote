@@ -5,7 +5,7 @@ import logo from '../assets/capgownvote.svg';
 import { toggleNavMenu } from '../actions';
 import {
   selectAuthId, selectUserRole, selectIsNavOpen,
-  selectIsAuthenticated,
+  selectIsAuthenticated, selectCurrentRoute,
 } from '../selectors';
 import {
   Nav, NavLogo, NavLinkLayout, NavHamburger,
@@ -14,7 +14,10 @@ import {
 } from '../blocks';
 
 const PageNav = (props) => {
-  const { isNavOpen, toggleNavMenu, isAuthenticated } = props;
+  const {
+    currentRoute, isNavOpen,
+    toggleNavMenu, isAuthenticated,
+  } = props;
 
   const HomeLink = Link(({ onClick }) => (
     <NavLogo
@@ -34,8 +37,8 @@ const PageNav = (props) => {
       to: '/register',
     },
     {
-      title: 'Leaderboard',
-      to: '/leaderboard',
+      title: 'Stats',
+      to: '/stats',
     },
   ];
 
@@ -60,6 +63,7 @@ const PageNav = (props) => {
                   onClick();
                   toggleNavMenu();
                 }}
+                active={currentRoute === to}
               >{title}</NavLink>
             ), to);
 
@@ -82,6 +86,7 @@ PageNav.mapStateToProps = (state) => ({
   userRole: selectUserRole(selectAuthId(state), state),
   isNavOpen: selectIsNavOpen(state),
   isAuthenticated: selectIsAuthenticated(state),
+  currentRoute: selectCurrentRoute(state),
 });
 
 PageNav.actionCreators = {

@@ -211,5 +211,7 @@ export const selectHasNotification = (state) =>
 
 export const selectIsNavOpen = (state) => state.nav.isOpen;
 
+export const selectCurrentRoute = (state) => state.routing.pathName;
+
 export const selectPreviousRoute = (state) =>
   state.routing.history[state.routing.history.length - 1];

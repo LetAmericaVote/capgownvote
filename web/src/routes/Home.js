@@ -10,7 +10,7 @@ import {
 const Home = (props) => {
   const RegisterLink = Link(ClearButton, '/register');
   const AboutLink = Link(HomeNavItem, '/about');
-  const LeaderboardLink = Link(HomeNavItem, '/leaderboard');
+  const LeaderboardLink = Link(HomeNavItem, '/stats');
 
   return (
     <Main>
@@ -22,10 +22,10 @@ const Home = (props) => {
             <RegisterLink>Register To Vote</RegisterLink>
             <PaddedArea />
             <HomeNavItemWrapper>
-              <AboutLink>About</AboutLink>
+              <LeaderboardLink>Stats</LeaderboardLink>
             </HomeNavItemWrapper>
             <HomeNavItemWrapper>
-              <LeaderboardLink>Leaderboard</LeaderboardLink>
+              <AboutLink>About</AboutLink>
             </HomeNavItemWrapper>
           </PaddedArea>
         </CenteredArea>

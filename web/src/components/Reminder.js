@@ -55,13 +55,16 @@ const Reminder = (props) => {
     </ReminderConfigPart>
   );
 
+  const hoursOffset = new Date().getTimezoneOffset() / 60;
   const availableTimes = [
-    { value: 'm', title: 'Morning', cutoff: new Date().setHours(9, 0, 0) },
-    { value: 'a', title: 'Afternoon', cutoff: new Date().setHours(15, 0, 0) },
-    { value: 'e', title: 'Evening', cutoff: new Date().setHours(19, 0, 0) },
+    { value: 'm', title: 'Morning', cutoff: new Date().setHours(9 + hoursOffset, 0, 0) },
+    { value: 'a', title: 'Afternoon', cutoff: new Date().setHours(15 + hoursOffset, 0, 0) },
+    { value: 'e', title: 'Evening', cutoff: new Date().setHours(19 + hoursOffset, 0, 0) },
   ].filter((time) => {
     if (reminderDay === 'td') {
-      return time.cutoff >= Date.now();
+      const offset = hoursOffset * (1000 * 60 * 60);
+
+      return (time.cutoff - offset) >= Date.now();
     }
 
     return true;

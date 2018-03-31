@@ -56,12 +56,13 @@ const Reminder = (props) => {
   );
 
   const hoursOffset = new Date().getTimezoneOffset() / 60;
-  const availableTimes = [
+
+  const availableTimes = (dayValue) => [
     { value: 'm', title: 'Morning', cutoff: new Date().setHours(9 + hoursOffset, 0, 0) },
     { value: 'a', title: 'Afternoon', cutoff: new Date().setHours(15 + hoursOffset, 0, 0) },
     { value: 'e', title: 'Evening', cutoff: new Date().setHours(19 + hoursOffset, 0, 0) },
   ].filter((time) => {
-    if (reminderDay === 'td') {
+    if (dayValue === 'td') {
       const offset = hoursOffset * (1000 * 60 * 60);
 
       return (time.cutoff - offset) >= Date.now();
@@ -70,32 +71,49 @@ const Reminder = (props) => {
     return true;
   });
 
+  const availableTimesByDay = {
+    'td': availableTimes('td'),
+    'tm': availableTimes('tm'),
+  };
+
+  const isTodayAvailable = !!availableTimesByDay['td'].length;
+  if (! isTodayAvailable && ! reminderDay) {
+    setFormValue(REMINDER_DAY, 'tm');
+  }
+
   const timePicker = (
     <ReminderTimeRow>
       <ReminderTimeColumn>
-        <SelectInputCarrot>
-          <SelectInput
-            onChange={event => setFormValue(REMINDER_DAY, event.target.value)}
-            value={reminderDay || ''}
-          >
-            {reminderDay ? null : <option>Pick a day</option>}
-            <option value="td">Today</option>
-            <option value="tm">Tomorow</option>
-          </SelectInput>
-        </SelectInputCarrot>
+        {isTodayAvailable ? (
+          <SelectInputCarrot>
+            <SelectInput
+              onChange={event => {
+                setFormValue(REMINDER_DAY, event.target.value)
+                setFormValue(REMINDER_TIME, null);
+              }}
+              value={reminderDay || ''}
+            >
+              {reminderDay ? null : <option>Pick a day</option>}
+              <option value="td">Today</option>
+              <option value="tm">Tomorow</option>
+            </SelectInput>
+          </SelectInputCarrot>
+        ) : null}
       </ReminderTimeColumn>
       <ReminderTimeColumn>
-        <SelectInputCarrot>
-          <SelectInput
-            onChange={event => setFormValue(REMINDER_TIME, event.target.value)}
-            value={reminderTime || ''}
-          >
-            {reminderTime ? null : <option>Pick a time</option>}
-            {availableTimes.map((time) => (
-              <option key={time.value} value={time.value}>{time.title}</option>
-            ))}
-          </SelectInput>
-        </SelectInputCarrot>
+        {reminderDay ? (
+          <SelectInputCarrot>
+            <SelectInput
+              onChange={event => setFormValue(REMINDER_TIME, event.target.value)}
+              value={reminderTime || ''}
+            >
+              {reminderTime ? null : <option>Pick a time</option>}
+              {availableTimesByDay[reminderDay].map((time) => (
+                <option key={time.value} value={time.value}>{time.title}</option>
+              ))}
+            </SelectInput>
+          </SelectInputCarrot>
+        ) : null}
       </ReminderTimeColumn>
     </ReminderTimeRow>
   );

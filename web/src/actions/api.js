@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { pushErrorNotification } from './notification';
 import { clearAuth } from './auth';
 import { GET_USER_DATA } from './user';
@@ -17,6 +18,14 @@ export function apiCallFailed(requestId, error, statusCode) {
     dispatch({ type: API_CALL_FAILURE, requestId, error });
 
     const errorMessage = error && typeof error === 'string' ? error : 'Whoops, looks like we had an error. Try again?';
+
+    ReactGA.event({
+      category: 'API',
+      action: 'User experienced an API error',
+      label: errorMessage,
+      nonInteraction: true,
+    });
+
     dispatch(pushErrorNotification(errorMessage));
   };
 }

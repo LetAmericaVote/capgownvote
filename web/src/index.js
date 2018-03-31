@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import { applyMiddleware, createStore, compose } from 'redux';
 import logger from 'redux-logger';
 import { css, injectGlobal } from 'styled-components';
+import ReactGA from 'react-ga';
 
 import Home from './routes/Home';
 import Register from './routes/Register';
@@ -23,9 +24,11 @@ import init from './init';
 
 import './fonts';
 
+const { REACT_APP_GA_TRACKING_ID, NODE_ENV } = process.env;
+
 const middlewares = [thunk, validation, schools, step];
 
-if (process.env.NODE_ENV === `development`) {
+if (NODE_ENV === `development`) {
   middlewares.push(logger);
 }
 
@@ -33,6 +36,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware(...middlewares)));
 
 init(store);
+
+ReactGA.initialize(REACT_APP_GA_TRACKING_ID, {
+  debug: NODE_ENV === `development`,
+});
 
 const Root = () => (
   <Provider store={store}>

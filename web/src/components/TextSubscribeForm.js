@@ -33,7 +33,7 @@ const TextSubscribeForm = (props) => {
     authId, mobile, setFormValue,
     updateUserMobile, ctaCopy, ctaLink,
     ctaOnClick, staticCtaCopy, userMobile,
-    reducedSpacing, ctaRequestId,
+    reducedSpacing, ctaRequestId, postSubmit,
   } = props;
 
   const defaultOnClick = () => {
@@ -57,6 +57,10 @@ const TextSubscribeForm = (props) => {
             ctaOnClick(mobile);
           } else {
             defaultOnClick();
+          }
+
+          if (postSubmit) {
+            postSubmit();
           }
         }}
         requestId={ctaRequestId || `${UPDATE_USER_MOBILE}_${authId}`}

@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { readAuth, wipeAuthCredentials } from './authStorage';
 import { setAuthId, setAuthToken, getUserData } from './actions';
 
@@ -33,10 +34,28 @@ function init(store) {
   if (paramId && paramToken) {
     auth(store, paramId, paramToken);
     window.history.replaceState({}, document.title, window.location.pathname);
+
+    ReactGA.event({
+      category: 'Auth',
+      action: 'Authenticated with one time login',
+      nonInteraction: true,
+    });
   } else if (isExpired) {
     wipeAuthCredentials();
+
+    ReactGA.event({
+      category: 'Auth',
+      action: 'Client had expired credentials',
+      nonInteraction: true,
+    });
   } else {
     auth(store, id, token);
+
+    ReactGA.event({
+      category: 'Auth',
+      action: 'Client had auth credentials',
+      nonInteraction: true,
+    });
   }
 }
 

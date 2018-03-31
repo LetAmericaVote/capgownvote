@@ -1,9 +1,11 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import BaseWrapper from './BaseWrapper';
 import TextSubscribeForm from './TextSubscribeForm';
 import {
   selectAuthenticatedUserOvrLink,
   selectAuthenticatedUserOvrRequiresLicense,
+  selectAuthenticatedUserStateCode,
  } from '../selectors';
 import {
   FlexColumnLayout, ContentParagraph,
@@ -11,7 +13,7 @@ import {
 } from '../blocks';
 
 const OvrRedirect = (props) => {
-  const { ovrLink, ovrRequiresLicense } = props;
+  const { ovrLink, ovrRequiresLicense, authenticatedUserStateCode } = props;
 
   const copy = ovrRequiresLicense ? `Your state has online voter registration and because you have state identification you can complete your registration on the state website.` : `Your state has online voter registration and you can complete your registration on the state website.`;
 
@@ -23,6 +25,13 @@ const OvrRedirect = (props) => {
         staticCtaCopy="Complete Form"
         ctaLink={ovrLink}
         reducedSpacing
+        postSubmit={() => {
+          ReactGA.event({
+            category: 'OVR',
+            action: 'User successfully visited state OVR platform',
+            label: authenticatedUserStateCode,
+          });
+        }}
       />
       <InputGroupHelperLabel>Clicking this button will open a new tab to the state voter registration website.</InputGroupHelperLabel>
     </FlexColumnLayout>
@@ -30,6 +39,7 @@ const OvrRedirect = (props) => {
 };
 
 OvrRedirect.mapStateToProps = (state) => ({
+  authenticatedUserStateCode: selectAuthenticatedUserStateCode(state),
   ovrLink: selectAuthenticatedUserOvrLink(state),
   ovrRequiresLicense: selectAuthenticatedUserOvrRequiresLicense(state),
 });

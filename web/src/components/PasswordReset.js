@@ -24,9 +24,10 @@ const PasswordReset = (props) => {
   } = props;
 
   const passwordsMatch = formResetPassword === formResetConfirmPassword;
+  const isPasswordLongEnough = formResetPassword.length >= 8;
 
   const onResetPassword = () => {
-    if (! passwordsMatch) {
+    if (! passwordsMatch || ! isPasswordLongEnough) {
       return;
     }
 
@@ -76,14 +77,14 @@ const PasswordReset = (props) => {
           type="password"
         />
       </SpacedInputGroupLayout>
-      {passwordsMatch ? (
+      {passwordsMatch && isPasswordLongEnough ? (
         <SubmitButton
           onClick={onResetPassword}
           ctaCopy={buttonCopy || "Reset password"}
           requestId={`${UPDATE_USER_PASSWORD}_${authenticatedId}`}
         />
       ) : (
-        <ErrorMessage>Passwords do not match</ErrorMessage>
+        <ErrorMessage>{! passwordsMatch ? `Passwords do not match` : `Password must be at least 8 characters long`}</ErrorMessage>
       )}
     </div>
   );

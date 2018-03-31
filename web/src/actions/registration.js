@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { getFromApi, postToApi } from './api';
 import { storeUserData } from './user';
 import { makeStateRequestId } from '../helpers';
@@ -60,6 +61,11 @@ export function postUserRegistrationForm() {
       .then(res => {
         if (res && res.data) {
           dispatch(storeUserData(res.data));
+
+          ReactGA.event({
+            category: 'Registration',
+            action: 'User successfully posted their form',
+          });
         }
       });
   };

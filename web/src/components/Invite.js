@@ -39,7 +39,6 @@ const Invite = (props) => {
     setFormValue(SCHOOL_INVITE_NAME, schoolSearchInput);
   }
 
-  console.log('abcd', stateCode, authenticatedUserStateCode);
   if (! stateCode && authenticatedUserStateCode) {
     setFormValue(SCHOOL_INVITE_STATE_CODE, authenticatedUserStateCode);
   }

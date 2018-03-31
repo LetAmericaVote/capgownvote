@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { postToApi } from './api';
 import { storeUserData } from './user';
 import { pushSchoolData } from './school';
@@ -16,6 +17,11 @@ export function setRequiresInvite(requiresInvite) {
 
 export const POST_INVITE = 'POST_INVITE';
 export function postInvite() {
+  ReactGA.event({
+    category: 'Invite',
+    action: 'User posted an invite',
+  });
+
   return (dispatch, getState) => {
     const payload = {
       name: selectFormValue(SCHOOL_INVITE_NAME, null, getState()),

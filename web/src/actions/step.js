@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import {
   selectStepFade, selectNextStep,
   selectPreviousStep,
@@ -35,6 +36,12 @@ export function changeCurrentStep(stepId, shouldScroll) {
       return;
     }
 
+    ReactGA.event({
+      category: 'Step',
+      action: 'Changed current step',
+      label: stepId,
+    });
+
     const delay = (
       isFadeInProgress ? (
         FADE_LENGTH - (Date.now() - new Date(fade.start))
@@ -55,7 +62,7 @@ export function changeCurrentStep(stepId, shouldScroll) {
       if (shouldScroll) {
         setTimeout(() => {
           const element = document.getElementById('step-frame');
-          
+
           if (element) {
             element.scrollIntoView();
           }
@@ -73,6 +80,12 @@ export function moveCurrentStepForward() {
     const next = selectNextStep(getState());
 
     if (next && next.id) {
+      ReactGA.event({
+        category: 'Step',
+        action: 'Used button to go forward to step...',
+        label: next.id,
+      });
+
       dispatch(changeCurrentStep(next.id));
     }
   };
@@ -83,6 +96,12 @@ export function moveCurrentStepBackward() {
     const next = selectPreviousStep(getState());
 
     if (next && next.id) {
+      ReactGA.event({
+        category: 'Step',
+        action: 'Used button to go back to step...',
+        label: next.id,
+      });
+
       dispatch(changeCurrentStep(next.id));
     }
   };

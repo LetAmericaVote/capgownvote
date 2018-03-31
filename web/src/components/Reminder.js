@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import BaseWrapper from './BaseWrapper';
 import TextSubscribeForm from './TextSubscribeForm';
 import PasswordReset from './PasswordReset';
@@ -134,10 +135,27 @@ const Reminder = (props) => {
       const workingTime = dateOffset + timeOffset;
       const targetTime = workingTime - (hoursOffset * (1000 * 60 * 60));
 
-      console.log(new Date(targetTime));
-
       postReminder(targetTime, mobile)
-        .then(isSet => setFormValue(REMINDER_SHOW_CONFIG, ! isSet));
+        .then(isSet => {
+          setFormValue(REMINDER_SHOW_CONFIG, ! isSet);
+
+          ReactGA.event({
+            category: 'Reminder',
+            action: 'Successfully configured SMS reminder',
+          });
+
+          ReactGA.event({
+            category: 'Reminder',
+            action: 'Selected SMS day preference',
+            label: reminderDay,
+          });
+
+          ReactGA.event({
+            category: 'Reminder',
+            action: 'Selected SMS time preference',
+            label: reminderTime,
+          });
+        });
     }
   };
 
@@ -159,7 +177,14 @@ const Reminder = (props) => {
             ) : (
               <PasswordReset
                 buttonCopy="Set password"
-                postUpdate={() => setFormValue(REMINDER_SHOW_CONFIG, false)}
+                postUpdate={() => {
+                  setFormValue(REMINDER_SHOW_CONFIG, false);
+
+                  ReactGA.event({
+                    category: 'Reminder',
+                    action: 'Successfully configured password',
+                  });
+                }}
               />
             )}
           </ReminderConfigPart>

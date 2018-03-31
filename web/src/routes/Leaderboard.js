@@ -67,7 +67,7 @@ const Leaderboard = (props) => {
       <LeaderboardBackground>
         <LeaderboardLayout>
           <BorderedBlock>
-            <ContentHeader centered>The Cap, Gown, Vote Leaderboard</ContentHeader>
+            <ContentHeader centered>Cap, Gown, Vote! School Leaderboard</ContentHeader>
             <ContentParagraph>You know what's better than your school winning a sports trophy? Every student voting in November.</ContentParagraph>
             <ContentParagraph>Schools are awarded points based on the number of students who register to vote or signup for SMS messages from Let America Vote to help protect voting rights. Scores are updated every hour.</ContentParagraph>
             {statRequest && statRequest.isPending ? null : <LeaderboardRows />}

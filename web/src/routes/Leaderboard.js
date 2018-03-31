@@ -29,8 +29,13 @@ const Leaderboard = (props) => {
   const authSchoolId = isAuthenticated ? authenticatedUserSchool.id : false;
   const isAuthSchoolRanked = isAuthenticated ? rankings.find(school => school.id === authSchoolId) : false;
 
-  // logic to check if first seed is under X points
-  const LeaderboardRows = () => (
+  const comeBackLater = ! rankings.length;
+
+  const comeBackLaterContent = (
+    <ContentParagraph>Cap, Gown, Vote is just getting off the ground though and we haven't run the numbers yet. Check back soon!</ContentParagraph>
+  );
+
+  const LeaderboardRows = () => comeBackLater ? comeBackLater : (
     <FlexColumnLayout>
       {rankings.map((school, index) => (
         <LeaderboardRowLayout key={school.id}>

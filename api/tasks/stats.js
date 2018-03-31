@@ -1,54 +1,57 @@
 const common = require('../src/lib/common');
-const { User, Stat, School } = require('../src/lib/models');
-
-const LIMIT = 100;
-const LEADERBOARD_MAX = 100;
+const { User, School } = require('../src/lib/models');
+const limit = 100;
 
 async function execute() {
+  let page = 0;
+  console.log('starting stats calculation');
+
   try {
     common.dbConnect();
-    const stat = {
-      totalStudents: 0,
-      totalHighschools: 0,
-      totalFormRegistrations: 0,
-      totalOvrRegistrations: 0,
-      leaderboard: [],
-    };
-
-    // totalHighschools should be a .count query()
 
     async function paginate(lastId) {
-      const users = await User.find({ _id: { '$gt': lastId } })
+      console.log(`calculating stats for page ${page}`);
+
+      const query = lastId ? { _id: { '$gt': lastId } } : {};
+      const users = await User.find(query)
         .populate('school')
-        .limit(LIMIT);
+        .limit(limit);
 
       if (! users || ! users.length) {
         return;
       }
 
-      stat.totalStudents += users.length;
-
       for (const user of users) {
-        // check if user has XYZ fields set
-        //  increment totalXYZ if so
-        //  recalculate leaderboard --> Do we put score on the school & drop the stat model?
-        //                          --> Make score an index, sort by it, expose as endpoint
-        //                          --> We could keep stats object for the other things? (total xyz registrations)
-        //                          --> We should add a lastId field to the stat then, so we're not duplicating score each task execution
+        if (user.isScoreCounted || ! user.stateCode) {
+          continue;
+        }
+
+        const {
+          isRegistered, hasOvr,
+          isEligible, hasStateLicense,
+          ovrRequiresLicense, mobileCommonsId,
+        } = user;
+
+        const isOvrRegistered = hasOvr && isEligible && (ovrRequiresLicense ? hasStateLicense : true);
+
+        if (isRegistered || isOvrRegistered || !!mobileCommonsId) {
+          user.school.points += 1;
+          await user.school.save();
+
+          user.isScoreCounted = true;
+          await user.save();
+        }
       }
 
+      page += 1;
       return paginate(users[users.length - 1].id);
     }
 
-    paginate().then(...)
+    return paginate().then(() => console.log('done calculating stats'));
   } catch (error) {
     console.error(error);
   }
 }
-
-// find last stat record,
-// if pending, dont run task?
-// otherwise, create the new stat and set to pending before any other execution...
 
 new Promise((resolve) => {
   execute().then(() => process.exit())

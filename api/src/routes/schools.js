@@ -4,15 +4,17 @@ const { School } = require('../lib/models');
 
 module.exports = (app) => {
   app.get('/v1/schools', (req, res) => {
-    const { start, limit, isClosed } = req.query;
+    const { start, limit, sortByPoints } = req.query;
     const parsedLimit = parseInt(limit);
 
     const findQuery = start ? {'_id': { '$gt': start }} : {};
     const limitCount = ! parsedLimit || parsedLimit > 100 ? 100 : parsedLimit;
+    const sortQuery = sortByPoints ? { points: -1 } : {};
 
     School
       .find(findQuery)
       .limit(limitCount)
+      .sort(sortQuery)
       .then(data => res.json({ data }))
       .catch(error => res.status(400).json({ error }));
   });

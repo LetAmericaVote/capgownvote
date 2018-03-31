@@ -1,25 +1,23 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
+import SchoolSuggestion from './SchoolSuggestion';
 import {
-  selectSchoolSuggestions, selectSchoolItems,
+  selectSchoolSuggestions, selectSchoolInputValue,
   selectAuthenticatedUserHasSchool,
-  selectSchoolInputValue,
 } from '../selectors';
 import {
-  SuggestionColumn, Suggestion, SuggestionPrimaryTitle,
-  SuggestionSecondaryTitle, TertiaryButton,
+  SuggestionColumn, TertiaryButton,
   TertiaryButtonWrapper,
 } from '../blocks';
 import {
-  setSchoolInputValue, getSchoolData,
-  updateAuthenticatedUserProfile, setRequiresInvite,
+  setSchoolInputValue, setRequiresInvite,
+  updateAuthenticatedUserProfile,
 } from '../actions';
 
 const SchoolSelectorSuggestions = (props) => {
   const {
     updateUser, schoolSuggestions, hasSchoolSet,
-    getSchoolData, schoolItems, setRequiresInvite,
-    hasSchoolInput,
+    setRequiresInvite, hasSchoolInput,
   } = props;
 
   if (hasSchoolSet) {
@@ -39,28 +37,14 @@ const SchoolSelectorSuggestions = (props) => {
   return (
     <SuggestionColumn>
       {schoolSuggestions.map(school => {
-        const { id, name } = school;
-
-        const data = schoolItems[id];
-        const hasData = !! data;
-
-        const city = hasData ? data.city : null;
-        const stateCode = hasData ? data.stateCode : null;
-        const locationCopy = `${city}, ${stateCode}`;
-
-        if (! hasData) {
-          getSchoolData(id);
-        }
-
-        const onClick = () => {
-          updateUser(school);
-        };
+        const { id } = school;
 
         return (
-          <Suggestion key={id} onClick={onClick}>
-            <SuggestionPrimaryTitle>{name}</SuggestionPrimaryTitle>
-            { hasData ? <SuggestionSecondaryTitle>{locationCopy}</SuggestionSecondaryTitle> : null}
-          </Suggestion>
+          <SchoolSuggestion
+            key={id}
+            schoolId={id}
+            onClick={() => updateUser(school)}
+          />
         );
       })}
       {hasSchoolInput ? <RequireInviteCheckbox /> : null}
@@ -70,7 +54,6 @@ const SchoolSelectorSuggestions = (props) => {
 
 SchoolSelectorSuggestions.mapStateToProps = (state) => ({
   hasSchoolSet: selectAuthenticatedUserHasSchool(state),
-  schoolItems: selectSchoolItems(state),
   schoolSuggestions: selectSchoolSuggestions(state),
   hasSchoolInput: !!selectSchoolInputValue(state),
 });
@@ -83,7 +66,6 @@ SchoolSelectorSuggestions.mapDispatchToProps = (dispatch) => ({
     dispatch(setSchoolInputValue(name));
     dispatch(setRequiresInvite(false));
   },
-  getSchoolData: schoolId => dispatch(getSchoolData(schoolId)),
   setRequiresInvite: requiresInvite => dispatch(setRequiresInvite(requiresInvite)),
 });
 

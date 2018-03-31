@@ -22,10 +22,10 @@ const Home = (props) => {
             <RegisterLink>Register To Vote</RegisterLink>
             <PaddedArea />
             <HomeNavItemWrapper>
-              <LeaderboardLink>Stats</LeaderboardLink>
+              <AboutLink>About</AboutLink>
             </HomeNavItemWrapper>
             <HomeNavItemWrapper>
-              <AboutLink>About</AboutLink>
+              <LeaderboardLink>Leaderboard</LeaderboardLink>
             </HomeNavItemWrapper>
           </PaddedArea>
         </CenteredArea>

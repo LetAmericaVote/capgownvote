@@ -652,6 +652,7 @@ export const SelectInputCarrot = styled.div`
   position: relative;
 
   ${props => props.required ? `
+    margin-top: ${baseValue / 4}px;
     &:before {
       position: absolute;
       content: 'Required';
@@ -661,7 +662,7 @@ export const SelectInputCarrot = styled.div`
       line-height: ${baseValue / 2}px;
       text-transform: uppercase;
       color: ${colors.red};
-      bottom: ${baseValue}px;
+      bottom: ${baseValue + (baseValue / 4)}px;
       ${primaryFontFamily}
       ${fontKerning}
     }
@@ -816,25 +817,30 @@ export const Suggestion = styled.div`
   display: block;
   width: 100%;
   margin-bottom: ${baseValue}px;
-  cursor: pointer;
   padding-left: ${baseValue / 2}px;
   position: relative;
 
-  &:before {
-    position: absolute;
-    content: '';
-    height: 50%;
-    width: 1px;
-    top: 25%;
-    left: 0;
-    background-color: ${colors.black};
-    transition: height 0.25s, top 0.25s;
-  }
+  ${props => props.disableHover ? `
+    margin-bottom: 0;
+  ` : `
+    cursor: pointer;
 
-  &:hover:before {
-    height: 100%;
-    top: 0;
-  }
+    &:before {
+      position: absolute;
+      content: '';
+      height: 50%;
+      width: 1px;
+      top: 25%;
+      left: 0;
+      background-color: ${colors.black};
+      transition: height 0.25s, top 0.25s;
+    }
+
+    &:hover:before {
+      height: 100%;
+      top: 0;
+    }
+  `}
 `;
 
 export const SuggestionPrimaryTitle = styled.h1`
@@ -1033,6 +1039,7 @@ export const ContentHeader = styled.h1`
   font-size: ${baseValue * 1.5}px;
   line-height: ${baseValue * 1.5}px;
   margin-bottom: ${baseValue}px;
+  ${props => props.centered ? 'text-align: center;' : ''}
   ${primaryFontFamily}
   ${fontKerning}
 `;
@@ -1138,8 +1145,8 @@ export const DividingLine = styled.div`
   width: 100%;
   height: 1px;
   background-color: ${colors.black};
-  margin-top: ${baseValue * 3}px;
-  margin-bottom: ${baseValue * 3}px;
+  margin-top: ${props => baseValue * (props.reducedSpacing ? 1 : 3)}px;
+  margin-bottom: ${props => baseValue * (props.reducedSpacing ? 1 : 3)}px;
 `;
 
 export const AuthHeader = styled.h1`
@@ -1251,4 +1258,30 @@ export const LeaderboardLayout = styled.section`
   max-width: ${maxWidth * 0.75}px;
   padding: ${baseValue}px;
   margin: ${baseValue * 3}px auto;
+`;
+
+export const LeaderboardRowLayout = styled(FlexRowLayout)`
+  margin-bottom: ${baseValue}px;
+  align-items: center;
+`;
+
+export const PointTitle = styled.h1`
+  display: block;
+  color: ${props => props.highlight ? colors.red : colors.cyan};
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
+  text-align: left;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const PointSubtitle = styled.h3`
+  display: block;
+  color: ${props => props.highlight ? colors.darkCyan : colors.darkSilver};
+  font-size: ${baseValue * 0.75}px;
+  line-height: ${baseValue * 0.75}px;
+  text-align: center;
+  white-space: nowrap;
+  ${primaryFontFamily}
+  ${fontKerning}
 `;

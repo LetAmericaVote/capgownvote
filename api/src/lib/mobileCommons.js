@@ -2,6 +2,7 @@ const MOBILE_COMMONS_API_BASE = 'https://secure.mcommons.com';
 const {
   MOBILE_COMMONS_USERNAME,
   MOBILE_COMMONS_PASSWORD,
+  APP_DISABLE_MOBILE_COMMONS,
 } = process.env;
 
 const request = require('superagent');
@@ -28,6 +29,10 @@ function selectIsSuccess(res) {
 }
 
 function updateProfile(user, optInPathId) {
+  if (APP_DISABLE_MOBILE_COMMONS && APP_DISABLE_MOBILE_COMMONS === 'true') {
+    return new Promise((resolve) => resolve());
+  }
+
   const payload = {
     phone_number: user.mobile,
     email: user.email,
@@ -70,6 +75,10 @@ function updateProfile(user, optInPathId) {
 }
 
 function sendMessage(user, message, campaignId) {
+  if (APP_DISABLE_MOBILE_COMMONS && APP_DISABLE_MOBILE_COMMONS === 'true') {
+    return new Promise((resolve) => resolve());
+  }
+
   const payload = {
     phone_number: user.mobile,
     body: message,

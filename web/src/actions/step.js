@@ -54,7 +54,11 @@ export function changeCurrentStep(stepId, shouldScroll) {
 
       if (shouldScroll) {
         setTimeout(() => {
-          document.getElementById('step-frame').scrollIntoView();
+          const element = document.getElementById('step-frame');
+          
+          if (element) {
+            element.scrollIntoView();
+          }
         }, 0);
       }
     };

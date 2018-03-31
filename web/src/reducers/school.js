@@ -1,7 +1,7 @@
 import createReducer from './createReducer';
 import {
   SET_SCHOOL_INPUT_VALUE, PUSH_SCHOOL_DATA,
-  SET_SCHOOL_SUGGESTIONS,
+  SET_SCHOOL_SUGGESTIONS, PUSH_MANY_SCHOOL_DATA,
 } from '../actions';
 
 const school = createReducer('school', {
@@ -20,6 +20,19 @@ const school = createReducer('school', {
     ...state,
     suggestions: action.suggestions,
   }),
+  [PUSH_MANY_SCHOOL_DATA]: (state, action) => {
+    return {
+      ...state,
+      items: {
+        ...state.items,
+        ...action.schools.reduce((acc, school) => {
+          acc[school.id] = school;
+
+          return acc;
+        }, {}),
+      },
+    };
+  },
 });
 
 export default school;

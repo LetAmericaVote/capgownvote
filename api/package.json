@@ -23,7 +23,10 @@
     "start": "heroku local --procfile=ProcfileDev",
     "reminder-task": "node tasks/reminder.js",
     "reminder-task-local": "node -r dotenv/config tasks/reminder.js",
-    "seed-schools": "node util/seed.js"
+    "stats-task": "node tasks/stats.js",
+    "stats-task-local": "node -r dotenv/config tasks/stats.js",
+    "seed-schools": "node util/seedSchools.js",
+    "seed-users": "node util/seedUsers.js"
   },
   "engines": {
     "node": "9.5.x",

@@ -21,9 +21,9 @@ function seedSchool(index) {
 
   const school = { ...item, city };
 
-  new School(school)
+  return new School(school)
     .save()
     .then(() => seedSchool(index + 1));
 }
 
-seedSchool(0);
+seedSchool(0).then(() => process.exit());

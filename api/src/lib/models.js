@@ -43,6 +43,11 @@ const SchoolSchema = new mongoose.Schema({
     ref: 'User',
     default: null,
   },
+  points: {
+    type: Number,
+    default: 0,
+    index: true,
+  },
 }, {
   timestamps: true,
   toObject: {
@@ -210,7 +215,7 @@ const UserSchema = mongoose.Schema({
   },
   school: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'School',
+    ref: 'school',
     default: null,
   },
   isEligible: {
@@ -252,6 +257,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     default: USER_ROLE,
     enum: [USER_ROLE, ADMIN_ROLE, AMBASSADOR_ROLE],
+  },
+  isScoreCounted: {
+    type: Boolean,
+    default: false,
   },
 }, {
   timestamps: true,
@@ -460,38 +469,6 @@ ReminderSchema.index({
 
 const Reminder = mongoose.model('reminder', ReminderSchema);
 
-// const StatsSchema = mongoose.Schema({
-//   totalStudents: {
-//     type: Number,
-//     default: null,
-//   },
-//   totalHighschools: {
-//     type: Number,
-//     default: null,
-//   },
-//   totalFormRegistrations: {
-//     type: Number,
-//     default: null,
-//   },
-//   totalOvrRegistrations: {
-//     type: Number,
-//     default: null,
-//   },
-//   leaderboard: [
-//     {
-//       ...SchoolSchema,
-//       score: {
-//         type: Number,
-//         default: null,
-//       },
-//     },
-//   ],
-// }, {
-//   timestamps: true,
-// });
-//
-// const Stat = mongoose.model('stat', StatsSchema);
-
 module.exports = {
-  School, User, Reminder, // Stat,
+  School, User, Reminder,
 };

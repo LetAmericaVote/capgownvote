@@ -37,8 +37,8 @@ const PageNav = (props) => {
       to: '/register',
     },
     {
-      title: 'Stats',
-      to: '/stats',
+      title: 'Leaderboard',
+      to: '/leaderboard',
     },
   ];
 

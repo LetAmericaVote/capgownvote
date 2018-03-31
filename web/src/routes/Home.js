@@ -10,7 +10,7 @@ import {
 const Home = (props) => {
   const RegisterLink = Link(ClearButton, '/register');
   const AboutLink = Link(HomeNavItem, '/about');
-  const LeaderboardLink = Link(HomeNavItem, '/stats');
+  const LeaderboardLink = Link(HomeNavItem, '/leaderboard');
 
   return (
     <Main>

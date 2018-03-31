@@ -42,7 +42,7 @@ const Root = () => (
         <Route path="/register"><Register/></Route>
         <Route path="/about"><About /></Route>
         <Route path="/auth"><Auth /></Route>
-        <Route path="/stats"><Leaderboard /></Route>
+        <Route path="/leaderboard"><Leaderboard /></Route>
       </div>
     </Router>
   </Provider>

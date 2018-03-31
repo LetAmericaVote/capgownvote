@@ -35,7 +35,7 @@ const Leaderboard = (props) => {
     <ContentParagraph>Cap, Gown, Vote is just getting off the ground though and we haven't run the numbers yet. Check back soon!</ContentParagraph>
   );
 
-  const LeaderboardRows = () => comeBackLater ? comeBackLater : (
+  const LeaderboardRows = () => comeBackLater ? comeBackLaterContent : (
     <FlexColumnLayout>
       {rankings.map((school, index) => (
         <LeaderboardRowLayout key={school.id}>

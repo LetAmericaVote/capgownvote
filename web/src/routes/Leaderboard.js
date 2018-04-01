@@ -22,7 +22,7 @@ const Leaderboard = (props) => {
     authenticatedUserSchool, isAuthenticated,
   } = props;
 
-  if (! statRequest || statRequest.hasFailed) {
+  if (! statRequest) {
     getSchoolStats();
   }
 

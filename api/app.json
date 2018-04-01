@@ -8,15 +8,6 @@
   "repository": "https://github.com/LetAmericaVote/capgownvote",
   "logo": "https://capgownvote.org/capgownvote.svg",
   "env": {
-    "APP_BASE": "api",
-    "RTV_URL": {
-      "required": true,
-      "description": "Rock The Vote API url"
-    },
-    "RTV_PARTNER_ID": {
-      "required": true,
-      "description": "Unique partner ID used to communicate with Rock The Vote"
-    },
     "ALGOLIA_APP_ID": {
       "required": true,
       "description": "Application ID used to communicate with Algolia"
@@ -24,6 +15,39 @@
     "ALGOLIA_WRITE_API_KEY": {
       "required": true,
       "description": "Secret write key used to make requests against Algolia"
+    },
+    "APP_BASE": "api",
+    "APP_DOMAIN": {
+      "required": true,
+      "description": "The URL of the application",
+    },
+    "APP_ENCRYPTION_TOKEN": {
+      "required": true,
+      "description": "32 bit encryption token"
+    },
+    "MOBILE_COMMONS_GENERAL_CAMPAIGN_OPT_IN": {
+      "required": true,
+      "description": "Mobile Commons opt-in ID for the general campaign"
+    },
+    "MOBILE_COMMONS_PASSWORD": {
+      "required": true,
+      "description": "Mobile Commons client authentication password"
+    },
+    "MOBILE_COMMONS_REMINDER_CAMPAIGN": {
+      "required": true,
+      "description": "Mobile Commons campaign ID for the reminder campaign"
+    },
+    "MOBILE_COMMONS_USERNAME": {
+      "required": true,
+      "description": "Mobile Commons client authentication username"
+    },
+    "RTV_URL": {
+      "required": true,
+      "description": "Rock The Vote API url"
+    },
+    "RTV_PARTNER_ID": {
+      "required": true,
+      "description": "Unique partner ID used to communicate with Rock The Vote"
     }
   },
   "formation": {
@@ -38,6 +62,9 @@
     },
     {
       "plan": "coralogix:free"
+    },
+    {
+      "plan": "scheduler:standard"
     }
   ],
   "buildpacks": [

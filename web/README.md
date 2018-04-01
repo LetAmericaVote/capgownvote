@@ -2,25 +2,32 @@
 
 This is the core frontend application of Cap Gown Vote. It's built with React, Redux and Styled Components. It uses create-react-app to bootstrap the foundations of the app.
 
-## installation
+## Installation
 
 ```sh
 $ npm install
 
-# Copy & fill out the env variables
+# Copy & fill out the env variables per environment.
+# Do NOT change the file names.
 $ cp .env.example .env.development.local
-$ cp .env.example .env.production.local
+$ cp .env.example .env.staging
+$ cp .env.example .env.prod
 ```
 
-## usage
+## Development
 
 ```sh
-# Auto-reloads tab on file change
 $ npm start
 ```
 
-## deploys
-...TODO
+## Deploys
+
+Requires an authenticated [surge.sh](https://github.com/sintaxi/surge) globally installed client to deploy.
+
+```sh
+$ npm run deploy:staging
+$ npm run deploy:production
+```
 
 ## create-react-app
 

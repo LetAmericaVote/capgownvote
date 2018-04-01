@@ -19,13 +19,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp ./build/index.html ./build/200.html",
-    "deploy": "surge ./build https://staging.capgownvote.org",
-    "deploy:prod": "surge ./build https://capgownvote.org",
+    "deploy:staging": "TARGET_ENV=staging node bin/deploy.js",
+    "deploy:production": "TARGET_ENV=production node bin/deploy.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "node-cmd": "^3.0.0",
     "surge": "^0.19.0"
   }
 }

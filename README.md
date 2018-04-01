@@ -7,7 +7,7 @@ Cap, Gown, Vote is a set of services to enable a national high school voter regi
 
 #### [/util](./util): Utility scripts to parse data, seed databases, crawl for information, etc.
 
-#### [/api](./api): Backend API service. 
+#### [/api](./api): Backend API service.
 
 **SOON: /admin**
 

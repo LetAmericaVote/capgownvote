@@ -22,7 +22,7 @@ const SchoolSuggestion = (props) => {
 
   const city = hasData ? schoolData.city : null;
   const stateCode = hasData ? schoolData.stateCode : null;
-  const locationCopy = `${city}, ${stateCode}`;
+  const locationCopy = `${city}, ${stateCode.toUpperCase()}`;
 
   if (! hasData) {
     if (! schoolRequest || (! schoolRequest.isPending && ! schoolRequest.hasSucceeded)) {

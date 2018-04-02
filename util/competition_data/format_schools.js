@@ -2,6 +2,7 @@ const fs = require('fs');
 const csvtojson = require('csvtojson');
 const uuid = require('uuid');
 const postal = require('postal-abbreviations');
+const nc = require('namecase');
 
 function parseCsv(file) {
   const data = [];
@@ -12,30 +13,25 @@ function parseCsv(file) {
 
 function formatData(source) {
   const schools = [];
-  
+
   source.forEach(data => {
     schools.push({
       id: uuid.v4(),
-      name: data['SCHOOL NAME'].toLowerCase(),
-      city: data['CITY'],
-      stateCode: data['STATE'],
+      name: nc(data['School Name']),
+      city: nc(data['City']),
+      stateCode: data['State'].toLowerCase(),
       zipcode: data['ZIP'],
     });
   });
 
-  const states = require('./states').states.map((state) => ({
-    name: state,
-    code: postal(state),
-  }));
-
-  return { schools, states };
+  return { schools };
 }
 
 function writeData(data) {
   fs.writeFileSync(`${__dirname}/competition.json`, JSON.stringify(data, null, '\t'));
 }
 
-parseCsv(`${__dirname}/20180208_HighSchools.csv`)
+parseCsv(`${__dirname}/CapGownVoteCities.csv`)
   .then(formatData)
   .then(writeData)
   .then(() => console.log('done'))

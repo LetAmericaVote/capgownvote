@@ -1,0 +1,17 @@
+{
+  "name": "competition_data",
+  "version": "1.0.0",
+  "description": "This utility reads a csv file containing the initial set of high-schools LetAmericaVote plans on engaging with, and transforms the data into a JSON file with only the relevant information required.",
+  "main": "format_schools.js",
+  "scripts": {
+    "parse": "node format_schools.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.9",
+    "namecase": "^1.1.2",
+    "postal-abbreviations": "^2.0.0",
+    "uuid": "^3.2.1"
+  }
+}

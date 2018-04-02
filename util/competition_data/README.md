@@ -5,6 +5,7 @@ This utility reads a csv file containing the initial set of high-schools LetAmer
 ## usage
 
 ```sh
-$ node index.js
+$ npm install
+$ npm run parse
 $ cat states.json
 ```

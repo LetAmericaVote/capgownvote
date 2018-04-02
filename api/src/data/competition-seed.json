@@ -1,2881 +1,1453 @@
 {
 	"schools": [
 		{
-			"id": "ecaf4eca-38c0-4d80-aeb1-d6f4b96e12d3",
-			"name": "abraham lincoln senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90031"
+			"id": "2215fb9a-db9e-47ef-803c-f449309aa92a",
+			"name": "Family Court High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35202"
 		},
 		{
-			"id": "704c7a41-6ed6-4587-bda7-a88bbf6c5286",
-			"name": "acad for multilingual arts and sci at mervyn m. dymally high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90003"
+			"id": "40719796-80bb-46b1-b04f-18ca69a9ee81",
+			"name": "George Washington Carver High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35207"
 		},
 		{
-			"id": "14e70831-7654-46b0-9b2f-5a40bd839dee",
-			"name": "academy of science and engineering",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90016"
+			"id": "fd5e8086-f77f-4273-8c8d-c31be2c8b7ab",
+			"name": "Huffman High School-Magnet",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35215"
 		},
 		{
-			"id": "8856b435-3fa8-495d-9b4c-1f4a9926e505",
-			"name": "alain leroy locke college preparatory academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
+			"id": "a2cc161b-36c9-4c61-9f34-b4714eb02e99",
+			"name": "Jackson-Olin High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35218"
 		},
 		{
-			"id": "8df4a480-b195-46e1-bd83-5cb577f50251",
-			"name": "alexander hamilton senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90034"
+			"id": "4df08a68-8a84-45aa-9115-d435bc919380",
+			"name": "Kennedy Alternative",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35212"
 		},
 		{
-			"id": "daba87bb-a526-473d-bafc-24b477250f08",
-			"name": "alliance alice m. baxter college-ready high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "0dcbe81c-cdd5-4094-b0af-4ccfe0044699",
+			"name": "Parker High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35204"
 		},
 		{
-			"id": "76afe948-d084-4968-b2ec-b91b5d90f552",
-			"name": "alliance cindy and bill simon technology academy high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "a0cab3da-32f7-4587-bdd9-3b4c954c1578",
+			"name": "Ramsay High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35205"
 		},
 		{
-			"id": "4e2dfae3-3fdd-47bb-9c9c-c616c4b0d17d",
-			"name": "alliance college-ready academy high 16",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "551120d8-4756-4885-9814-16e8f1f60b39",
+			"name": "Wenonah High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35221"
 		},
 		{
-			"id": "4c2f4339-bb8e-4b22-863a-ed13b6eff82d",
-			"name": "alliance collins family college-ready high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "c85700b0-38f7-44c2-8405-4c9671e3a831",
+			"name": "Woodlawn High School-Magnet",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35212"
 		},
 		{
-			"id": "194c8736-3a0d-43a7-8b89-6aa7c6a8f546",
-			"name": "alliance dr. olga mohan high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
+			"id": "319932d6-deb3-4f94-89d9-05d9a6fbbc9d",
+			"name": "Workshop Incorporate",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35202"
 		},
 		{
-			"id": "22a96c8b-7f76-46ec-9991-7aaced7662f7",
-			"name": "alliance health services academy high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "98498955-d626-44dc-bdd2-227b46ff9d13",
+			"name": "Erwin High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35215"
 		},
 		{
-			"id": "e46a06bb-ceea-4ee7-b47f-95283fd627c1",
-			"name": "alliance judy ivie burton technology academy high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
+			"id": "9c66f66f-b7c7-45ae-bd23-e059563b6623",
+			"name": "Oak MT High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35242"
 		},
 		{
-			"id": "cc44b2f5-6057-480d-b526-4ed315b6bfe2",
-			"name": "alliance leichtman-levine family foundation env sci high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "3e07d16a-5ad4-43ab-ad30-dd367f1c29d6",
-			"name": "alliance marc & eva stern math and science",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "5b1a7e47-9f07-4f98-826e-ece8de5c2c2b",
-			"name": "alliance margaret m. bloomfield technology academy high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "cde6eb9c-fa79-4862-b1d2-1f5b088566aa",
-			"name": "alliance morgan mckinzie high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "d8df5eda-3aa6-4141-8c8e-6ec1f5b550ed",
-			"name": "alliance patti and peter neuwirth leadership academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "5c5812a9-2909-4156-8ac3-eab896516318",
-			"name": "alliance renee and meyer luskin academy high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "f75e7b6f-2046-4194-9b69-6d501d0a0cde",
-			"name": "alliance susan and eric smidt technology high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "06dfb795-b425-4f1b-84a0-ec45200fef2d",
-			"name": "alliance tennenbaum family technology high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "9bc6ca78-f5a7-4cc3-832c-b49cb2b0dc2a",
-			"name": "anahuacalmecac international univ prep of n. america",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90032"
-		},
-		{
-			"id": "a6496a85-3d44-474d-89b0-1f509c0b0107",
-			"name": "animo college preparatory academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "01241d4c-2457-477c-baf5-069c00e2844b",
-			"name": "animo inglewood charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "7eeb0599-aeb5-4d1a-8bb9-a2dcea2d146a",
-			"name": "animo jackie robinson high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "028d033c-f737-4997-9514-a9cab9248ff8",
-			"name": "animo leadership high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "844a0580-bb96-46d1-a6f7-fbc2306c1fae",
-			"name": "animo pat brown",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "c3290c12-3f21-40df-809b-c4b24988b158",
-			"name": "animo ralph bunche charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "4ff4a167-b2b1-4f0f-9bf1-c12b64fdc798",
-			"name": "animo south los angeles charter",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "00bc12e0-2c6f-45c9-b8af-674976c8fd60",
-			"name": "animo venice charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "93ba4768-b1ed-4f7b-a3aa-981fd83d079d",
-			"name": "animo watts college preparatory academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "822db6a0-c763-4a9d-8374-e5b8c0387050",
-			"name": "augustus f. hawkins high a critical design and gaming",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90044"
-		},
-		{
-			"id": "c61019f4-0d09-4a9a-b4ce-8e8b931aa0c8",
-			"name": "augustus f. hawkins high b community health advocates",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90044"
-		},
-		{
-			"id": "496c70c4-7267-4526-8431-928ffec5720d",
-			"name": "augustus f. hawkins high c rspnsbl indigenous soc entrepr",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90044"
-		},
-		{
-			"id": "42a4cf5a-0cfe-43bc-82ff-ec1fb5a66f40",
-			"name": "belmont senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "26c6bf20-2fc3-4497-90df-8f7bf09aad23",
-			"name": "benjamin franklin senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90042"
-		},
-		{
-			"id": "083ee963-a5d2-445b-9e27-4192acea6a59",
-			"name": "boyle heights continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "4cc6e2f1-3de7-4d0a-b110-c32d07374d2c",
-			"name": "boyle heights stem high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "254132eb-ad6c-4c7c-8a8f-d7811563be76",
-			"name": "bright star secondary charter academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90045"
-		},
-		{
-			"id": "4c759181-7341-497f-a0ac-3c7782e008fd",
-			"name": "camino nuevo charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "e685285b-24de-4f13-b1d2-99986c22f4a1",
-			"name": "camino nuevo high no. 2",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90004"
-		},
-		{
-			"id": "d7aa3950-5524-435c-ae94-67a013579227",
-			"name": "central city value",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90004"
-		},
-		{
-			"id": "f7cee476-32ca-40aa-9132-8ced6989b16f",
-			"name": "central high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90021"
-		},
-		{
-			"id": "ff36f2de-e157-402b-aa64-75f445bba190",
-			"name": "cheviot hills continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90034"
-		},
-		{
-			"id": "4cd93e24-d59c-4cae-b7bc-0dbf9030cd1b",
-			"name": "college bridge academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
-		},
-		{
-			"id": "2b4960db-05f7-4f18-86e9-28af073fc2cf",
-			"name": "communication and tech at diego rivera lrng complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90001"
-		},
-		{
-			"id": "b122074a-49d4-48b0-84bb-0038201d5c0d",
-			"name": "contreras learning center-academic leadership community",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "8d46a627-a41e-40e7-9ac1-c2ace6f938d1",
-			"name": "contreras learning center-school of social justice",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "4a17bc48-85f4-4f21-b86d-781958a85fdb",
-			"name": "contreras lrng center-los angeles sch of global studies",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "7ec662a1-4bcf-406d-aeef-3e29924309ac",
-			"name": "crenshaw arts-technology charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90023"
-		},
-		{
-			"id": "e9704af5-059f-473c-a710-5e19a1fe537d",
-			"name": "crenshaw sci tech engr math and med magnet",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90043"
-		},
-		{
-			"id": "2944f19b-421f-4a9f-8ec1-a7cbe3d7b097",
-			"name": "david starr jordan senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90002"
-		},
-		{
-			"id": "abcd8d18-8468-4a11-96ad-e90fdbe5d791",
-			"name": "downtown business high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90012"
-		},
-		{
-			"id": "27210e4a-15c6-45ed-9829-f3469ea7697f",
-			"name": "dr. maya angelou community high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "62d264f7-8fb0-40e9-93bd-beee677ab489",
-			"name": "e. los angeles renaiss acad at esteban e. torres high #2",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90063"
-		},
-		{
-			"id": "e5d2cf91-96f9-4d4a-9d5e-64fb961916bc",
-			"name": "early college academy-la trade tech college",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "0898bebf-abd6-447f-812f-d7cfa38e8914",
-			"name": "edward r. roybal learning center",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "f56c462d-df85-470d-a72e-edeeee628e1e",
-			"name": "ellington (duke) high (continuation)",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90047"
-		},
-		{
-			"id": "510d2fdc-4844-4f17-93e7-c3661b5da1fc",
-			"name": "engr and tech acad at esteban e. torres high #3",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90063"
-		},
-		{
-			"id": "3e04d581-43ef-48e4-afc3-fe83e6a5305b",
-			"name": "environmental and social policy magnet",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90031"
-		},
-		{
-			"id": "b375dc6b-eb9a-467f-a54f-93018e07a133",
-			"name": "esteban torres east la performing arts magnet",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90063"
-		},
-		{
-			"id": "4ade0f31-29dc-4a78-8895-fc8059448a19",
-			"name": "fairfax senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90046"
-		},
-		{
-			"id": "702c5439-4c49-4401-a7a4-d7172af6ecce",
-			"name": "felicitas and gonzalo mendez high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "ec7ed1e3-04f8-49b9-bbd7-b315126423fa",
-			"name": "francisco bravo medical magnet high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "a5f6d4b0-13bd-4482-8200-9dd6402df3f5",
-			"name": "frida kahlo high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "7aaa4073-d247-4683-a1f1-e3714cc97d64",
-			"name": "george washington preparatory high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90047"
-		},
-		{
-			"id": "9df968e1-1976-4978-b502-59693f4c2c5f",
-			"name": "green design at diego rivera learning complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90001"
-		},
-		{
-			"id": "fb89d8e7-ef0f-45e7-95aa-176f4f5c8295",
-			"name": "harris newmark continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "fb3e24ce-925e-4234-905c-f33dc2b6d805",
-			"name": "highland park continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90042"
-		},
-		{
-			"id": "59bebfd8-2e42-4c14-a5fc-b325526e090b",
-			"name": "hilda l. solis lrng acad sch of tech business and ed",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90022"
-		},
-		{
-			"id": "7bc56ca0-098a-4b2d-96b4-a489f73219e8",
-			"name": "hollywood senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90028"
-		},
-		{
-			"id": "ea9b297f-90c7-4794-8af8-bfc1fb8a7986",
-			"name": "humanitas acad of art and tech at esteban e. torres high #4",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90063"
-		},
-		{
-			"id": "3df952f8-5b09-4791-9536-26cc2f77d68e",
-			"name": "james a. garfield senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90022"
-		},
-		{
-			"id": "fb7674b2-365b-43de-960c-b4554e8f8868",
-			"name": "john c. fremont senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90003"
-		},
-		{
-			"id": "e34ecd79-ea50-41d3-b9e1-0fb29775ec83",
-			"name": "john hope continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90003"
-		},
-		{
-			"id": "3815aac7-3a43-48e4-9039-1909838ea2da",
-			"name": "john marshall senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90027"
-		},
-		{
-			"id": "4aeb06f1-af8b-4c60-8ce4-1215fbb7b88f",
-			"name": "king/drew medical magnet high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90059"
-		},
-		{
-			"id": "e8f462ae-d0b8-4778-8abf-710bbc681867",
-			"name": "l.a. county high school for the arts",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90032"
-		},
-		{
-			"id": "a2dc5970-6598-4db7-a535-0a103d0c0e05",
-			"name": "leadership in entertainment and media arts (lema)",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90031"
-		},
-		{
-			"id": "8a33dc78-0b6e-480a-ab63-8d7a4d388fc9",
-			"name": "los angeles international charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90042"
-		},
-		{
-			"id": "7e4d924d-a494-4d87-a6bd-8499833ace61",
-			"name": "los angeles river at sonia sotomayor learning academies",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90065"
-		},
-		{
-			"id": "9d9c4952-6dfc-440e-982b-a1ae51d40818",
-			"name": "los angeles senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90019"
-		},
-		{
-			"id": "585c6d1e-1869-4c3f-97b2-2ba3702e7e29",
-			"name": "los angeles teacher preparatory academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "42e996f8-e491-4627-9622-1f70927f727d",
-			"name": "los angeles unified school district rocp",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "ec9941af-a54d-4798-9d83-b29e4216b32b",
-			"name": "manual arts senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90037"
-		},
-		{
-			"id": "3e6a8ebf-61fb-4dc9-bbe1-55b3894e6f98",
-			"name": "math and science college preparatory",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90018"
-		},
-		{
-			"id": "d29afaed-bce0-46ad-852a-1e46d8dfb171",
-			"name": "math science & technology magnet academy at roosevelt high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "17be9253-7635-43fd-a521-97785d5de84d",
-			"name": "metropolitan continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90021"
-		},
-		{
-			"id": "eaa0cd1b-4329-44cd-a6bf-45d68a44a4cf",
-			"name": "middle college high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90047"
-		},
-		{
-			"id": "0dc02deb-7439-4fcd-a458-6f2b95e10f25",
-			"name": "monterey continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90022"
-		},
-		{
-			"id": "48807198-33c5-4d94-a137-ce43662daa34",
-			"name": "nava college preparatory academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "52ba4b3a-9722-42b8-8271-ee53c9049e7a",
-			"name": "new village girls academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90026"
-		},
-		{
-			"id": "59c5e17f-6a2f-4be6-a6ae-51aa1defd9d2",
-			"name": "orthopaedic hospital",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
-		},
-		{
-			"id": "d40c5249-f866-4635-8c7d-59602897b078",
-			"name": "oscar de la hoya animo charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90015"
-		},
-		{
-			"id": "c9fc61ca-8396-4b44-b707-706a959042af",
-			"name": "pathways community",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90003"
-		},
-		{
-			"id": "b30e48d6-a046-4313-ab67-9a223c4307f2",
-			"name": "performing arts community at diego rivera learning complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90001"
-		},
-		{
-			"id": "469d02ec-aa5a-4cee-a859-ea0675cda928",
-			"name": "phoenix continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90066"
-		},
-		{
-			"id": "a718df46-93b4-47e4-8b9c-3d472da2e42f",
-			"name": "public service community at diego rivera learning complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90001"
-		},
-		{
-			"id": "ce49f2ec-6a6e-4dbe-9147-d5bb5e459bab",
-			"name": "pueblo de los angeles continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90031"
-		},
-		{
-			"id": "88fdcefb-8d2c-456c-a7cd-2f9f22094fa1",
-			"name": "ramon c. cortines school of visual and performing arts",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90012"
-		},
-		{
-			"id": "3fbb001d-ed00-4c3b-97d8-26dbfe29310d",
-			"name": "rfk community schools-for the visual arts and humanities",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90005"
-		},
-		{
-			"id": "5b779ee4-1e47-4fc9-b71f-785476334bbf",
-			"name": "rfk community schools-los angeles high school of the arts",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90005"
-		},
-		{
-			"id": "4027d462-77b6-40e4-9a09-38017c574408",
-			"name": "santee education complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "f72f01b3-ab1d-4e31-b54e-aca7d4aef4e1",
-			"name": "sch of hist and dramatic arts at sonia sotomayor lrng acads",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90065"
-		},
-		{
-			"id": "9283026c-3a9f-4521-8bec-6b858115df41",
-			"name": "school of business and tourism at contreras learning complex",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90017"
-		},
-		{
-			"id": "a1a71b08-5778-4a52-af9e-af80ee66ce12",
-			"name": "soc just leadership acad at esteban e. torres high #5",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90063"
-		},
-		{
-			"id": "a679b112-79d3-4bbc-8c64-7136015ec7b6",
-			"name": "soledad enrichment action charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90004"
-		},
-		{
-			"id": "6f6200e8-8b9f-4e98-b46d-82ae05b1683f",
-			"name": "student empowerment academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "f2808fb9-11e3-47d9-87cf-244af72d2ad2",
-			"name": "susan miller dorsey senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90016"
-		},
-		{
-			"id": "99ade378-3f7a-482c-b149-ddbc4c014269",
-			"name": "synergy quantum academy",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90016"
-		},
-		{
-			"id": "c1d5ef15-9ddd-48c2-a69c-cd490f431eac",
-			"name": "teach tech charter high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90047"
-		},
-		{
-			"id": "05c80ca6-fe41-419c-b5c8-e14220655b13",
-			"name": "the education corps",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
-		},
-		{
-			"id": "6d1a35ea-8386-4000-bea6-62953e19aa5c",
-			"name": "theodore roosevelt senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90033"
-		},
-		{
-			"id": "0b271fa3-01d4-45d7-b7a7-6fb5f20c4a56",
-			"name": "thomas jefferson senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90011"
-		},
-		{
-			"id": "f0790613-19a5-4987-86f1-6abfbb22463e",
-			"name": "university preparatory value high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90005"
-		},
-		{
-			"id": "7b535f26-81e4-4348-b08a-17a37a66e770",
-			"name": "university senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90025"
-		},
-		{
-			"id": "8d259add-8d4d-4a40-ada4-36ef9c548634",
-			"name": "usc hybrid high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90071"
-		},
-		{
-			"id": "d344052c-0f05-4ddd-a241-eac0f8fb9627",
-			"name": "venice senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90066"
-		},
-		{
-			"id": "89ceece0-528d-43b8-89c1-8541fb14415b",
-			"name": "view park continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90016"
-		},
-		{
-			"id": "afbd757e-f71a-4f2a-af82-bf948d52f18f",
-			"name": "view park preparatory accelerated high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90056"
-		},
-		{
-			"id": "c1596bad-3876-44eb-843c-30e4a9191985",
-			"name": "wallis annenberg high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90037"
-		},
-		{
-			"id": "c8c9f1ba-ac57-487c-93a7-d7217f98c44b",
-			"name": "wesm health/sports medicine",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90045"
-		},
-		{
-			"id": "c679e260-8d68-4232-887b-0736e37f0399",
-			"name": "west adams preparatory high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
-		},
-		{
-			"id": "8d0c844b-59ef-4c6e-80b6-655e92a59f70",
-			"name": "whitman continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90036"
-		},
-		{
-			"id": "5cc2f63a-db78-4d2d-a46e-8fb9bd3b9f24",
-			"name": "whitney young continuation",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90043"
-		},
-		{
-			"id": "f319a2c8-e7bc-4343-9ac7-09077041f373",
-			"name": "woodrow wilson senior high",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90032"
-		},
-		{
-			"id": "95326455-9b51-4498-8efa-3ebe1b03c9ea",
-			"name": "youth opportunities unlimited",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90044"
-		},
-		{
-			"id": "413d780f-d564-48d2-bd51-d2ef2daf20d0",
-			"name": "youthbuild charter school of california",
-			"city": "Los Angeles",
-			"stateCode": "CA",
-			"zipcode": "90007"
-		},
-		{
-			"id": "1095aed5-d6d1-4ef4-8d09-8473e2ee7ae2",
-			"name": "new america school - thornton",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80229"
-		},
-		{
-			"id": "f6b62a82-f08c-4645-8a5b-b1faaadf7e9b",
-			"name": "new america school - lowry",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80220"
-		},
-		{
-			"id": "a909cc26-953d-4743-9e95-899b6550a960",
-			"name": "sheridan high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80236"
-		},
-		{
-			"id": "a139268a-4c94-4621-99b9-4501dc292aab",
-			"name": "abraham lincoln high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80219"
-		},
-		{
-			"id": "4d110b74-2437-41e9-ac87-c57b9a7867b9",
-			"name": "academy of urban learning",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "91978981-8919-4bea-9b1f-6b48587a9f85",
-			"name": "cec middle college of denver",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "c718a424-43dc-41df-a515-13d42cf9d45b",
-			"name": "collegiate preparatory academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80239"
-		},
-		{
-			"id": "6758d1d2-ab01-418a-9d13-5e7e0c1c2d8b",
-			"name": "colorado high school charter",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80204"
-		},
-		{
-			"id": "c86a8823-cc27-4d51-87be-b95b2cad44d3",
-			"name": "compassion road academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80204"
-		},
-		{
-			"id": "bc55de25-380d-442f-91da-eed42146f9c5",
-			"name": "denver online high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "2a76a0bc-ab89-4054-a64a-2d00eac7ea88",
-			"name": "dsst: cole high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80205"
-		},
-		{
-			"id": "2d02a48e-d23a-4d3a-ac36-1d5b049db311",
-			"name": "dsst: green valley ranch high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80249"
-		},
-		{
-			"id": "3c64677e-a49b-48a7-b236-a6d17a2db622",
-			"name": "dsst: stapleton high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80238"
-		},
-		{
-			"id": "abd27e78-a317-44f6-9755-4e5b395b481c",
-			"name": "east high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80206"
-		},
-		{
-			"id": "513cb471-305f-4766-a85d-117700d11c98",
-			"name": "emily griffith technical college",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80203"
-		},
-		{
-			"id": "4650b0e0-9efd-4db3-85c6-bfe9353bd3e9",
-			"name": "excel academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80219"
-		},
-		{
-			"id": "f15eb0ff-f37a-4c2d-9937-92d11a3c240e",
-			"name": "florence crittenton high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80223"
-		},
-		{
-			"id": "5405a3d9-ec0d-4735-b3c6-fc247a4e1c73",
-			"name": "george washington high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80224"
-		},
-		{
-			"id": "4a2eb16f-d6fa-46f8-b0a7-b770de3d1ec7",
-			"name": "girls athletic leadership school high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80204"
-		},
-		{
-			"id": "18be8ee4-6074-4db5-ad60-f0cb9b492dfe",
-			"name": "high tech early college",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80239"
-		},
-		{
-			"id": "7ae66b08-8dd2-4712-8d56-c85aec4b1e0c",
-			"name": "john f kennedy high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80227"
-		},
-		{
-			"id": "7c1b7da1-904c-448f-98b1-616ec3c24cdf",
-			"name": "justice high school denver",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80203"
-		},
-		{
-			"id": "6d6ebe37-af2e-47a5-ae66-567264e5d6ff",
-			"name": "kipp denver collegiate high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80223"
-		},
-		{
-			"id": "623e7d77-5dd4-493e-9d24-afffb0c63358",
-			"name": "manual high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80205"
-		},
-		{
-			"id": "db4c6137-9044-40c2-973f-b6143224d762",
-			"name": "north high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "de88087e-1ca5-4207-98ac-2bba897fd40d",
-			"name": "north high school engagement center",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "7978908d-37b5-47c7-bd31-d491cdfd3adc",
-			"name": "p.u.s.h. academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80239"
-		},
-		{
-			"id": "86221cf6-3fb2-442a-9f38-b27e8ecfed7c",
-			"name": "respect academy at lincoln",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80219"
-		},
-		{
-			"id": "c2cc3d35-7e97-43bc-93b6-082b8904bc4d",
-			"name": "south high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80210"
-		},
-		{
-			"id": "448e6522-9afa-4dcc-8e10-164de69495fb",
-			"name": "southwest early college",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80236"
-		},
-		{
-			"id": "8fb96f66-157a-452d-92d0-a65bff95f749",
-			"name": "strive prep - excel",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80211"
-		},
-		{
-			"id": "089cc08d-ade5-4894-b614-c31baeefc92b",
-			"name": "strive prep - smart academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80219"
-		},
-		{
-			"id": "5190250b-87bc-4d1d-bdd8-2b620896be01",
-			"name": "thomas jefferson high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80237"
-		},
-		{
-			"id": "a4d35a3c-aded-4686-acf7-9d0bc0aec214",
-			"name": "venture prep high school",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80207"
-		},
-		{
-			"id": "1a0c675a-7705-426c-b055-0fb0d90500b8",
-			"name": "west career academy",
-			"city": "DENVER",
-			"stateCode": "CO",
-			"zipcode": "80204"
-		},
-		{
-			"id": "7573a6bf-b451-4880-80ad-0626aeb33788",
-			"name": "alonso high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "906fdeff-fa45-4ef9-8965-d054e554dc1f",
+			"name": "Alonso High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33635"
 		},
 		{
-			"id": "95dbb149-dba4-472e-b900-9b09a4080193",
-			"name": "blake high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "324a53a2-596e-42f1-974c-f43774dbae95",
+			"name": "Blake High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33607"
 		},
 		{
-			"id": "c40b69a4-68f9-4482-8196-7bc5680778a5",
-			"name": "bowers-whitley career center",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "500d8d1b-be55-406e-bb92-fdc047e77f16",
+			"name": "Bowers-Whitley Career Center",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33613"
 		},
 		{
-			"id": "b8d88e25-7222-47e8-996d-b01f9569e971",
-			"name": "brooks debartolo collegiate high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "ff2228f9-89dd-4dc5-8112-8938680cd857",
+			"name": "Brooks Debartolo Collegiate High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33612"
 		},
 		{
-			"id": "c438cd3e-dc2f-45d5-a7c0-4d4433de02ed",
-			"name": "catapult academy",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "4f1ec313-ad25-4a9d-951d-1f36d9800bd3",
+			"name": "Catapult Academy",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33610"
 		},
 		{
-			"id": "985541e7-4eed-4815-a4cc-53abdf9735ed",
-			"name": "chamberlain high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "952b2697-78d3-41a9-95a6-15f44d1def15",
+			"name": "Chamberlain High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33612"
 		},
 		{
-			"id": "281e0364-86d5-436d-9b20-a0847dd89eab",
-			"name": "freedom high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "9b04e52f-638e-4798-abc3-014f37b1ba34",
+			"name": "Freedom High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33647"
 		},
 		{
-			"id": "7ca5d35f-906e-4895-afe3-bcac3d19789c",
-			"name": "gaither high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "968cd364-50ef-492c-b3cd-97b8112fb7f1",
+			"name": "Gaither High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33618"
 		},
 		{
-			"id": "daf4396e-5a99-4668-9ab7-253d9908b80e",
-			"name": "jefferson high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "e2e5050f-1237-44c7-8258-25a2491149d6",
+			"name": "Jefferson High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33607"
 		},
 		{
-			"id": "1a3f36dc-e727-419b-9b01-91b84c4e2d1a",
-			"name": "king high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "81d42742-232e-48de-b140-d45ff2a51b50",
+			"name": "King High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33610"
 		},
 		{
-			"id": "807f8e45-205d-4f94-b1ac-62947d03fabf",
-			"name": "leto high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "4842df68-ca27-4832-955a-1385901c743f",
+			"name": "Leto High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33614"
 		},
 		{
-			"id": "a1b885ad-de4b-4f71-8d66-46bc27b92d56",
-			"name": "middleton high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "cfb69b57-5f13-4bec-b19f-1bb7cabb700a",
+			"name": "Middleton High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33610"
 		},
 		{
-			"id": "2b229216-946a-4023-b25d-298202f94f34",
-			"name": "plant high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "45be1b8e-d53a-4ad4-a918-484b60226147",
+			"name": "Plant High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33629"
 		},
 		{
-			"id": "661c3a9f-42cd-4720-80e8-f4c7166009cd",
-			"name": "robinson high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "8e10143c-9cb7-4346-911f-b6f3fe459b6f",
+			"name": "Robinson High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33616"
 		},
 		{
-			"id": "0f643e7b-df3e-40ba-80ea-62e23180ff62",
-			"name": "seminole heights charter high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "24c4ebe1-c17c-4b50-afc0-f6fbd3d70df9",
+			"name": "Seminole Heights Charter High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33603"
 		},
 		{
-			"id": "87dac0b2-89ee-497d-af92-122ae700a2b3",
-			"name": "sickles high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "8ba3bf46-9f09-4b1a-9a27-371399df8f53",
+			"name": "Sickles High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33626"
 		},
 		{
-			"id": "03915f40-7fda-444f-a6af-8627ee72abda",
-			"name": "tampa bay tech high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "242d0795-4c0c-4ec4-a54c-d44364a9c72d",
+			"name": "Tampa Bay Tech High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33610"
 		},
 		{
-			"id": "35bb52c2-fa73-4629-84bf-48a9fa5586b5",
-			"name": "town & country high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "31ccfd69-9315-47d6-8933-fc933f7a8a03",
+			"name": "Town & Country High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33615"
 		},
 		{
-			"id": "9b12b20e-a4f5-4509-af12-f046c6ee4582",
-			"name": "west university charter high",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "d7f20173-4099-49e5-bc39-53c05eeda8b0",
+			"name": "West University Charter High",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33612"
 		},
 		{
-			"id": "53af5e74-c585-430a-933e-67ece1aa7028",
-			"name": "wharton high school",
-			"city": "TAMPA",
-			"stateCode": "FL",
+			"id": "27142b9a-7599-4250-af8d-a0c49c0cc395",
+			"name": "Wharton High School",
+			"city": "Tampa",
+			"stateCode": "fl",
 			"zipcode": "33647"
 		},
 		{
-			"id": "50709d92-4a27-4878-b4f1-001e5d5c0822",
-			"name": "crim high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30317"
+			"id": "a1203548-703a-4e25-8716-1df73c64cd8e",
+			"name": "Boston Adult Academy",
+			"city": "Back Bay",
+			"stateCode": "ma",
+			"zipcode": "2116"
 		},
 		{
-			"id": "0af0a1e9-5f22-413c-8ee5-183743259f56",
-			"name": "druid hills high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30307"
-		},
-		{
-			"id": "e99d2be9-931e-4c62-a1c1-e13d3b34049d",
-			"name": "lakeside high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30345"
-		},
-		{
-			"id": "d892fa33-8fda-4681-8d90-77a6e4f77e49",
-			"name": "mcnair high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30316"
-		},
-		{
-			"id": "5306cb81-ba41-4925-ba0d-fdd1015b0412",
-			"name": "booker t. washington high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30314"
-		},
-		{
-			"id": "51349968-bb4c-41ff-9d39-f2847dc26346",
-			"name": "corretta scott king womens' leadership academy",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30318"
-		},
-		{
-			"id": "c62a8e95-67ba-4ab5-be46-e7a572db0658",
-			"name": "department of human resources",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30303"
-		},
-		{
-			"id": "b72ef37d-0896-4732-b5ca-637d70ddf2ba",
-			"name": "douglass high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30318"
-		},
-		{
-			"id": "5d904313-5d9a-4b65-9325-5ca4cb011d6a",
-			"name": "early college high school at carver",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30315"
-		},
-		{
-			"id": "3ae6d315-1823-4303-8af5-a3b472e3a094",
-			"name": "graduation achievement center charter high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30303"
-		},
-		{
-			"id": "715be8aa-f58f-48d0-8cb6-bc1412f8e48c",
-			"name": "grady high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30309"
-		},
-		{
-			"id": "b21205bb-2c18-45fc-9bd3-839e6d99113c",
-			"name": "hapeville charter career academy",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30349"
-		},
-		{
-			"id": "2b2663cf-f938-4e42-8ecd-46e9bd721e17",
-			"name": "kipp atlanta collegiate",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30314"
-		},
-		{
-			"id": "baad5c85-7063-4a8b-b78a-9c14b0356dab",
-			"name": "maynard h. jackson- jr. high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30316"
-		},
-		{
-			"id": "6c279f89-78cf-448c-8819-2b7c84c3f790",
-			"name": "mays high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30331"
-		},
-		{
-			"id": "40402ea9-f6be-4c4f-8d11-a0cc092e4883",
-			"name": "north atlanta high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30327"
-		},
-		{
-			"id": "1d731c08-1bfd-4296-9f18-9004cce1f36e",
-			"name": "north springs high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30328"
-		},
-		{
-			"id": "16a71754-13ad-45c8-94fd-d2637514ebbc",
-			"name": "riverwood international charter school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30328"
-		},
-		{
-			"id": "6d2fc624-1a5d-4902-8661-437b765b17e1",
-			"name": "school of health sciences and research at carver",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30315"
-		},
-		{
-			"id": "f0319150-88a5-4833-bd0c-7aead4fc8305",
-			"name": "school of technology at carver",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30315"
-		},
-		{
-			"id": "27088cc3-2c23-40ff-8b31-257cae153abc",
-			"name": "south atlanta law and social justice school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30354"
-		},
-		{
-			"id": "4d3e4b15-29dc-4554-87eb-5f8d3bd126c9",
-			"name": "south atlanta school of computer animation and design",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30354"
-		},
-		{
-			"id": "a705d48d-adf1-4630-9552-e01c2f80a935",
-			"name": "south atlanta school of health and medical science",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30354"
-		},
-		{
-			"id": "4b7e0f8d-27e6-4612-b950-4b644b0dd9d9",
-			"name": "the school of the arts at carver",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30315"
-		},
-		{
-			"id": "bd9f2c8c-39fd-4b9f-aa65-8d0172fa3103",
-			"name": "therrell school of law- government and public policy - c",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30311"
-		},
-		{
-			"id": "b7b05805-52f4-4cb0-b82c-4bf42b2acde5",
-			"name": "westlake high school",
-			"city": "Atlanta",
-			"stateCode": "GA",
-			"zipcode": "30331"
-		},
-		{
-			"id": "2e7446ee-c45f-4258-ac6f-5dd63400150d",
-			"name": "east high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50316"
-		},
-		{
-			"id": "e099cb82-1b14-4623-a4a4-9e69b9e82b7a",
-			"name": "hoover high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50310"
-		},
-		{
-			"id": "e3d01b8e-7de7-4a84-bef9-20c7c864b10f",
-			"name": "lincoln high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50315"
-		},
-		{
-			"id": "152afdc8-e495-4435-bb3e-e9cdf6d97548",
-			"name": "north high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50313"
-		},
-		{
-			"id": "88dcc3e5-db67-4577-8ae8-e73b43f0240b",
-			"name": "roosevelt high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50312"
-		},
-		{
-			"id": "50a80ada-93d6-49cd-9877-d590d54b0d94",
-			"name": "saydel high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50313"
-		},
-		{
-			"id": "07789e5c-1960-4ad7-8de4-93a28fbe248d",
-			"name": "scavo alternative high school",
-			"city": "Des Moines",
-			"stateCode": "IA",
-			"zipcode": "50309"
-		},
-		{
-			"id": "b8a28406-5e1c-4d7c-b6fc-dffe2886dc40",
-			"name": "benjamin franklin high school",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70122"
-		},
-		{
-			"id": "bbec1a19-77ca-431a-a45e-77372739d57c",
-			"name": "edna karr high school",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70131"
-		},
-		{
-			"id": "18f5cde6-a7b8-436b-b650-8fbd4a0c43bd",
-			"name": "mcdonogh #35 college preparatory school",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70122"
-		},
-		{
-			"id": "f8320ac3-1b05-478b-b613-6aa5787ccbca",
-			"name": "new orleans charter science and mathematics hs",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70115"
-		},
-		{
-			"id": "ffad7504-9092-4ac0-8351-ab518c3bdf60",
-			"name": "new orleans military/maritime academy",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70114"
-		},
-		{
-			"id": "ac2ad5ca-4059-43c7-888a-0e48ec854db7",
-			"name": "warren easton senior high school",
-			"city": "New Orleans",
-			"stateCode": "LA",
-			"zipcode": "70119"
-		},
-		{
-			"id": "94d9063b-3cc7-4b7d-a2ee-f9adb5ee60cd",
-			"name": "boston arts academy",
+			"id": "1c422004-eebb-4811-95fb-aaa3543cd617",
+			"name": "Boston Arts Academy",
 			"city": "Boston",
-			"stateCode": "MA",
-			"zipcode": "02215"
+			"stateCode": "ma",
+			"zipcode": "2215"
 		},
 		{
-			"id": "7829bbe7-1abd-4af2-be84-f6932517150a",
-			"name": "edward m. kennedy academy for health careers (horace mann ch",
+			"id": "0b25dd15-ae55-4859-9130-c8e2de5d62ea",
+			"name": "Margarita Muniz Academy",
 			"city": "Boston",
-			"stateCode": "MA",
-			"zipcode": "02115"
+			"stateCode": "ma",
+			"zipcode": "2130"
 		},
 		{
-			"id": "bba09169-21f0-4476-ba4f-0d9d6c10984b",
-			"name": "margarita muniz academy",
+			"id": "9d88443f-1113-4b78-9434-230ea6425a54",
+			"name": "Snowden International School At Copley",
 			"city": "Boston",
-			"stateCode": "MA",
-			"zipcode": "02130"
+			"stateCode": "ma",
+			"zipcode": "2116"
 		},
 		{
-			"id": "2904c02f-d4ec-4500-ada4-305895e64bce",
-			"name": "snowden international school at copley",
+			"id": "cafa2737-eca3-40a3-bc45-07c7065707a8",
+			"name": "Edward M. Kennedy Academy For Health Careers (Horace Mann Ch",
 			"city": "Boston",
-			"stateCode": "MA",
-			"zipcode": "02116"
+			"stateCode": "ma",
+			"zipcode": "2115"
 		},
 		{
-			"id": "43a6c4de-9849-4ee7-a535-08e318510576",
-			"name": "north kansas city high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "c3e1cdf5-221b-4b5c-9fa0-ec1c6059d3d2",
+			"name": "Another Course To College",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "2135"
+		},
+		{
+			"id": "652a970e-94e1-4158-84a0-7891d1a378b5",
+			"name": "Brighton High",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "2135"
+		},
+		{
+			"id": "764f9325-cf83-459c-8969-05a2cf3d59ba",
+			"name": "Lyon Upper 9-12",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "2135"
+		},
+		{
+			"id": "6422fd42-a079-423b-902c-b2087ef863d8",
+			"name": "Charlestown High",
+			"city": "Charlestown",
+			"stateCode": "ma",
+			"zipcode": "2129"
+		},
+		{
+			"id": "242c4f52-dbae-4a9d-95ff-b353f177889d",
+			"name": "Chelsea High",
+			"city": "Chelsea",
+			"stateCode": "ma",
+			"zipcode": "2150"
+		},
+		{
+			"id": "cf6c040e-47dd-4d84-a108-91f0ff9ea4ba",
+			"name": "Phoenix Charter Academy",
+			"city": "Chelsea",
+			"stateCode": "ma",
+			"zipcode": "2150"
+		},
+		{
+			"id": "74ed03b0-9e1d-4d9c-8af8-ca37d5e6b4d7",
+			"name": "Boston International High School",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "2124"
+		},
+		{
+			"id": "2edcc8b4-99b0-4911-ae90-d37e2d43a959",
+			"name": "Community Academy of Science and Health",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "2122"
+		},
+		{
+			"id": "74b945f9-4b90-4c3a-8fe3-6206a5e800e3",
+			"name": "Dorchester Academy",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "2125"
+		},
+		{
+			"id": "442ff9e3-af32-4b8f-b993-481e4067a6c8",
+			"name": "Jeremiah E Burke High",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "2121"
+		},
+		{
+			"id": "f84cc81c-c9df-45c4-b542-5ba44d963112",
+			"name": "East Boston High",
+			"city": "East Boston",
+			"stateCode": "ma",
+			"zipcode": "2128"
+		},
+		{
+			"id": "d182ba8c-9343-4d32-a6f9-8b86ba3a2390",
+			"name": "Boston Community Leadership Academy",
+			"city": "Hyde Park",
+			"stateCode": "ma",
+			"zipcode": "2136"
+		},
+		{
+			"id": "dcc2de14-d292-4a74-bfc0-4331d644853c",
+			"name": "New Mission High School",
+			"city": "Hyde Park",
+			"stateCode": "ma",
+			"zipcode": "2136"
+		},
+		{
+			"id": "1b7a84fc-c45f-4d65-b0c3-33671a5bbfdf",
+			"name": "Community Academy",
+			"city": "Jamaica Plain",
+			"stateCode": "ma",
+			"zipcode": "2130"
+		},
+		{
+			"id": "041bb3bf-e379-4599-9e7f-3a8b3ebd3179",
+			"name": "The English High",
+			"city": "Jamaica Plain",
+			"stateCode": "ma",
+			"zipcode": "2130"
+		},
+		{
+			"id": "054cc9d6-c4ad-4743-ac7d-ce0a782894bb",
+			"name": "Revere High",
+			"city": "Revere",
+			"stateCode": "ma",
+			"zipcode": "2151"
+		},
+		{
+			"id": "36384e24-8eec-4da9-af7b-1e29f8af0210",
+			"name": "Seacoast School",
+			"city": "Revere",
+			"stateCode": "ma",
+			"zipcode": "2151"
+		},
+		{
+			"id": "75df963b-d512-46ba-a42e-0864febac64e",
+			"name": "Fenway High School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2120"
+		},
+		{
+			"id": "c5e88ef9-a4ec-4a45-ac99-933742345f58",
+			"name": "Greater Egleston Community High School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2119"
+		},
+		{
+			"id": "1d0e32ee-9667-42da-9a8a-b7bee606c75c",
+			"name": "Madison Park High",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2120"
+		},
+		{
+			"id": "04cf4aae-bbd7-491e-9715-ce0172cb6074",
+			"name": "Boston Day and Evening Academy Charter School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2119"
+		},
+		{
+			"id": "bb5e6adf-be86-4289-a386-f72e6282d173",
+			"name": "City On A Hill Charter Public School Circuit Street",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2119"
+		},
+		{
+			"id": "6fb3c2f0-b061-4942-89a6-6e0c079af9e8",
+			"name": "City On A Hill Charter Public School Dudley Square",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2119"
+		},
+		{
+			"id": "1b94755a-1a89-4c95-aa2a-fe6864e34004",
+			"name": "Excel High School",
+			"city": "South Boston",
+			"stateCode": "ma",
+			"zipcode": "2127"
+		},
+		{
+			"id": "ff539f4b-e32d-4822-86f5-890f8f7de820",
+			"name": "Urban Science Academy",
+			"city": "West Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2132"
+		},
+		{
+			"id": "ad4222b0-72aa-497c-b5d5-fc72fa8c8d2b",
+			"name": "West Roxbury Academy",
+			"city": "West Roxbury",
+			"stateCode": "ma",
+			"zipcode": "2132"
+		},
+		{
+			"id": "f1e84e63-3e8e-4f1f-884f-08b3414d0f82",
+			"name": "North Kansas City High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64116"
 		},
 		{
-			"id": "ed8977ea-9a99-405e-a8b0-1ec8d9079513",
-			"name": "oak park high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "60d347bd-8432-492b-8504-676bf720c772",
+			"name": "Oak Park High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64118"
 		},
 		{
-			"id": "3b90eb6e-3dda-4548-9bfa-d9adaa791848",
-			"name": "staley high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "453f7285-be6f-4fb2-970b-2426ee37956f",
+			"name": "Staley High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64156"
 		},
 		{
-			"id": "4cdd5b7d-2418-48b6-9a24-cd28d4fdf9f7",
-			"name": "winnetonka high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "9d7964c5-a6f2-4783-991d-1a08cb865702",
+			"name": "Winnetonka High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64119"
 		},
 		{
-			"id": "af4d84f5-6968-4027-a965-0625a5a6bdb7",
-			"name": "allen village high school",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "0adb79ac-f66a-416a-95a2-95c6c54f4402",
+			"name": "Allen Village High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64111"
 		},
 		{
-			"id": "8754cdcd-ef47-4bff-8b97-961ff2e197cb",
-			"name": "alta vista charter school",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "ae7123a3-2005-4f9c-b4df-56fee475cb50",
+			"name": "Alta Vista Charter School",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64108"
 		},
 		{
-			"id": "80c64495-e298-4449-b610-3e3376c88569",
-			"name": "center sr. high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "f18ecc31-49ec-4620-8190-af77e333a4f6",
+			"name": "Center Sr. High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64131"
 		},
 		{
-			"id": "13533984-daf1-4624-a594-b011da723279",
-			"name": "delasalle charter school",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "a35a4345-843c-4fed-b216-18e5b0a236ef",
+			"name": "Delasalle Charter School",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64109"
 		},
 		{
-			"id": "99a0a5f3-0af8-499c-8e57-88cfd25f66d4",
-			"name": "frontier schl of excellence-u",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "ecf1554a-dff5-484b-b65d-a161f7c067f3",
+			"name": "Frontier Schl of Excellence-U",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64110"
 		},
 		{
-			"id": "aeb892d5-da96-4205-83a2-65234b1285a4",
-			"name": "frontier stem high school",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "796709a4-fbd0-441f-9382-62b72506cf06",
+			"name": "Frontier Stem High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64120"
 		},
 		{
-			"id": "79b7e688-469f-4af7-9ac9-c39128243428",
-			"name": "hickman mills freshman center",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "4185dfd4-d6a3-4ab0-ace5-f3439ccd5f35",
+			"name": "Hickman Mills Freshman Center",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64138"
 		},
 		{
-			"id": "70ee7b46-6594-4f5f-a5b9-039a620ea57a",
-			"name": "hogan preparatory academy",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
-			"zipcode": "64131"
-		},
-		{
-			"id": "e3346b39-f503-44e8-821a-28ef6e646b42",
-			"name": "manual career tech. ctr.",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
-			"zipcode": "64106"
-		},
-		{
-			"id": "a93d5950-848f-440d-b0e4-c22f54fadb24",
-			"name": "ruskin high school",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "02e23153-8f50-49e8-9e1e-f6f88192fa9a",
+			"name": "Ruskin High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64134"
 		},
 		{
-			"id": "3ce8a69c-5aed-4ddf-b3bb-dae1ff26c26b",
-			"name": "university academy-upper",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "32d97f8d-960e-4d5b-b625-ed05a241173b",
+			"name": "Hogan Preparatory Academy",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64131"
 		},
 		{
-			"id": "e623f5b7-3661-44f1-b766-944d765dabab",
-			"name": "park hill high",
-			"city": "KANSAS CITY",
-			"stateCode": "MO",
+			"id": "03915271-e67b-4644-9428-559478e6cecd",
+			"name": "Manual Career Tech. Ctr.",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64106"
+		},
+		{
+			"id": "f39f85c6-5ec4-4e14-a2da-4b6c248f9b16",
+			"name": "University Academy-Upper",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64131"
+		},
+		{
+			"id": "9a66e531-b7a5-4784-8173-18a48f32b29d",
+			"name": "Park Hill High",
+			"city": "Kansas City",
+			"stateCode": "mo",
 			"zipcode": "64153"
 		},
 		{
-			"id": "609de39f-b0ce-4751-9051-3677f8f4526e",
-			"name": "advanced technologies academy",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89106"
+			"id": "9792821d-ff42-4abd-913a-f47451f0a2a4",
+			"name": "Lift For Life Academy High School",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63104"
 		},
 		{
-			"id": "63124a0b-6ab4-47cd-bab2-951304c79613",
-			"name": "beacon academy of nevada",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89147"
+			"id": "83891f1a-e593-4ec8-8de9-1a542fd17e5a",
+			"name": "Beaumont Cte High School",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63107"
 		},
 		{
-			"id": "94298e51-9633-41b8-9f33-7d9ae5a2fb91",
-			"name": "biltmore continuation hs",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89101"
+			"id": "71ba0517-ba47-487a-a038-82282d2ee969",
+			"name": "Carnahan Sch. of the Future",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63118"
 		},
 		{
-			"id": "d96565c6-c5f5-4d09-9f3e-3281cfa2dad9",
-			"name": "burk horizon southwest sunset hs",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89103"
+			"id": "27d5ee06-10bb-43dd-9bf7-35a664f53fa5",
+			"name": "Central Visual/perf. Arts High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63139"
 		},
 		{
-			"id": "fe31e3d5-9a81-4452-b53b-fcc88377616b",
-			"name": "college of so. nv hs west",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89146"
+			"id": "b51a632f-ad46-446f-a09d-6ebe5bdc2293",
+			"name": "Cleveland Njrotc Academy",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63139"
 		},
 		{
-			"id": "067f781d-0c2b-42c6-97ae-f331b6de24c1",
-			"name": "las vegas academy of int'l studies performing and visual ar",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89101"
+			"id": "a4a4eb2c-1d82-483e-9546-0b825800c32c",
+			"name": "Gateway High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63110"
 		},
 		{
-			"id": "c62d5f45-bafa-4753-828d-90771e6e43e8",
-			"name": "morris sunset east high school",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89104"
+			"id": "9e4b9b5c-13f5-4ccc-a705-019643dfccf1",
+			"name": "Metro High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63108"
 		},
 		{
-			"id": "1f44bc04-355a-497e-852e-95c138c60910",
-			"name": "odyssey charter high school",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89146"
+			"id": "35a5dafb-9f84-460d-a48c-d294c04357e4",
+			"name": "Miller Career Academy",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63106"
 		},
 		{
-			"id": "eeb649e1-46ac-4a07-a644-2f4c1c450394",
-			"name": "veterans tribute career techincal academy",
-			"city": "Las Vegas",
-			"stateCode": "NV",
-			"zipcode": "89106"
+			"id": "d70f246b-56ca-489b-b29c-698aec67e438",
+			"name": "Roosevelt High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63118"
 		},
 		{
-			"id": "e666d719-9462-4a3e-9051-1a85dcd3f0c8",
-			"name": "arts & college preparatory academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
+			"id": "fba04778-3b51-489b-a936-55eb3e5e8afd",
+			"name": "Soldan International Studies",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63108"
 		},
 		{
-			"id": "4b1e8b52-384f-4932-bf02-63582654a981",
-			"name": "beechcroft high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43229"
+			"id": "8cc727d9-d821-449b-bb68-cbf7ae595d3b",
+			"name": "Sumner High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63113"
 		},
 		{
-			"id": "e2ce2636-7541-4566-8c15-ee8f89df1d47",
-			"name": "briggs high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43223"
+			"id": "2c852fc4-c39d-4f00-b453-55f92ddb6949",
+			"name": "Transportation and Law",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63120"
 		},
 		{
-			"id": "20ec159a-7c53-4176-9a0c-e505ff2fb804",
-			"name": "centennial high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43220"
+			"id": "0d3c6738-0835-4b19-8097-63d413e01176",
+			"name": "Vashon High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63106"
 		},
 		{
-			"id": "9d769839-7e03-4b6f-be77-d9e06b6d2d17",
-			"name": "central high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43222"
+			"id": "f35f6a6b-362f-497e-8152-ffa0b92f28a5",
+			"name": "Vo. Tech. Tuition",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63101"
 		},
 		{
-			"id": "48ce9152-962c-437a-a2e3-c9ca3f24a74f",
-			"name": "charles school at ohio dominican university",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43214"
+			"id": "f9f4daf6-ae20-4431-8dab-fc7a20fc6099",
+			"name": "Gateway Science Academy High",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63139"
 		},
 		{
-			"id": "8918f803-1452-42eb-ad58-616c57d333b5",
-			"name": "columbus alternative high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43211"
+			"id": "d46edcb1-34c2-418c-825a-9766b4448a89",
+			"name": "Grand Center Arts Academy High",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63103"
 		},
 		{
-			"id": "ba2f3b64-9e59-4802-ab74-217a9be04f0b",
-			"name": "columbus downtown high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43215"
+			"id": "f19e2870-ebf2-472f-a632-979fd4e52f09",
+			"name": "Collegiate School of Med/bio",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63104"
 		},
 		{
-			"id": "7d9b4aa5-df09-44b8-815a-66b88494791a",
-			"name": "cruiser academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
+			"id": "ad9dbcea-7519-4039-a440-99b31fa7856a",
+			"name": "Making Community Connections Charter School (H)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3103"
 		},
 		{
-			"id": "2c56903c-5ade-443e-8c96-ed27bdf36930",
-			"name": "early college academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43201"
+			"id": "ae900436-389e-4775-a642-acefcd893a77",
+			"name": "Manchester Central High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3104"
 		},
 		{
-			"id": "3b04b5c8-9f13-4331-bbc8-085ef310afe1",
-			"name": "east high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43205"
+			"id": "67b51a16-c54d-44db-8c16-f6dc31b9b7cc",
+			"name": "Manchester Memorial High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3103"
 		},
 		{
-			"id": "db18e7e7-4d16-4195-b3b9-0212345de152",
-			"name": "eastmoor academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43213"
+			"id": "56802781-35ea-46d0-96e8-f68ff0ec63bd",
+			"name": "Manchester School of Technology (High School)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3103"
 		},
 		{
-			"id": "8c2cbedb-1a8f-4450-80fa-91744c2bd884",
-			"name": "focus learning academy of southeastern columbus",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
+			"id": "ff3e96c5-1782-4bff-af95-f2bd39102c45",
+			"name": "Manchester West High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3102"
 		},
 		{
-			"id": "d4d598d2-53f6-4036-af63-f3026690b4a5",
-			"name": "focus learning academy of southwest columbus",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43207"
+			"id": "7d52bdbb-47d7-4182-a5eb-0db5210eb4e8",
+			"name": "The Founders Academy Charter School (H)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "3103"
 		},
 		{
-			"id": "2d0fe53e-ea02-46d8-ab55-6f6d9b187e17",
-			"name": "focus north high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43229"
+			"id": "25fde2ee-950c-4f52-b48c-0b7d355c5a46",
+			"name": "Academy For Science and Design Charter (H)",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "3063"
 		},
 		{
-			"id": "850f0450-47e0-4ee2-a6fa-68573b4c3411",
-			"name": "fort hayes arts and academic hs",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43215"
+			"id": "df3f9731-6194-4496-8590-b9df42df0691",
+			"name": "Nashua High School North",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "3063"
 		},
 		{
-			"id": "626aaffc-b02e-4f5f-a050-07225785b1ce",
-			"name": "fort hayes career center",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43215"
+			"id": "74ee1250-d0ef-48c8-8eb4-22f09bd4046e",
+			"name": "Nashua High School South",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "3062"
 		},
 		{
-			"id": "8785b782-77db-4336-838a-976c07262dfb",
-			"name": "franklin heights high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43204"
-		},
-		{
-			"id": "184dbad4-eea9-41fa-b1e8-ea8195c22931",
-			"name": "franklinton preparatory academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43222"
-		},
-		{
-			"id": "6a7db881-3eab-408f-aeb3-5ed343b36475",
-			"name": "graham school the",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43214"
-		},
-		{
-			"id": "fc93464e-fac2-4f2b-85de-b1d3851e7361",
-			"name": "grandview heights high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43212"
-		},
-		{
-			"id": "d825fda7-af39-49c7-a2e4-c7d578f5b58b",
-			"name": "hamilton township high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43207"
-		},
-		{
-			"id": "3cb28ff4-f185-427e-a5fb-da86e373f5c4",
-			"name": "horizon science academy columbus",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43229"
-		},
-		{
-			"id": "3fc5f2cf-da8e-494c-9f92-5f51b259b9a0",
-			"name": "independence high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
-		},
-		{
-			"id": "2834f3b6-0c6f-4eae-b85e-3df5517d2b61",
-			"name": "life skills center of columbus north",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43229"
-		},
-		{
-			"id": "47ce4e46-99e7-4791-937d-7d51389a28eb",
-			"name": "life skills center of columbus southeast",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
-		},
-		{
-			"id": "c1ec13b1-461f-48f2-b1ee-17455aa82aab",
-			"name": "marion-franklin high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43207"
-		},
-		{
-			"id": "dfcad42a-3188-4936-abbf-df746d4666f5",
-			"name": "mason run high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43227"
-		},
-		{
-			"id": "d57df1b0-5926-47d8-92e9-bd3d20faeffa",
-			"name": "mifflin high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43219"
-		},
-		{
-			"id": "2499d6de-1eea-4870-8c61-a51c6d7845f3",
-			"name": "nexus academy of columbus",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43232"
-		},
-		{
-			"id": "481a264c-3a50-4e1b-b773-5a506f530ab1",
-			"name": "northland high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43229"
-		},
-		{
-			"id": "0ffa657c-37e1-444c-983e-150a4dd64b25",
-			"name": "ohio construction academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43219"
-		},
-		{
-			"id": "179186f1-b940-4992-9def-192e91dc8f32",
-			"name": "road to success academy",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43205"
-		},
-		{
-			"id": "e67ace2e-573e-40ec-8900-c9e7e55634f9",
-			"name": "the academy for urban scholars",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43203"
-		},
-		{
-			"id": "2ba62942-def2-441e-a59c-1e4a0bf943b0",
-			"name": "walnut ridge high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43227"
-		},
-		{
-			"id": "5f805a31-667f-43ea-8cd4-0bbae5732ad6",
-			"name": "west high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43204"
-		},
-		{
-			"id": "13db6271-3efe-43b1-90a1-d58af6a34ae6",
-			"name": "whetstone high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43214"
-		},
-		{
-			"id": "119979d7-3fda-4c0a-a071-7b0545e0b528",
-			"name": "worthington kilbourne high school",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43235"
-		},
-		{
-			"id": "9a479e59-d658-45e1-88db-d3947fd70535",
-			"name": "youthbuild columbus community",
-			"city": "Columbus",
-			"stateCode": "OH",
-			"zipcode": "43201"
-		},
-		{
-			"id": "faed3360-649e-4c49-8bb7-4e1998d94483",
-			"name": "edison high school",
-			"city": "Richmond",
-			"stateCode": "OH",
-			"zipcode": "43944"
-		},
-		{
-			"id": "99c82c8b-3d8e-43cf-85c3-84dd5de325f4",
-			"name": "academy at palumbo",
+			"id": "e9f5c3e2-c279-4894-a29c-d7a8de57a124",
+			"name": "Act Academy Cyber Cs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19147"
-		},
-		{
-			"id": "f867fc48-4eca-49e6-975d-d562d5a36826",
-			"name": "act academy cyber cs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19138"
 		},
 		{
-			"id": "6de0a597-dbdd-4cdb-a874-e95e9f30fa42",
-			"name": "arts academy at benjamin rush",
+			"id": "ca6a97bf-cb03-41a6-9112-ea0a23e0ef3b",
+			"name": "Charter High School For Architecture and Design",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19154"
-		},
-		{
-			"id": "2a1cbba5-ac6b-4f4f-b0cc-8b904f80ee2c",
-			"name": "bartram john - main",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19142"
-		},
-		{
-			"id": "c5a4d688-b22c-4fcb-9976-018f69f9de8c",
-			"name": "bodine william w hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19123"
-		},
-		{
-			"id": "0888b03e-8ea7-405e-81e6-da70bbf50c3b",
-			"name": "building 21",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19122"
-		},
-		{
-			"id": "7629bbc3-6bc3-4ae6-90f6-4acf1ee5298f",
-			"name": "carver hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19121"
-		},
-		{
-			"id": "440abfda-f912-4357-83f7-cba3dc6d8a42",
-			"name": "central hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19141"
-		},
-		{
-			"id": "51ff9ee4-d9c4-40a9-b053-6227d5273ba7",
-			"name": "charter high school for architecture and",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19106"
 		},
 		{
-			"id": "9d415348-da17-43b4-83ed-3a00be8a5570",
-			"name": "constitution hs",
+			"id": "720710e2-5651-405b-b2de-82d198ba3f7d",
+			"name": "Delaware Valley Chs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19106"
-		},
-		{
-			"id": "2e0e537d-6bdf-4027-9e75-057448f419fc",
-			"name": "creative and performing arts",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19147"
-		},
-		{
-			"id": "fde1be70-e4d2-4aa7-a7d7-ddfd352f7d09",
-			"name": "delaware valley chs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19141"
 		},
 		{
-			"id": "cf7328d9-7de3-4368-ae1d-2c20f7b88e96",
-			"name": "dobbins avt hs",
+			"id": "300ed62a-cebc-4308-92e4-4a2f76c8e5e6",
+			"name": "Franklin Towne Chs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19132"
-		},
-		{
-			"id": "bc2b8935-f49e-4b4c-8e18-d8b348a19e38",
-			"name": "edison hs/fareira skills",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19140"
-		},
-		{
-			"id": "6b57b89e-b182-43d3-b370-dff10789a77f",
-			"name": "fels samuel hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19111"
-		},
-		{
-			"id": "33f175d2-ba76-46de-9029-71c29ea7d945",
-			"name": "frankford hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19124"
-		},
-		{
-			"id": "512bb115-047f-45f9-97fb-ca8247bd9c59",
-			"name": "franklin benjamin hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19130"
-		},
-		{
-			"id": "0caec3c4-a36c-4d6d-a82b-23c0d02be02e",
-			"name": "franklin lc",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19130"
-		},
-		{
-			"id": "5b1843f4-2ba6-4e3c-bcbd-66ff2560569e",
-			"name": "franklin towne chs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19137"
 		},
 		{
-			"id": "6db65d4c-5256-4edf-ac50-e987d16d669b",
-			"name": "furness horace hs",
+			"id": "4a97c284-013a-4bf2-9189-57e56ae1f932",
+			"name": "Imhotep Institute Chs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19148"
-		},
-		{
-			"id": "840516f6-c150-4de2-a126-c4a4c9e70de6",
-			"name": "girls hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19141"
-		},
-		{
-			"id": "401a5a8a-8697-4900-a883-649ec2d7c385",
-			"name": "imhotep institute chs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19138"
 		},
 		{
-			"id": "bf56f368-01ea-4b0e-bb84-73bc03858177",
-			"name": "kensington creative & performing arts hs",
+			"id": "c2b99955-3307-430a-b20a-e42ae6158eb7",
+			"name": "Multi-Cultural Academy Cs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19122"
-		},
-		{
-			"id": "f8a16ac9-784d-4825-afea-4777506016fe",
-			"name": "kensington health sciences",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19125"
-		},
-		{
-			"id": "28cd6972-28b2-4253-8115-0dc56afc99d9",
-			"name": "kensington intern business finance & en",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19125"
-		},
-		{
-			"id": "e10e9c2a-aa48-46c1-b319-7360895ec015",
-			"name": "kensington urban education academy",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19125"
-		},
-		{
-			"id": "265290cb-bda1-45aa-aeda-6a1d894d4a95",
-			"name": "king martin luther hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19138"
-		},
-		{
-			"id": "eab0a92c-3cab-49af-bc08-81efbdcc6b1a",
-			"name": "lankenau hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19128"
-		},
-		{
-			"id": "5f1351cc-a2dc-4c87-8678-60d5401906fd",
-			"name": "lincoln hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19136"
-		},
-		{
-			"id": "0efcdd62-9cee-456f-af13-10f4e145e74a",
-			"name": "mastbaum jules e avts",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19134"
-		},
-		{
-			"id": "10115087-9b58-47ed-996d-20876c7d3e35",
-			"name": "motivation hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19143"
-		},
-		{
-			"id": "9b20db45-b8c8-4399-91b5-ce7d8df14bce",
-			"name": "multi-cultural academy cs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19140"
 		},
 		{
-			"id": "4d73c698-3292-4969-a177-f142ede19909",
-			"name": "northeast hs",
+			"id": "b051d9df-477a-4b5d-8633-a1c1566a07e5",
+			"name": "Olney Charter High School",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19111"
-		},
-		{
-			"id": "b4a3926f-e39e-4a1e-b532-64ba757fac0d",
-			"name": "olney charter high school",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19140"
 		},
 		{
-			"id": "99e6373c-a605-4f25-95b5-53f7acf960c4",
-			"name": "overbrook hs",
+			"id": "611b5754-406f-4750-bb82-47e37c243ad3",
+			"name": "Academy At Palumbo",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19131"
+			"stateCode": "pa",
+			"zipcode": "19147"
 		},
 		{
-			"id": "b20abc97-ac69-4bcf-be2f-b5917fa89e21",
-			"name": "parkway northwest",
+			"id": "b73c563c-f937-4c8a-90d4-76e3a7edacc1",
+			"name": "Arts Academy At Benjamin Rush",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19150"
+			"stateCode": "pa",
+			"zipcode": "19154"
 		},
 		{
-			"id": "80956bfe-c8fe-484b-b369-c1f164f88c7e",
-			"name": "parkway west",
+			"id": "ae086185-d363-4a5a-8fbe-5a850c4720f7",
+			"name": "Bartram John - Main",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19139"
+			"stateCode": "pa",
+			"zipcode": "19142"
 		},
 		{
-			"id": "10daa20c-a557-4ff3-a3fb-649a9e6299a4",
-			"name": "parkway-center city",
+			"id": "e0661e55-33f1-43d5-9f2d-c203484228a3",
+			"name": "Bodine William W Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19123"
 		},
 		{
-			"id": "d262ff73-009e-422c-98cf-17a2306412ff",
-			"name": "paul robeson hs for human services",
+			"id": "532a59dd-a9c8-4b9b-ab5e-4f89b5bea61a",
+			"name": "Building 21",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19104"
-		},
-		{
-			"id": "f88e0700-c98c-4212-847c-984a3c871a26",
-			"name": "philadelphia electrical & tech chs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19102"
-		},
-		{
-			"id": "3ca30fb5-fd5e-49bd-890f-1c978f401680",
-			"name": "philadelphia military acad at elverson",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19122"
 		},
 		{
-			"id": "ec5b33f3-a811-46d6-8d78-136fd5d80ce3",
-			"name": "preparatory cs of mathematics science",
+			"id": "1bc5b5e4-0d10-44d2-8182-03e063dbcc68",
+			"name": "Carver Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19145"
+			"stateCode": "pa",
+			"zipcode": "19121"
 		},
 		{
-			"id": "08927481-c575-42e8-bce6-ffc1706fda63",
-			"name": "randolph a. philip avt hs",
+			"id": "3d854240-1ffe-41db-af0e-6f793cea22df",
+			"name": "Central Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19129"
+			"stateCode": "pa",
+			"zipcode": "19141"
 		},
 		{
-			"id": "f39093e6-f1ed-40bb-8080-d5072bab9c87",
-			"name": "roxborough hs",
+			"id": "767f32c4-2c19-48fc-ac76-2558e3fb4bb6",
+			"name": "Constitution Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19128"
+			"stateCode": "pa",
+			"zipcode": "19106"
 		},
 		{
-			"id": "72e8e346-4646-425c-8027-02958112e675",
-			"name": "saul w b agricultural school",
+			"id": "8bd273f0-07d0-48fc-8bc0-df509cb670ec",
+			"name": "Creative and Performing Arts",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19128"
+			"stateCode": "pa",
+			"zipcode": "19147"
 		},
 		{
-			"id": "ed916307-8b22-4eb5-98bb-7e1f7839e1a1",
-			"name": "sayre william l ms",
+			"id": "fc96a480-7e8b-4106-be8e-b5b579beb5e7",
+			"name": "Dobbins Avt Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19139"
-		},
-		{
-			"id": "71be2f52-e01b-4e68-b3a0-348a9acc6136",
-			"name": "school of the future",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19104"
-		},
-		{
-			"id": "6d833012-1343-43e4-b739-a65dcee78655",
-			"name": "science leadership academy",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19103"
-		},
-		{
-			"id": "2c882393-bb66-4619-8951-870f9cd30afc",
-			"name": "south philadelphia hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19148"
-		},
-		{
-			"id": "04e59609-62e4-4b64-b896-b8f136c3e9c8",
-			"name": "strawberry mansion hs",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19132"
 		},
 		{
-			"id": "0f09c07b-af9a-47f7-b54f-e11d550a3786",
-			"name": "swenson arts & technology hs",
+			"id": "1fb61251-9fb1-4c72-92b3-44b91c0d6223",
+			"name": "Edison Hs/fareira Skills",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19114"
-		},
-		{
-			"id": "eef81bb8-7a2f-4da5-99e8-df1f69cae0d6",
-			"name": "the linc",
-			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19140"
 		},
 		{
-			"id": "d34af984-896a-4a93-a965-eae485a74106",
-			"name": "the science leadership academy at beeber",
+			"id": "a473b267-4ad4-439a-990c-ed5b373f3152",
+			"name": "Fels Samuel Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
+			"zipcode": "19111"
+		},
+		{
+			"id": "2f75e52d-ea54-417e-9c83-6087fe971474",
+			"name": "Frankford Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19124"
+		},
+		{
+			"id": "803012f8-2849-4336-b29f-1331d0e24884",
+			"name": "Franklin Benjamin Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19130"
+		},
+		{
+			"id": "80f8506b-007a-4860-9548-4d75f1663ddd",
+			"name": "Franklin Lc",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19130"
+		},
+		{
+			"id": "7c7b7ef0-c4c6-47d5-8d57-a20585085e8d",
+			"name": "Furness Horace Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19148"
+		},
+		{
+			"id": "b17a6e44-30bb-4d01-a7e6-e27fb2e3d4eb",
+			"name": "Girls Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19141"
+		},
+		{
+			"id": "e5af7f24-e4d7-4c5f-b621-db10200db1a9",
+			"name": "Kensington Creative & Performing Arts Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"id": "d5cf6c98-c35d-4d16-b05b-95fe998ed58a",
+			"name": "Kensington Health Sciences",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"id": "24e2fa1f-d9ad-491e-95ac-322c2a730665",
+			"name": "Kensington Intern Business Finance & En",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"id": "b4ffcf79-2107-4968-9550-9ebfb67e6528",
+			"name": "Kensington Urban Education Academy",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"id": "2c6f26c3-4843-4e57-a319-9a9ecab76731",
+			"name": "King Martin Luther Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19138"
+		},
+		{
+			"id": "6550c9b9-83cd-4984-9c7e-45706afcb28c",
+			"name": "Lankenau Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"id": "2cd37a8c-540a-4637-a540-e04895435f75",
+			"name": "Lincoln Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19136"
+		},
+		{
+			"id": "6a1c5e92-3e33-4541-9a18-64e226ef905f",
+			"name": "Mastbaum Jules E Avts",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19134"
+		},
+		{
+			"id": "1ac620bd-037a-4c9c-97b4-9a9f5c242f78",
+			"name": "Motivation Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19143"
+		},
+		{
+			"id": "589931c8-e975-4731-8433-037133441f62",
+			"name": "Northeast Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19111"
+		},
+		{
+			"id": "02a1d08e-15ae-4df4-b7bf-990ab982ed1f",
+			"name": "Overbrook Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
 			"zipcode": "19131"
 		},
 		{
-			"id": "bf0e733e-64f1-46af-af83-49a8e4bb7bd2",
-			"name": "the u school: innovative lab",
+			"id": "4e124265-2bed-4eed-bc29-92bf3aa78f92",
+			"name": "Parkway Northwest",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19122"
+			"stateCode": "pa",
+			"zipcode": "19150"
 		},
 		{
-			"id": "0f66fc28-4af2-4754-831f-91a6486d6a1d",
-			"name": "the workshop school",
+			"id": "9f925a42-532f-446d-b0ef-bbc49ae2ca6e",
+			"name": "Parkway West",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19139"
 		},
 		{
-			"id": "2e9bf20c-2f37-47e2-b9a1-606083616b13",
-			"name": "universal audenried charter school",
+			"id": "870f3ecb-9424-4309-87e1-8bd1010b66ee",
+			"name": "Parkway-Center City",
 			"city": "Philadelphia",
-			"stateCode": "PA",
-			"zipcode": "19145"
+			"stateCode": "pa",
+			"zipcode": "19123"
 		},
 		{
-			"id": "477b489f-2805-4dcd-8ad2-19241609f100",
-			"name": "washington george hs",
+			"id": "cdc791e6-1ed2-4fe7-a331-c5ab28f972a4",
+			"name": "Paul Robeson HS For Human Services",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
+			"zipcode": "19104"
+		},
+		{
+			"id": "b969b5e4-6692-40a3-83e2-4996b6eef459",
+			"name": "Philadelphia Military Acad At Elverson",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"id": "f61a2474-640b-40b6-acb1-e76f7ab46178",
+			"name": "Randolph A. Philip Avt Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19129"
+		},
+		{
+			"id": "b1f79184-70d9-4ced-9659-bec98d75ed8d",
+			"name": "Roxborough Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"id": "617ce35e-91da-4028-9b29-94ef59db82b7",
+			"name": "Saul W B Agricultural School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"id": "59c5325f-858e-4d11-a883-da44787c85e8",
+			"name": "Sayre William L Ms",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"id": "db551dd0-cdbb-49d4-ae2e-c746f31dc4c1",
+			"name": "School of the Future",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19104"
+		},
+		{
+			"id": "f3deca72-1920-43d4-a6fe-8833871a37b3",
+			"name": "Science Leadership Academy",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19103"
+		},
+		{
+			"id": "f5ba4ac0-f4f0-4263-ab41-acd514f23e4c",
+			"name": "South Philadelphia Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19148"
+		},
+		{
+			"id": "b7eb44c7-af3b-426e-97ec-b4ae5840627c",
+			"name": "Strawberry Mansion Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19132"
+		},
+		{
+			"id": "be6922d1-3e87-4359-a8f1-3a099347ee4d",
+			"name": "Swenson Arts & Technology Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19114"
+		},
+		{
+			"id": "b6f6312b-bbc4-40a0-89d4-cd87b7837231",
+			"name": "The Linc",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19140"
+		},
+		{
+			"id": "954bde34-1624-4d7a-bfb8-6dd47aaf62da",
+			"name": "The Science Leadership Academy At Beeber",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19131"
+		},
+		{
+			"id": "ac967729-4cc6-49c0-8b8b-e8e6f6c7cc30",
+			"name": "The U School: Innovative Lab",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"id": "41d87f5a-04ff-483e-b151-02be54cc1098",
+			"name": "The Workshop School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"id": "c01f7bd5-c222-4b78-80a2-fe31516f800f",
+			"name": "Washington George Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
 			"zipcode": "19116"
 		},
 		{
-			"id": "f4961ea9-8627-47ac-af67-4a97bd85ef3a",
-			"name": "west philadelphia hs",
+			"id": "d63e65ac-90ef-47cb-8e65-817f1365e145",
+			"name": "West Philadelphia Hs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
 			"zipcode": "19139"
 		},
 		{
-			"id": "b3eb01d0-9413-4cfe-b018-dde47e910363",
-			"name": "youth build phila cs",
+			"id": "8d896186-94f5-4dcc-93f7-5a75219ca7b6",
+			"name": "Philadelphia Electrical & Tech Chs",
 			"city": "Philadelphia",
-			"stateCode": "PA",
+			"stateCode": "pa",
+			"zipcode": "19102"
+		},
+		{
+			"id": "b7d9c062-bd52-42ca-882b-3ebb0c73ca82",
+			"name": "Preparatory CS of Mathematics Science",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19145"
+		},
+		{
+			"id": "3ab04ebc-93da-4f20-8d6b-6f965ede5911",
+			"name": "Universal Audenried Charter School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19145"
+		},
+		{
+			"id": "2133dde3-b36b-4d09-ae9a-85a8402c0858",
+			"name": "Youth Build Phila Cs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
 			"zipcode": "19122"
 		},
 		{
-			"id": "09725099-c6fb-4681-9708-9b90d8b9d0bb",
-			"name": "academy for career exploration",
+			"id": "38158135-a94b-43d8-b2c3-359bda0c153b",
+			"name": "Academy For Career Exploration",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02907"
+			"stateCode": "ri",
+			"zipcode": "2907"
 		},
 		{
-			"id": "c8693c58-46f1-4cc7-a32b-00d58e364a0b",
-			"name": "central high school",
+			"id": "2d5249af-39b1-4975-a3da-b4c8b75451de",
+			"name": "Central High School",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "07103"
+			"stateCode": "ri",
+			"zipcode": "2903"
 		},
 		{
-			"id": "e80dbf2d-b32a-4205-bd4b-31b6055fad6c",
-			"name": "classical high school",
+			"id": "d850cb5f-d75c-4450-8da4-ce1a1fd643f9",
+			"name": "Classical High School",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02903"
+			"stateCode": "ri",
+			"zipcode": "2903"
 		},
 		{
-			"id": "35cf8e06-c9b6-4c71-8ded-9b72d388a068",
-			"name": "dr. jorge alvarez hs",
+			"id": "d72facb6-dc23-43b6-beb6-081b24e78c86",
+			"name": "Dr. Jorge Alvarez Hs",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02907"
+			"stateCode": "ri",
+			"zipcode": "2907"
 		},
 		{
-			"id": "d8efc643-bcfc-46c5-afe7-9f52103da61d",
-			"name": "e-cubed academy",
+			"id": "3c46dbd9-2329-43df-a1b2-c1ffd9cf828f",
+			"name": "E-Cubed Academy",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02904"
+			"stateCode": "ri",
+			"zipcode": "2904"
 		},
 		{
-			"id": "fd9524d4-6649-4484-8e5a-daa5e0d7705d",
-			"name": "hope high school",
+			"id": "93aaa8c7-3d07-4685-8427-d4a22da308d2",
+			"name": "Hope High School",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02906"
+			"stateCode": "ri",
+			"zipcode": "2906"
 		},
 		{
-			"id": "8ed30d67-6115-4460-a0ca-69254524ae0b",
-			"name": "metropolitan career tech ctr",
+			"id": "8def5bfe-2664-439a-a8f0-e401bbfb9079",
+			"name": "Mount Pleasant High",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02905"
+			"stateCode": "ri",
+			"zipcode": "2908"
 		},
 		{
-			"id": "0efc5ad7-2787-4643-9ef6-1290aafb255c",
-			"name": "mount pleasant high",
+			"id": "94c613b2-3eac-4bda-8f44-baaac972c8d5",
+			"name": "Providence Career Technical",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02908"
+			"stateCode": "ri",
+			"zipcode": "2903"
 		},
 		{
-			"id": "aaca3550-95bd-4922-81ab-c122f3402578",
-			"name": "providence career technical",
+			"id": "82fd2e6f-775e-4d09-8217-af321af3e1e9",
+			"name": "W B Cooley and Acad Internationa",
 			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02903"
+			"stateCode": "ri",
+			"zipcode": "2905"
 		},
 		{
-			"id": "3c7268d4-eb5b-47d2-b07a-30d342a59671",
-			"name": "rini middle college",
-			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02903"
-		},
-		{
-			"id": "e792ef47-26d6-4917-8690-3754a7dedc97",
-			"name": "sheila skip nowell leadership",
-			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02909"
-		},
-		{
-			"id": "2bf2c186-a0e5-4745-b365-2fc1f382f215",
-			"name": "village green virtual",
-			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02903"
-		},
-		{
-			"id": "7389a42b-a7ab-45f2-ba77-42497f83c5f4",
-			"name": "w b cooley and acad internationa",
-			"city": "Providence",
-			"stateCode": "RI",
-			"zipcode": "02905"
-		},
-		{
-			"id": "f12cb867-d39c-4d52-9b43-cb3aa0999c64",
-			"name": "brainerd high school",
+			"id": "404cac74-a366-4197-b184-8e80f8d639df",
+			"name": "Brainerd High School",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37411"
 		},
 		{
-			"id": "2a3d1dd1-04da-4552-9df8-6d4819be4eb0",
-			"name": "east ridge high school",
+			"id": "649cd161-484c-4ee4-9b02-94c17ebb0106",
+			"name": "East Ridge High School",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37412"
 		},
 		{
-			"id": "e1a0024f-d813-44c4-b8b1-b25b0e1cf654",
-			"name": "hamilton county collegiate high at chattanooga state",
+			"id": "439d6ab2-208c-404a-ab86-a36537639615",
+			"name": "Hamilton County Collegiate High At Chattanooga State",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37406"
 		},
 		{
-			"id": "642a8888-33b4-41ca-a3b2-aa694ca06dbb",
-			"name": "red bank high school",
+			"id": "619c44f6-a2eb-4c14-8b1a-68edd3053013",
+			"name": "Red Bank High School",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37415"
 		},
 		{
-			"id": "99de00d4-17e0-4ad1-a827-59c499016325",
-			"name": "stem school chattanooga",
+			"id": "bdfe3ad8-0671-40fd-943f-8e0e2fcdbbc4",
+			"name": "Stem School Chattanooga",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37406"
 		},
 		{
-			"id": "14017b6b-4ea7-4e05-a38f-140c800a77e7",
-			"name": "the howard school",
+			"id": "61e1925b-b5a2-4de3-b3ea-a915769e33c6",
+			"name": "The Howard School",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37408"
 		},
 		{
-			"id": "35f63859-265c-465f-8161-1c1388526590",
-			"name": "tyner academy",
+			"id": "9b9af622-88a7-44db-8512-61d4794e1f34",
+			"name": "Tyner Academy",
 			"city": "Chattanooga",
-			"stateCode": "TN",
+			"stateCode": "tn",
 			"zipcode": "37421"
 		},
 		{
-			"id": "38581128-2328-419e-bdc5-f58160210079",
-			"name": "monacan high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23236"
-		},
-		{
-			"id": "20243f42-0467-4547-81b2-55730dc96cc4",
-			"name": "armstrong high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23223"
-		},
-		{
-			"id": "1e9d88fe-92d9-42ba-bf75-b11c72d4bc34",
-			"name": "freeman high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23229"
-		},
-		{
-			"id": "08ab5a6b-add3-4fb1-9275-b2183924b534",
-			"name": "godwin high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23238"
-		},
-		{
-			"id": "7a4e0652-4a2c-4c80-a0fb-0675a0aa767b",
-			"name": "henrico high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23227"
-		},
-		{
-			"id": "a4ca759f-58f6-4fbd-b434-5f71a1f50466",
-			"name": "hermitage high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23228"
-		},
-		{
-			"id": "7a346dc6-bbc2-47f9-b4be-180ec75315be",
-			"name": "tucker high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23294"
-		},
-		{
-			"id": "e594b075-e117-4dad-9519-82124e1b9089",
-			"name": "varina high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23231"
-		},
-		{
-			"id": "0d8959e5-aa11-4bc3-83da-9f9ee882b4a4",
-			"name": "george wythe high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23225"
-		},
-		{
-			"id": "76e08ad6-ec29-42e6-9ede-2a2aeb039f07",
-			"name": "huguenot high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23225"
-		},
-		{
-			"id": "b0b15328-e08e-42ab-9cc1-03cb9b805eea",
-			"name": "john marshall high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23227"
-		},
-		{
-			"id": "58da1762-2a55-4097-a331-572b3d38ddde",
-			"name": "open high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23220"
-		},
-		{
-			"id": "03ea1693-2f62-44ea-8ff8-e1cd1b3fe543",
-			"name": "richmond career education & employment (charter school)",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23225"
-		},
-		{
-			"id": "b5001215-7ac2-4ae0-a4a0-3df932ffeb7d",
-			"name": "richmond community high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23222"
-		},
-		{
-			"id": "a36142cf-e9ac-4294-9931-fdda1de9e07f",
-			"name": "thomas jefferson high",
-			"city": "Richmond",
-			"stateCode": "VA",
-			"zipcode": "23230"
-		},
-		{
-			"id": "ced6b35a-59bc-43a1-bf44-7c8827decc5d",
-			"name": "alliance school of milwaukee",
+			"id": "dee29aad-0f9e-426d-a85c-b07ef0acf788",
+			"name": "Milwaukee Collegiate Academy",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53205"
-		},
-		{
-			"id": "baec2f5b-3a98-4766-929a-18cacd5e2c70",
-			"name": "assata",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53209"
-		},
-		{
-			"id": "eb322afb-3bf5-4b5e-b745-5cfdd134a857",
-			"name": "audubon technology and communication high school",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53215"
-		},
-		{
-			"id": "185dbf0a-810d-46e7-8670-7edd9dc14d6f",
-			"name": "banner preparatory school of milwaukee",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53208"
-		},
-		{
-			"id": "609b506c-357c-4f91-8840-f68f820a1b9c",
-			"name": "bradley technology high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53204"
-		},
-		{
-			"id": "f88e2033-8b85-4d33-a846-a0758e811fde",
-			"name": "carmen high school of science and technology south campus",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53215"
-		},
-		{
-			"id": "5cc60776-dc2a-4752-a0ff-194747afc61f",
-			"name": "community high school",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53223"
-		},
-		{
-			"id": "953d7ce0-ef21-403e-aa80-180693cc78f4",
-			"name": "grandview high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53204"
-		},
-		{
-			"id": "e509cf90-a76e-4240-8747-c3b9a6e29bd1",
-			"name": "hamilton high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53220"
-		},
-		{
-			"id": "0b6880fd-b06c-4bc5-b97e-0db327e7414c",
-			"name": "james madison academic campus",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53218"
-		},
-		{
-			"id": "ea7d484a-569c-4383-a959-b5c5c1db637b",
-			"name": "king international",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53209"
-		},
-		{
-			"id": "0410dc24-498c-4d4c-83e6-eb80b965ae2b",
-			"name": "milwaukee collegiate academy",
-			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53216"
 		},
 		{
-			"id": "7bb540e9-4786-4dbb-a981-4db2795e8ce0",
-			"name": "milwaukee community cyber high",
+			"id": "0fc27fcf-2508-4ba9-b7f7-8ea1f159795d",
+			"name": "Alliance School of Milwaukee",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53204"
-		},
-		{
-			"id": "b636c812-39de-42dd-a49b-b55c22343509",
-			"name": "milwaukee high school of the arts",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53233"
-		},
-		{
-			"id": "a0f033a7-0730-439d-8022-19e577557771",
-			"name": "milwaukee secure detention facility",
-			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53205"
 		},
 		{
-			"id": "80c0a012-9233-400d-a79f-495cbb7e2617",
-			"name": "new school for community service",
+			"id": "f0109826-d601-4ebe-bfb1-ea85d553f6f8",
+			"name": "Assata",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53233"
-		},
-		{
-			"id": "59594ead-3146-4c61-9f0f-73b59828cda1",
-			"name": "north division high 0419",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53206"
-		},
-		{
-			"id": "4f0f58eb-7f00-4038-98b6-40301d73f462",
-			"name": "nova tech",
-			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53209"
 		},
 		{
-			"id": "c14b9c28-3efd-4576-ba5b-9f353de973f7",
-			"name": "project stay",
+			"id": "492780be-2456-4c2f-b6ad-794b6978d4c7",
+			"name": "Audubon Technology and Communication High School",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53233"
-		},
-		{
-			"id": "3959c838-089f-430b-a54a-6309649e125c",
-			"name": "pulaski high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53215"
 		},
 		{
-			"id": "47a76ac3-612a-4617-b162-87124fa08cd8",
-			"name": "reagan college preparatory high",
+			"id": "33c53213-5f38-4360-8da0-cbcfa7b5cd57",
+			"name": "Banner Preparatory School of Milwaukee",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53221"
+			"stateCode": "wi",
+			"zipcode": "53208"
 		},
 		{
-			"id": "867d301e-854e-482b-be55-dcec21e07813",
-			"name": "riverside high",
+			"id": "4f8f4b7c-b6a8-4f64-a931-e0d382e57a66",
+			"name": "Bradley Technology High",
 			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53211"
-		},
-		{
-			"id": "d9a1755a-5ec0-4b29-b7e2-82e8c3c974f2",
-			"name": "shalom high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
-			"zipcode": "53205"
-		},
-		{
-			"id": "c3831532-d2b3-4ffc-a170-dd8b855504eb",
-			"name": "south division high",
-			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53204"
 		},
 		{
-			"id": "d560fe6e-7cb4-4eb4-8940-d317dba1456e",
-			"name": "transition high",
+			"id": "65b96839-e194-41aa-b285-8fef2e20636d",
+			"name": "Carmen High School of Science and Technology South Campus",
 			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
+			"zipcode": "53215"
+		},
+		{
+			"id": "f27d308c-8a96-4732-b9c0-2eaf80d03d05",
+			"name": "Community High School",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53223"
+		},
+		{
+			"id": "49dec0fe-3bdb-4ad5-b4b9-a155d2de2f69",
+			"name": "Grandview High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"id": "f52b7bd3-74b0-4f6e-8cfd-25666bcbf5f0",
+			"name": "Hamilton High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53220"
+		},
+		{
+			"id": "a3fe4096-08bd-496e-b28b-e592bf55cd1f",
+			"name": "James Madison Academic Campus",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53218"
+		},
+		{
+			"id": "9decbf96-1570-4659-90f4-9a3c7753085c",
+			"name": "King International",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53209"
+		},
+		{
+			"id": "2356cdd5-5841-43e8-a5f3-de862f463e16",
+			"name": "Milwaukee Community Cyber High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"id": "ba8567d1-b2d5-4a80-a312-be898a5552b2",
+			"name": "Milwaukee High School of the Arts",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"id": "4fa4f057-481c-4307-9d00-54558f928c49",
+			"name": "New School For Community Service",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"id": "d3f16406-e5f5-4e7d-8a97-459ea4e6cb67",
+			"name": "North Division High 0419",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53206"
+		},
+		{
+			"id": "85312c57-bc5c-4412-bb6d-98fb76bd6490",
+			"name": "Nova Tech",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53209"
+		},
+		{
+			"id": "81dc0794-91d3-475d-a9c8-5f0001b966a4",
+			"name": "Project Stay",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"id": "96853b38-1116-4756-a8d3-eb4e5493f621",
+			"name": "Pulaski High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53215"
+		},
+		{
+			"id": "1245eca5-b208-4732-b215-00d05433291b",
+			"name": "Reagan College Preparatory High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53221"
+		},
+		{
+			"id": "10de55d1-bf49-4fd7-9418-f041d1b33e09",
+			"name": "Riverside High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53211"
+		},
+		{
+			"id": "2df6c5f8-1b8d-4f11-92ed-4688a109a736",
+			"name": "Shalom High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
 			"zipcode": "53205"
 		},
 		{
-			"id": "8c76b799-89b9-4579-bebe-0f850ea5cd27",
-			"name": "vincent high",
+			"id": "74c46c62-0fa3-47f4-b987-fa50a13aca7e",
+			"name": "South Division High",
 			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"id": "d6338a1b-1bd6-48de-9bf3-acf513372651",
+			"name": "Transition High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
+		},
+		{
+			"id": "a77389c0-b0b9-4769-aa4d-895bc2ca08d6",
+			"name": "Vincent High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
 			"zipcode": "53224"
 		},
 		{
-			"id": "382152b4-ca96-4918-8439-3d5dc1b28f84",
-			"name": "whs information technology",
+			"id": "c45282ba-4581-4ed6-a98f-e6f82a434284",
+			"name": "Whs Information Technology",
 			"city": "Milwaukee",
-			"stateCode": "WI",
+			"stateCode": "wi",
 			"zipcode": "53210"
+		},
+		{
+			"id": "c0d4ad8c-8501-4a72-b2cf-1bb11ab5fcaf",
+			"name": "Milwaukee Secure Detention Facility",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
 		}
 	]
 }

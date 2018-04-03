@@ -13,7 +13,7 @@ function seedSchool(index) {
 
   const item = schools[index];
 
-  const school = { ...item, city };
+  const school = { ...item };
 
   return new School(school)
     .save()

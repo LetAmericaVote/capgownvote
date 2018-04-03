@@ -20,8 +20,8 @@ const SchoolSuggestion = (props) => {
 
   const hasData = !! schoolData && !! schoolData.id;
 
-  const city = hasData ? schoolData.city : null;
-  const stateCode = hasData ? schoolData.stateCode : null;
+  const city = hasData ? schoolData.city : '';
+  const stateCode = hasData ? schoolData.stateCode : '';
   const locationCopy = `${city}, ${stateCode.toUpperCase()}`;
 
   if (! hasData) {

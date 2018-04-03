@@ -13,11 +13,6 @@ function seedSchool(index) {
 
   const item = schools[index];
 
-  const city = item.city
-    .split(' ')
-    .map(word => word.toLowerCase())
-    .join(' ');
-
   const school = { ...item, city };
 
   return new School(school)

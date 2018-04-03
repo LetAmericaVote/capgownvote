@@ -1,6 +1,5 @@
 const fs = require('fs');
 const csvtojson = require('csvtojson');
-const uuid = require('uuid');
 const postal = require('postal-abbreviations');
 const nc = require('namecase');
 
@@ -16,11 +15,10 @@ function formatData(source) {
 
   source.forEach(data => {
     schools.push({
-      id: uuid.v4(),
       name: nc(data['School Name']),
       city: nc(data['City']),
       stateCode: data['State'].toLowerCase(),
-      zipcode: data['ZIP'],
+      zipcode: `${data['ZIP'].length === 5 ? '' : '0'}${data['ZIP']}`,
     });
   });
 

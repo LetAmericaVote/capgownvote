@@ -4,29 +4,29 @@ const cmd = require('node-cmd');
 const { TARGET_ENV } = process.env;
 
 const BUILD_STEP = `
-  react-scripts build
+  react-scripts build &&
   cp ./build/index.html ./build/200.html
 `;
 
 const DEPLOY_SECRET_FILE = '.env.production.local';
 const STAGING_SECRET_FILE = '.env.staging';
-const PRODUCTION_SECRET_FILE = '.env.production';
+const PRODUCTION_SECRET_FILE = '.env.prod';
 
 const SURGE_DEPLOY = 'surge ./build';
 
-const WIPE_STAGING_SECRET_FILE = `rm ${DEPLOY_SECRET_FILE}`;
+const WIPE_TMP_SECRET_FILE = `rm ${DEPLOY_SECRET_FILE}`;
 
 const PRODUCTION_DEPLOY = `
   cp ${PRODUCTION_SECRET_FILE} ${DEPLOY_SECRET_FILE}
   ${BUILD_STEP}
-  ${WIPE_STAGING_SECRET_FILE}
   ${SURGE_DEPLOY} https://capgownvote.org
+  ${WIPE_TMP_SECRET_FILE}
 `;
 
 const STAGING_DEPLOY = `
   cp ${STAGING_SECRET_FILE} ${DEPLOY_SECRET_FILE}
   ${BUILD_STEP}
-  ${WIPE_STAGING_SECRET_FILE}
+  ${WIPE_TMP_SECRET_FILE}
   ${SURGE_DEPLOY} https://staging.capgownvote.org
 `;
 

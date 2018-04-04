@@ -274,7 +274,7 @@ UserSchema.index('email', {
 });
 
 UserSchema.virtual('rules').get(function() {
-  return rules.find(item => item.code.toLowerCase() === this.stateCode).rules;
+  return (rules.find(item => item.code.toLowerCase() === this.stateCode) || {}).rules;
 });
 
 UserSchema.virtual('stateHasOvr').get(function() {

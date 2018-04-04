@@ -13,6 +13,7 @@ import {
   selectAuthenticatedUserOvrRequiresLicense,
   selectAuthenticatedUserCustomRegistrationMessage,
   selectAuthenticatedUserMobile,
+  selectHasAcknowledgedInvite,
 } from '../selectors';
 import {
   CREATE_USER_STEP,
@@ -43,6 +44,7 @@ const step = store => next => action => {
   const ovrRequiresLicense = selectAuthenticatedUserOvrRequiresLicense(store.getState());
   const customRegistrationMessage = selectAuthenticatedUserCustomRegistrationMessage(store.getState());
   const hasMobile = !!selectAuthenticatedUserMobile(store.getState());
+  const hasAcknowledgedInvite = selectHasAcknowledgedInvite(store.getState());
 
   const ovrIsAvailable = isEligible && hasOvr &&
     (ovrRequiresLicense ? hasStateLicense : true);
@@ -68,7 +70,7 @@ const step = store => next => action => {
   if (requiresInvite) {
     orderData.push({
       id: INVITE_SCHOOL_STEP,
-      isComplete: hasSchool,
+      isComplete: hasSchool && hasAcknowledgedInvite,
     });
   }
 

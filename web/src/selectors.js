@@ -2,6 +2,8 @@ import { HOME_STATE_RTV_KEY } from './helpers';
 
 export const selectRequiresInvite = (state) => state.invite.requiresInvite;
 
+export const selectHasAcknowledgedInvite = (state) => state.invite.acknowledgedInvite;
+
 export const selectSchoolInputValue = (state) => state.school.inputValue || '';
 
 export const selectSchoolItems = (state) => state.school.items || {};

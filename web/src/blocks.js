@@ -458,8 +458,8 @@ export const FooterPaidDisclaimerLayout = styled.div`
 export const FooterPaidDisclaimer = styled.h3`
   display: block;
   color: ${colors.red};
-  font-size: ${baseValue / 2}px;
-  line-height: ${baseValue / 2}px;
+  font-size: ${baseValue * 0.75}px;
+  line-height: ${baseValue * 0.75}px;
   border: 1px solid ${colors.red};
   padding: ${baseValue}px;
   text-align: center;

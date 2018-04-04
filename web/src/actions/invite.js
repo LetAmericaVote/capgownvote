@@ -15,6 +15,11 @@ export function setRequiresInvite(requiresInvite) {
   return { type: SET_REQUIRES_INVITE, requiresInvite };
 }
 
+export const SET_ACKNOWLEDGED_INVITE = 'SET_ACKNOWLEDGED_INVITE';
+export function setAcknowledgedInvite(acknowledgedInvite) {
+  return { type: SET_ACKNOWLEDGED_INVITE, acknowledgedInvite };
+}
+
 export const POST_INVITE = 'POST_INVITE';
 export function postInvite() {
   ReactGA.event({

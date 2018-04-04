@@ -15,6 +15,7 @@ const initialState = {
   form: {},
   invite: {
     requiresInvite: false,
+    acknowledgedInvite: false,
   },
   nav: {
     isOpen: false,

@@ -23,6 +23,8 @@ const About = (props) => {
         <ContentParagraph>Being civically engaged is crucial to having a vibrant democracy. Research shows that when young people learn the voting process and vote, they are more likely to do so when they are older.</ContentParagraph>
         <ContentHeader>How does it work?</ContentHeader>
         <ContentParagraph>Let America Vote will contact high schools in your city to identify and recruit student ambassadors. If you know of any particular schools that would be interested in participating, please let us know. After we sign up schools and identify student ambassadors, we will work with them to organize voter registration drives using our online tool to register eligible students.</ContentParagraph>
+        <ContentHeader>My school isn't listed when I search for it, how can I get involved?</ContentHeader>
+        <ContentParagraph>Even if there isn't currently an official Cap, Gown, Vote! partnership with your city, you can still become a student ambassador. All you have to do is sign up, invite your school when prompted, and start registering your peers.</ContentParagraph>
         <ContentHeader>Who do I contact if I have additional questions and if I would like my city to participate?</ContentHeader>
         <ContentParagraph>Please contact info@letamericavote.org.</ContentParagraph>
         <ContentHeader>Photo Credits</ContentHeader>

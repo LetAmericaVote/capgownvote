@@ -40,7 +40,7 @@ const SchoolSchema = new mongoose.Schema({
   },
   invitedBy: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'user',
     default: null,
   },
   points: {

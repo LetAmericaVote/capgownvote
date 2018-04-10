@@ -26,7 +26,7 @@ const cors = (app) => {
   });
 };
 
-const dbConnect = () => mongoose.connect(process.env.MONGODB_URI);
+const dbConnect = (connectionUri = null) => mongoose.connect(connectionUri || process.env.MONGODB_URI);
 
 const hashText = (text) => {
   return new Promise((resolve, reject) => {

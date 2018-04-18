@@ -41,6 +41,10 @@ module.exports = (app) => {
       return res.status(400).json({ error: 'Missing email' });
     }
 
+    if (! data.stateCode) {
+      return res.status(400).json({ error: 'Missing state' });
+    }
+
     User.findByEmail(data.email).then(dupeUser => {
       if (dupeUser && dupeUser.id) {
         res.status(401).json({ error: 'An account with that email exists already' });

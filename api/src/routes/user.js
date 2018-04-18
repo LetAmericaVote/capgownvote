@@ -36,9 +36,24 @@ module.exports = (app) => {
 
   app.post('/v1/user', (req, res) => {
     const data = User.userEditableFields(req.body);
-    const user = new User(data);
 
-    user.save().then(() => {
+    if (! data) {
+      return res.status(400).json({ error: 'Missing email' });
+    }
+
+    User.findByEmail(data.email).then(dupeUser => {
+      if (dupeUser && dupeUser.id) {
+        res.status(401).json({ error: 'An account with that email exists already' });
+        return false;
+      }
+
+      const user = new User(data);
+      return user.save();
+    }).then((user) => {
+      if (! user) {
+        return;
+      }
+
       user.generateToken().then((token) => {
         randomBytes(24)
           .then(password => user.setPassword(password))
@@ -50,7 +65,10 @@ module.exports = (app) => {
 
             res.json({ data: { user: user.api(), token } });
           });
-      });
+      }).catch((error) => {
+        res.status(500).json({ error: 'Internal server error.' });
+        console.error(error);
+      })
     }).catch((error) => {
       res.status(500).json({ error: 'Internal server error.' });
       console.error(error);

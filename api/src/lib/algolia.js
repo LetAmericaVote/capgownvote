@@ -3,7 +3,7 @@ const client = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_WRI
 const index = client.initIndex('schools');
 
 module.exports = {
-  addSchool: function(school) {    
+  addSchool: function(school) {
     const object = {
       objectID: school.id,
       name: school.name,
@@ -12,9 +12,10 @@ module.exports = {
     return new Promise((resolve, reject) => {
       index.addObject(object, (err, content) => {
         if (err) {
+          console.error(error);
           return reject(err);
         }
-
+        
         resolve(content);
       });
     });
@@ -24,6 +25,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       index.deleteObject(school.id, (err) => {
         if (err) {
+          console.error(error);
           return reject(err);
         }
 

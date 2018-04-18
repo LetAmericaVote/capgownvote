@@ -1241,6 +1241,102 @@
 			"city": "Milwaukee",
 			"stateCode": "wi",
 			"zipcode": "53205"
+		},
+		{
+			"name": "Incline High School",
+			"city": "Incline Village",
+			"stateCode": "nv",
+			"zipcode": "89451"
+		},
+		{
+			"name": "Academy of Art Careers and Technology",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Academy of Career Education Charter School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Damonte Ranch High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89511"
+		},
+		{
+			"name": "Earl Wooster High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Galena High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89511"
+		},
+		{
+			"name": "I Can Do Anything Charter High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "North Valleys High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89506"
+		},
+		{
+			"name": "Procter R Hug High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89512"
+		},
+		{
+			"name": "Rainshadow Community Charter High",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Reno High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89509"
+		},
+		{
+			"name": "Robert MC Queen High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89523"
+		},
+		{
+			"name": "Tmcc Magnet High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89512"
+		},
+		{
+			"name": "Edward C Reed High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89434"
+		},
+		{
+			"name": "Spanish Springs High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89436"
+		},
+		{
+			"name": "Sparks High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89431"
 		}
 	]
 }

@@ -6,7 +6,7 @@ const { schools } = require('../src/data/competition-seed');
 function seedSchool(index) {
   if (! schools[index]) {
     console.log('Done');
-    process.exit();
+    return;
   }
 
   console.log(`Seeding School ${index} of ${schools.length - 1}`);
@@ -15,9 +15,14 @@ function seedSchool(index) {
 
   const school = { ...item };
 
+  // @TEMP. Remove after deploy.
+  if (item.stateCode !== 'nv') {
+    return seedSchool(index + 1);
+  }
+
   return new School(school)
     .save()
     .then(() => seedSchool(index + 1));
 }
 
-seedSchool(0).then(() => process.exit());
+seedSchool(0).then(() => setTimeout(() => {}, 2000));

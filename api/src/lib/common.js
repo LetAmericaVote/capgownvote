@@ -90,7 +90,7 @@ const generateToken = () => {
 
 const generateTokenExpiration = () => Date.now() + TOKEN_EXPIRATION_LENGTH;
 
-const findStateByCode = code => states.find(state => state.code.toLowerCase() === code);
+const findStateByCode = code => states.find(state => state.code.toLowerCase() === code.toLowerCase());
 
 module.exports = {
   cors,

@@ -57,13 +57,16 @@ module.exports = (app) => {
       user.generateToken().then((token) => {
         randomBytes(24)
           .then(password => user.setPassword(password))
-          .then((user, err) => {
-            if (err) {
-              console.error(err);
+          .then((user) => {
+            if (! user) {
               return res.status(500).json({ error: 'Internal server error.' });
             }
 
             res.json({ data: { user: user.api(), token } });
+          })
+          .catch(error => {
+            res.status(500).json({ error: 'Internal server error.' });
+            console.error(error);
           });
       }).catch((error) => {
         res.status(500).json({ error: 'Internal server error.' });

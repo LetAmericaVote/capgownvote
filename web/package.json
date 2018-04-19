@@ -6,6 +6,7 @@
     "algoliasearch": "^3.25.1",
     "history": "^4.7.2",
     "postal-abbreviations": "^2.0.0",
+    "query-string": "^6.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.4.1",
@@ -19,8 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy:staging": "TARGET_ENV=staging node bin/deploy.js",
-    "deploy:production": "TARGET_ENV=production node bin/deploy.js",
+    "build:staging": "TARGET_ENV=staging node bin/build.js",
+    "build:prod": "TARGET_ENV=production node bin/build.js",
+    "deploy:staging": "npm run build:prod && now ./build --name capgownvote-prod",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

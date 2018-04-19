@@ -22,7 +22,10 @@
     "start": "react-scripts start",
     "build:staging": "TARGET_ENV=staging node bin/build.js",
     "build:prod": "TARGET_ENV=production node bin/build.js",
-    "deploy:staging": "npm run build:prod && now ./build --name capgownvote-prod",
+    "deploy:staging": "now ./build --name capgownvote-staging",
+    "deploy:prod": "now ./build --name capgownvote-prod",
+    "alias:staging": "now alias $DOMAIN staging.capgownvote.org",
+    "alias:prod": "now alias $DOMAIN capgownvote.org",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

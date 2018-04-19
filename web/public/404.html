@@ -9,9 +9,12 @@
 <body>
   <script>
     (function redirect() {
+      const search = window.location.search;
+      const hasSearch = search && search.length;
+      const redirect = `redirect=${encodeURIComponent(document.location.pathname)}`;
+
       if (document && document.location) {
-        // TODO: Handle existing query string...
-        document.location.replace(`/?redirect=${encodeURIComponent(document.location.pathname)}`);
+        document.location.replace(`/${hasSearch ? `${search}&` : '?'}${redirect}`);
       }
     }());
   </script>

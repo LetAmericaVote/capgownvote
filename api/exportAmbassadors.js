@@ -11,7 +11,7 @@ function exportData(results) {
     'schoolStateCode', 'schoolStateName', 'schoolName', 'schoolCity',
   ];
 
-  const data = results.map(result => ({
+  const data = results.filter(result => !!result.invitedBy).map(result => ({
     firstName: result.invitedBy.firstName,
     lastName: result.invitedBy.lastName,
     mobile: result.invitedBy.mobile,

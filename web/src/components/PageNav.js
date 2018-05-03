@@ -29,8 +29,8 @@ const PageNav = (props) => {
 
   const menuLinks = [
     {
-      title: 'About',
-      to: '/about',
+      title: 'Toolkit',
+      to: '/toolkit',
     },
     {
       title: 'Register',

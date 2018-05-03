@@ -9,7 +9,7 @@ import {
 
 const Home = (props) => {
   const RegisterLink = Link(ClearButton, '/register');
-  const AboutLink = Link(HomeNavItem, '/about');
+  const AboutLink = Link(HomeNavItem, '/toolkit');
   const LeaderboardLink = Link(HomeNavItem, '/leaderboard');
 
   return (
@@ -22,7 +22,7 @@ const Home = (props) => {
             <RegisterLink>Register To Vote</RegisterLink>
             <PaddedArea />
             <HomeNavItemWrapper>
-              <AboutLink>About</AboutLink>
+              <AboutLink>Toolkit</AboutLink>
             </HomeNavItemWrapper>
             <HomeNavItemWrapper>
               <LeaderboardLink>Leaderboard</LeaderboardLink>

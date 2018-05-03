@@ -9,7 +9,7 @@ import ReactGA from 'react-ga';
 
 import Home from './routes/Home';
 import Register from './routes/Register';
-import About from './routes/About';
+import Toolkit from './routes/Toolkit';
 import Auth from './routes/Auth';
 import Leaderboard from './routes/Leaderboard';
 import Router from './routing/Router';
@@ -47,7 +47,8 @@ const Root = () => (
       <div>
         <Route path="/"><Home /></Route>
         <Route path="/register"><Register/></Route>
-        <Route path="/about"><About /></Route>
+        <Route path="/about"><Toolkit /></Route>
+        <Route path="/toolkit"><Toolkit /></Route>
         <Route path="/auth"><Auth /></Route>
         <Route path="/leaderboard"><Leaderboard /></Route>
       </div>

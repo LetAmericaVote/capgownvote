@@ -362,6 +362,18 @@ export const HomeNavItem = styled.a`
   }
 `;
 
+export const SimpleLink = styled.a`
+  display: block;
+  color: ${colors.black};
+  cursor: pointer;
+  margin-bottom: ${baseValue * 2}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  text-decoration: underline;
+`;
+
 export const Footer = styled.footer`
   display: flex;
   width: 100%;
@@ -1033,7 +1045,18 @@ export const ContentLayout = styled.section`
   margin: ${baseValue * 3}px auto;
 `;
 
-export const ContentHeader = styled.h1`
+export const ContentTitle = styled.h1`
+  display: block;
+  color: ${colors.darkCyan};
+  font-size: ${baseValue * 2.5}px;
+  line-height: ${baseValue * 2.5}px;
+  margin-bottom: ${baseValue}px;
+  ${props => props.centered ? 'text-align: center;' : ''}
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const ContentHeader = styled.h3`
   display: block;
   color: ${colors.cyan};
   font-size: ${baseValue * 1.5}px;

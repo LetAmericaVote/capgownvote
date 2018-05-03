@@ -134,7 +134,8 @@ const About = (props) => {
         <ContentParagraph>{copy.fact[4]}</ContentParagraph>
         <ContentParagraph>{copy.fact[5]}</ContentParagraph>
         <ContentParagraph>{copy.fact[6]}</ContentParagraph>
-        {/* download for sources */}
+        <ContentParagraph>Download the Cap, Gown, Vote! Advocacy Toolkit for complete sources and additional information.</ContentParagraph>
+        <SimpleLink href="/advocacy-toolkit.pdf">Download toolkit</SimpleLink>
 
         <ContentHeader>Photo Credits</ContentHeader>
         <ContentParagraph>Photos by Stephanie McCabe & Caleb Woods on Unsplash</ContentParagraph>

@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import header4k from './assets/header-4k.jpg';
-import headerDesktop from './assets/header-desktop.jpg';
+import headerLargeDesktop from './assets/header-large-desktop.jpg';
+import headerSmallDesktop from './assets/header-small-desktop.jpg';
 import headerMobile from './assets/header-mobile.jpg';
 import headerTablet from './assets/header-tablet.jpg';
 
@@ -23,6 +23,8 @@ export const colors = {
   red: '#ff4c4d',
   cyan: '#21c2de',
   darkCyan: '#072c34',
+  yellow: '#ffff4c',
+  bronze: '#ffa54c',
 };
 
 export const primaryFontFamily = css`
@@ -78,25 +80,98 @@ export const FullPageBackground = styled.section`
   `}
 
   ${media.desktopSmall`
-    background-image: url(${headerDesktop});
+    background-image: url(${headerSmallDesktop});
   `}
 
   ${media['4k']`
-    background-image: url(${header4k});
+    background-image: url(${headerLargeDesktop});
   `}
+`;
+
+export const CardLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media.tablet`
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `}
+`;
+
+export const Card = styled.article`
+  display: block;
+  flex: 0 0 100%;
+  border: 1px solid ${colors.silver};
+  margin-bottom: ${baseValue}px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  ${media.tablet`
+    flex: 0 0 calc(33.3% - ${baseValue}px);
+    margin-bottom: 0;
+  `}
+`;
+
+export const CardContent = styled.div`
+  display: block;
+  padding: ${baseValue}px;
+`;
+
+export const CardImage = styled.div`
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+`;
+
+export const CardHeader = styled.h1`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * 2}px;
+  line-height: ${baseValue * 2}px;
+  margin-bottom: ${baseValue}px;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const CardCopy = styled.p`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
+export const MiniHeader = styled.h6`
+  display: block;
+  color: ${colors.black};
+  font-size: ${baseValue * .75}px;
+  line-height: ${baseValue * .75}px;
+  text-transform: uppercase;
+  ${secondaryFontFamily}
+  ${fontKerning}
 `;
 
 export const Nav = styled.nav`
   width: 100%;
   display: flex;
+  position: ${props => props.float ? 'absolute' : 'relative'};
   flex-direction: row;
-  background-color: ${colors.white};
+  background-color: ${props => props.transparent ? '' : colors.white};
   padding: ${baseValue / 2}px ${baseValue}px;
+  ${props => props.fillPage ? 'height: 100%;' : ''}
 `;
 
 export const NavLogo = styled.img`
   height: ${baseValue * 2}px;
   cursor: pointer;
+  z-index: ${zIndexes.nav + 1};
 `;
 
 export const NavLinkMenu = styled.div`
@@ -108,7 +183,7 @@ export const NavLinkMenu = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: ${zIndexes.nav};
     background-color: ${colors.silver};
   ` : ''}
@@ -138,7 +213,7 @@ export const NavLinkLayout = styled.div`
 
 export const NavLink = styled.a`
   display: block;
-  color: ${colors.darkCyan};
+  color: ${props => props.invertColors ? colors.white : colors.darkCyan};
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
   text-transform: uppercase;
@@ -148,8 +223,11 @@ export const NavLink = styled.a`
   ${fontKerning}
 
   ${media.tablet`
-    padding: ${baseValue / 6}px ${baseValue / 2}px;
+    padding: ${baseValue / 4}px ${baseValue / 2}px;
     margin: 0 ${baseValue / 2}px;
+
+    font-size: 14px;
+    line-height: 14px;
 
     ${props => props.active ? `
       position: relative;
@@ -181,7 +259,7 @@ const hamburgerLength = baseValue * 1.5;
 
 export const NavHamburgerLayout = styled.div`
   position: absolute;
-  top: ${baseValue / 2}px;
+  top: ${baseValue -  (baseValue / 3)}px;
   right: ${baseValue}px;
   width: ${hamburgerLength}px;
   height: ${hamburgerLength}px;
@@ -204,7 +282,7 @@ export const NavHamburger = styled.div`
   display: block;
   width: 100%;
   height: 2px;
-  background-color: ${props => props.open ? 'transparent' : colors.darkCyan};
+  background-color: ${props => props.open ? 'transparent' : (props.invertColors ? colors.white : colors.darkCyan)};
   top: calc(50% - 1px);
   position: absolute;
   transition: transform .15s cubic-bezier(.645,.045,.355,1), background-color 0s cubic-bezier(.645,.045,.355,1) .1s;
@@ -214,7 +292,7 @@ export const NavHamburger = styled.div`
     display: block;
     width: 100%;
     height: 2px;
-    background-color: ${colors.darkCyan};
+    background-color: ${props => props.invertColors ? colors.white : colors.darkCyan};
     position: absolute;
     transition: transform 0s cubic-bezier(.645,.045,.355,1) .1s;
   }
@@ -250,9 +328,22 @@ export const CenteredArea = styled.div`
   justify-content: center;
 `;
 
+export const BottomLeftArea = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: flex-start;
+`;
+
 export const PaddedArea = styled.div`
   display: block;
   padding: ${baseValue}px;
+`;
+
+export const DoublePaddedArea = styled.div`
+  display: block;
+  padding: ${baseValue * 2}px;
 `;
 
 export const TitleBarContainer = styled.header`
@@ -282,8 +373,43 @@ export const Title = styled.h1`
   color: ${colors.white};
   font-size: ${baseValue * 3}px;
   line-height: ${baseValue * 3}px;
+  text-align: ${props => props.center ? 'center' : 'left'};
   ${primaryFontFamily}
   ${fontKerning}
+`;
+
+export const LargeTitle = styled.h1`
+  display: block;
+  color: ${colors.white};
+  font-size: ${baseValue * 3.5}px;
+  line-height: ${baseValue * 3.5}px;
+  text-align: ${props => props.center ? 'center' : 'left'};
+  text-transform: uppercase;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const DarkLargeTitle = styled(LargeTitle)`
+  color: ${colors.black};
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - ${baseValue / 2}px);
+    height: ${baseValue / 2}px;
+    left: ${baseValue / 4}px;
+    bottom: -${baseValue}px;
+    background-color: ${colors.black};
+  }
+`;
+
+export const DarkTitle = styled(LargeTitle)`
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
+  color: ${colors.black};
 `;
 
 export const TitleEmphasize = styled.span`
@@ -291,6 +417,16 @@ export const TitleEmphasize = styled.span`
   color: ${colors.red};
   font-size: ${baseValue * 3}px;
   line-height: ${baseValue * 3}px;
+  ${primaryFontFamily}
+  ${fontKerning}
+`;
+
+export const LargeTitleEmphasize = styled.span`
+  display: inline-block;
+  color: ${colors.red};
+  font-size: ${baseValue * 3.5}px;
+  line-height: ${baseValue * 3.5}px;
+  text-transform: uppercase;
   ${primaryFontFamily}
   ${fontKerning}
 `;
@@ -304,6 +440,37 @@ export const Subtitle = styled.h3`
   ${fontKerning}
 `;
 
+export const Quote = styled(Subtitle)`
+  font-style: italic;
+  text-align: center;
+  color: ${colors.white};
+`;
+
+export const QuoteAuthor = styled.p`
+  display: block;
+  color: ${colors.white};
+  font-size: ${baseValue * .75}px;
+  line-height: ${baseValue * .75}px;
+  text-align: center;
+  margin-top: ${baseValue / 2}px;
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
+export const QuoteContainer = styled(DoublePaddedArea)`
+  background-color: ${colors.darkCyan};
+`;
+
+export const Thesis = styled.h4`
+  display: block;
+  color: ${colors.white};
+  font-size: ${baseValue}px;
+  line-height: ${baseValue}px;
+  text-align: ${props => props.center ? 'center' : 'left'};
+  ${secondaryFontFamily}
+  ${fontKerning}
+`;
+
 export const ClearButton = styled.button`
   display: block;
   background: none;
@@ -311,6 +478,8 @@ export const ClearButton = styled.button`
   width: 100%;
   max-width: ${breakpoints.mobileLarge};
   padding: ${baseValue / 2}px ${baseValue}px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   color: ${colors.white};
   font-size: ${baseValue}px;
@@ -325,6 +494,38 @@ export const ClearButton = styled.button`
   &:hover {
     color: ${colors.red};
     background-color: ${colors.white};
+  }
+`;
+
+export const RedButton = styled.button`
+  display: inline-block;
+  background: none;
+  padding: ${baseValue / 2}px ${baseValue}px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: ${colors.white};
+  background-color: ${colors.red};
+  border-radius: 4px;
+  font-size: ${baseValue}px;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  ${secondaryFontFamily}
+  ${fontKerning}
+
+  &:hover {
+    color: ${colors.red};
+    background-color: ${colors.white};
+  }
+`;
+
+export const AltRedButton = styled(RedButton)`
+  &:hover {
+    color: ${colors.red};
+    background-color: ${colors.silver};
   }
 `;
 
@@ -372,6 +573,10 @@ export const SimpleLink = styled.a`
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
   text-decoration: underline;
+`;
+
+export const InlineLink = styled(SimpleLink)`
+  display: inline;
 `;
 
 export const Footer = styled.footer`
@@ -829,7 +1034,7 @@ export const Suggestion = styled.div`
   display: block;
   width: 100%;
   margin-bottom: ${baseValue}px;
-  padding-left: ${baseValue / 2}px;
+  padding-left: ${props => props.disableIndent ? 0 : baseValue / 2}px;
   position: relative;
 
   ${props => props.disableHover ? `
@@ -860,8 +1065,10 @@ export const SuggestionPrimaryTitle = styled.h1`
   color: ${colors.black};
   font-size: ${baseValue}px;
   line-height: ${baseValue}px;
-  ${secondaryFontFamily}
+  ${primaryFontFamily}
   ${fontKerning}
+
+  ${props => props.uppercase ? 'text-transform: uppercase;' : ''}
 `;
 
 export const SuggestionSecondaryTitle = styled.h3`
@@ -870,8 +1077,10 @@ export const SuggestionSecondaryTitle = styled.h3`
   font-size: ${baseValue / 2}px;
   line-height: ${baseValue / 2}px;
   margin-top: ${baseValue / 4}px;
-  ${primaryFontFamily}
+  ${secondaryFontFamily}
   ${fontKerning}
+
+  ${props => props.uppercase ? 'text-transform: uppercase;' : ''}
 `;
 
 export const InviteLayout = styled.div`
@@ -1098,6 +1307,16 @@ export const FlexRowLayout = styled.div`
   flex-direction: row;
 `;
 
+export const HomeLeaderboardLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media.tablet`
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+`;
+
 export const TextSubscribePart = styled.div`
   margin-bottom: ${baseValue}px;
 `;
@@ -1265,27 +1484,21 @@ export const ReminderTimeColumn = styled.div`
   margin-bottom: ${baseValue * 2}px;
 `;
 
-export const LeaderboardBackground = styled.div`
-  display: block;
-  width: 100%;
-  height: 100%;
-  flex-grow: 1;
-
-  background-color: ${colors.white};
-  background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81.28 88H68.413l19.298 19.298L81.28 88zm2.107 0h13.226L90 107.838 83.387 88zm15.334 0h12.866l-19.298 19.298L98.72 88zm-32.927-2.207L73.586 78h32.827l.5.5 7.294 7.293L115.414 87l-24.707 24.707-.707.707L64.586 87l1.207-1.207zm2.62.207L74 80.414 79.586 86H68.414zm16 0L90 80.414 95.586 86H84.414zm16 0L106 80.414 111.586 86h-11.172zm-8-6h11.173L98 85.586 92.414 80zM82 85.586L87.586 80H76.414L82 85.586zM17.414 0L.707 16.707 0 17.414V0h17.414zM4.28 0L0 12.838V0h4.28zm10.306 0L2.288 12.298 6.388 0h8.198zM180 17.414L162.586 0H180v17.414zM165.414 0l12.298 12.298L173.612 0h-8.198zM180 12.838L175.72 0H180v12.838zM0 163h16.413l.5.5 7.294 7.293L25.414 172l-8 8H0v-17zm0 10h6.613l-2.334 7H0v-7zm14.586 7l7-7H8.72l-2.333 7h8.2zM0 165.414L5.586 171H0v-5.586zM10.414 171L16 165.414 21.586 171H10.414zm-8-6h11.172L8 170.586 2.414 165zM180 163h-16.413l-7.794 7.793-1.207 1.207 8 8H180v-17zm-14.586 17l-7-7h12.865l2.333 7h-8.2zM180 173h-6.613l2.334 7H180v-7zm-21.586-2l5.586-5.586 5.586 5.586h-11.172zM180 165.414L174.414 171H180v-5.586zm-8 5.172l5.586-5.586h-11.172l5.586 5.586zM152.933 25.653l1.414 1.414-33.94 33.942-1.416-1.416 33.943-33.94zm1.414 127.28l-1.414 1.414-33.942-33.94 1.416-1.416 33.94 33.943zm-127.28 1.414l-1.414-1.414 33.94-33.942 1.416 1.416-33.943 33.94zm-1.414-127.28l1.414-1.414 33.942 33.94-1.416 1.416-33.94-33.943zM0 85c2.21 0 4 1.79 4 4s-1.79 4-4 4v-8zm180 0c-2.21 0-4 1.79-4 4s1.79 4 4 4v-8zM94 0c0 2.21-1.79 4-4 4s-4-1.79-4-4h8zm0 180c0-2.21-1.79-4-4-4s-4 1.79-4 4h8z' fill='%23ff4c4d' fill-opacity='0.5' fill-rule='evenodd'/%3E%3C/svg%3E");
-`;
-
 export const LeaderboardLayout = styled.section`
   display: block;
   width: 100%;
   max-width: ${maxWidth * 0.75}px;
   padding: ${baseValue}px;
-  margin: ${baseValue * 3}px auto;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const LeaderboardRowLayout = styled(FlexRowLayout)`
   margin-bottom: ${baseValue}px;
+  padding-bottom: ${baseValue}px;
+  border-bottom: 1px solid ${colors.silver};
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const PointTitle = styled.h1`

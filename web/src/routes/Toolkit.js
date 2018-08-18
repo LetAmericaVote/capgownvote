@@ -5,7 +5,7 @@ import PageNav from '../components/PageNav';
 import {
   Main, TitleBar, Title, TitleBarContainer,
   ContentTitle, ContentParagraph, ContentLayout,
-  SimpleLink, ContentHeader,
+  SimpleLink, ContentHeader, InlineLink,
 } from '../blocks';
 
 const copy = {
@@ -73,12 +73,12 @@ const About = (props) => {
       <PageNav />
       <TitleBarContainer>
         <TitleBar>
-          <Title>Cap, Gown, Vote Toolkit</Title>
+          <Title center>Cap, Gown, Vote Toolkit</Title>
         </TitleBar>
       </TitleBarContainer>
       <ContentLayout>
         <ContentParagraph>{copy.intro[0]}</ContentParagraph>
-        <ContentParagraph>{copy.intro[1]}</ContentParagraph>
+        <ContentParagraph>{copy.intro[1]} <InlineLink href="https://www.rockthevote.org/voting-information/">Rock the Vote’s Election Center has voter registration deadline information for each state.</InlineLink> {copy.intro[1]}</ContentParagraph>
 
         <ContentTitle>{copy.participate[0]}</ContentTitle>
         <ContentHeader>{copy.participate[1]}</ContentHeader>

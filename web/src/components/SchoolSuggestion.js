@@ -11,7 +11,8 @@ const SchoolSuggestion = (props) => {
   const {
     schoolId, schoolData, onClick,
     disableHover, getSchoolData,
-    schoolRequest,
+    schoolRequest, disableIndent,
+    uppercase,
   } = props;
 
   if (! schoolId) {
@@ -32,10 +33,20 @@ const SchoolSuggestion = (props) => {
     return null;
   }
 
+  const suggestionProps = {
+    onClick,
+    disableHover,
+    disableIndent,
+  };
+
+  const titleProps = {
+    uppercase,
+  };
+
   return (
-    <Suggestion onClick={onClick} disableHover={disableHover}>
-      <SuggestionPrimaryTitle>{schoolData.name}</SuggestionPrimaryTitle>
-      <SuggestionSecondaryTitle>{locationCopy}</SuggestionSecondaryTitle>
+    <Suggestion {...suggestionProps}>
+      <SuggestionPrimaryTitle {...titleProps}>{schoolData.name}</SuggestionPrimaryTitle>
+      <SuggestionSecondaryTitle {...titleProps}>{locationCopy}</SuggestionSecondaryTitle>
     </Suggestion>
   );
 }

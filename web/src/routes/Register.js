@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import BaseWrapper from '../components/BaseWrapper';
 import PageFooter from '../components/PageFooter';
 import PageNav from '../components/PageNav';
@@ -18,7 +19,7 @@ import Thanks from '../components/Thanks';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
-  PaddedArea, Subtitle,
+  ContentParagraph, InlineLink, PaddedArea,
 } from '../blocks';
 import {
   CREATE_USER_STEP,
@@ -34,7 +35,9 @@ import {
   THANKS_STEP,
 } from '../stepNames'
 
-const subCopy = `Sign up for Cap, Gown, Vote! and make your high school the most civically engaged in America.`;
+const Warning = styled(ContentParagraph)`
+  margin-bottom: 0;
+`;
 
 const Register = (props) => {
   const { currentStep, isFading } = props;
@@ -113,6 +116,7 @@ const Register = (props) => {
     }
 
     case STILL_IMPACT_STEP: {
+      // TODO: Share w/ a friend in your school...?
       ActiveStepComponent = (props) => (
         <StepFrame {...props} title="You can still make a difference.">
           <TextSubscribe />
@@ -167,11 +171,10 @@ const Register = (props) => {
       <PageNav />
       <TitleBarContainer>
         <TitleBar>
-          <Title>Support your school and join Cap, Gown, Vote!</Title>
+          <Title center>Register to vote</Title>
         </TitleBar>
-        <PaddedArea>
-          <Subtitle>{subCopy}</Subtitle>
-        </PaddedArea>
+        <PaddedArea />
+        <Warning>Have questions about registering to vote? <InlineLink href="/faq">Checkout our FAQ</InlineLink></Warning>
       </TitleBarContainer>
       <ActiveStepComponent isFading={isFading} />
       <PageFooter />

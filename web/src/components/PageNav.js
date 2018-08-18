@@ -2,6 +2,7 @@ import React from 'react';
 import BaseWrapper from './BaseWrapper';
 import Link from '../routing/Link';
 import logo from '../assets/capgownvote.svg';
+import invertedLogo from '../assets/capgownvote-light.svg';
 import { toggleNavMenu } from '../actions';
 import {
   selectAuthId, selectUserRole, selectIsNavOpen,
@@ -17,11 +18,12 @@ const PageNav = (props) => {
   const {
     currentRoute, isNavOpen,
     toggleNavMenu, isAuthenticated,
+    isFloated, isInverted,
   } = props;
 
   const HomeLink = Link(({ onClick }) => (
     <NavLogo
-      src={logo}
+      src={isInverted && ! isNavOpen ? invertedLogo : logo}
       alt="Logo"
       onClick={onClick}
     />
@@ -29,16 +31,20 @@ const PageNav = (props) => {
 
   const menuLinks = [
     {
-      title: 'Toolkit',
-      to: '/toolkit',
+      title: 'Activists',
+      to: '/activist',
     },
     {
-      title: 'Register',
-      to: '/register',
+      title: 'Student Ambassadors',
+      to: '/ambassador',
     },
     {
-      title: 'Leaderboard',
+      title: 'School Leaderboard',
       to: '/leaderboard',
+    },
+    {
+      title: 'Register To Vote',
+      to: '/register',
     },
   ];
 
@@ -50,7 +56,7 @@ const PageNav = (props) => {
   }
 
   return (
-    <Nav>
+    <Nav float={isFloated} transparent={isInverted} fillPage={isFloated && isNavOpen}>
       <HomeLink />
       <NavLinkMenu open={isNavOpen}>
         <NavLinkLayout open={isNavOpen}>
@@ -64,6 +70,7 @@ const PageNav = (props) => {
                   toggleNavMenu();
                 }}
                 active={currentRoute === to}
+                invertColors={isInverted && ! isNavOpen}
               >{title}</NavLink>
             ), to);
 
@@ -75,7 +82,7 @@ const PageNav = (props) => {
       </NavLinkMenu>
       <NavHamburgerLayout>
         <NavHamburgerWrapper onClick={toggleNavMenu}>
-          <NavHamburger open={isNavOpen} />
+          <NavHamburger open={isNavOpen} invertColors={isInverted && ! isNavOpen} />
         </NavHamburgerWrapper>
       </NavHamburgerLayout>
     </Nav>

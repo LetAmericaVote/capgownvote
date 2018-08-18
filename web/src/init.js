@@ -31,8 +31,8 @@ function init(store) {
   const { id: paramId, token: paramToken, redirect } = getUrlParams(window.location.search);
   const { id, token, isExpired } = readAuth();
 
-  if (location.host === 'capgownvote.com') {
-    location.replace('https://capgownvote.org');
+  if (window.location.host === 'capgownvote.com') {
+    window.location.replace('https://capgownvote.org');
   }
 
   if (document.location.pathname === '/' && redirect) {

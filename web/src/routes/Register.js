@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import BaseWrapper from '../components/BaseWrapper';
 import PageFooter from '../components/PageFooter';
 import PageNav from '../components/PageNav';
@@ -19,7 +18,7 @@ import Thanks from '../components/Thanks';
 import { selectCurrentStepId, selectIsStepFadeSet } from '../selectors';
 import {
   Main, TitleBar, Title, TitleBarContainer,
-  ContentParagraph, InlineLink, PaddedArea,
+  Warning, InlineLink,
 } from '../blocks';
 import {
   CREATE_USER_STEP,
@@ -34,10 +33,6 @@ import {
   CUSTOM_MESSAGE_STEP,
   THANKS_STEP,
 } from '../stepNames'
-
-const Warning = styled(ContentParagraph)`
-  margin-bottom: 0;
-`;
 
 const Register = (props) => {
   const { currentStep, isFading } = props;
@@ -179,7 +174,6 @@ const Register = (props) => {
         <TitleBar>
           <Title center>Register to vote</Title>
         </TitleBar>
-        <PaddedArea />
         <Warning>Have questions about registering to vote? <InlineLink href="/faq">Checkout our FAQ</InlineLink></Warning>
       </TitleBarContainer>
       <ActiveStepComponent isFading={isFading} />

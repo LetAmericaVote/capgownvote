@@ -614,6 +614,7 @@ export const FooterItemLayout = styled.div`
 export const FooterItem = styled.div`
   display: block;
   margin-bottom: ${baseValue}px;
+  min-width: 160px;
 `;
 
 export const FooterLinkWrapper = styled.div`
@@ -674,10 +675,7 @@ export const FooterPaidDisclaimerLayout = styled.div`
   max-width: ${maxWidth / 2}px;
   margin-left: auto;
   margin-right: auto;
-
-  ${media.tablet`
-    margin-top: ${baseValue}px;
-  `}
+  margin-top: ${baseValue}px;
 `;
 
 export const FooterPaidDisclaimer = styled.h3`
@@ -1303,6 +1301,18 @@ export const ContentParagraph = styled.p`
 
   ${secondaryFontFamily}
   ${fontKerning}
+`;
+
+export const Warning = styled(ContentParagraph)`
+  margin-bottom: 0;
+  padding-top: ${baseValue}px;
+  padding-left: ${baseValue / 2}px;
+  padding-right: ${baseValue / 2}px;
+
+  ${media.tablet`
+    padding-left: 0;
+    padding-right: 0;
+  `}
 `;
 
 export const FlexColumnLayout = styled.div`

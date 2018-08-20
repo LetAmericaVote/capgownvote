@@ -2,7 +2,7 @@
   "name": "capgownvote",
   "version": "1.0.0",
   "scripts": {
-    "start": "serve --single --cache=60000"
+    "start": "serve"
   },
   "dependencies": {
     "serve": "latest"

@@ -1,11 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import PageFooter from '../components/PageFooter';
 import PageNav from '../components/PageNav';
 import {
   Main, TitleBarContainer, Title,
   TitleBar, ContentHeader, ContentParagraph,
-  InlineLink, ContentLayout,
+  InlineLink, ContentLayout, AltRedButton, baseValue,
 } from '../blocks';
+
+const SignupLayout = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: ${baseValue}px;
+`;
 
 const Ambassador = (props) => {
   return (
@@ -28,7 +35,13 @@ const Ambassador = (props) => {
         <ContentParagraph>By partnering with Rock the Vote and tapping available online resources, we’ve made voter registration fast and easy. Just follow the steps below.</ContentParagraph>
 
         <ContentHeader>1. Sign up</ContentHeader>
-        <ContentParagraph>Cap, Gown, Vote! student ambassadors are the most important part of our program. As an ambassador, you’ll help your friends and classmates get registered using our online tool. We’ll keep track of your efforts, so you can see how your school stacks up against high schools all across the country. <InlineLink href="https://www.letamericavote.org/landing/engagement-cgv-ambassadors">Sign up here!</InlineLink></ContentParagraph>
+        <ContentParagraph>Cap, Gown, Vote! student ambassadors are the most important part of our program. As an ambassador, you’ll help your friends and classmates get registered using our online tool. We’ll keep track of your efforts, so you can see how your school stacks up against high schools all across the country.</ContentParagraph>
+
+        <SignupLayout>
+          <InlineLink href="https://www.letamericavote.org/landing/engagement-cgv-ambassadors">
+            <AltRedButton>Sign up to become an ambassador</AltRedButton>
+          </InlineLink>
+        </SignupLayout>
 
         <ContentHeader>2.Make a plan</ContentHeader>
         <ContentParagraph>Talk to your principal, your favorite teacher or another school official about finding a good time to get your classmates registered to vote using the Cap, Gown, Vote! online tool. </ContentParagraph>

@@ -1,10 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+import Link from '../routing/Link';
 import {
   Footer, FooterLink, FooterItem, FooterSubtext,
   FooterLinkWrapper, FooterSubtextWrapper,
   FooterPaidDisclaimer, FooterItemLayout,
-  FooterPaidDisclaimerLayout,
+  FooterPaidDisclaimerLayout, InlineLink,
 } from '../blocks';
+
+const FaqLinkComponent = styled(InlineLink)`
+  margin-bottom: 0;
+`;
+const FaqLink = Link(FaqLinkComponent, '/faq');
 
 const disclaimer = `Paid for by Let America Vote (www.letamericavote.org). Not authorized by any candidate or candidate’s committee.`;
 
@@ -33,6 +40,7 @@ const PageFooter = () => {
           </FooterLinkWrapper>
         </FooterItem>
       </FooterItemLayout>
+      <FaqLink>Frequently Asked Questions</FaqLink>
       <FooterPaidDisclaimerLayout>
         <FooterPaidDisclaimer>{disclaimer}</FooterPaidDisclaimer>
       </FooterPaidDisclaimerLayout>

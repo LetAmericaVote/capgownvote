@@ -3,6 +3,8 @@ import BaseWrapper from './BaseWrapper';
 import Link from '../routing/Link';
 import logo from '../assets/capgownvote.svg';
 import invertedLogo from '../assets/capgownvote-light.svg';
+import longLogo from '../assets/capgownvote-long.svg';
+import invertedLongLogo from '../assets/capgownvote-long-light.svg';
 import { toggleNavMenu } from '../actions';
 import {
   selectAuthId, selectUserRole, selectIsNavOpen,
@@ -21,9 +23,13 @@ const PageNav = (props) => {
     isFloated, isInverted,
   } = props;
 
+  const isHome = currentRoute === '/';
+  const conditionalLogo = isHome ? logo : longLogo;
+  const conditionalInvertedLogo = isHome ? invertedLogo : invertedLongLogo;
+
   const HomeLink = Link(({ onClick }) => (
     <NavLogo
-      src={isInverted && ! isNavOpen ? invertedLogo : logo}
+      src={isInverted && ! isNavOpen ? conditionalInvertedLogo : conditionalLogo}
       alt="Logo"
       onClick={onClick}
     />
@@ -31,12 +37,12 @@ const PageNav = (props) => {
 
   const menuLinks = [
     {
-      title: 'Activists',
-      to: '/activist',
-    },
-    {
       title: 'Student Ambassadors',
       to: '/ambassador',
+    },
+    {
+      title: 'Activists',
+      to: '/activist',
     },
     {
       title: 'School Leaderboard',

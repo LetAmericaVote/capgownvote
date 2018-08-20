@@ -3,26 +3,49 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import UrlPattern from 'url-pattern';
 
-const Route = (props) => {
-  const { curentPathName, children, path } = props;
-  const pattern = new UrlPattern(path);
-  const match = pattern.match(curentPathName);
+class Route extends React.Component {
+  constructor(props) {
+    super(props);
 
-  if (match === null) {
-    return null;
+    this.state = {
+      component: null
+    };
   }
 
-  return React.Children.map(children, child => React.cloneElement(child, { match }));
-};
+  async componentDidMount() {
+    const { importComponent } = this.props;
+    const { default: RouteComponent } = await importComponent();
+
+    this.setState({ RouteComponent });
+  }
+
+  render() {
+    const { RouteComponent } = this.state;
+    const { currentPathName, path } = this.props;
+    const pattern = new UrlPattern(path);
+    const match = pattern.match(currentPathName);
+
+    if (! currentPathName) {
+      return null;
+    }
+
+    if (match === null) {
+      return null;
+    }
+
+    return RouteComponent ? (
+      <RouteComponent match={match} />
+    ) : null;
+  }
+}
 
 Route.propTypes = {
   path: PropTypes.string.isRequired,
-  curentPathName: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  currentPathName: PropTypes.string.isRequired,
 };
 
 Route.mapStateToProps = (state) => ({
-  curentPathName: state.routing.pathName,
+  currentPathName: state.routing.pathName,
 });
 
 export default connect(Route.mapStateToProps)(Route);

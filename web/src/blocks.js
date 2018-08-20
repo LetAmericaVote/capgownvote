@@ -66,6 +66,21 @@ export const Main = styled.main`
   min-height: 100vh;
 `;
 
+export const HomeContentContainer = styled.div`
+  display: block;
+  width: 100%;
+  max-width: ${maxWidth}px;
+  padding-left: ${baseValue / 2}px;
+  padding-right: ${baseValue / 2}px;
+  margin-left: auto;
+  margin-right: auto;
+
+  ${media.tablet`
+    padding-left: 0;
+    padding-right: 0;
+  `}
+`;
+
 export const FullPageBackground = styled.section`
   display: block;
   width: 100%;
@@ -132,8 +147,8 @@ export const CardImage = styled.div`
 export const CardHeader = styled.h1`
   display: block;
   color: ${colors.black};
-  font-size: ${baseValue * 2}px;
-  line-height: ${baseValue * 2}px;
+  font-size: ${baseValue * 1.5}px;
+  line-height: ${baseValue * 1.5}px;
   margin-bottom: ${baseValue}px;
   ${primaryFontFamily}
   ${fontKerning}
@@ -584,18 +599,16 @@ export const Footer = styled.footer`
   width: 100%;
   padding: ${baseValue}px;
   flex-direction: column;
+  align-items: center;
   bottom: 0;
   border-top: 2px solid ${colors.red};
 `;
 
 export const FooterItemLayout = styled.div`
   display: flex;
-  flex-direction: column;
-
-  ${media.tablet`
-    flex-direction: row;
-    justify-content: center;
-  `}
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 400px;
 `;
 
 export const FooterItem = styled.div`
@@ -606,11 +619,6 @@ export const FooterItem = styled.div`
 export const FooterLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${baseValue}px;
-
-  ${media.tablet`
-    margin-bottom: 0;
-  `}
 `;
 
 export const FooterSubtextWrapper = styled.div`

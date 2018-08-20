@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseWrapper from './BaseWrapper';
-import TextSubscribeForm from './TextSubscribeForm';
+// import TextSubscribeForm from './TextSubscribeForm';
 import Link from '../routing/Link';
 import { selectAuthenticatedUserPdf } from '../selectors';
 import {
@@ -51,10 +51,10 @@ const Mail = (props) => {
         Need to access your completed form later?
       </ContentParagraph>
       <SetPasswordLink />
-      <ContentHeader>Take the next step, help protect voting rights</ContentHeader>
+      {/* <ContentHeader>Take the next step, help protect voting rights</ContentHeader>
       <ContentParagraph>Join Let America Vote and help protect your community from politicians that want to make it harder to vote.</ContentParagraph>
       <ContentParagraph>Subscribe to text messages from Let America Vote to start getting actions you can take to protect voting rights.</ContentParagraph>
-      <TextSubscribeForm ctaCopy="Subscribe" reducedSpacing />
+      <TextSubscribeForm ctaCopy="Subscribe" reducedSpacing /> */}
     </FlexColumnLayout>
   );
 };

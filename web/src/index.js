@@ -7,13 +7,6 @@ import logger from 'redux-logger';
 import { css, injectGlobal } from 'styled-components';
 import ReactGA from 'react-ga';
 
-import Home from './routes/Home';
-import Register from './routes/Register';
-import Auth from './routes/Auth';
-import Leaderboard from './routes/Leaderboard';
-import Faq from './routes/Faq';
-import Activist from './routes/Activist';
-import Ambassador from './routes/Ambassador';
 import Router from './routing/Router';
 import Route from './routing/Route';
 
@@ -46,15 +39,15 @@ ReactGA.initialize(REACT_APP_GA_TRACKING_ID, {
 const Root = () => (
   <Provider store={store}>
     <Router>
-      <div>
-        <Route path="/"><Home /></Route>
-        <Route path="/register"><Register/></Route>
-        <Route path="/faq"><Faq /></Route>
-        <Route path="/activist"><Activist /></Route>
-        <Route path="/ambassador"><Ambassador /></Route>
-        <Route path="/auth"><Auth /></Route>
-        <Route path="/leaderboard"><Leaderboard /></Route>
-      </div>
+      <React.Fragment>
+        <Route path="/" importComponent={() => import('./routes/Home')} />
+        <Route path="/register" importComponent={() => import('./routes/Register')} />
+        <Route path="/faq" importComponent={() => import('./routes/Faq')} />
+        <Route path="/activist" importComponent={() => import('./routes/Activist')} />
+        <Route path="/ambassador" importComponent={() => import('./routes/Ambassador')} />
+        <Route path="/auth" importComponent={() => import('./routes/Auth')} />
+        <Route path="/leaderboard" importComponent={() => import('./routes/Leaderboard')} />
+      </React.Fragment>
     </Router>
   </Provider>
 );

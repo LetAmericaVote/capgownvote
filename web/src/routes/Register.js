@@ -116,14 +116,20 @@ const Register = (props) => {
     }
 
     case STILL_IMPACT_STEP: {
-      // TODO: Share w/ a friend in your school...?
       ActiveStepComponent = (props) => (
-        <StepFrame {...props} title="You can still make a difference.">
-          <TextSubscribe />
+        <StepFrame {...props} title="Awesome - make sure your friends are registered to vote and don't forget to cast your ballot this November.">
+          <Thanks />
         </StepFrame>
       );
 
       break;
+      // ActiveStepComponent = (props) => (
+      //   <StepFrame {...props} title="You can still make a difference.">
+      //     <TextSubscribe />
+      //   </StepFrame>
+      // );
+      //
+      // break;
     }
 
     case MAIL_FORM_STEP: {

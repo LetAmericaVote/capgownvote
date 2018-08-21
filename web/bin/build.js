@@ -5,7 +5,6 @@ const { TARGET_ENV } = process.env;
 
 const BUILD_STEP = `
   react-scripts build &&
-  cp ./build/index.html ./build/200.html &&
 `;
 
 const DEPLOY_SECRET_FILE = '.env.production.local';

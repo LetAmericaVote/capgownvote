@@ -1,10 +1,14 @@
 {
-  "name": "capgownvote",
+  "name": "build",
   "version": "1.0.0",
+  "description": "",
+  "main": "now.js",
   "scripts": {
-    "start": "serve"
+    "start": "serve --single"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "serve": "latest"
+    "serve": "^9.6.0"
   }
 }

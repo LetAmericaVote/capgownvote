@@ -32,11 +32,13 @@ function init(store) {
   const { id, token, isExpired } = readAuth();
 
   if (window.location.host === 'capgownvote.com') {
-    window.location.replace(`https://capgownvote.org${window.location.pathname}`);
+    window.location.replace('https://capgownvote.org');
   }
 
   if (document.location.pathname === '/' && redirect) {
-    document.location.assign(`${document.location.origin}/${redirect}`);
+    const safe = redirect.split('/').filter(part => !!part.length);
+
+    document.location.assign(`${document.location.origin}/${safe}`);
   }
 
   if (paramId && paramToken) {

@@ -43,6 +43,10 @@ const PageNav = (props) => {
       to: '/leaderboard',
     },
     {
+      title: 'FAQ',
+      to: '/faq',
+    },
+    {
       title: 'Register To Vote',
       to: '/register',
     },

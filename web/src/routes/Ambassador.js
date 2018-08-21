@@ -30,7 +30,7 @@ const Ambassador = (props) => {
 
         <ContentParagraph>You can make a real difference in 2018 by becoming a Cap, Gown, Vote! student ambassador. Below is a step-by-step guide for helping your friends and classmates register to vote. </ContentParagraph>
 
-        <ContentParagraph>If you’re a not a student but still want to help, check out our guide for activists. We also have information about how you can help get young Americans registered to vote <InlineLink href="/activist">here</InlineLink>.</ContentParagraph>
+        <ContentParagraph>If you’re a not a student but still want to help, <InlineLink href="/activist">check out our guide for activists</InlineLink>.</ContentParagraph>
 
         <ContentParagraph>By partnering with Rock the Vote and tapping available online resources, we’ve made voter registration fast and easy. Just follow the steps below.</ContentParagraph>
 
@@ -43,7 +43,7 @@ const Ambassador = (props) => {
           </InlineLink>
         </SignupLayout>
 
-        <ContentHeader>2.Make a plan</ContentHeader>
+        <ContentHeader>2. Make a plan</ContentHeader>
         <ContentParagraph>Talk to your principal, your favorite teacher or another school official about finding a good time to get your classmates registered to vote using the Cap, Gown, Vote! online tool. </ContentParagraph>
 
         <ContentParagraph>An event is a great way to get a group of students together to get registered. Work with a teacher or administrator on setting aside a specific time for a meeting, assembly or other voter-registration event. </ContentParagraph>

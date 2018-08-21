@@ -21,7 +21,7 @@ const Activist = (props) => {
 
         <ContentParagraph>It’s more important than ever for young people to make their voices heard, and we all must do everything we can to help them get registered and out to vote. If you’re an activist who wants to help out, follow the simple steps below to join our effort to get more young people participating in our democracy.</ContentParagraph>
 
-        <ContentParagraph>If you’re a student, see how you can help register people at your school. We have handy information about Cap, Gown, Vote! for students <InlineLink href="https://www.letamericavote.org/landing/engagement-cgv-ambassadors/">here</InlineLink>.</ContentParagraph>
+        <ContentParagraph>If you’re a student, <InlineLink href="https://www.letamericavote.org/landing/engagement-cgv-ambassadors/">click here</InlineLink> to find out how to become an ambassador for your school and register your friends and classmates.</ContentParagraph>
 
         <ContentHeader>1. Host a voter registration event in your city!</ContentHeader>
         <ContentParagraph>If you want to see more young Americans voting in the midterm elections, grab a clipboard (or an iPad) and go out and register voters.  You can show people how to register online using capgownvote.org.  Going to community colleges, local convenience stores and malls -- places where young folks hang out -- are all good places to start. But, you know your city better than anyone, so find a place where you think young potential voters will be and get them registered! Voter registration laws in each state are different, so please confirm the rules for your state on the secretary of state’s website (Google your state and “secretary of state” and “voter registration”). Once you learn the protocol for your state, head out and register voters! If you have questions, email us at capgownvote@letamericavote.org.</ContentParagraph>
@@ -58,14 +58,6 @@ const Activist = (props) => {
         <ContentParagraph>* There are signs of rising participation. In a recent study by Harvard’s Institute of Politics, 37 percent of Americans under 30 indicated that they will definite vote in the 2018 midterm elections, compared to 23 percent who said the same in 2014, and 31 percent in 2010.</ContentParagraph>
 
         <ContentParagraph>* Early indications are that youth voter registration is on the rise in 2018, underscoring young people’s political awakening. From February to July, the share of voters nationwide in the 18-to-29 age cohort rose more than 2 percent. Youth registration is increasing all across the country and surging in places as diverse as Pennsylvania, Indiana and Arizona.</ContentParagraph>
-
-        <ContentHeader>Sources and supporting information: </ContentHeader>
-        <ContentParagraph>* Youth voters are defined as voters ages 18-29.</ContentParagraph>
-        <ContentParagraph>*  The Center for Information & Research on Civic Learning and Engagement (CIRCLE), March 23, 2018, <InlineLink href="https://civicyouth.org/from-parkland-to-the-polls-teen-activism-and-youth-voting-in-2018/">CIRCLE</InlineLink>.</ContentParagraph>
-        <ContentParagraph>*  2014 Youth Turnout and Youth Registration Rates Lowest Ever Recorded; Changes Essential in 2016, CIRCLE, <InlineLink href="https://civicyouth.org/2014-youth-turnout-and-youth-registration-rates-lowest-ever-recorded-changes-essential-in-2016/">CIRCLE</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Youth Voting, CIRCLE, <InlineLink href="https://civicyouth.org/quick-facts/youth-voting/">Youth Vote</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Harvard Institute of Politics Spring 2018 Youth Poll,<InlineLink href="http://iop.harvard.edu/spring-2018-poll">Youth Poll</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Analysis: After Parkland Shooting, Youth Voter Registration Surges, <InlineLink href="https://targetsmart.com/news-item/analysis-after-parkland-shooting-youth-voter-registration-surges">Youth Voter Registration Surges</InlineLink></ContentParagraph>
       </ContentLayout>
       <PageFooter />
     </Main>

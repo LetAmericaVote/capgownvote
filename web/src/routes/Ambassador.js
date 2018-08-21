@@ -80,14 +80,6 @@ const Ambassador = (props) => {
         <ContentParagraph>*There are signs of rising participation. In a recent study by Harvard’s Institute of Politics, 37 percent of Americans under 30 indicated that they will definite vote in the 2018 midterm elections, compared to 23 percent who said the same in 2014, and 31 percent in 2010.</ContentParagraph>
 
         <ContentParagraph>*Early indications are that youth voter registration is on the rise in 2018, underscoring young people’s political awakening. From February to July, the share of voters nationwide in the 18-to-29 age cohort rose more than 2 percent. Youth registration is increasing all across the country and surging in places as diverse as Pennsylvania, Indiana and Arizona.</ContentParagraph>
-
-        <ContentHeader>Sources and supporting information:</ContentHeader>
-        <ContentParagraph>* Youth voters are defined as voters ages 18-29.</ContentParagraph>
-        <ContentParagraph>*  The Center for Information & Research on Civic Learning and Engagement (CIRCLE), March 23, 2018, <InlineLink href="https://civicyouth.org/from-parkland-to-the-polls-teen-activism-and-youth-voting-in-2018/">CIRCLE</InlineLink>.</ContentParagraph>
-        <ContentParagraph>*  2014 Youth Turnout and Youth Registration Rates Lowest Ever Recorded; Changes Essential in 2016, CIRCLE, <InlineLink href="https://civicyouth.org/2014-youth-turnout-and-youth-registration-rates-lowest-ever-recorded-changes-essential-in-2016/">CIRCLE</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Youth Voting, CIRCLE, <InlineLink href="https://civicyouth.org/quick-facts/youth-voting/">Youth Vote</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Harvard Institute of Politics Spring 2018 Youth Poll,<InlineLink href="http://iop.harvard.edu/spring-2018-poll">Youth Poll</InlineLink></ContentParagraph>
-        <ContentParagraph>*  Analysis: After Parkland Shooting, Youth Voter Registration Surges, <InlineLink href="https://targetsmart.com/news-item/analysis-after-parkland-shooting-youth-voter-registration-surges">Youth Voter Registration Surges</InlineLink></ContentParagraph>
       </ContentLayout>
       <PageFooter />
     </Main>

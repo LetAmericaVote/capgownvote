@@ -36,9 +36,8 @@ function init(store) {
   }
 
   if (document.location.pathname === '/' && redirect) {
-    const safe = redirect.split('/').filter(part => !!part.length);
-
-    document.location.assign(`${document.location.origin}/${safe}`);
+    const safe = redirect.startsWith('/') ? redirect : `/${redirect}`;
+    document.location.assign(`${document.location.origin}${safe}`);
   }
 
   if (paramId && paramToken) {

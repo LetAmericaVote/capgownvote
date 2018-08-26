@@ -30,7 +30,7 @@ const Activist = (props) => {
         <ContentParagraph>We want as many mayors as possible across the country to sign on to Cap, Gown, Vote! and commit to registering their young constituents. Contact your mayor and use our young voter talking points below to recruit them to join our team. If you need assistance with mayoral outreach, please contact capgownvote@letamericavote.org. </ContentParagraph>
 
         <ContentHeader>3. Help identify student ambassadors in your city.</ContentHeader>
-        <ContentParagraph>The success of Cap, Gown, Vote! depends on the involvement of high school student ambassadors around the country. We want excited students leading this effort, and you can help us identify them. Sign up at and we’ll follow up with you on how to recruit student ambassadors in your community. </ContentParagraph>
+        <ContentParagraph>The success of Cap, Gown, Vote! depends on the involvement of high school student ambassadors around the country. We want excited students leading this effort, and you can help us identify them. Please encourage high school students you know to get involved at <InlineLink href="/ambassador">capgownvote.org/ambassador</InlineLink>.</ContentParagraph>
 
         <ContentHeader>4. Use your platform.</ContentHeader>
         <ContentParagraph>The more people who know about Cap, Gown, Vote! and understand the importance of youth voter registration, the more successful we’ll be. Use the platform you have on social media and among your friends to talk about youth voter registration and the easy online tools available at capgownvote.org. And don’t forget to use the hashtag #CapGownVote when you post! </ContentParagraph>

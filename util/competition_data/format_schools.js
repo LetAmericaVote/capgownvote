@@ -29,7 +29,7 @@ function writeData(data) {
   fs.writeFileSync(`${__dirname}/competition.json`, JSON.stringify(data, null, '\t'));
 }
 
-parseCsv(`${__dirname}/CapGownVoteCities.csv`)
+parseCsv(`${__dirname}/CapGownVoteCitiesFall.csv`)
   .then(formatData)
   .then(writeData)
   .then(() => console.log('done'))

@@ -22,11 +22,13 @@ function exportData(results) {
     schoolName: result.name,
   }));
 
-  const json2csvParser = new json2csv({ fields });
-  const csv = json2csvParser.parse(data);
+  if (data && data.length) {
+    const json2csvParser = new json2csv({ fields });
+    const csv = json2csvParser.parse(data);
 
-  console.log('writing data');
-  require('fs').writeFileSync('amb.csv', csv);
+    console.log('writing data');
+    require('fs').writeFileSync('amb.csv', csv);
+  }
 
   process.exit();
 }

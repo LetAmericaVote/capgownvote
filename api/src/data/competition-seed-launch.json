@@ -1,0 +1,1342 @@
+{
+	"schools": [
+		{
+			"name": "Family Court High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35202"
+		},
+		{
+			"name": "George Washington Carver High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35207"
+		},
+		{
+			"name": "Huffman High School-Magnet",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35215"
+		},
+		{
+			"name": "Jackson-Olin High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35218"
+		},
+		{
+			"name": "Kennedy Alternative",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35212"
+		},
+		{
+			"name": "Parker High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35204"
+		},
+		{
+			"name": "Ramsay High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35205"
+		},
+		{
+			"name": "Wenonah High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35221"
+		},
+		{
+			"name": "Woodlawn High School-Magnet",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35212"
+		},
+		{
+			"name": "Workshop Incorporate",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35202"
+		},
+		{
+			"name": "Erwin High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35215"
+		},
+		{
+			"name": "Oak MT High School",
+			"city": "Birmingham",
+			"stateCode": "al",
+			"zipcode": "35242"
+		},
+		{
+			"name": "Alonso High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33635"
+		},
+		{
+			"name": "Blake High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33607"
+		},
+		{
+			"name": "Bowers-Whitley Career Center",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33613"
+		},
+		{
+			"name": "Brooks Debartolo Collegiate High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33612"
+		},
+		{
+			"name": "Catapult Academy",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33610"
+		},
+		{
+			"name": "Chamberlain High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33612"
+		},
+		{
+			"name": "Freedom High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33647"
+		},
+		{
+			"name": "Gaither High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33618"
+		},
+		{
+			"name": "Jefferson High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33607"
+		},
+		{
+			"name": "King High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33610"
+		},
+		{
+			"name": "Leto High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33614"
+		},
+		{
+			"name": "Middleton High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33610"
+		},
+		{
+			"name": "Plant High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33629"
+		},
+		{
+			"name": "Robinson High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33616"
+		},
+		{
+			"name": "Seminole Heights Charter High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33603"
+		},
+		{
+			"name": "Sickles High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33626"
+		},
+		{
+			"name": "Tampa Bay Tech High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33610"
+		},
+		{
+			"name": "Town & Country High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33615"
+		},
+		{
+			"name": "West University Charter High",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33612"
+		},
+		{
+			"name": "Wharton High School",
+			"city": "Tampa",
+			"stateCode": "fl",
+			"zipcode": "33647"
+		},
+		{
+			"name": "Boston Adult Academy",
+			"city": "Back Bay",
+			"stateCode": "ma",
+			"zipcode": "02116"
+		},
+		{
+			"name": "Boston Arts Academy",
+			"city": "Boston",
+			"stateCode": "ma",
+			"zipcode": "02215"
+		},
+		{
+			"name": "Margarita Muniz Academy",
+			"city": "Boston",
+			"stateCode": "ma",
+			"zipcode": "02130"
+		},
+		{
+			"name": "Snowden International School At Copley",
+			"city": "Boston",
+			"stateCode": "ma",
+			"zipcode": "02116"
+		},
+		{
+			"name": "Edward M. Kennedy Academy For Health Careers (Horace Mann Ch",
+			"city": "Boston",
+			"stateCode": "ma",
+			"zipcode": "02115"
+		},
+		{
+			"name": "Another Course To College",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "02135"
+		},
+		{
+			"name": "Brighton High",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "02135"
+		},
+		{
+			"name": "Lyon Upper 9-12",
+			"city": "Brighton",
+			"stateCode": "ma",
+			"zipcode": "02135"
+		},
+		{
+			"name": "Charlestown High",
+			"city": "Charlestown",
+			"stateCode": "ma",
+			"zipcode": "02129"
+		},
+		{
+			"name": "Chelsea High",
+			"city": "Chelsea",
+			"stateCode": "ma",
+			"zipcode": "02150"
+		},
+		{
+			"name": "Phoenix Charter Academy",
+			"city": "Chelsea",
+			"stateCode": "ma",
+			"zipcode": "02150"
+		},
+		{
+			"name": "Boston International High School",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "02124"
+		},
+		{
+			"name": "Community Academy of Science and Health",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "02122"
+		},
+		{
+			"name": "Dorchester Academy",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "02125"
+		},
+		{
+			"name": "Jeremiah E Burke High",
+			"city": "Dorchester",
+			"stateCode": "ma",
+			"zipcode": "02121"
+		},
+		{
+			"name": "East Boston High",
+			"city": "East Boston",
+			"stateCode": "ma",
+			"zipcode": "02128"
+		},
+		{
+			"name": "Boston Community Leadership Academy",
+			"city": "Hyde Park",
+			"stateCode": "ma",
+			"zipcode": "02136"
+		},
+		{
+			"name": "New Mission High School",
+			"city": "Hyde Park",
+			"stateCode": "ma",
+			"zipcode": "02136"
+		},
+		{
+			"name": "Community Academy",
+			"city": "Jamaica Plain",
+			"stateCode": "ma",
+			"zipcode": "02130"
+		},
+		{
+			"name": "The English High",
+			"city": "Jamaica Plain",
+			"stateCode": "ma",
+			"zipcode": "02130"
+		},
+		{
+			"name": "Revere High",
+			"city": "Revere",
+			"stateCode": "ma",
+			"zipcode": "02151"
+		},
+		{
+			"name": "Seacoast School",
+			"city": "Revere",
+			"stateCode": "ma",
+			"zipcode": "02151"
+		},
+		{
+			"name": "Fenway High School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02120"
+		},
+		{
+			"name": "Greater Egleston Community High School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02119"
+		},
+		{
+			"name": "Madison Park High",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02120"
+		},
+		{
+			"name": "Boston Day and Evening Academy Charter School",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02119"
+		},
+		{
+			"name": "City On A Hill Charter Public School Circuit Street",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02119"
+		},
+		{
+			"name": "City On A Hill Charter Public School Dudley Square",
+			"city": "Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02119"
+		},
+		{
+			"name": "Excel High School",
+			"city": "South Boston",
+			"stateCode": "ma",
+			"zipcode": "02127"
+		},
+		{
+			"name": "Urban Science Academy",
+			"city": "West Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02132"
+		},
+		{
+			"name": "West Roxbury Academy",
+			"city": "West Roxbury",
+			"stateCode": "ma",
+			"zipcode": "02132"
+		},
+		{
+			"name": "North Kansas City High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64116"
+		},
+		{
+			"name": "Oak Park High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64118"
+		},
+		{
+			"name": "Staley High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64156"
+		},
+		{
+			"name": "Winnetonka High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64119"
+		},
+		{
+			"name": "Allen Village High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64111"
+		},
+		{
+			"name": "Alta Vista Charter School",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64108"
+		},
+		{
+			"name": "Center Sr. High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64131"
+		},
+		{
+			"name": "Delasalle Charter School",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64109"
+		},
+		{
+			"name": "Frontier Schl of Excellence-U",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64110"
+		},
+		{
+			"name": "Frontier Stem High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64120"
+		},
+		{
+			"name": "Hickman Mills Freshman Center",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64138"
+		},
+		{
+			"name": "Ruskin High School",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64134"
+		},
+		{
+			"name": "Hogan Preparatory Academy",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64131"
+		},
+		{
+			"name": "Manual Career Tech. Ctr.",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64106"
+		},
+		{
+			"name": "University Academy-Upper",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64131"
+		},
+		{
+			"name": "Park Hill High",
+			"city": "Kansas City",
+			"stateCode": "mo",
+			"zipcode": "64153"
+		},
+		{
+			"name": "Lift For Life Academy High School",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63104"
+		},
+		{
+			"name": "Beaumont Cte High School",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63107"
+		},
+		{
+			"name": "Carnahan Sch. of the Future",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63118"
+		},
+		{
+			"name": "Central Visual/perf. Arts High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63139"
+		},
+		{
+			"name": "Cleveland Njrotc Academy",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63139"
+		},
+		{
+			"name": "Gateway High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63110"
+		},
+		{
+			"name": "Metro High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63108"
+		},
+		{
+			"name": "Miller Career Academy",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63106"
+		},
+		{
+			"name": "Roosevelt High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63118"
+		},
+		{
+			"name": "Soldan International Studies",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63108"
+		},
+		{
+			"name": "Sumner High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63113"
+		},
+		{
+			"name": "Transportation and Law",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63120"
+		},
+		{
+			"name": "Vashon High",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63106"
+		},
+		{
+			"name": "Vo. Tech. Tuition",
+			"city": "StLouis",
+			"stateCode": "mo",
+			"zipcode": "63101"
+		},
+		{
+			"name": "Gateway Science Academy High",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63139"
+		},
+		{
+			"name": "Grand Center Arts Academy High",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63103"
+		},
+		{
+			"name": "Collegiate School of Med/bio",
+			"city": "St. Louis",
+			"stateCode": "mo",
+			"zipcode": "63104"
+		},
+		{
+			"name": "Making Community Connections Charter School (H)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03103"
+		},
+		{
+			"name": "Manchester Central High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03104"
+		},
+		{
+			"name": "Manchester Memorial High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03103"
+		},
+		{
+			"name": "Manchester School of Technology (High School)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03103"
+		},
+		{
+			"name": "Manchester West High School",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03102"
+		},
+		{
+			"name": "The Founders Academy Charter School (H)",
+			"city": "Manchester",
+			"stateCode": "nh",
+			"zipcode": "03103"
+		},
+		{
+			"name": "Academy For Science and Design Charter (H)",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "03063"
+		},
+		{
+			"name": "Nashua High School North",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "03063"
+		},
+		{
+			"name": "Nashua High School South",
+			"city": "Nashua",
+			"stateCode": "nh",
+			"zipcode": "03062"
+		},
+		{
+			"name": "Act Academy Cyber Cs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19138"
+		},
+		{
+			"name": "Charter High School For Architecture and Design",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19106"
+		},
+		{
+			"name": "Delaware Valley Chs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19141"
+		},
+		{
+			"name": "Franklin Towne Chs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19137"
+		},
+		{
+			"name": "Imhotep Institute Chs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19138"
+		},
+		{
+			"name": "Multi-Cultural Academy Cs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19140"
+		},
+		{
+			"name": "Olney Charter High School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19140"
+		},
+		{
+			"name": "Academy At Palumbo",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19147"
+		},
+		{
+			"name": "Arts Academy At Benjamin Rush",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19154"
+		},
+		{
+			"name": "Bartram John - Main",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19142"
+		},
+		{
+			"name": "Bodine William W Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19123"
+		},
+		{
+			"name": "Building 21",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"name": "Carver Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19121"
+		},
+		{
+			"name": "Central Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19141"
+		},
+		{
+			"name": "Constitution Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19106"
+		},
+		{
+			"name": "Creative and Performing Arts",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19147"
+		},
+		{
+			"name": "Dobbins Avt Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19132"
+		},
+		{
+			"name": "Edison Hs/fareira Skills",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19140"
+		},
+		{
+			"name": "Fels Samuel Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19111"
+		},
+		{
+			"name": "Frankford Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19124"
+		},
+		{
+			"name": "Franklin Benjamin Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19130"
+		},
+		{
+			"name": "Franklin Lc",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19130"
+		},
+		{
+			"name": "Furness Horace Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19148"
+		},
+		{
+			"name": "Girls Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19141"
+		},
+		{
+			"name": "Kensington Creative & Performing Arts Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"name": "Kensington Health Sciences",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"name": "Kensington Intern Business Finance & En",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"name": "Kensington Urban Education Academy",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19125"
+		},
+		{
+			"name": "King Martin Luther Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19138"
+		},
+		{
+			"name": "Lankenau Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"name": "Lincoln Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19136"
+		},
+		{
+			"name": "Mastbaum Jules E Avts",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19134"
+		},
+		{
+			"name": "Motivation Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19143"
+		},
+		{
+			"name": "Northeast Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19111"
+		},
+		{
+			"name": "Overbrook Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19131"
+		},
+		{
+			"name": "Parkway Northwest",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19150"
+		},
+		{
+			"name": "Parkway West",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"name": "Parkway-Center City",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19123"
+		},
+		{
+			"name": "Paul Robeson HS For Human Services",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19104"
+		},
+		{
+			"name": "Philadelphia Military Acad At Elverson",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"name": "Randolph A. Philip Avt Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19129"
+		},
+		{
+			"name": "Roxborough Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"name": "Saul W B Agricultural School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19128"
+		},
+		{
+			"name": "Sayre William L Ms",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"name": "School of the Future",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19104"
+		},
+		{
+			"name": "Science Leadership Academy",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19103"
+		},
+		{
+			"name": "South Philadelphia Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19148"
+		},
+		{
+			"name": "Strawberry Mansion Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19132"
+		},
+		{
+			"name": "Swenson Arts & Technology Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19114"
+		},
+		{
+			"name": "The Linc",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19140"
+		},
+		{
+			"name": "The Science Leadership Academy At Beeber",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19131"
+		},
+		{
+			"name": "The U School: Innovative Lab",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"name": "The Workshop School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"name": "Washington George Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19116"
+		},
+		{
+			"name": "West Philadelphia Hs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19139"
+		},
+		{
+			"name": "Philadelphia Electrical & Tech Chs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19102"
+		},
+		{
+			"name": "Preparatory CS of Mathematics Science",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19145"
+		},
+		{
+			"name": "Universal Audenried Charter School",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19145"
+		},
+		{
+			"name": "Youth Build Phila Cs",
+			"city": "Philadelphia",
+			"stateCode": "pa",
+			"zipcode": "19122"
+		},
+		{
+			"name": "Academy For Career Exploration",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02907"
+		},
+		{
+			"name": "Central High School",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02903"
+		},
+		{
+			"name": "Classical High School",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02903"
+		},
+		{
+			"name": "Dr. Jorge Alvarez Hs",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02907"
+		},
+		{
+			"name": "E-Cubed Academy",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02904"
+		},
+		{
+			"name": "Hope High School",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02906"
+		},
+		{
+			"name": "Mount Pleasant High",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02908"
+		},
+		{
+			"name": "Providence Career Technical",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02903"
+		},
+		{
+			"name": "W B Cooley and Acad Internationa",
+			"city": "Providence",
+			"stateCode": "ri",
+			"zipcode": "02905"
+		},
+		{
+			"name": "Brainerd High School",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37411"
+		},
+		{
+			"name": "East Ridge High School",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37412"
+		},
+		{
+			"name": "Hamilton County Collegiate High At Chattanooga State",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37406"
+		},
+		{
+			"name": "Red Bank High School",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37415"
+		},
+		{
+			"name": "Stem School Chattanooga",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37406"
+		},
+		{
+			"name": "The Howard School",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37408"
+		},
+		{
+			"name": "Tyner Academy",
+			"city": "Chattanooga",
+			"stateCode": "tn",
+			"zipcode": "37421"
+		},
+		{
+			"name": "Milwaukee Collegiate Academy",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53216"
+		},
+		{
+			"name": "Alliance School of Milwaukee",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
+		},
+		{
+			"name": "Assata",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53209"
+		},
+		{
+			"name": "Audubon Technology and Communication High School",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53215"
+		},
+		{
+			"name": "Banner Preparatory School of Milwaukee",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53208"
+		},
+		{
+			"name": "Bradley Technology High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"name": "Carmen High School of Science and Technology South Campus",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53215"
+		},
+		{
+			"name": "Community High School",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53223"
+		},
+		{
+			"name": "Grandview High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"name": "Hamilton High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53220"
+		},
+		{
+			"name": "James Madison Academic Campus",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53218"
+		},
+		{
+			"name": "King International",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53209"
+		},
+		{
+			"name": "Milwaukee Community Cyber High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"name": "Milwaukee High School of the Arts",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"name": "New School For Community Service",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"name": "North Division High 0419",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53206"
+		},
+		{
+			"name": "Nova Tech",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53209"
+		},
+		{
+			"name": "Project Stay",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53233"
+		},
+		{
+			"name": "Pulaski High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53215"
+		},
+		{
+			"name": "Reagan College Preparatory High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53221"
+		},
+		{
+			"name": "Riverside High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53211"
+		},
+		{
+			"name": "Shalom High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
+		},
+		{
+			"name": "South Division High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53204"
+		},
+		{
+			"name": "Transition High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
+		},
+		{
+			"name": "Vincent High",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53224"
+		},
+		{
+			"name": "Whs Information Technology",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53210"
+		},
+		{
+			"name": "Milwaukee Secure Detention Facility",
+			"city": "Milwaukee",
+			"stateCode": "wi",
+			"zipcode": "53205"
+		},
+		{
+			"name": "Incline High School",
+			"city": "Incline Village",
+			"stateCode": "nv",
+			"zipcode": "89451"
+		},
+		{
+			"name": "Academy of Art Careers and Technology",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Academy of Career Education Charter School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Damonte Ranch High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89511"
+		},
+		{
+			"name": "Earl Wooster High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Galena High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89511"
+		},
+		{
+			"name": "I Can Do Anything Charter High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "North Valleys High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89506"
+		},
+		{
+			"name": "Procter R Hug High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89512"
+		},
+		{
+			"name": "Rainshadow Community Charter High",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89502"
+		},
+		{
+			"name": "Reno High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89509"
+		},
+		{
+			"name": "Robert MC Queen High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89523"
+		},
+		{
+			"name": "Tmcc Magnet High School",
+			"city": "Reno",
+			"stateCode": "nv",
+			"zipcode": "89512"
+		},
+		{
+			"name": "Edward C Reed High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89434"
+		},
+		{
+			"name": "Spanish Springs High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89436"
+		},
+		{
+			"name": "Sparks High School",
+			"city": "Sparks",
+			"stateCode": "nv",
+			"zipcode": "89431"
+		}
+	]
+}

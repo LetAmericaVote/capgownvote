@@ -87,7 +87,7 @@ const TextSubscribeForm = (props) => {
 
   return (
     <FlexColumnLayout>
-      <SpacedInputGroupLayout {...inputGroupProps}>
+      {/* <SpacedInputGroupLayout {...inputGroupProps}>
         <InputGroupLabelLayout>
           <InputGroupLabel>
             Mobile Number
@@ -99,7 +99,7 @@ const TextSubscribeForm = (props) => {
           type="tel"
         />
         <PrivacyPolicy />
-      </SpacedInputGroupLayout>
+      </SpacedInputGroupLayout> */}
       <SubscribeButton />
     </FlexColumnLayout>
   );

@@ -22,7 +22,7 @@ const StepFrame = (props) => {
 
   return (
     <FlexColumnLayout id="step-frame">
-      {showReminder ? (<Reminder />) : null}
+      {/* {showReminder ? (<Reminder />) : null} */}
       <StepFrameLayout isFading={isFading}>
         <StepFrameLayoutPart>
           <StepSticky>
